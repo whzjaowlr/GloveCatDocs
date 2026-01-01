@@ -10,7 +10,7 @@ export default defineConfig({
   base: process.env.NODE_ENV === 'production' ? '/GloveCatDocs/' : '/',
 
   head: [
-    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
     ["meta", { name: "theme-color", content: "#f97316" }],
     ["meta", { property: "og:title", content: "GloveCat Docs" }],
     [
