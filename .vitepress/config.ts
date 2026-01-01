@@ -5,9 +5,9 @@ export default defineConfig({
   description: "GloveCat (GCAT) 공식 문서",
   lang: "ko-KR",
 
-  // GitHub Pages 배포용 - 리포지토리 이름에 맞게 수정하세요
-  // 커스텀 도메인 사용 시 base: '/' 로 변경
-  base: process.env.NODE_ENV === 'production' ? '/GloveCatDocs/' : '/',
+  // GitHub Pages 배포용 base path
+  // 커스텀 도메인 사용 시 '/' 로 변경
+  base: '/GloveCatDocs/',
 
   head: [
     ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
