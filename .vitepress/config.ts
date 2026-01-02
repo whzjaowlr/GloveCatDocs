@@ -60,6 +60,7 @@ export default defineConfig({
           items: [
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
+            { text: "Migration", link: "/guide/migration" },
           ],
         },
       ],
