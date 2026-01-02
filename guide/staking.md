@@ -1,76 +1,89 @@
-# 스테이킹 가이드
+# Staking Guide
 
-GCAT을 스테이킹하여 보상을 받는 방법입니다.
+Stake GCAT to earn rewards.
 
-## 스테이킹 종류
+## Staking Types
 
-### Flexible 스테이킹
+### Flexible Staking
 
-| 특징      | 설명            |
-| --------- | --------------- |
-| 입출금    | 언제든 자유롭게 |
-| APY       | 기본 APY 적용   |
-| 최소 금액 | 없음            |
+| Feature       | Description           |
+| ------------- | --------------------- |
+| Withdraw      | Anytime               |
+| APY           | 1%                    |
+| Min Amount    | 1,000 GCAT            |
 
-::: tip 장점 유동성을 유지하면서 보상을 받을 수 있습니다. :::
+::: tip Advantage
+Earn rewards while maintaining liquidity.
+:::
 
-### Lock-up 스테이킹
+### Lock-up Staking
 
-장기 스테이킹으로 더 높은 APY를 받으세요.
+Lock your tokens for higher APY.
 
-| 기간  | APY | 비고     |
-| ----- | --- | -------- |
-| 30일  | 1%  | -        |
-| 90일  | 3%  | -        |
-| 180일 | 5%  | -        |
-| 365일 | 8%  | -        |
-| 2년   | 12% | -        |
-| 4년   | 15% | 최대 APY |
+| Period | APY | Note |
+| ------ | --- | ---- |
+| 90 days | 2% | - |
+| 180 days | 5% | - |
+| 365 days | 8% | - |
+| 730 days (2yr) | 12% | - |
+| 1460 days (4yr) | 15% | Max APY |
 
-::: warning 주의 Lock-up 기간 동안에는 출금이 불가능합니다. :::
+::: warning Note
+Withdrawal is not possible during the lock-up period.
+:::
 
-## 사용 방법
+## Tier Boost
 
-### 1. 지갑 연결
+Based on GCAT holdings:
 
-1. dApp 접속: [app.glovecat.com](https://app.glovecat.com)
-2. "지갑 연결" 버튼 클릭
-3. MetaMask 또는 Rainbow 지갑 선택
-4. Base 네트워크 확인
+| Tier | Holdings (GCAT) | Boost |
+| ---- | --------------- | ----- |
+| Bronze | 1,000 ~ 100,000 | 1.0x |
+| Silver | 100,001 ~ 500,000 | 1.1x |
+| Gold | 500,001 ~ 1,000,000 | 1.2x |
+| Platinum | 1,000,001 ~ 2M | 1.4x |
+| Diamond | 2M+ | 1.8x |
 
-### 2. 스테이킹
+## Referral System
 
-1. 스테이킹 탭 이동
-2. Flexible 또는 Lock-up 선택
-3. 스테이킹 금액 입력
-4. Lock-up의 경우 기간 선택
-5. "스테이킹" 버튼 클릭
-6. 지갑에서 트랜잭션 승인
+- **Referrer Bonus**: 5%
+- **Referee Bonus**: 5%
+- **Setting**: One-time only
 
-### 3. 보상 청구
+**Example**: User B (referred by A) claims 100 GCAT reward:
+- B receives: 105 GCAT
+- A receives: 5 GCAT
 
-1. "보상 청구" 버튼 클릭
-2. 트랜잭션 승인
-3. 보상 수령 완료
+## How to Stake
 
-## NFT 부스트
+### 1. Connect Wallet
 
-NFT를 보유하면 스테이킹 보상에 부스트가 적용됩니다.
+1. Visit dApp: [app.glovecat.com](https://app.glovecat.com)
+2. Click "Connect Wallet"
+3. Select MetaMask or Rainbow
+4. Confirm Base network
 
-| NFT 티어 | 부스트 |
-| -------- | ------ |
-| Bronze   | 1.1x   |
-| Silver   | 1.2x   |
-| Gold     | 1.3x   |
-| Platinum | 1.5x   |
-| Diamond  | 2.0x   |
+### 2. Stake Tokens
+
+1. Go to Staking tab
+2. Select Flexible or Lock-up
+3. Enter staking amount
+4. For Lock-up, select period
+5. Click "Stake" button
+6. Approve transaction in wallet
+
+### 3. Claim Rewards
+
+1. Click "Claim Rewards" button
+2. Approve transaction
+3. Rewards received
 
 ## FAQ
 
-### Q: 언스테이킹 시 수수료가 있나요?
+### Q: Are there fees for unstaking?
 
-A: 없습니다. 가스비만 지불하시면 됩니다.
+A: No. You only pay gas fees.
 
-### Q: 보상은 얼마나 자주 받을 수 있나요?
+### Q: How often can I claim rewards?
 
-A: 언제든 원할 때 청구할 수 있습니다.
+A: Anytime you want.

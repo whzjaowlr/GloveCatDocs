@@ -1,64 +1,74 @@
-# 보상 시스템
+# Rewards System
 
-다양한 활동을 통해 GCAT 보상을 받으세요.
+Earn GCAT rewards through various activities.
 
-## 일일 체크인
+## Daily Check-in
 
-### 규칙
+### Rules
 
-- 하루에 한 번 체크인 가능
-- UTC 00:00 기준 리셋
-- 연속 체크인으로 스트릭 보너스
+- Check-in once per day
+- Resets at UTC 00:00
+- Consecutive check-ins earn streak bonus
+- **EIP-712 signature** (backend integration required)
 
-### 스트릭 보너스
+### Streak Bonus
 
-| 연속 일수 | 보너스    |
-| --------- | --------- |
-| 1-6일     | 기본 보상 |
-| 7일       | **+50%**  |
-| 14일+     | 추가 보상 |
+| Consecutive Days | Bonus |
+| ---------------- | ----- |
+| 1-6 days | Base reward |
+| 7 days | **+50%** |
+| 14+ days | Additional rewards |
 
-### 사용 방법
+### How to Use
 
-1. 보상 탭 이동
-2. "체크인" 버튼 클릭
-3. 트랜잭션 승인
-4. 보상 수령!
+1. Go to Rewards tab
+2. Click "Check-in" button
+3. Approve transaction
+4. Receive rewards!
 
-## 리더보드
+### Special Badge
 
-### 시즌 보상
+Achieve **100 Day Streak** to receive the **100 Day Streak Badge** (Soulbound).
 
-| 순위   | 보상       |
-| ------ | ---------- |
-| 🥇 1위 | 5,000 GCAT |
-| 🥈 2위 | 3,000 GCAT |
-| 🥉 3위 | 2,000 GCAT |
-| 4-10위 | 500 GCAT   |
+## Leaderboard
 
-### 점수 획득
+### Categories
 
-- 일일 체크인
-- 스테이킹
-- 거버넌스 참여
-- NFT 보유
+| Category | Calculation |
+| -------- | ----------- |
+| **STAKING** | Time-weighted average: `Σ(amount × days) / season_days` |
+| **VOLUME** | Total volume: `buyVolume + sellVolume` |
 
-## 업적 시스템
+### Season Rewards (NFT)
 
-특별한 활동을 달성하면 업적 배지와 보상을 받습니다.
+| Rank | NFT Tier |
+| ---- | -------- |
+| 🥇 1st | Legendary |
+| 🥈 2nd-3rd | Epic |
+| 🥉 4th-7th | Rare |
+| 8th-10th | Common |
 
-| 업적        | 조건        | 보상        |
-| ----------- | ----------- | ----------- |
-| First Stake | 첫 스테이킹 | 배지 + GCAT |
-| Voter       | 첫 투표     | 배지        |
-| Collector   | NFT 보유    | 배지        |
+### Season Duration
+
+- Monthly seasons
+- On-chain data → Off-chain aggregation → Merkle Proof → Rewards
+
+## Achievement System
+
+Complete special activities to earn achievement badges and rewards.
+
+| Achievement | Condition | Reward |
+| ----------- | --------- | ------ |
+| First Stake | Complete first staking | Badge + GCAT |
+| Voter | First governance vote | Badge |
+| Collector | Own NFT | Badge |
 
 ## FAQ
 
-### Q: 체크인을 놓치면 스트릭이 초기화되나요?
+### Q: Does my streak reset if I miss a day?
 
-A: 네, 하루라도 놓치면 스트릭이 0으로 초기화됩니다.
+A: Yes, missing even one day resets your streak to 0.
 
-### Q: 리더보드 시즌은 얼마나 되나요?
+### Q: How long is a leaderboard season?
 
-A: 시즌은 약 30일입니다.
+A: Approximately 30 days (monthly).

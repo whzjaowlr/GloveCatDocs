@@ -1,52 +1,65 @@
-# NFT 가이드
+# NFT Guide
 
-GloveCat NFT를 보유하면 다양한 혜택을 받을 수 있습니다.
+GloveCat NFTs provide various benefits to holders.
 
-## 티어 시스템
+## Tier System
 
-| 티어        | 수수료 할인 | 스테이킹 부스트 |
-| ----------- | ----------- | --------------- |
-| 🥉 Bronze   | 5%          | 1.1x            |
-| 🥈 Silver   | 10%         | 1.2x            |
-| 🥇 Gold     | 15%         | 1.3x            |
-| 💎 Platinum | 20%         | 1.5x            |
-| 👑 Diamond  | 30%         | 2.0x            |
+| Tier | Fee Discount | Staking Boost | Holdings (GCAT) |
+| ---- | ------------ | ------------- | --------------- |
+| 🥉 Bronze | 5% | 1.0x | 1,000 ~ 100,000 |
+| 🥈 Silver | 10% | 1.1x | 100,001 ~ 500,000 |
+| 🥇 Gold | 15% | 1.2x | 500,001 ~ 1,000,000 |
+| 💎 Platinum | 20% | 1.4x | 1,000,001 ~ 2M |
+| 👑 Diamond | 30% | 1.8x | 2M+ |
 
-## 혜택
+## Benefits
 
-### 수수료 할인
+### Fee Discount
 
-NFT를 보유하면 거래 수수료가 할인됩니다.
+NFT holders receive reduced transaction fees.
 
-### 스테이킹 부스트
+### Staking Boost
 
-스테이킹 보상에 배율이 적용됩니다.
+Multiplier applied to staking rewards.
 
-### 투표권 부스트
+### Voting Weight
 
-거버넌스 투표 시 추가 투표권을 받습니다.
+Additional voting power in governance.
 
-### 독점 혜택
+### Exclusive Perks
 
-- 신규 기능 얼리 액세스
-- 에어드롭 우선권
-- 커뮤니티 이벤트 참여
+- Early access to new features
+- Priority for airdrops
+- Community event participation
 
-## 획득 방법
+## How to Get
 
-1. **민팅**: 공식 민팅 이벤트
-2. **마켓플레이스**: OpenSea 등에서 구매
-3. **에어드롭**: 커뮤니티 이벤트
+1. **Minting**: Official minting events
+2. **Marketplace**: Purchase on OpenSea
+3. **Airdrop**: Community events
+4. **Leaderboard**: Monthly ranking rewards
 
-## 배지 시스템
+## Leaderboard NFT Rewards
 
-특별한 활동을 통해 배지를 획득하세요.
+| Rank | Tier |
+| ---- | ---- |
+| 1st | Legendary |
+| 2nd-3rd | Epic |
+| 4th-7th | Rare |
+| 8th-10th | Common |
 
-| 배지            | 조건               |
-| --------------- | ------------------ |
-| Early Adopter   | 런칭 초기 참여     |
-| Diamond Hands   | 장기 홀딩          |
-| Governance Hero | 거버넌스 활발 참여 |
-| Staking Master  | 대량 스테이킹      |
+## Badge System (Soulbound)
 
-::: info Soulbound 배지는 양도 불가(Soulbound)입니다. :::
+Earn badges through special achievements.
+
+| Badge | Condition |
+| ----- | --------- |
+| 100 Day Streak | 100 consecutive daily check-ins |
+| Top 10 Holder | Top 10 token holder |
+| Top 10 Referrer | Top 10 referrer |
+| Early Adopter | Early launch participant |
+| Diamond Tier | Achieved Diamond tier |
+
+::: info Soulbound
+Badges are non-transferable (Soulbound).
+:::
