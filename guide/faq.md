@@ -1,63 +1,63 @@
 # FAQ
 
-자주 묻는 질문입니다.
+Frequently asked questions.
 
-## 일반
+## General
 
-### GCAT은 어디서 구매하나요?
+### Where can I buy GCAT?
 
-[Uniswap](https://app.uniswap.org) (Base 네트워크)에서 구매할 수 있습니다.
+You can buy on [Uniswap](https://app.uniswap.org) (Base network).
 
-### 어떤 지갑을 사용할 수 있나요?
+### Which wallets are supported?
 
-MetaMask, Rainbow, Coinbase Wallet 등 Base 네트워크를 지원하는 모든 지갑을 사용할 수 있습니다.
+Any wallet that supports Base network: MetaMask, Rainbow, Coinbase Wallet, etc.
 
-### Base 네트워크는 어떻게 추가하나요?
+### How do I add Base network?
 
-1. [Chainlist](https://chainlist.org/?search=base)에서 Base 검색
-2. "Add to Wallet" 클릭
-3. 지갑에서 승인
+1. Search for Base on [Chainlist](https://chainlist.org/?search=base)
+2. Click "Add to Wallet"
+3. Approve in your wallet
 
-## 스테이킹
+## Staking
 
-### 스테이킹 보상은 언제 받나요?
+### When do I receive staking rewards?
 
-언제든지 "보상 청구" 버튼을 눌러 받을 수 있습니다.
+Anytime by clicking the "Claim Rewards" button.
 
-### Lock-up 중에 언스테이킹할 수 있나요?
+### Can I unstake during lock-up?
 
-아니요, Lock-up 기간이 끝나야 언스테이킹이 가능합니다.
+No, you must wait until the lock-up period ends.
 
-### APY는 고정인가요?
+### Is APY fixed?
 
-기본 APY는 고정이지만, NFT 부스트에 따라 개인별로 다를 수 있습니다.
+Base APY is fixed, but individual rates may vary based on NFT boosts.
 
 ## NFT
 
-### NFT는 어디서 구매하나요?
+### Where can I buy NFTs?
 
-공식 민팅 이벤트 또는 OpenSea 등 마켓플레이스에서 구매할 수 있습니다.
+Official minting events or marketplaces like OpenSea.
 
-### 여러 NFT를 가지면 혜택이 중첩되나요?
+### Do multiple NFT benefits stack?
 
-아니요, 가장 높은 티어의 혜택만 적용됩니다.
+No, only the highest tier benefits apply.
 
-## 거버넌스
+## Governance
 
-### 누구나 제안을 만들 수 있나요?
+### Can anyone create proposals?
 
-10,000 GCAT 이상 스테이킹한 사용자만 제안을 생성할 수 있습니다.
+Only users staking 10,000+ GCAT can create proposals.
 
-### 투표 결과가 무조건 반영되나요?
+### Are voting results always implemented?
 
-아니요, SignalingDAO는 의견 수렴 도구입니다. 팀에서 검토 후 결정합니다.
+No, SignalingDAO is a signaling tool. The team reviews and decides.
 
-## 보안
+## Security
 
-### 컨트랙트가 감사되었나요?
+### Has the contract been audited?
 
-네, 메인넷 배포 전 보안 감사를 완료했습니다.
+Yes, security audit was completed before mainnet deployment.
 
-### 팀이 모든 토큰을 통제하나요?
+### Does the team control all tokens?
 
-아니요, 팀 물량은 락업되어 있고 주요 설정은 멀티시그로 관리됩니다.
+No, team tokens are locked and key settings are managed by multisig.

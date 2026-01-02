@@ -1,29 +1,29 @@
-# 긴급 대응
+# Emergency Response
 
-보안 사고 발생 시 대응 절차입니다.
+Procedures for responding to security incidents.
 
-## 긴급 연락처
+## Emergency Contacts
 
-- **텔레그램**: @GloveCatOfficial
-- **트위터**: @glovecatcoin
+- **Telegram**: @GloveCatOfficial
+- **Twitter**: @glovecatcoin
 
-## 대응 절차
+## Response Procedures
 
-### 1단계: 일시 정지
+### Step 1: Pause
 ```solidity
 pause()
 ```
-모든 거래를 즉시 중단합니다.
+Immediately halt all transactions.
 
-### 2단계: 상황 파악
-- 피해 규모 확인
-- 공격 벡터 분석
+### Step 2: Assess Situation
+- Confirm scope of damage
+- Analyze attack vector
 
-### 3단계: 복구
-- 필요시 스냅샷 기반 복구
-- 커뮤니티 공지
+### Step 3: Recovery
+- Snapshot-based recovery if needed
+- Community announcement
 
-## 사전 예방
+## Prevention
 
-- 정기적 보안 감사
-- 실시간 모니터링
+- Regular security audits
+- Real-time monitoring

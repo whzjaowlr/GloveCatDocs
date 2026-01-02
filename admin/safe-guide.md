@@ -1,20 +1,20 @@
-# Safe 멀티시그 가이드
+# Safe Multisig Guide
 
-GloveCat은 Gnosis Safe 멀티시그를 통해 관리됩니다.
+GloveCat is managed through Gnosis Safe multisig.
 
-## Safe 주소
-- **메인넷**: `TBD`
-- **서명자**: 2-of-3 설정
+## Safe Address
+- **Mainnet**: `TBD`
+- **Signers**: 2-of-3 configuration
 
-## 트랜잭션 실행 절차
+## Transaction Execution Process
 
-1. Safe 앱 접속
-2. 트랜잭션 제안
-3. 2명 이상 서명
-4. 실행
+1. Access Safe app
+2. Propose transaction
+3. Two or more signatures
+4. Execute
 
-## 주의사항
+## Important Notes
 
 ::: warning
-모든 중요 트랜잭션은 팀 내 검토 후 실행하세요.
+All critical transactions should be reviewed by the team before execution.
 :::

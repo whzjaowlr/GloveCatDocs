@@ -1,55 +1,56 @@
-# 거버넌스 가이드
+# Governance Guide
 
-SignalingDAO를 통해 프로젝트 방향에 의견을 제시하세요.
+Voice your opinions on project direction through SignalingDAO.
 
-## SignalingDAO란?
+## What is SignalingDAO?
 
-SignalingDAO는 **의견 수렴 목적**의 거버넌스 시스템입니다. 구속력은 없지만 팀에서 적극 검토합니다.
+SignalingDAO is a governance system for **gathering community opinions**. While not binding, the team actively reviews all proposals.
 
-::: info 참고 주요 결정은 팀에서 최종 판단합니다. SignalingDAO는 커뮤니티 의견을 수렴하는
-도구입니다. :::
+::: info Note
+Major decisions are made by the team. SignalingDAO is a tool for gathering community feedback.
+:::
 
-## 제안 생성
+## Creating Proposals
 
-### 요구 조건
+### Requirements
 
-- **최소 스테이킹**: 10,000 GCAT
-- **제목**: 5-100자
-- **설명**: 20-2,000자
+- **Minimum Staking**: 10,000 GCAT
+- **Title**: 5-100 characters
+- **Description**: 20-2,000 characters
 
-### 절차
+### Process
 
-1. 거버넌스 탭 이동
-2. "제안 생성" 클릭
-3. 제목 및 설명 작성
-4. 트랜잭션 승인
-5. 생성 완료 (7일간 투표)
+1. Go to Governance tab
+2. Click "Create Proposal"
+3. Write title and description
+4. Approve transaction
+5. Created (7-day voting period)
 
-## 투표하기
+## Voting
 
-### 투표권 계산
+### Voting Power Calculation
 
 ```
-투표권 = GCAT 보유량 + (스테이킹 × 부스트) + NFT 부스트
+Voting Power = GCAT Holdings + (Staked × Boost) + NFT Boost
 ```
 
-### 투표 방법
+### How to Vote
 
-1. 제안 선택
-2. 찬성/반대 클릭
-3. 트랜잭션 승인
+1. Select proposal
+2. Click For/Against
+3. Approve transaction
 
-## 제안 상태
+## Proposal Status
 
-| 상태      | 설명           |
-| --------- | -------------- |
-| 🟡 대기중 | 투표 시작 전   |
-| 🟢 투표중 | 현재 투표 진행 |
-| 🔴 종료   | 투표 기간 만료 |
-| ✅ 완료   | 팀 검토 완료   |
+| Status        | Description           |
+| ------------- | --------------------- |
+| 🟡 Pending    | Before voting starts  |
+| 🟢 Active     | Currently voting      |
+| 🔴 Ended      | Voting period expired |
+| ✅ Completed  | Team review completed |
 
-## 팁
+## Tips
 
-- 명확하고 실행 가능한 제안을 작성하세요
-- 커뮤니티와 미리 논의 후 제안하면 좋습니다
-- 제안 전 유사한 기존 제안이 있는지 확인하세요
+- Write clear and actionable proposals
+- Discuss with the community before proposing
+- Check for similar existing proposals

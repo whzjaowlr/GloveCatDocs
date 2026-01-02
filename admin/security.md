@@ -1,27 +1,27 @@
-# 보안 프로토콜
+# Security Protocol
 
-GloveCat의 보안 체계입니다.
+GloveCat's security framework.
 
-## 스마트 컨트랙트 보안
+## Smart Contract Security
 
-### 감사
-- OpenZeppelin 라이브러리 사용
-- 내부 보안 검토 완료
+### Audits
+- OpenZeppelin library usage
+- Internal security review completed
 
-### 접근 제어
-- 2-of-3 멀티시그 필수
-- 타임락 적용 (중요 변경 24시간 지연)
+### Access Control
+- 2-of-3 multisig required
+- Timelock applied (24-hour delay for critical changes)
 
-## 운영 보안
+## Operational Security
 
-### 키 관리
-- 하드웨어 월렛 사용
-- 시드 분산 보관
+### Key Management
+- Hardware wallet usage
+- Distributed seed storage
 
-### 모니터링
-- 대량 전송 알림
-- 비정상 활동 감지
+### Monitoring
+- Large transfer alerts
+- Anomaly detection
 
-## 인시던트 대응
+## Incident Response
 
-자세한 내용은 [긴급 대응](/admin/emergency) 문서를 참조하세요.
+For details, see [Emergency Response](/admin/emergency).

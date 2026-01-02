@@ -1,57 +1,57 @@
-# 토크노믹스
+# Tokenomics
 
-GCAT의 토큰 분배 및 경제 구조입니다.
+GCAT token distribution and economic structure.
 
-## 총 공급량
+## Total Supply
 
-| 항목      | 값                   |
-| --------- | -------------------- |
-| 총 공급량 | **500,000,000 GCAT** |
-| Decimals  | 18                   |
-| 타입      | ERC-20               |
-| 네트워크  | Base (Chain ID: 8453)|
+| Item         | Value                  |
+| ------------ | ---------------------- |
+| Total Supply | **500,000,000 GCAT**   |
+| Decimals     | 18                     |
+| Type         | ERC-20                 |
+| Network      | Base (Chain ID: 8453)  |
 
-## 토큰 분배
+## Token Distribution
 
 ```
-유동성 풀      █████████████████████████    45%
-커뮤니티       ████████████████             25%
-스테이킹 보상   ██████████                   15%
-팀 (락업)      ██████                       10%
-버그 바운티    ███                           5%
+Liquidity Pool      █████████████████████████    45%
+Community           ████████████████             25%
+Staking Rewards     ██████████                   15%
+Team (Locked)       ██████                       10%
+Bug Bounty          ███                           5%
 ```
 
-| 항목          | 비율 | 물량   | 비고                    |
-| ------------- | ---- | ------ | ----------------------- |
-| 유동성 풀     | 45%  | 225M   | 초기 LP 제공 + 자동 유동성 |
-| 커뮤니티      | 25%  | 125M   | 에어드롭, 마케팅, 이벤트   |
-| 스테이킹 보상 | 15%  | 75M    | Flexible/Lock-up 보상    |
-| 팀            | 10%  | 50M    | 24개월 락업              |
-| 버그 바운티   | 5%   | 25M    | 보안 취약점 신고 보상     |
+| Allocation      | Ratio | Amount | Note                           |
+| --------------- | ----- | ------ | ------------------------------ |
+| Liquidity Pool  | 45%   | 225M   | Initial LP + Auto-liquidity    |
+| Community       | 25%   | 125M   | Airdrops, marketing, events    |
+| Staking Rewards | 15%   | 75M    | Flexible/Lock-up rewards       |
+| Team            | 10%   | 50M    | 24-month lock-up               |
+| Bug Bounty      | 5%    | 25M    | Security vulnerability rewards |
 
-## 수수료 구조
+## Fee Structure
 
-| 종류        | 비율 | 용도                    |
-| ----------- | ---- | ----------------------- |
-| 구매 수수료 | 0%   | 수수료 없음 ✅          |
-| 판매 수수료 | 2%   | 유동성 1% + 생태계 1%   |
+| Type     | Rate | Purpose                    |
+| -------- | ---- | -------------------------- |
+| Buy Fee  | 0%   | No fee ✅                  |
+| Sell Fee | 2%   | Liquidity 1% + Ecosystem 1%|
 
-::: tip NFT 할인
-NFT 티어에 따라 최대 30% 수수료 할인!
+::: tip NFT Discount
+Up to 30% fee discount based on NFT tier!
 :::
 
-## 거래 한도
+## Transaction Limits
 
-| 항목        | 한도           | 비고           |
-| ----------- | -------------- | -------------- |
-| 거래당 최대 | 0.3%           | 1,500,000 GCAT |
-| 지갑당 최대 | 2%             | 10,000,000 GCAT |
+| Item           | Limit           | Note              |
+| -------------- | --------------- | ----------------- |
+| Max Per TX     | 0.3%            | 1,500,000 GCAT    |
+| Max Per Wallet | 2%              | 10,000,000 GCAT   |
 
-::: info 안티봇
-런칭 후 10블록 동안 99% 세금 적용으로 봇 방지
+::: info Anti-Bot
+99% tax applied for 10 blocks after launch to prevent bots
 :::
 
-## 락업 정보
+## Lock-up Information
 
-- **팀 지갑**: 24개월 선형 베스팅
-- **스테이킹 락업**: 30일/90일 선택 가능
+- **Team Wallet**: 24-month linear vesting
+- **Staking Lock-up**: 90/180/365/730/1460 days options

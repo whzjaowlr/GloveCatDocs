@@ -1,35 +1,37 @@
-# 관리자 가이드
+# Admin Guide
 
-::: warning 관리자 전용 이 섹션은 GloveCat 프로젝트 관리자만 필요합니다. :::
+::: warning Admin Only
+This section is only for GloveCat project administrators.
+:::
 
-## 개요
+## Overview
 
-GloveCat 관리자는 스마트 컨트랙트의 설정을 관리합니다.
+GloveCat admins manage smart contract settings.
 
-## 역할 및 권한
+## Roles & Permissions
 
-| 역할              | 권한                               |
-| ----------------- | ---------------------------------- |
-| **Owner**         | 모든 관리자 함수 호출 가능         |
-| **SecurityAdmin** | 긴급 조치 권한 (pause, 블랙리스트) |
+| Role              | Permissions                           |
+| ----------------- | ------------------------------------- |
+| **Owner**         | Can call all admin functions          |
+| **SecurityAdmin** | Emergency actions (pause, blacklist)  |
 
-## 관리 원칙
+## Management Principles
 
-1. **다중 서명**: Safe{Wallet} 2/3 또는 3/5 필수
-2. **투명성**: 모든 설정 변경 커뮤니티 공지
-3. **신중함**: 충분한 검토 후 실행
-4. **보안**: 비공개 채널에서 민감 정보 논의
+1. **Multi-signature**: Safe{Wallet} 2/3 or 3/5 required
+2. **Transparency**: Announce all setting changes to community
+3. **Caution**: Execute after thorough review
+4. **Security**: Discuss sensitive info in private channels
 
-## 관리 도구
+## Admin Tools
 
-- **Safe{Wallet}**: 다중 서명 관리
-- **Admin Panel**: dApp 내 관리자 페이지
-- **BaseScan**: 컨트랙트 확인 및 직접 호출
+- **Safe{Wallet}**: Multi-signature management
+- **Admin Panel**: Admin page within dApp
+- **BaseScan**: Contract verification and direct calls
 
-## 목차
+## Contents
 
-- [컨트랙트 정보](/admin/contracts) - 배포 주소, ABI
-- [관리자 함수](/admin/functions) - 호출 가능한 함수
-- [Safe 가이드](/admin/safe-guide) - 다중서명 설정
-- [긴급 대응](/admin/emergency) - 비상 상황 대응
-- [보안 프로토콜](/admin/security) - 보안 정책
+- [Contract Info](/admin/contracts) - Deployment addresses, ABI
+- [Admin Functions](/admin/functions) - Callable functions
+- [Safe Guide](/admin/safe-guide) - Multi-sig setup
+- [Emergency Response](/admin/emergency) - Emergency procedures
+- [Security Protocol](/admin/security) - Security policies

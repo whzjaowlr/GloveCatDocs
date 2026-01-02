@@ -1,34 +1,33 @@
-# GloveCat (GCAT) 소개
+# GloveCat (GCAT) Introduction
 
-GloveCat은 **Base 체인** 기반의 밈 코인으로, 커뮤니티 중심의 투명한 운영과 혁신적인 DeFi 기능을
-제공합니다.
+GloveCat is a **Base chain** meme token that provides community-driven transparent operations and innovative DeFi features.
 
-## 🐱🥊 비전
+## 🐱🥊 Vision
 
-- **투명한 운영**: 모든 스마트 컨트랙트 오픈소스 공개
-- **커뮤니티 중심**: SignalingDAO를 통한 의견 수렴
-- **지속 가능한 생태계**: 스테이킹, NFT, 게이미피케이션 연계
+- **Transparent Operations**: All smart contracts open-sourced
+- **Community-Driven**: Opinion gathering through SignalingDAO
+- **Sustainable Ecosystem**: Connecting staking, NFT, and gamification
 
-## 핵심 기능
+## Core Features
 
-| 기능     | 설명                                    |
-| -------- | --------------------------------------- |
-| 스테이킹 | Flexible/Lock-up 스테이킹으로 보상 획득 |
-| NFT      | 티어 기반 혜택 (수수료 할인, 부스트)    |
-| 거버넌스 | 제안 생성 및 투표                       |
-| 보상     | 출석 체크인, 리더보드                   |
+| Feature     | Description                                    |
+| ----------- | ---------------------------------------------- |
+| Staking     | Earn rewards with Flexible/Lock-up staking     |
+| NFT         | Tier-based benefits (fee discounts, boosts)    |
+| Governance  | Create proposals and vote                      |
+| Rewards     | Daily check-in, leaderboard                    |
 
-## 컨트랙트 정보
+## Contract Information
 
-| 항목      | 값                                           |
-| --------- | -------------------------------------------- |
-| 네트워크  | Base (Chain ID: 8453)                        |
-| 토큰 주소 | `0x2489E6892f94a692ae71dC2d43878F8d8A4a5581` |
-| 심볼      | GCAT                                         |
-| 소수점    | 18                                           |
+| Item           | Value                                         |
+| -------------- | --------------------------------------------- |
+| Network        | Base (Chain ID: 8453)                         |
+| Token Address  | `0x2489E6892f94a692ae71dC2d43878F8d8A4a5581`  |
+| Symbol         | GCAT                                          |
+| Decimals       | 18                                            |
 
-## 시작하기
+## Getting Started
 
-1. [지갑 연결](/guide/staking#지갑-연결)
-2. [GCAT 구매](https://app.uniswap.org) (Uniswap - Base)
-3. [스테이킹 시작](/guide/staking)
+1. [Connect Wallet](/guide/staking#wallet-connection)
+2. [Buy GCAT](https://app.uniswap.org) (Uniswap - Base)
+3. [Start Staking](/guide/staking)

@@ -1,36 +1,36 @@
-# 관리자 함수
+# Admin Functions
 
-GloveCat 스마트 컨트랙트의 관리자 전용 함수입니다.
+Admin-only functions for GloveCat smart contracts.
 
-::: warning 주의
-모든 관리자 함수는 Safe{Wallet} 멀티시그를 통해 실행하세요.
+::: warning Caution
+All admin functions should be executed through Safe{Wallet} multisig.
 :::
 
-## GloveCatCore 함수
+## GloveCatCore Functions
 
-### 일시 정지
+### Pause
 
 ```solidity
 function pause() external onlyOwner
 function unpause() external onlyOwner
 ```
 
-긴급 상황 시 모든 거래를 일시 정지/재개합니다.
+Pause/resume all transactions during emergencies.
 
-### 세금 설정
+### Tax Settings
 
 ```solidity
 function setTaxRate(uint256 _buyTax, uint256 _sellTax) external onlyOwner
 ```
 
-| 파라미터 | 설명 | 제한 |
-|---------|------|------|
-| `_buyTax` | 구매 세율 | 최대 10% |
-| `_sellTax` | 판매 세율 | 최대 10% |
+| Parameter | Description | Limit |
+|-----------|-------------|-------|
+| `_buyTax` | Buy tax rate | Max 10% |
+| `_sellTax` | Sell tax rate | Max 10% |
 
-**현재 설정**: Buy 0%, Sell 2%
+**Current Settings**: Buy 0%, Sell 2%
 
-### 화이트리스트
+### Whitelist
 
 ```solidity
 function addToWhitelist(address account) external onlyOwner
@@ -38,69 +38,69 @@ function removeFromWhitelist(address account) external onlyOwner
 function setWhitelistEnabled(bool enabled) external onlyOwner
 ```
 
-화이트리스트된 주소는 세금 및 거래 제한 면제.
+Whitelisted addresses are exempt from taxes and transaction limits.
 
-### 블랙리스트
+### Blacklist
 
 ```solidity
 function addToBlacklist(address account) external onlyOwner
 function removeFromBlacklist(address account) external onlyOwner
 ```
 
-블랙리스트된 주소는 모든 거래 차단.
+Blacklisted addresses are blocked from all transactions.
 
-### 거래 한도
+### Transaction Limits
 
 ```solidity
 function setMaxTxAmount(uint256 amount) external onlyOwner
 function setMaxWalletAmount(uint256 amount) external onlyOwner
 ```
 
-| 함수 | 현재값 | 설명 |
-|------|--------|------|
-| `maxTxAmount` | 0.3% | 거래당 최대 한도 |
-| `maxWalletAmount` | 2% | 지갑당 최대 보유량 |
+| Function | Current Value | Description |
+|----------|---------------|-------------|
+| `maxTxAmount` | 0.3% | Max limit per transaction |
+| `maxWalletAmount` | 2% | Max wallet holdings |
 
-### 안티봇
+### Anti-Bot
 
 ```solidity
 function setDeadBlocks(uint256 blocks) external onlyOwner
 function setDeadBlocksTax(uint256 tax) external onlyOwner
 ```
 
-런칭 시 봇 방지용 고율 세금 설정.
+High tax settings for bot prevention at launch.
 
-## Staking 함수
+## Staking Functions
 
-### 보상률 설정
+### Reward Rate Settings
 
 ```solidity
 function setRewardRate(uint256 rate) external onlyOwner
 ```
 
-스테이킹 보상률 조정 (연간, 기본 포인트).
+Adjust staking reward rate (annual, basis points).
 
-### 락업 옵션
+### Lock-up Options
 
 ```solidity
 function setLockupOption(uint256 period, uint256 bonusRate) external onlyOwner
 ```
 
-락업 기간별 추가 보상률 설정.
+Set additional reward rates for each lock-up period.
 
-## 소유권
+## Ownership
 
-### 이전
+### Transfer
 
 ```solidity
 function transferOwnership(address newOwner) external onlyOwner
 function acceptOwnership() external
 ```
 
-2단계 소유권 이전 (안전성 강화):
-1. `transferOwnership(newOwner)` 호출
-2. 새 소유자가 `acceptOwnership()` 호출
+Two-step ownership transfer (enhanced security):
+1. Call `transferOwnership(newOwner)`
+2. New owner calls `acceptOwnership()`
 
-## 긴급 대응
+## Emergency Response
 
-상황별 대응 방법은 [긴급 대응](/admin/emergency) 문서를 참조하세요.
+For situation-specific responses, see [Emergency Response](/admin/emergency).
