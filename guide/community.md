@@ -14,7 +14,7 @@ Join the GloveCat community!
 
 | Tool           | Link                                                                              |
 | -------------- | --------------------------------------------------------------------------------- |
-| 🚀 dApp        | [app.glovecat.com](https://app.glovecat.com)                                      |
+| 🚀 dApp        | [glovecatcoin.com](https://glovecatcoin.com)                                      |
 | 📊 BaseScan    | [Contract](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |
 | 📈 DEXScreener | [GCAT/WETH](https://dexscreener.com/base/gcat)                                    |
 
@@ -30,7 +30,7 @@ Join the GloveCat community!
 If you find bugs or security issues:
 
 - **General Bugs**: Report on Telegram or Discord
-- **Security Issues**: Private report to security@glovecat.com
+- **Security Issues**: Private report to security@glovecatcoin.com
 
 ::: warning Security Issues
 Do not post security vulnerabilities in public channels. Please report privately.

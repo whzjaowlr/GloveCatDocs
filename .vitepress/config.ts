@@ -5,9 +5,8 @@ export default defineConfig({
   description: "GloveCat (GCAT) Official Documentation",
   lang: "en-US",
 
-  // GitHub Pages deployment base path
-  // Change to '/' when using custom domain
-  base: '/GloveCatDocs/',
+  // Custom domain - docs.glovecatcoin.com
+  base: '/',
 
   head: [
     ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
@@ -27,7 +26,7 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/" },
       { text: "Admin", link: "/admin/" },
-      { text: "dApp", link: "https://app.glovecat.com" },
+      { text: "dApp", link: "https://glovecatcoin.com" },
     ],
 
     sidebar: {

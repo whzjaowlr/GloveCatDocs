@@ -54,7 +54,7 @@
 
 | Item | URL |
 |------|-----|
-| **dApp** | [app.glovecat.com](https://app.glovecat.com) |
+| **dApp** | [glovecatcoin.com](https://glovecatcoin.com) |
 | **Contract** | [BaseScan](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |
 | **Twitter** | [@glovecatcoin](https://twitter.com/glovecatcoin) |
 | **Telegram** | [GloveCatOfficial](https://t.me/GloveCatOfficial) |

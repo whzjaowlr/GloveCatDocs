@@ -14,7 +14,7 @@ hero:
       link: /guide/
     - theme: alt
       text: Launch dApp
-      link: https://app.glovecat.com
+      link: https://glovecatcoin.com
 
 features:
   - icon: 💰
@@ -35,7 +35,7 @@ features:
 
 | Item     | Link                                                                              |
 | -------- | --------------------------------------------------------------------------------- |
-| dApp     | [app.glovecat.com](https://app.glovecat.com)                                      |
+| dApp     | [glovecatcoin.com](https://glovecatcoin.com)                                      |
 | Twitter  | [@glovecatcoin](https://twitter.com/glovecatcoin)                                 |
 | Telegram | [GloveCatOfficial](https://t.me/GloveCatOfficial)                                 |
 | BaseScan | [Contract](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |

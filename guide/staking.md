@@ -58,7 +58,7 @@ Based on GCAT holdings:
 
 ### 1. Connect Wallet
 
-1. Visit dApp: [app.glovecat.com](https://app.glovecat.com)
+1. Visit dApp: [glovecatcoin.com](https://glovecatcoin.com)
 2. Click "Connect Wallet"
 3. Select MetaMask or Rainbow
 4. Confirm Base network
