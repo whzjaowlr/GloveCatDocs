@@ -11,11 +11,18 @@ export default defineConfig({
   head: [
     ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
     ["meta", { name: "theme-color", content: "#f97316" }],
-    ["meta", { property: "og:title", content: "GloveCat Docs" }],
-    [
-      "meta",
-      { property: "og:description", content: "GloveCat (GCAT) Official Docs - Base Chain Meme Token" },
-    ],
+    // Open Graph
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://docs.glovecatcoin.com" }],
+    ["meta", { property: "og:title", content: "GloveCat Docs 🐱🥊" }],
+    ["meta", { property: "og:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
+    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/og-image.png" }],
+    // Twitter
+    ["meta", { name: "twitter:card", content: "summary_large_image" }],
+    ["meta", { name: "twitter:url", content: "https://docs.glovecatcoin.com" }],
+    ["meta", { name: "twitter:title", content: "GloveCat Docs 🐱🥊" }],
+    ["meta", { name: "twitter:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
+    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.png" }],
   ],
 
   themeConfig: {
