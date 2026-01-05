@@ -36,8 +36,8 @@ Bug Bounty          ███                           5%
 | Buy Fee  | 0%   | No fee ✅                  |
 | Sell Fee | 2%   | Liquidity 1% + Ecosystem 1%|
 
-::: tip NFT Discount
-Up to 30% fee discount based on NFT tier!
+::: tip Fee Structure
+Sell fee is permanently hardcoded at 2% and cannot be changed by any admin.
 :::
 
 ## Transaction Limits
@@ -48,7 +48,7 @@ Up to 30% fee discount based on NFT tier!
 | Max Per Wallet | 2%              | 10,000,000 GCAT   |
 
 ::: info Anti-Bot
-99% tax applied for 10 blocks after launch to prevent bots
+99% fee applied for 10 blocks after launch to prevent bots
 :::
 
 ## Lock-up Information

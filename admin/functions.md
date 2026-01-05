@@ -17,18 +17,17 @@ function unpause() external onlyOwner
 
 Pause/resume all transactions during emergencies.
 
-### Tax Settings
+### Fee Settings
 
-```solidity
-function setTaxRate(uint256 _buyTax, uint256 _sellTax) external onlyOwner
-```
+> ⚠️ **IMMUTABLE (변경 불가)**
+>
+> Fee rates are now permanently hardcoded in the contract:
+> - Buy Fee: 0% (fixed)
+> - Sell Fee: 2% (fixed) = `SELL_LIQUIDITY_FEE(1%) + SELL_ECOSYSTEM_FEE(1%)`
+>
+> The `setFeeRate()` function has been **removed**. No admin can change these values.
 
-| Parameter | Description | Limit |
-|-----------|-------------|-------|
-| `_buyTax` | Buy tax rate | Max 10% |
-| `_sellTax` | Sell tax rate | Max 10% |
-
-**Current Settings**: Buy 0%, Sell 2%
+**Current Settings**: Buy 0%, Sell 2% 🔒 **영구 고정**
 
 ### Whitelist
 
@@ -38,7 +37,7 @@ function removeFromWhitelist(address account) external onlyOwner
 function setWhitelistEnabled(bool enabled) external onlyOwner
 ```
 
-Whitelisted addresses are exempt from taxes and transaction limits.
+Whitelisted addresses are exempt from fees and transaction limits.
 
 ### Blacklist
 
@@ -65,10 +64,10 @@ function setMaxWalletAmount(uint256 amount) external onlyOwner
 
 ```solidity
 function setDeadBlocks(uint256 blocks) external onlyOwner
-function setDeadBlocksTax(uint256 tax) external onlyOwner
+function setDeadBlocksFee(uint256 fee) external onlyOwner
 ```
 
-High tax settings for bot prevention at launch.
+High fee settings for bot prevention at launch.
 
 ## Staking Functions
 

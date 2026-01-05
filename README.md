@@ -23,9 +23,9 @@
 
 | Feature | Description |
 |---------|-------------|
-| **Token Tax** | Buy 0%, Sell 2% (Liquidity 1% + Ecosystem 1%) |
+| **Token Fee** | Buy 0%, Sell 2% (Liquidity 1% + Ecosystem 1%) 🔒 Immutable |
 | **Limits** | MaxTx 0.3%, MaxWallet 3% |
-| **Auto-LP** | Tax token → ETH/GCAT liquidity conversion |
+| **Auto-LP** | Fee token → ETH/GCAT liquidity conversion |
 | **MEV Protection** | 15 min cooldown |
 
 ### Staking APY
