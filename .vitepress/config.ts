@@ -61,6 +61,7 @@ export default defineConfig({
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
             { text: "Migration", link: "/guide/migration" },
+            { text: "Terms of Service", link: "/guide/terms" },
           ],
         },
       ],

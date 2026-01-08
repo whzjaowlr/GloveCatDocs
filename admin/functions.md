@@ -63,11 +63,58 @@ function setMaxWalletAmount(uint256 amount) external onlyOwner
 ### Anti-Bot
 
 ```solidity
-function setDeadBlocks(uint256 blocks) external onlyOwner
-function setDeadBlocksFee(uint256 fee) external onlyOwner
+function setAntiBotEnabled(bool enabled) external onlyAdmin
+function setMaxTxPerBlock(uint8 max) external onlyAdmin
+function setWhitelisted(address account, bool status) external onlyAdmin
+function addWhitelistBatch(address[] calldata accounts) external onlyAdmin
+function startLaunch() external onlyAdmin
+function setWhitelistDuration(uint256 blocks) external onlyAdmin
 ```
 
-High fee settings for bot prevention at launch.
+| Function | Description |
+|----------|-------------|
+| `setAntiBotEnabled` | Enable/disable anti-bot features |
+| `setMaxTxPerBlock` | Max transactions per block (default: 2) |
+| `setWhitelisted` | Add/remove whitelist during launch |
+| `startLaunch` | Start launch (enables Dead Blocks) |
+
+::: info Dead Blocks (Hardcoded)
+- `DEAD_BLOCKS = 10` (first 10 blocks after launch)
+- `DEAD_BLOCK_FEE = 9900` (99% fee)
+- These values are **constants** and cannot be changed by any admin.
+:::
+
+## LP Lock Functions (GloveCatVault)
+
+### LP Lock Auto-Extension
+
+```solidity
+function autoExtendLP() external  // 누구나 호출 가능
+```
+
+LP Lock 자동 연장:
+- **조건**: 잔여 30일 이하일 때만 호출 가능
+- **효과**: +6개월 연장
+- **제한**: 마이그레이션 요청 중에는 연장 불가
+
+### Migration System
+
+> ⚠️ **MultiSig 전용**
+>
+> 마이그레이션은 MultiSig만 실행할 수 있습니다.
+
+```solidity
+function requestMigration() external onlyMultiSig   // 2개월 대기 시작
+function executeMigration() external onlyMultiSig   // 2개월 후 실행 → LP Unlock 가능
+function cancelMigration() external onlyMultiSig    // 실행 전 취소 가능
+function getMigrationInfo() external view           // 마이그레이션 상태 조회
+```
+
+| 단계 | 함수 | 대기 시간 |
+|------|------|----------|
+| 1. 요청 | `requestMigration()` | 2개월 카운트다운 |
+| 2. 실행 | `executeMigration()` | 즉시 (스냅샷 기록) |
+| 3. LP Unlock | `unlockLP()` | 마이그레이션 실행 후에만 가능 |
 
 ## Staking Functions
 
@@ -77,7 +124,7 @@ High fee settings for bot prevention at launch.
 function setRewardRate(uint256 rate) external onlyOwner
 ```
 
-Adjust staking reward rate (annual, basis points).
+Adjust staking incentive rate (annual, basis points).
 
 ### Lock-up Options
 

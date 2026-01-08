@@ -27,6 +27,7 @@
 | **Limits** | MaxTx 0.3%, MaxWallet 3% |
 | **Auto-LP** | Fee token → ETH/GCAT liquidity conversion |
 | **MEV Protection** | 15 min cooldown |
+| **LP Lock** | Auto-extension 🔁 (30 days → +6 months), Migration 2 month delay |
 
 ### Staking APY
 

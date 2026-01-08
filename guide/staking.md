@@ -1,6 +1,6 @@
 # Staking Guide
 
-Stake GCAT to earn rewards.
+Stake GCAT to earn incentives.
 
 ## Staking Types
 
@@ -13,7 +13,7 @@ Stake GCAT to earn rewards.
 | Min Amount    | 1,000 GCAT            |
 
 ::: tip Advantage
-Earn rewards while maintaining liquidity.
+Earn incentives while maintaining liquidity.
 :::
 
 ### Lock-up Staking
@@ -26,7 +26,7 @@ Lock your tokens for higher APY.
 | 180 days | 5% | - |
 | 365 days | 8% | - |
 | 730 days (2yr) | 12% | - |
-| 1460 days (4yr) | 15% | Max APY |
+| 1460 days (4yr) | 17% | Max APY |
 
 ::: warning Note
 Withdrawal is not possible during the lock-up period.
@@ -38,11 +38,11 @@ Based on GCAT holdings:
 
 | Tier | Holdings (GCAT) | Boost |
 | ---- | --------------- | ----- |
-| Bronze | 1,000 ~ 100,000 | 1.0x |
+| Bronze | 0 ~ 100,000 | 1.0x |
 | Silver | 100,001 ~ 500,000 | 1.1x |
 | Gold | 500,001 ~ 1,000,000 | 1.2x |
-| Platinum | 1,000,001 ~ 2M | 1.4x |
-| Diamond | 2M+ | 1.8x |
+| Platinum | 1,000,001 ~ 5M | 1.3x |
+| Diamond | 5M+ | 1.7x |
 
 ## Referral System
 
@@ -50,7 +50,7 @@ Based on GCAT holdings:
 - **Referee Bonus**: 5%
 - **Setting**: One-time only
 
-**Example**: User B (referred by A) claims 100 GCAT reward:
+**Example**: User B (referred by A) claims 100 GCAT incentive:
 - B receives: 105 GCAT
 - A receives: 5 GCAT
 
@@ -72,11 +72,11 @@ Based on GCAT holdings:
 5. Click "Stake" button
 6. Approve transaction in wallet
 
-### 3. Claim Rewards
+### 3. Claim Incentives
 
-1. Click "Claim Rewards" button
+1. Click "Claim Incentives" button
 2. Approve transaction
-3. Rewards received
+3. Incentives received
 
 ## FAQ
 
@@ -84,6 +84,6 @@ Based on GCAT holdings:
 
 A: No. You only pay gas fees.
 
-### Q: How often can I claim rewards?
+### Q: How often can I claim incentives?
 
 A: Anytime you want.

@@ -1,6 +1,6 @@
 # Rewards System
 
-Earn GCAT rewards through various activities.
+Earn GCAT incentives through various activities.
 
 ## Daily Check-in
 
@@ -24,7 +24,7 @@ Earn GCAT rewards through various activities.
 1. Go to Rewards tab
 2. Click "Check-in" button
 3. Approve transaction
-4. Receive rewards!
+4. Receive incentives!
 
 ### Special Badge
 
@@ -39,7 +39,7 @@ Achieve **100 Day Streak** to receive the **100 Day Streak Badge** (Soulbound).
 | **STAKING** | Time-weighted average: `Σ(amount × days) / season_days` |
 | **VOLUME** | Total volume: `buyVolume + sellVolume` |
 
-### Season Rewards (NFT)
+### Season Incentives (NFT)
 
 | Rank | NFT Tier |
 | ---- | -------- |
@@ -51,13 +51,13 @@ Achieve **100 Day Streak** to receive the **100 Day Streak Badge** (Soulbound).
 ### Season Duration
 
 - Monthly seasons
-- On-chain data → Off-chain aggregation → Merkle Proof → Rewards
+- On-chain data → Off-chain aggregation → Merkle Proof → Incentives
 
 ## Achievement System
 
-Complete special activities to earn achievement badges and rewards.
+Complete special activities to earn achievement badges and incentives.
 
-| Achievement | Condition | Reward |
+| Achievement | Condition | Incentive |
 | ----------- | --------- | ------ |
 | First Stake | Complete first staking | Badge + GCAT |
 | Voter | First governance vote | Badge |

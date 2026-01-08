@@ -22,7 +22,7 @@ Join the GloveCat community!
 
 1. **Join Telegram** - Real-time communication
 2. **Follow Twitter** - Announcements and updates
-3. **Governance** - Vote in SignalingDAO
+3. **Governance** - Vote on Snapshot
 4. **Create Content** - Memes, art, guides
 
 ## Bug Reports

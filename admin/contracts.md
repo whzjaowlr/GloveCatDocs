@@ -9,7 +9,7 @@ List of deployed smart contracts.
 | GloveCatCore      | `0x2489E6892f94a692ae71dC2d43878F8d8A4a5581` | ✅       |
 | Staking           | TBD                                          | -        |
 | GloveCatNFT       | TBD                                          | -        |
-| SignalingDAO      | TBD                                          | -        |
+| Snapshot          | snapshot.org/#/glovecat.eth                  | ✅ (off-chain) |
 | RewardDistributor | TBD                                          | -        |
 
 ## Network Information
@@ -27,7 +27,7 @@ Contract ABIs can be found in the `/src/abi/` folder.
 - `GloveCatCore.json`
 - `Staking.json`
 - `GloveCatNFT.json`
-- `SignalingDAO.json`
+- External: [Snapshot](https://snapshot.org/#/glovecat.eth)
 
 ## Verification
 

@@ -5,14 +5,14 @@ GloveCat is a **Base chain** meme token that provides community-driven transpare
 ## 🐱🥊 Vision
 
 - **Transparent Operations**: All smart contracts open-sourced
-- **Community-Driven**: Opinion gathering through SignalingDAO
+- **Community-Driven**: Opinion gathering through Snapshot voting
 - **Sustainable Ecosystem**: Connecting staking, NFT, and gamification
 
 ## Core Features
 
 | Feature     | Description                                    |
 | ----------- | ---------------------------------------------- |
-| Staking     | Earn rewards with Flexible/Lock-up staking     |
+| Staking     | Earn incentives with Flexible/Lock-up staking     |
 | NFT         | Tier-based benefits (fee discounts, boosts)    |
 | Governance  | Create proposals and vote                      |
 | Rewards     | Daily check-in, leaderboard                    |

@@ -20,7 +20,7 @@ Any wallet that supports Base network: MetaMask, Rainbow, Coinbase Wallet, etc.
 
 ## Staking
 
-### When do I receive staking rewards?
+### When do I receive staking incentives?
 
 Anytime by clicking the "Claim Rewards" button.
 
@@ -50,7 +50,7 @@ Only users staking 10,000+ GCAT can create proposals.
 
 ### Are voting results always implemented?
 
-No, SignalingDAO is a signaling tool. The team reviews and decides.
+No, Snapshot voting is advisory. The team reviews and decides.
 
 ## Security
 

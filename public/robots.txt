@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://docs.glovecatcoin.com/sitemap.xml
+
+# GloveCat Documentation
+# https://docs.glovecatcoin.com

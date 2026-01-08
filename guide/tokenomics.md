@@ -16,7 +16,7 @@ GCAT token distribution and economic structure.
 ```
 Liquidity Pool      █████████████████████████    45%
 Community           ████████████████             25%
-Staking Rewards     ██████████                   15%
+Staking Incentives   ██████████                   15%
 Team (Locked)       ██████                       10%
 Bug Bounty          ███                           5%
 ```
@@ -25,7 +25,7 @@ Bug Bounty          ███                           5%
 | --------------- | ----- | ------ | ------------------------------ |
 | Liquidity Pool  | 45%   | 225M   | Initial LP + Auto-liquidity    |
 | Community       | 25%   | 125M   | Airdrops, marketing, events    |
-| Staking Rewards | 15%   | 75M    | Flexible/Lock-up rewards       |
+| Staking Incentives | 15%   | 75M    | Flexible/Lock-up incentives       |
 | Team            | 10%   | 50M    | 24-month lock-up               |
 | Bug Bounty      | 5%    | 25M    | Security vulnerability rewards |
 
@@ -46,6 +46,10 @@ Sell fee is permanently hardcoded at 2% and cannot be changed by any admin.
 | -------------- | --------------- | ----------------- |
 | Max Per TX     | 0.3%            | 1,500,000 GCAT    |
 | Max Per Wallet | 2%              | 10,000,000 GCAT   |
+
+::: warning Limit Expiry
+Transaction limits are automatically removed 2 weeks after launch (`LIMIT_EXPIRY = 14 days`)
+:::
 
 ::: info Anti-Bot
 99% fee applied for 10 blocks after launch to prevent bots

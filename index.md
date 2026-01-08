@@ -19,16 +19,16 @@ hero:
 features:
   - icon: 💰
     title: Staking
-    details: Earn rewards with Flexible and Lock-up staking options
+    details: Earn incentives with Flexible and Lock-up staking options
   - icon: 🎨
     title: NFT Tiers
     details: Get fee discounts and staking boosts with NFT holdings
   - icon: 🗳️
     title: Governance
-    details: Community participation through SignalingDAO
+    details: Community participation through Snapshot
   - icon: 🎁
-    title: Rewards System
-    details: Daily check-in rewards, leaderboard, achievement system
+    title: Incentives System
+    details: Daily check-in incentives, leaderboard, achievement system
 ---
 
 ## Quick Links
