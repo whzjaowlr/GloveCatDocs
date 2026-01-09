@@ -57,8 +57,30 @@ function setMaxWalletAmount(uint256 amount) external onlyOwner
 
 | Function | Current Value | Description |
 |----------|---------------|-------------|
-| `maxTxAmount` | 0.3% | Max limit per transaction |
-| `maxWalletAmount` | 2% | Max wallet holdings |
+| `maxTxAmount` | 0.5% | Max limit per transaction (2,500,000 GCAT) |
+| `maxWalletAmount` | 2.5% | Max wallet holdings (12,500,000 GCAT) |
+
+### Oracle Price Check (배포 후 필수 설정)
+
+::: danger CRITICAL - 배포 후 반드시 설정
+Oracle 가격 체크는 기본적으로 **비활성화**되어 있습니다. OracleManager 배포 후 반드시 활성화해야 합니다.
+:::
+
+```solidity
+// GloveCatCore
+function setOraclePriceCheckEnabled(bool enabled) external onlyAdmin
+function setOracleManager(address _oracleManager) external onlyAdmin
+
+// AutoLiquidityManager
+function setOraclePriceCheckEnabled(bool enabled) external onlyAdmin
+function setOracleManager(address _oracleManager) external onlyAdmin
+```
+
+**배포 후 필수 절차:**
+1. OracleManager 컨트랙트 배포
+2. GloveCatCore에서 `setOracleManager(oracleManagerAddress)` 호출
+3. GloveCatCore에서 `setOraclePriceCheckEnabled(true)` 호출
+4. AutoLiquidityManager에서도 동일하게 설정
 
 ### Anti-Bot
 
@@ -86,35 +108,30 @@ function setWhitelistDuration(uint256 blocks) external onlyAdmin
 
 ## LP Lock Functions (GloveCatVault)
 
-### LP Lock Auto-Extension
+### LP Lock (10-Year Fixed)
+
+LP tokens are locked for **10 years** by default. Early unlock is only possible through migration.
 
 ```solidity
-function autoExtendLP() external  // 누구나 호출 가능
+uint256 public constant DEFAULT_LP_LOCK_DURATION = 3650 days; // 10 years
 ```
-
-LP Lock 자동 연장:
-- **조건**: 잔여 30일 이하일 때만 호출 가능
-- **효과**: +6개월 연장
-- **제한**: 마이그레이션 요청 중에는 연장 불가
 
 ### Migration System
 
-> ⚠️ **MultiSig 전용**
->
-> 마이그레이션은 MultiSig만 실행할 수 있습니다.
+> ⚠️ **Admin/MultiSig Only**
 
 ```solidity
-function requestMigration() external onlyMultiSig   // 2개월 대기 시작
-function executeMigration() external onlyMultiSig   // 2개월 후 실행 → LP Unlock 가능
-function cancelMigration() external onlyMultiSig    // 실행 전 취소 가능
-function getMigrationInfo() external view           // 마이그레이션 상태 조회
+function requestMigration() external onlyAdmin   // 30-day countdown starts
+function executeMigration() external onlyAdmin   // After 30 days → LP Unlock possible
+function cancelMigration() external onlyAdmin    // Cancel before execution
+function getMigrationInfo() external view        // Check migration status
 ```
 
-| 단계 | 함수 | 대기 시간 |
-|------|------|----------|
-| 1. 요청 | `requestMigration()` | 2개월 카운트다운 |
-| 2. 실행 | `executeMigration()` | 즉시 (스냅샷 기록) |
-| 3. LP Unlock | `unlockLP()` | 마이그레이션 실행 후에만 가능 |
+| Step | Function | Delay |
+|------|----------|-------|
+| 1. Request | `requestMigration()` | 30-day countdown |
+| 2. Execute | `executeMigration()` | Immediate (snapshot recorded) |
+| 3. LP Unlock | `unlockLP()` | Only after migration executed |
 
 ## Staking Functions
 

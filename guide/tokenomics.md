@@ -68,5 +68,5 @@ Transaction limits are automatically removed 10 days after launch (`LIMIT_EXPIRY
 
 ## Lock-up Information
 
-- **Team Wallet**: 24-month linear vesting
+- **Team Wallet**: 6-month cliff + linear vesting
 - **Staking Lock-up**: 90/180/365/730/1460 days options
