@@ -11,8 +11,8 @@ All admin functions should be executed through Safe{Wallet} multisig.
 ### Pause
 
 ```solidity
-function pause() external onlyOwner
-function unpause() external onlyOwner
+function pause() external onlyAdmin
+function unpause() external onlyAdmin
 ```
 
 Pause/resume all transactions during emergencies.
@@ -133,6 +133,42 @@ function setLockupOption(uint256 period, uint256 bonusRate) external onlyOwner
 ```
 
 Set additional reward rates for each lock-up period.
+
+### Tier Management
+
+```solidity
+function addTier(uint256 minAmount, uint256 maxAmount, uint256 multiplierBasisPoints, uint256 taxDiscountBasisPoints) external onlyAdmin
+function updateTier(uint256 tierId, uint256 minAmount, uint256 maxAmount, uint256 multiplierBasisPoints, uint256 taxDiscountBasisPoints, bool active) external onlyAdmin
+function getUserTaxDiscount(address user) external view returns (uint256)
+```
+
+| Function | Description |
+|----------|-------------|
+| `addTier` | Add new staking tier |
+| `updateTier` | Update tier settings (Bronze/Silver tax discount fixed at 0%) |
+| `getUserTaxDiscount` | Get user's tax discount based on staking tier |
+
+::: info Boost Calculation
+Staking boost and NFT boost are **summed** (not multiplied):
+- **Formula**: `1.0x + (tierBonus) + (nftBonus)`
+- **Example**: Diamond (1.5x) + Legendary NFT (1.8x) = 1.0x + 0.5x + 0.8x = **2.3x**
+:::
+
+## Tax Discount System (GloveCatCore)
+
+```solidity
+function getTotalTaxDiscount(address user) external view returns (uint256)
+function setStakingContract(address _stakingContract) external onlyAdmin
+function setNftContract(address _nftContract) external onlyAdmin
+function setLevelSystemContract(address _levelSystemContract) external onlyAdmin
+```
+
+Tax discounts from Staking Tier and NFT Tier are **summed** (max 100%):
+
+| Source | Discount Range |
+|--------|---------------|
+| Staking Tier | 0% (Bronze/Silver fixed), configurable for Gold+ |
+| NFT Tier | 10% (Common) ~ 80% (Legendary) |
 
 ## Ownership
 

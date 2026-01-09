@@ -4,23 +4,27 @@ GloveCat NFTs provide various benefits to holders.
 
 ## Tier System
 
-| Tier | Fee Discount | Staking Boost | Holdings (GCAT) |
-| ---- | ------------ | ------------- | --------------- |
-| 🥉 Bronze | 5% | 1.0x | 0 ~ 100,000 |
-| 🥈 Silver | 10% | 1.1x | 100,001 ~ 500,000 |
-| 🥇 Gold | 15% | 1.2x | 500,001 ~ 1,000,000 |
-| 💎 Platinum | 20% | 1.3x | 1,000,001 ~ 5M |
-| 👑 Diamond | 25% | 1.5x | 5M+ |
+| Tier | Fee Discount | Staking Boost |
+| ---- | ------------ | ------------- |
+| 🐱 Common | 10% | 1.1x |
+| 🌟 Rare | 25% | 1.2x |
+| 💜 Epic | 50% | 1.5x |
+| 👑 Legendary | 80% | 1.8x |
 
 ## Benefits
 
 ### Fee Discount
 
-NFT holders receive reduced transaction fees.
+NFT holders receive reduced transaction fees. Tax discounts are **summed** with Staking Tier discounts (max 100%).
+
+**Example**: Epic NFT (50%) + Diamond Staking (configurable) = Combined discount
 
 ### Staking Boost
 
-Multiplier applied to staking incentives.
+Bonus applied to staking rewards. Boosts are **summed** (not multiplied):
+
+- **Formula**: `1.0x + (Staking Tier Bonus) + (NFT Tier Bonus)`
+- **Example**: Silver Tier (1.1x) + Rare NFT (1.2x) = 1.0x + 0.1x + 0.2x = **1.3x**
 
 ### Voting Weight
 

@@ -32,17 +32,28 @@ Lock your tokens for higher APY.
 Withdrawal is not possible during the lock-up period.
 :::
 
-## Tier Boost
+## Tier System
 
-Based on GCAT holdings:
+Based on GCAT staking amount:
 
-| Tier | Holdings (GCAT) | Boost |
-| ---- | --------------- | ----- |
-| Bronze | 0 ~ 100,000 | 1.0x |
-| Silver | 100,001 ~ 500,000 | 1.1x |
-| Gold | 500,001 ~ 1,000,000 | 1.2x |
-| Platinum | 1,000,001 ~ 5M | 1.3x |
-| Diamond | 5M+ | 1.7x |
+| Tier | Holdings (GCAT) | Staking Boost | Tax Discount |
+| ---- | --------------- | ------------- | ------------ |
+| Bronze | 0 ~ 100,000 | 1.0x | 0% (fixed) |
+| Silver | 100,001 ~ 500,000 | 1.1x | 0% (fixed) |
+| Gold | 500,001 ~ 1,000,000 | 1.2x | Configurable |
+| Platinum | 1,000,001 ~ 5M | 1.3x | Configurable |
+| Diamond | 5M+ | 1.5x | Configurable |
+
+::: tip Boost Calculation
+Staking boost from multiple sources are **summed** (not multiplied):
+
+- **Formula**: `1.0x + (Tier Bonus) + (NFT Bonus)`
+- **Example**: Diamond (1.5x) + Legendary NFT (1.8x) = 1.0x + 0.5x + 0.8x = **2.3x**
+:::
+
+::: info Tax Discount
+Tax discounts from Staking Tier and NFT Tier are also summed (max 100%).
+:::
 
 ## Referral System
 

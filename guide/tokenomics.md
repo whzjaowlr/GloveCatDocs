@@ -40,6 +40,17 @@ Bug Bounty          ███                           5%
 Sell fee is permanently hardcoded at 2% and cannot be changed by any admin.
 :::
 
+### Tax Discount
+
+Holders can receive tax discounts based on Staking Tier and NFT Tier (summed, max 100%):
+
+| Source | Discount Range |
+|--------|---------------|
+| Staking Tier | 0% (Bronze/Silver), configurable (Gold+) |
+| NFT Tier | 10% (Common) ~ 80% (Legendary) |
+
+**Example**: Epic NFT (50%) + Gold Staking (0%) = **50% discount** → 1% sell fee
+
 ## Transaction Limits
 
 | Item           | Limit           | Note              |
