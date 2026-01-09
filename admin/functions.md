@@ -144,8 +144,8 @@ function getUserTaxDiscount(address user) external view returns (uint256)
 
 | Function | Description |
 |----------|-------------|
-| `addTier` | Add new staking tier |
-| `updateTier` | Update tier settings (Bronze/Silver tax discount fixed at 0%) |
+| `addTier` | Add new staking tier **(Max Multiplier: 5.0x)** |
+| `updateTier` | Update tier settings (**Max Multiplier: 5.0x**, Bronze/Silver tax discount fixed at 0%) |
 | `getUserTaxDiscount` | Get user's tax discount based on staking tier |
 
 ::: info Boost Calculation

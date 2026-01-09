@@ -49,6 +49,7 @@ Staking boost from multiple sources are **summed** (not multiplied):
 
 - **Formula**: `1.0x + (Tier Bonus) + (NFT Bonus)`
 - **Example**: Diamond (1.5x) + Legendary NFT (1.8x) = 1.0x + 0.5x + 0.8x = **2.3x**
+- **Note**: The total summed multiplier is capped at **5.0x**.
 :::
 
 ::: info Tax Discount
