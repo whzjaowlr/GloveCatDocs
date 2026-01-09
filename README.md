@@ -24,7 +24,7 @@
 | Feature | Description |
 |---------|-------------|
 | **Token Fee** | Buy 0%, Sell 2% (Liquidity 1% + Ecosystem 1%) 🔒 Immutable |
-| **Limits** | MaxTx 0.3%, MaxWallet 3% |
+| **Limits** | MaxTx 0.5%, MaxWallet 2.5% |
 | **Auto-LP** | Fee token → ETH/GCAT liquidity conversion |
 | **MEV Protection** | 15 min cooldown |
 | **LP Lock** | Auto-extension 🔁 (30 days → +6 months), Migration 2 month delay |

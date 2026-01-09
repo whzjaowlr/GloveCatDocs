@@ -55,11 +55,11 @@ Holders can receive tax discounts based on Staking Tier and NFT Tier (summed, ma
 
 | Item           | Limit           | Note              |
 | -------------- | --------------- | ----------------- |
-| Max Per TX     | 0.3%            | 1,500,000 GCAT    |
-| Max Per Wallet | 2%              | 10,000,000 GCAT   |
+| Max Per TX     | 0.5%            | 2,500,000 GCAT    |
+| Max Per Wallet | 2.5%            | 12,500,000 GCAT   |
 
 ::: warning Limit Expiry
-Transaction limits are automatically removed 2 weeks after launch (`LIMIT_EXPIRY = 14 days`)
+Transaction limits are automatically removed 10 days after launch (`LIMIT_EXPIRY = 10 days`)
 :::
 
 ::: info Anti-Bot
