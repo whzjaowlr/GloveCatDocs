@@ -4,7 +4,7 @@ Procedures for responding to security incidents.
 
 ## Emergency Contacts
 
-- **Telegram**: @GloveCatOfficial
+- **Telegram**: @glovecatcoin
 - **Twitter**: @glovecatcoin
 
 ## Response Procedures

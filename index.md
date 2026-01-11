@@ -37,5 +37,5 @@ features:
 | -------- | --------------------------------------------------------------------------------- |
 | dApp     | [glovecatcoin.com](https://glovecatcoin.com)                                      |
 | Twitter  | [@glovecatcoin](https://twitter.com/glovecatcoin)                                 |
-| Telegram | [GloveCatOfficial](https://t.me/GloveCatOfficial)                                 |
+| Telegram | [glovecatcoin](https://t.me/glovecatcoin)                                 |
 | BaseScan | [Contract](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |
