@@ -8,6 +8,12 @@ export default defineConfig({
   // Custom domain - docs.glovecatcoin.com
   base: '/',
 
+  // Sitemap 자동 생성
+  sitemap: {
+    hostname: 'https://docs.glovecatcoin.com',
+    lastmodDateOnly: false,
+  },
+
   head: [
     ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
     ["meta", { name: "theme-color", content: "#f97316" }],
