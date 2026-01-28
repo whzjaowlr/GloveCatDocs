@@ -6,7 +6,7 @@ Join the GloveCat community!
 
 | Channel      | Link                                              |
 | ------------ | ------------------------------------------------- |
-| 🐦 Twitter/X | [@glovecatcoin](https://twitter.com/glovecatcoin) |
+| 🐦 Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | 📱 Telegram  | [glovecatcoin](https://t.me/glovecatcoin) |
 | 💬 Discord   | [GloveCat Server](https://discord.gg/glovecat)    |
 
