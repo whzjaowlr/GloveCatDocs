@@ -97,8 +97,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "© 2025 GloveCat. All rights reserved.",
-      copyright: "This project is created for educational and entertainment purposes.",
+      message: "Contact: <a href='mailto:glovecatcoin@gmail.com'>glovecatcoin@gmail.com</a> | <a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms of Service</a>",
+      copyright: "© 2026 GloveCat. All rights reserved. <br> This project is created for educational and entertainment purposes.",
     },
 
     search: {

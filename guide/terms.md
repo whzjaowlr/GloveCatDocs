@@ -28,15 +28,13 @@ Services.
 
 **You are NOT permitted to use the Services if you are a citizen, resident, or located in:**
 
-1. **Republic of Korea (South Korea)** - 대한민국
-2. **United States of America** - Including all territories (Puerto Rico, Guam, U.S. Virgin Islands,
-   etc.)
-3. **Democratic People's Republic of Korea (North Korea)**
-4. **Iran**
-5. **Syria**
-6. **Cuba**
-7. **Crimea region of Ukraine**
-8. **Any other jurisdiction where cryptocurrency or digital assets are prohibited by law**
+1. **Republic of Korea (South Korea)**
+2. **Democratic People's Republic of Korea (North Korea)**
+3. **Iran**
+4. **Syria**
+5. **Cuba**
+6. **Crimea region of Ukraine**
+7. **Any other jurisdiction where cryptocurrency or digital assets are prohibited by law**
 
 ### 2.3 User Representation
 
@@ -153,12 +151,10 @@ The protocol implements daily volume limits that reset every 24 hours from your 
 
 You agree NOT to:
 
-1. Use the Services from a Restricted Jurisdiction
-2. Circumvent geographic restrictions (VPN, proxy, etc.)
-3. Engage in market manipulation
-4. Use the Services for money laundering or illegal activities
-5. Provide false information about your identity or location
-6. Interfere with the proper functioning of the Services
+1. Engage in market manipulation
+2. Use the Services for money laundering or illegal activities
+3. Provide false information about your identity or location
+4. Interfere with the proper functioning of the Services
 
 ---
 
@@ -192,8 +188,7 @@ any claims, damages, or expenses arising from:
 
 ## 9. Governing Law
 
-These Terms shall be governed by and construed in accordance with the laws of [TO BE DETERMINED -
-consult legal counsel].
+These Terms shall be governed by and construed in accordance with the laws of **Republic of Korea**, without regard to its conflict of law provisions.
 
 ---
 
@@ -213,7 +208,7 @@ constitutes acceptance of the new Terms.
 
 ## 12. Contact
 
-For questions about these Terms, contact: [INSERT CONTACT EMAIL]
+For questions about these Terms, contact: [glovecatcoin@gmail.com](mailto:glovecatcoin@gmail.com)
 
 ---
 
@@ -229,16 +224,9 @@ BY THESE TERMS OF SERVICE.**
 
 ---
 
-## 한국어 안내 (Korean Notice)
-
 > [!WARNING] **대한민국 거주자 이용 불가**
 >
 > 본 서비스는 대한민국 거주자에게 제공되지 않습니다. 대한민국 거주자의 서비스 이용은 엄격히
 > 금지되며, 이를 위반하여 발생하는 모든 법적 책임은 이용자 본인에게 있습니다.
 
 ---
-
-> [!WARNING] **Not Available to US Residents**
->
-> This service is NOT available to citizens or residents of the United States. US persons are
-> strictly prohibited from using this service. Any violation is at your own legal risk.
