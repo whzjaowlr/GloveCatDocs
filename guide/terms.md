@@ -1,7 +1,7 @@
 # GloveCat Terms of Service
 
-> **Last Updated**: 2026-01-06  
-> **Effective Date**: 2026-01-06
+> **Last Updated**: 2026-02-19  
+> **Effective Date**: 2026-02-19
 
 ---
 
@@ -12,6 +12,17 @@ related services (collectively, the "Services"), you agree to be bound by these 
 ("Terms").
 
 **If you do not agree to these Terms, do not use the Services.**
+
+---
+
+## ⛔ Meme Coin Disclaimer (Assessment of Value)
+
+**GloveCat ($GCAT) is a meme coin created for entertainment purposes only.**
+
+1.  **No Intrinsic Value**: $GCAT has **no intrinsic value** or expectation of financial return.
+2.  **No Utility**: The token is for community engagement and has no inherent utility outside the GloveCat ecosystem.
+3.  **Not a Security**: $GCAT is **NOT** a security, investment contract, or financial instrument.
+4.  **No Team Allocations for Profit**: Team tokens are strictly for ecosystem development and are not intended for profit distribution.
 
 ---
 

@@ -29,6 +29,16 @@ export default defineConfig({
     ["meta", { name: "twitter:title", content: "GloveCat Docs 🐱🥊" }],
     ["meta", { name: "twitter:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
     ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.png" }],
+    // Security Headers (CSP)
+    [
+      "meta",
+      {
+        "http-equiv": "Content-Security-Policy",
+        content: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:;",
+      },
+    ],
+    ["meta", { "http-equiv": "X-Content-Type-Options", content: "nosniff" }],
+    ["meta", { name: "referrer", content: "strict-origin-when-cross-origin" }],
   ],
 
   themeConfig: {
