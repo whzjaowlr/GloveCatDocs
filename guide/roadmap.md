@@ -1,53 +1,44 @@
 # Roadmap
 
-> **Last Updated**: 2026-01-06
+> **Last Updated**: 2026-05-24
 
 GloveCat project development plan and progress.
 
 ## 📊 Progress Status
 
-| Priority | Item                       | Status       |
-| -------- | -------------------------- | ------------ |
-| 🔴 P0    | GloveCatCore Deployment    | ✅ Complete  |
-| 🔴 P0    | BlacklistManager Separation| ✅ Complete  |
-| 🔴 P0    | TieredAccess Migration     | ✅ Complete  |
-| 🔴 P0    | Safe MultiSig Ownership    | 🟡 In Progress |
-| 🟡 P1    | Forta Real-time Monitoring | ⏳ Planned   |
-| 🟡 P1    | Dual Oracle (Pyth Backup)  | ⏳ Planned   |
-| 🔵 P2    | Aerodrome DEX Integration  | ⏳ Planned   |
-| 🔵 P2    | Multi-language Support     | ✅ Complete (KO/EN) |
+| Priority | Item                              | Status       |
+| -------- | --------------------------------- | ------------ |
+| 🔴 P0    | Five-contract Base Mainnet deploy | ✅ Complete  |
+| 🔴 P0    | BaseScan source verification      | ✅ Complete  |
+| 🔴 P0    | Safe transaction execution        | 🟡 Pending   |
+| 🔴 P0    | Public liquidity and LP lock      | 🟡 Pending   |
+| 🟡 P1    | Public monitoring dashboard       | ⏳ Planned   |
+| 🟡 P1    | Dune analytics dashboard          | ⏳ Planned   |
+| 🔵 P2    | Aerodrome liquidity integration   | ⏳ Planned   |
+| 🔵 P2    | Additional language support       | ⏳ Planned   |
 
 ---
 
-## 🔴 P0: Pre-Deployment Required
+## 🔴 P0: Launch Operations
 
-### GloveCatCore Deployment ✅
-Token contract deployed and verified on Base mainnet
+### Five-contract Base Mainnet deploy ✅
+`GloveCatCore`, `Staking`, `GloveCatNFT`, `NFTLevelSystem`, and `GamificationCore` are deployed
+and verified on Base Mainnet.
 
-### BlacklistManager Separation ✅
-Separated blacklist management contract for enhanced security
+### Safe transaction execution 🟡
+Prepared Safe transactions must be executed to connect the deployed contracts.
 
-### TieredAccess Migration ✅
-Owner/Admin permission separation system implemented
-
-### Safe MultiSig Ownership Transfer 🟡
-- 2-of-3 MultiSig setup
-- All contract ownership transfer planned
+### Public liquidity and LP lock 🟡
+Pool creation, project liquidity addition, and LP locking are external launch operations and are
+not automatic token-contract features.
 
 ---
 
-## 🟡 P1: Within 2 Weeks Post-Deployment
+## 🟡 P1: Post-Launch Visibility
 
-### Forta Real-time Monitoring
-- Large token transfer detection
-- Permission change alerts
-- Slack/Discord webhook integration
-
-### Dual Oracle
-| Role    | Oracle       | Status     |
-| ------- | ------------ | ---------- |
-| Primary | Chainlink    | ✅ Implemented |
-| Backup  | Pyth Network | ⏳ Planned |
+- Public monitoring dashboard
+- Dune analytics dashboard
+- Community-facing contract status pages
 
 ---
 
@@ -62,5 +53,5 @@ Owner/Admin permission separation system implemented
 
 ::: info Note
 Roadmap may be adjusted based on market conditions.
-Next review: 2026-Q1
+Next review: 2026-Q2
 :::

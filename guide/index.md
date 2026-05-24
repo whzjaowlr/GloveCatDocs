@@ -13,7 +13,7 @@ GloveCat is a **Base chain** meme token that provides community-driven transpare
 | Feature     | Description                                    |
 | ----------- | ---------------------------------------------- |
 | Staking     | Earn incentives with Flexible/Lock-up staking     |
-| NFT         | Tier-based benefits (fee discounts, boosts)    |
+| NFT         | Tier-based staking boosts, badges, and EXP     |
 | Governance  | Create proposals and vote                      |
 | Rewards     | Daily check-in, leaderboard                    |
 
@@ -22,7 +22,7 @@ GloveCat is a **Base chain** meme token that provides community-driven transpare
 | Item           | Value                                         |
 | -------------- | --------------------------------------------- |
 | Network        | Base (Chain ID: 8453)                         |
-| Token Address  | `0x2489E6892f94a692ae71dC2d43878F8d8A4a5581`  |
+| Token Address  | <ContractAddress name="GloveCatCore" token /> |
 | Symbol         | GCAT                                          |
 | Decimals       | 18                                            |
 

@@ -15,7 +15,7 @@ Join the GloveCat community!
 | Tool           | Link                                                                              |
 | -------------- | --------------------------------------------------------------------------------- |
 | 🚀 dApp        | [glovecatcoin.com](https://glovecatcoin.com)                                      |
-| 📊 BaseScan    | [Contract](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |
+| 📊 BaseScan    | <ContractLink name="GloveCatCore" label="Contract" token />                       |
 | 📈 DEXScreener | [GCAT/WETH](https://dexscreener.com/base/gcat)                                    |
 
 ## How to Participate

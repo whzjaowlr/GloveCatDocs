@@ -3,8 +3,11 @@
 GloveCat is managed through Gnosis Safe multisig.
 
 ## Safe Address
-- **Mainnet**: `TBD`
+- **Mainnet**: <code>0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803</code>
 - **Signers**: 2-of-3 configuration
+
+See [Contract Information](/admin/contracts) for the current Safe, launch-liquidity, treasury,
+team, and ecosystem fee wallet addresses.
 
 ## Transaction Execution Process
 

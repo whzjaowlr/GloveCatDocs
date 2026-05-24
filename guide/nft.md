@@ -1,23 +1,17 @@
 # NFT Guide
 
-GloveCat NFTs provide various benefits to holders.
+GloveCat NFTs provide staking boosts, badges, and gamification hooks to holders.
 
 ## Tier System
 
-| Tier | Fee Discount | Staking Boost |
-| ---- | ------------ | ------------- |
-| 🐱 Common | 10% | 1.1x |
-| 🌟 Rare | 25% | 1.2x |
-| 💜 Epic | 50% | 1.5x |
-| 👑 Legendary | 80% | 1.8x |
+| Tier | Staking Boost |
+| ---- | ------------- |
+| 🐱 Common | 1.1x |
+| 🌟 Rare | 1.2x |
+| 💜 Epic | 1.5x |
+| 👑 Legendary | 1.8x |
 
 ## Benefits
-
-### Fee Discount
-
-NFT holders receive reduced transaction fees. Tax discounts are **summed** with Staking Tier discounts (max 100%).
-
-**Example**: Epic NFT (50%) + Diamond Staking (configurable) = Combined discount
 
 ### Staking Boost
 

@@ -94,18 +94,17 @@ blockchain. We do not have the ability to:
 
 ---
 
-### 4.1 Token Tax Structure
+### 4.1 Token Fee Structure
 
-Transactions may be subject to automatic protocol-level tax:
+The active GCAT core has a fixed fee surface:
 
-| Type          | Rate | Purpose                                                |
-| ------------- | ---- | ------------------------------------------------------ |
-| Liquidity Tax | 1%   | Automatically added to on-chain liquidity              |
-| Ecosystem Tax | 1%   | Protocol-level allocation for ecosystem sustainability |
-| Burn Tax      | 0%   | Irreversibly removed from total supply                 |
+| Type     | Rate | Purpose          |
+| -------- | ---- | ---------------- |
+| Buy Fee  | 0%   | No token fee     |
+| Sell Fee | 1%   | Ecosystem wallet |
 
-> **Important**: These are protocol-level allocations automatically executed by smart contracts. No
-> single party can unilaterally access or withdraw these funds.
+> **Important**: The token contract does not automatically add liquidity, and it does not expose a
+> mutable marketing, burn, or liquidity tax schedule.
 
 ### 4.2 Fund Management
 
@@ -150,11 +149,11 @@ Transactions may be subject to automatic protocol-level tax:
 
 ### 5.5 Trading Limits
 
-The protocol implements daily volume limits that reset every 24 hours from your last transaction:
+The protocol may enforce launch-phase wallet limits:
 
-- **Daily Volume Limit**: Maximum daily trading volume per wallet
-- **Reset Timing**: Limits reset 24 hours after your first daily transaction
-- **Note**: Timing of limit resets depends on your individual transaction history
+- **Initial Max Wallet Limit**: Applies during the launch limit window
+- **Expiry**: The launch max-wallet limit expires after trading starts
+- **Note**: Wallet and exchange interfaces may apply additional independent limits
 
 ---
 

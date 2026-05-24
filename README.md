@@ -13,7 +13,7 @@
 - ✅ **Contract Verified** - Basescan source verification
 
 **GloveCatCore Address**:
-[`0x2489E6892f94a692ae71dC2d43878F8d8A4a5581`](https://basescan.org/address/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581)
+See the centralized deployment registry in `.vitepress/data/contracts.ts`.
 
 ---
 
@@ -23,11 +23,10 @@
 
 | Feature | Description |
 |---------|-------------|
-| **Token Fee** | Buy 0%, Sell 2% (Liquidity 1% + Ecosystem 1%) 🔒 Immutable |
-| **Limits** | MaxTx 0.5%, MaxWallet 2.5% |
-| **Auto-LP** | Fee token → ETH/GCAT liquidity conversion |
-| **MEV Protection** | 15 min cooldown |
-| **LP Lock** | Auto-extension 🔁 (30 days → +6 months), Migration 2 month delay |
+| **Token Fee** | Buy 0%, Sell 1% ecosystem fee 🔒 Immutable |
+| **Limits** | Initial max wallet launch limit |
+| **Liquidity** | Added and locked manually outside the token contract |
+| **Governance** | Snapshot off-chain community participation |
 
 ### Staking APY
 
@@ -37,8 +36,6 @@
 | 90 days | 2% |
 | 180 days | 5% |
 | 365 days | 8% |
-| 730 days (2yr) | 12% |
-| 1460 days (4yr) | 15% |
 
 ---
 
@@ -56,7 +53,7 @@
 | Item | URL |
 |------|-----|
 | **dApp** | [glovecatcoin.com](https://glovecatcoin.com) |
-| **Contract** | [BaseScan](https://basescan.org/token/0x2489E6892f94a692ae71dC2d43878F8d8A4a5581) |
+| **Contract** | See `.vitepress/data/contracts.ts` |
 | **Twitter** | [@GCATstudio](https://twitter.com/GCATstudio) |
 | **Telegram** | [glovecatcoin](https://t.me/glovecatcoin) |
 
@@ -81,9 +78,9 @@ npm run docs:build
 
 - **VitePress** - Static docs site
 - **GitHub Pages** - Hosting
-- **Solidity** 0.8.28 - Smart contracts
+- **Solidity** 0.8.34 - Smart contracts
 - **Base** (Chain ID: 8453)
 
 ---
 
-**Last Updated**: 2026-01-02
+**Last Updated**: 2026-05-23

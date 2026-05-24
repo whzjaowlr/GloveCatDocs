@@ -20,7 +20,7 @@ Immediately halt all transactions.
 - Analyze attack vector
 
 ### Step 3: Recovery
-- Snapshot-based recovery if needed
+- Confirm whether Safe configuration, contract wiring, or liquidity operations need action
 - Community announcement
 
 ## Prevention

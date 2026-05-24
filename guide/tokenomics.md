@@ -13,25 +13,21 @@ GCAT token distribution and economic structure.
 
 ## Token Distribution
 
-```
-Liquidity Pool      █████████████████████████    45%
-Protocol Treasury   █████████████████████████    45%
-Team (Vesting)      ██████                       10%
-```
+| Allocation       | Ratio | Amount           | Note                           |
+| ---------------- | ----- | ---------------- | ------------------------------ |
+| Launch Liquidity | 55%   | 275,000,000 GCAT | Initial liquidity wallet       |
+| Treasury         | 40%   | 200,000,000 GCAT | Ecosystem, staking, operations |
+| Team             | 5%    | 25,000,000 GCAT  | Team wallet                    |
 
-| Allocation        | Ratio | Amount | Note                               |
-| ----------------- | ----- | ------ | ---------------------------------- |
-| Liquidity Pool    | 45%   | 225M   | Initial LP + Auto-liquidity        |
-| Protocol Treasury | 45%   | 225M   | Staking, Daily Rewards, Security   |
-| Team              | 10%   | 50M    | 6-month linear vesting             |
+### Treasury Use Areas
 
-### Protocol Treasury Breakdown
+The 40% treasury allocation is controlled by the project treasury wallet. These are treasury use areas, not separate initial token allocations.
 
-| Purpose           | Allocation | Description                          |
-| ----------------- | ---------- | ------------------------------------ |
-| Staking Incentives | ~30%      | Flexible/Lock-up staking rewards     |
-| Daily Check-in    | ~10%      | User engagement rewards              |
-| Security/Reserve  | ~5%       | Bug bounty, emergency reserve        |
+| Purpose          | Description                         |
+| ---------------- | ----------------------------------- |
+| Staking Rewards  | Flexible/lock-up staking incentives |
+| Gamification     | Achievement and leaderboard rewards |
+| Security/Reserve | Security and operational reserve    |
 
 ::: tip Multi-Sig Secured
 All treasury wallets are secured with Gnosis Safe Multi-Signature (3/5 or 2/3).
@@ -39,43 +35,26 @@ All treasury wallets are secured with Gnosis Safe Multi-Signature (3/5 or 2/3).
 
 ## Fee Structure
 
-| Type     | Rate | Purpose                    |
-| -------- | ---- | -------------------------- |
-| Buy Fee  | 0%   | No fee ✅                  |
-| Sell Fee | 2%   | Liquidity 1% + Ecosystem 1%|
+| Type     | Rate | Purpose          |
+| -------- | ---- | ---------------- |
+| Buy Fee  | 0%   | No token fee     |
+| Sell Fee | 1%   | Ecosystem wallet |
 
 ::: tip Fee Structure
-Sell fee is permanently hardcoded at 2% and cannot be changed by any admin.
+Sell fee is permanently hardcoded at 1% ecosystem fee and cannot be changed by any admin.
 :::
-
-### Tax Discount
-
-Holders can receive tax discounts based on Staking Tier and NFT Tier (summed, max 100%):
-
-| Source | Discount Range |
-|--------|---------------|
-| Staking Tier | 0% (Bronze/Silver), configurable (Gold+) |
-| NFT Tier | 10% (Common) ~ 80% (Legendary) |
-
-**Example**: Epic NFT (50%) + Gold Staking (0%) = **50% discount** → 1% sell fee
 
 ## Transaction Limits
 
-| Item           | Limit           | Note              |
-| -------------- | --------------- | ----------------- |
-| Max Per TX     | 0.5%            | 2,500,000 GCAT    |
-| Max Per Wallet | 2.5%            | 12,500,000 GCAT   |
+| Item           | Initial Limit | Note              |
+| -------------- | ------------- | ----------------- |
+| Max Per Wallet | 2%            | 10,000,000 GCAT   |
 
 ::: warning Limit Expiry
-Transaction limits are automatically removed 10 days after launch (`LIMIT_EXPIRY = 10 days`)
-:::
-
-::: info Anti-Bot
-99% fee applied for 10 blocks after launch to prevent bots
+The launch max-wallet limit expires 1 hour after trading starts (`LIMIT_EXPIRY = 1 hours`).
 :::
 
 ## Lock-up Information
 
-- **Team Wallet**: 6-month cliff + linear vesting
-- **LP Tokens**: 10-year lock in GloveCatVault
-- **Staking Lock-up**: 90/180/365/730/1460 days options
+- **LP Tokens**: Added and locked manually outside the token contract
+- **Staking Lock-up**: 90/180/365 days options

@@ -1,34 +1,9 @@
 # Rewards System
 
-Earn GCAT incentives through various activities.
+Earn GCAT incentives through achievements and leaderboard participation.
 
-## Daily Check-in
-
-### Rules
-
-- Check-in once per day
-- Resets at UTC 00:00
-- Consecutive check-ins earn streak bonus
-- **EIP-712 signature** (backend integration required)
-
-### Streak Bonus
-
-| Consecutive Days | Bonus |
-| ---------------- | ----- |
-| 1-6 days | Base reward |
-| 7 days | **+50%** |
-| 14+ days | Additional rewards |
-
-### How to Use
-
-1. Go to Rewards tab
-2. Click "Check-in" button
-3. Approve transaction
-4. Receive incentives!
-
-### Special Badge
-
-Achieve **100 Day Streak** to receive the **100 Day Streak Badge** (Soulbound).
+The active on-chain rewards surface is `GamificationCore`, backed by `GloveCatNFT` for badges and
+NFT incentives.
 
 ## Leaderboard
 
@@ -39,14 +14,9 @@ Achieve **100 Day Streak** to receive the **100 Day Streak Badge** (Soulbound).
 | **STAKING** | Time-weighted average: `Σ(amount × days) / season_days` |
 | **VOLUME** | Total volume: `buyVolume + sellVolume` |
 
-### Season Incentives (NFT)
+### Season Incentives
 
-| Rank | NFT Tier |
-| ---- | -------- |
-| 🥇 1st | Legendary |
-| 🥈 2nd-3rd | Epic |
-| 🥉 4th-7th | Rare |
-| 8th-10th | Common |
+Leaderboard reward claims use Merkle proofs published for each finalized season.
 
 ### Season Duration
 
@@ -65,9 +35,9 @@ Complete special activities to earn achievement badges and incentives.
 
 ## FAQ
 
-### Q: Does my streak reset if I miss a day?
+### Q: Is check-in active on-chain?
 
-A: Yes, missing even one day resets your streak to 0.
+A: No. The active 5-contract deployment only exposes achievement and leaderboard reward flows.
 
 ### Q: How long is a leaderboard season?
 
