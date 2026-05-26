@@ -30,7 +30,7 @@ Join the GloveCat community!
 If you find bugs or security issues:
 
 - **General Bugs**: Report on Telegram or Discord
-- **Security Issues**: Private report to security@glovecatcoin.com
+- **Security Issues**: Contact project maintainers through official private channels
 
 ::: warning Security Issues
 Do not post security vulnerabilities in public channels. Please report privately.

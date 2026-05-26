@@ -218,7 +218,7 @@ constitutes acceptance of the new Terms.
 
 ## 12. Contact
 
-For questions about these Terms, contact: [glovecatcoin@gmail.com](mailto:glovecatcoin@gmail.com)
+For questions about these Terms, use the official community channels listed in the documentation.
 
 ---
 

@@ -1,0 +1,21 @@
+:root {
+  --vp-c-brand-1: #9a3412;
+  --vp-c-brand-2: #c2410c;
+  --vp-c-brand-3: #ea580c;
+  --vp-button-brand-bg: #9a3412;
+  --vp-button-brand-hover-bg: #7c2d12;
+  --vp-button-brand-active-bg: #7c2d12;
+  --vp-button-brand-text: #ffffff;
+}
+
+.VPNavBarTitle .logo {
+  width: 24px !important;
+  height: 24px !important;
+  aspect-ratio: 1 / 1;
+}
+
+.VPHomeHero .image-src {
+  width: min(320px, 70vw);
+  height: auto;
+  aspect-ratio: 1 / 1;
+}

@@ -15,20 +15,21 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
+    ["link", { rel: "icon", href: "/logo.webp", type: "image/webp" }],
+    ["link", { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchpriority: "high" }],
     ["meta", { name: "theme-color", content: "#f97316" }],
     // Open Graph
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:url", content: "https://docs.glovecatcoin.com" }],
     ["meta", { property: "og:title", content: "GloveCat Docs 🐱🥊" }],
     ["meta", { property: "og:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
-    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/og-image.png" }],
+    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
     // Twitter
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:url", content: "https://docs.glovecatcoin.com" }],
     ["meta", { name: "twitter:title", content: "GloveCat Docs 🐱🥊" }],
     ["meta", { name: "twitter:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
-    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.png" }],
+    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
     // Security Headers (CSP)
     [
       "meta",
@@ -42,7 +43,7 @@ export default defineConfig({
   ],
 
   themeConfig: {
-    logo: "/logo.png",
+    logo: "/logo.webp",
     siteTitle: "GloveCat",
 
     nav: [
@@ -106,7 +107,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: "Contact: <a href='mailto:glovecatcoin@gmail.com'>glovecatcoin@gmail.com</a> | <a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms of Service</a>",
+      message: "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms of Service</a> | Community support through official channels",
       copyright: "© 2026 GloveCat. All rights reserved. <br> This project is created for educational and entertainment purposes.",
     },
 

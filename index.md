@@ -6,7 +6,7 @@ hero:
   text: "Base Chain Meme Token"
   tagline: 🐱🥊 Community-Driven Transparent DeFi Ecosystem
   image:
-    src: /logo.png
+    src: /logo.webp
     alt: GloveCat
   actions:
     - theme: brand
