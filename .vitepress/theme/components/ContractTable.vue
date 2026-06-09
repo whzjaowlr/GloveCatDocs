@@ -9,6 +9,7 @@ import { addressUrl, contracts } from "../../data/contracts";
         <th>Contract</th>
         <th>Description</th>
         <th>Address</th>
+        <th>Status</th>
         <th>Verified</th>
       </tr>
     </thead>
@@ -17,10 +18,17 @@ import { addressUrl, contracts } from "../../data/contracts";
         <td>{{ contract.name }}</td>
         <td>{{ contract.description }}</td>
         <td>
-          <a :href="addressUrl(contract.address)" target="_blank" rel="noreferrer">
+          <a
+            v-if="contract.address"
+            :href="addressUrl(contract.address) || undefined"
+            target="_blank"
+            rel="noreferrer"
+          >
             <code>{{ contract.address }}</code>
           </a>
+          <span v-else>Pending</span>
         </td>
+        <td>{{ contract.status }}</td>
         <td>{{ contract.verified ? "Yes" : "No" }}</td>
       </tr>
     </tbody>

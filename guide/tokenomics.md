@@ -1,60 +1,56 @@
 # Tokenomics
 
-GCAT token distribution and economic structure.
+GCAT has a fixed total supply and a simplified redeploy allocation model.
 
 ## Total Supply
 
-| Item         | Value                  |
-| ------------ | ---------------------- |
-| Total Supply | **500,000,000 GCAT**   |
-| Decimals     | 18                     |
-| Type         | ERC-20                 |
-| Network      | Base (Chain ID: 8453)  |
+| Item | Value |
+| ---- | ----- |
+| Total supply | 500,000,000 GCAT |
+| Decimals | 18 |
+| Type | ERC20 with ERC20Permit |
+| Network target | Base Mainnet |
 
-## Token Distribution
+## Initial Allocation
 
-| Allocation       | Ratio | Amount           | Note                           |
-| ---------------- | ----- | ---------------- | ------------------------------ |
-| Launch Liquidity | 55%   | 275,000,000 GCAT | Initial liquidity wallet       |
-| Treasury         | 40%   | 200,000,000 GCAT | Ecosystem, staking, operations |
-| Team             | 5%    | 25,000,000 GCAT  | Team wallet                    |
+| Allocation | Ratio | Amount | Notes |
+| ---------- | ----: | -----: | ----- |
+| Launch liquidity wallet | 75% | 375,000,000 GCAT | Used for manual public liquidity setup |
+| Treasury and staking reserve | 20% | 100,000,000 GCAT | Ecosystem operations and reward pool funding |
+| Team wallet | 5% | 25,000,000 GCAT | Team allocation |
 
-### Treasury Use Areas
+There is no dedicated preminted marketing allocation, bug bounty allocation, or automatic liquidity
+allocation outside the rows above.
 
-The 40% treasury allocation is controlled by the project treasury wallet. These are treasury use areas, not separate initial token allocations.
+## Fees
 
-| Purpose          | Description                         |
-| ---------------- | ----------------------------------- |
-| Staking Rewards  | Flexible/lock-up staking incentives |
-| Gamification     | Achievement and leaderboard rewards |
-| Security/Reserve | Security and operational reserve    |
+| Type | Rate | Destination |
+| ---- | ---: | ----------- |
+| Buy fee | 0% | No token fee |
+| Sell fee | 1% | Ecosystem fee wallet |
 
-::: tip Multi-Sig Secured
-All treasury wallets are secured with Gnosis Safe Multi-Signature (3/5 or 2/3).
-:::
+The token contract does not expose fee-rate setters or fee-exclusion admin functions. Sell fees are
+not automatically redistributed by the token contract.
 
-## Fee Structure
+## Launch Limits
 
-| Type     | Rate | Purpose          |
-| -------- | ---- | ---------------- |
-| Buy Fee  | 0%   | No token fee     |
-| Sell Fee | 1%   | Ecosystem wallet |
+| Item | Rule |
+| ---- | ---- |
+| Max wallet | Starts at 2% of total supply |
+| Expiry | One hour after `openTrading()` |
+| Max transaction limit | Removed from active source |
 
-::: tip Fee Structure
-Sell fee is permanently hardcoded at 1% ecosystem fee and cannot be changed by any admin.
-:::
+The launch max-wallet limit is not a complete market-protection system. Wallets, exchanges, and
+routers may also apply independent limits.
 
-## Transaction Limits
+## Liquidity
 
-| Item           | Initial Limit | Note              |
-| -------------- | ------------- | ----------------- |
-| Max Per Wallet | 2%            | 10,000,000 GCAT   |
+Liquidity creation, ETH/WETH funding, LP token custody, and LP token locking are manual operational
+steps outside the token contract. Public liquidity claims should include pair address, transaction
+hashes, LP token custody, lock duration, and lock evidence.
 
-::: warning Limit Expiry
-The launch max-wallet limit expires 1 hour after trading starts (`LIMIT_EXPIRY = 1 hours`).
-:::
+## Reward Funding
 
-## Lock-up Information
-
-- **LP Tokens**: Added and locked manually outside the token contract
-- **Staking Lock-up**: 90/180/365 days options
+Staking and gamification rewards are paid only from funded reward pools. If a reward pool is
+insufficient, the staking contract can carry unpaid staking incentives forward as
+`pendingIncentives`; it does not mint new reward tokens.

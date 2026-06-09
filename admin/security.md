@@ -1,40 +1,61 @@
 # Security Protocol
 
-GloveCat's security framework ensures the safety of user funds and improved system stability.
+This page summarizes the current security posture for the redeploy surface. It is not an external
+audit report and does not guarantee that no vulnerabilities exist.
 
-## Smart Contract Security
+## Confirmed Design Constraints
 
-### 2026 Security Standards
-- **Gas Limit Protection**: External calls (Staking, NFT interactions) are capped at **200,000 gas** to prevent DOS attacks.
-- **Inflation Control**: Staking Multiplier is strictly capped at **5.0x** (`MAX_MULTIPLIER = 50000`).
-- **Fixed Fee Surface**: `GloveCatCore` has a fixed 0% buy fee and 1% sell ecosystem fee.
+- Buy fee is fixed at 0%.
+- Sell fee is fixed at 1% ecosystem fee.
+- Fee setters and fee exclusions are absent.
+- Staking amount does not create an additional multiplier.
+- Final staking multiplier is capped at 4.0x.
+- NFT staking boost is capped at 2.2x.
+- Multiple NFT tiers do not stack; the highest active tier applies.
+- Leaderboard claims are staking-only.
+- Each leaderboard season allows at most 10 successful claims.
+- Merkle leaves include chain ID, contract address, season, user, rank, and value.
 
-### Audits
-- OpenZeppelin library usage
-- Internal security review completed (2026-01-09)
-- **Resolved Issues**:
-  - Staking Multiplier Cap (Fixed)
-  - External Call DOS Risk (Fixed via Gas Limit)
-  - Automatic liquidity assumptions removed from the token contract
+## Documentation Boundary
 
-### Access Control
-- MultiSig-only admin functions
-- Two-step MultiSig transfer with `transferMultiSig`, `acceptMultiSig`, and `cancelMultiSigTransfer`
+This page describes only the active redeploy surface and current release gates.
 
-## Operational Security
+## Access Control
 
-### Liquidity Operations
-Liquidity creation, project liquidity addition, and LP locking happen outside the token contract.
-Do not look for automatic router-recovery functions in the active contract set.
+`TieredAccess` uses a Safe-style `multiSig` authority. MultiSig transfer is a two-step flow:
 
-### Key Management
-- Hardware wallet usage
-- Distributed seed storage
+1. Current Safe calls `transferMultiSig(newSafe)`.
+2. New Safe calls `acceptMultiSig()`.
 
-### Monitoring
-- Large transfer alerts
-- Anomaly detection
+No OpenZeppelin `AccessControl` manager roles are exposed in the active access layer.
 
-## Incident Response
+## Release Gates
 
-For details, see [Emergency Response](/admin/emergency).
+Recommended checks before active publication:
+
+```bash
+npm run compile
+npm run test:foundry
+npm run lint:sol
+npm run lint:slither:release
+npm run format:check
+npm run lint:check
+```
+
+The current contract repo release gate recently passed with 206 Foundry tests and 0 medium/high
+Slither release blockers. Low timestamp findings remain and should be tracked as operational risk.
+
+## Operational Risks
+
+- Reward pools can be exhausted.
+- Liquidity and LP lock execution are manual.
+- NFT royalty payment depends on marketplace support.
+- Leaderboard root corrections are blocked after the first successful claim.
+- `openTrading()` is one-way.
+- The pre-launch LP seed path works only before trading opens and only from the configured launch
+  liquidity wallet to an official pair.
+
+## Reporting
+
+Security issues should be reported privately to project maintainers. Do not publish exploit details
+in public channels.

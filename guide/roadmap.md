@@ -1,57 +1,39 @@
 # Roadmap
 
-> **Last Updated**: 2026-05-24
+> Last updated: 2026-06-09
 
-GloveCat project development plan and progress.
+This roadmap tracks release readiness for the current redeploy surface. It is not a guarantee of
+delivery dates.
 
-## 📊 Progress Status
+## P0: Redeploy Readiness
 
-| Priority | Item                              | Status       |
-| -------- | --------------------------------- | ------------ |
-| 🔴 P0    | Five-contract Base Mainnet deploy | ✅ Complete  |
-| 🔴 P0    | BaseScan source verification      | ✅ Complete  |
-| 🔴 P0    | Safe transaction execution        | 🟡 Pending   |
-| 🔴 P0    | Public liquidity and LP lock      | 🟡 Pending   |
-| 🟡 P1    | Public monitoring dashboard       | ⏳ Planned   |
-| 🟡 P1    | Dune analytics dashboard          | ⏳ Planned   |
-| 🔵 P2    | Aerodrome liquidity integration   | ⏳ Planned   |
-| 🔵 P2    | Additional language support       | ⏳ Planned   |
+| Item | Status |
+| ---- | ------ |
+| Active source cleanup | In progress |
+| Public docs refresh | In progress |
+| Fresh Base manifest | Pending |
+| BaseScan verification for fresh contracts | Pending |
+| Safe configuration evidence | Pending |
+| Official pair setup | Pending |
+| Initial liquidity seed | Pending |
+| Trading open | Pending |
+| LP token lock evidence | Pending |
 
----
+## P1: Launch Operations
 
-## 🔴 P0: Launch Operations
+- Publish active contract addresses only after manifest validation.
+- Publish Safe owner/threshold evidence.
+- Publish liquidity pair and LP lock evidence.
+- Fund staking and gamification reward pools from approved sources.
+- Add public monitoring for contract wiring, reward pools, and liquidity status.
 
-### Five-contract Base Mainnet deploy ✅
-`GloveCatCore`, `Staking`, `GloveCatNFT`, `NFTLevelSystem`, and `GamificationCore` are deployed
-and verified on Base Mainnet.
+## P2: Post-Launch Visibility
 
-### Safe transaction execution 🟡
-Prepared Safe transactions must be executed to connect the deployed contracts.
+- Public contract status dashboard.
+- Analytics dashboard for staking participation and reward pool health.
+- Improved user-facing staking and NFT benefit explanations.
 
-### Public liquidity and LP lock 🟡
-Pool creation, project liquidity addition, and LP locking are external launch operations and are
-not automatic token-contract features.
+## Roadmap Rule
 
----
-
-## 🟡 P1: Post-Launch Visibility
-
-- Public monitoring dashboard
-- Dune analytics dashboard
-- Community-facing contract status pages
-
----
-
-## 🔵 P2: Long-term Plan (Q1-Q2 2026)
-
-- Aerodrome DEX integration
-- Dune Analytics dashboard public release
-- Mobile app launch
-- Cross-chain bridge (Ethereum, Arbitrum)
-
----
-
-::: info Note
-Roadmap may be adjusted based on market conditions.
-Next review: 2026-Q2
-:::
+Roadmap items should be published only when they have a current owner, dependency list, and evidence
+plan.

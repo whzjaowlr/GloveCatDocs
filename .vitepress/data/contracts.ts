@@ -2,14 +2,16 @@ export type ContractKey =
   | "GloveCatCore"
   | "Staking"
   | "GloveCatNFT"
-  | "NFTLevelSystem"
-  | "GamificationCore";
+  | "GloveCatBadge"
+  | "GamificationCore"
+  | "GloveCatViewer";
 
 export interface ContractInfo {
   name: ContractKey;
   description: string;
-  address: `0x${string}`;
+  address: `0x${string}` | null;
   verified: boolean;
+  status: string;
 }
 
 export type WalletKey =
@@ -23,7 +25,7 @@ export type WalletKey =
 export interface WalletInfo {
   name: WalletKey;
   description: string;
-  address: `0x${string}`;
+  address: `0x${string}` | null;
 }
 
 export const baseNetwork = {
@@ -34,76 +36,89 @@ export const baseNetwork = {
 };
 
 export const baseDeployment = {
-  phase: "full-redeploy-2026-05-23",
-  status: "deployed, verified, pending Safe configuration execution",
+  phase: "redeploy-preparation",
+  status: "no-current-redeploy",
   compiler: "solc 0.8.34",
-  deployer: "0xf04a5FE7E719C62142A927C560e4C8DeD9c05629",
-  updatedAt: "2026-05-23T11:41:03.655Z",
+  deployer: null as `0x${string}` | null,
+  updatedAt: "2026-06-09",
+  note: "Historical Base addresses are archived. Publish fresh addresses only after a new manifest is generated and marked active.",
 };
 
 export const contracts: ContractInfo[] = [
   {
     name: "GloveCatCore",
-    description: "GCAT ERC20 token",
-    address: "0x7C154359AAaD5C5Bff50339Ad4EdD2752893bf20",
-    verified: true,
+    description: "GCAT ERC20 token with fixed sell fee and launch max-wallet limit",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
   },
   {
     name: "Staking",
-    description: "Flexible and lock-up staking",
-    address: "0x51f3835b6D96Abb13569047F674857F652043d87",
-    verified: true,
+    description: "Lock-only staking with 90/180/365 day periods",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
   },
   {
     name: "GloveCatNFT",
-    description: "Tier NFT and badge contract",
-    address: "0xf89a78Ac113518d82747C49E8167051a01e21D25",
-    verified: true,
+    description: "ERC721 tier NFT for staking boost and ERC2981 royalties",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
   },
   {
-    name: "NFTLevelSystem",
-    description: "NFT EXP and level system",
-    address: "0x1e8908576d651b2b1a1B2d5fB6B9943601663627",
-    verified: true,
+    name: "GloveCatBadge",
+    description: "ERC1155 badge contract with soulbound or transferable badge types",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
   },
   {
     name: "GamificationCore",
-    description: "Achievements and leaderboard rewards",
-    address: "0x34AD8cD8d1233B5246A93c2D13cC2AAb74806f5b",
-    verified: true,
+    description: "Achievement rewards and staking-only leaderboard NFT claims",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
+  },
+  {
+    name: "GloveCatViewer",
+    description: "Read-only frontend helper",
+    address: null,
+    verified: false,
+    status: "Pending fresh redeploy manifest",
   },
 ];
 
 export const wallets: WalletInfo[] = [
   {
     name: "Safe",
-    description: "MultiSig authority for admin operations",
-    address: "0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803",
+    description: "Production multiSig authority, published after fresh manifest review",
+    address: null,
   },
   {
     name: "Deployer",
-    description: "EOA used for the 2026-05-23 full redeploy broadcast",
-    address: "0xf04a5FE7E719C62142A927C560e4C8DeD9c05629",
+    description: "EOA used for the fresh broadcast, published in the active manifest",
+    address: null,
   },
   {
     name: "Launch Liquidity Wallet",
-    description: "Constructor launch-liquidity allocation recipient",
-    address: "0xa92C88dE90F3114A6bD0fFf8DE56139Dc3F27fda",
+    description: "Recipient for the 75% launch liquidity allocation",
+    address: null,
   },
   {
     name: "Treasury Wallet",
-    description: "Constructor treasury allocation recipient",
-    address: "0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803",
+    description: "Recipient for the 20% treasury and staking reserve allocation",
+    address: null,
   },
   {
     name: "Team Wallet",
-    description: "Constructor team allocation recipient",
-    address: "0x5217a803350f004548Af9863712659458Fa5bCfC",
+    description: "Recipient for the 5% team allocation",
+    address: null,
   },
   {
     name: "Ecosystem Fee Wallet",
     description: "Recipient for the fixed 1% sell ecosystem fee",
-    address: "0x5217a803350f004548Af9863712659458Fa5bCfC",
+    address: null,
   },
 ];
 
@@ -115,10 +130,10 @@ export const walletsByName = Object.fromEntries(
   wallets.map((wallet) => [wallet.name, wallet])
 ) as Record<WalletKey, WalletInfo>;
 
-export function addressUrl(address: string) {
-  return `${baseNetwork.explorerUrl}/address/${address}`;
+export function addressUrl(address: string | null) {
+  return address ? `${baseNetwork.explorerUrl}/address/${address}` : null;
 }
 
-export function tokenUrl(address: string) {
-  return `${baseNetwork.explorerUrl}/token/${address}`;
+export function tokenUrl(address: string | null) {
+  return address ? `${baseNetwork.explorerUrl}/token/${address}` : null;
 }

@@ -1,37 +1,30 @@
 # Community
 
-Join the GloveCat community!
+Use official channels for announcements, launch status, support, and security reporting.
 
 ## Official Channels
 
-| Channel      | Link                                              |
-| ------------ | ------------------------------------------------- |
-| 🐦 Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
-| 📱 Telegram  | [glovecatcoin](https://t.me/glovecatcoin) |
-| 💬 Discord   | [GloveCat Server](https://discord.gg/glovecat)    |
+| Channel | Link |
+| ------- | ---- |
+| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
+| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
+| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 
-## dApp & Tools
+## Before Sharing Contract Addresses
 
-| Tool           | Link                                                                              |
-| -------------- | --------------------------------------------------------------------------------- |
-| 🚀 dApp        | [glovecatcoin.com](https://glovecatcoin.com)                                      |
-| 📊 BaseScan    | <ContractLink name="GloveCatCore" label="Contract" token />                       |
-| 📈 DEXScreener | [GCAT/WETH](https://dexscreener.com/base/gcat)                                    |
+Check [Contract Information](/admin/contracts). Historical addresses should not be shared as active
+deployment addresses unless the current manifest is marked `active` and the address is verified.
 
-## How to Participate
+## How To Participate
 
-1. **Join Telegram** - Real-time communication
-2. **Follow Twitter** - Announcements and updates
-3. **Governance** - Vote on Snapshot
-4. **Create Content** - Memes, art, guides
+- Follow official launch updates.
+- Review public proposals and Snapshot posts where available.
+- Create educational content that links to current docs.
+- Report documentation mismatches so stale claims can be removed.
 
-## Bug Reports
+## Bug And Security Reports
 
-If you find bugs or security issues:
+General bugs can be reported through official community support channels.
 
-- **General Bugs**: Report on Telegram or Discord
-- **Security Issues**: Contact project maintainers through official private channels
-
-::: warning Security Issues
-Do not post security vulnerabilities in public channels. Please report privately.
-:::
+Security issues should be reported privately to project maintainers. Do not post exploit details,
+private keys, operational secrets, or suspected vulnerabilities in public channels.

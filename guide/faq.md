@@ -1,63 +1,54 @@
 # FAQ
 
-Frequently asked questions.
-
 ## General
+
+### Is there an active Base mainnet address?
+
+Not in the current documentation registry. The current Base manifest is a `no-current-redeploy`
+placeholder. Fresh addresses should be published only after a new broadcast-generated manifest is
+reviewed and marked `active`.
 
 ### Where can I buy GCAT?
 
-You can buy on [Uniswap](https://app.uniswap.org) (Base network).
+Use only official launch announcements and verified contract addresses. Historical addresses are
+reference-only until the fresh manifest is active.
 
 ### Which wallets are supported?
 
-Any wallet that supports Base network: MetaMask, Rainbow, Coinbase Wallet, etc.
-
-### How do I add Base network?
-
-1. Search for Base on [Chainlist](https://chainlist.org/?search=base)
-2. Click "Add to Wallet"
-3. Approve in your wallet
+Any wallet that supports Base can interact with Base contracts, subject to the dApp and wallet
+provider's own support.
 
 ## Staking
 
-### When do I receive staking incentives?
+### Do staking amounts create separate multipliers?
 
-Anytime by clicking the "Claim Rewards" button.
+No. Staking amount does not add a reward multiplier.
 
 ### Can I unstake during lock-up?
 
-No, you must wait until the lock-up period ends.
+No. A lock position can be unstaked only after the selected lock period ends.
 
-### Is APY fixed?
+### Are rewards guaranteed?
 
-Base APY is fixed, but individual rates may vary based on NFT boosts.
+No. Rewards depend on available reward pool funding.
 
 ## NFT
 
-### Where can I buy NFTs?
-
-Official minting events or marketplaces like OpenSea.
-
 ### Do multiple NFT benefits stack?
 
-No, only the highest tier benefits apply.
+No. The staking contract uses the highest active NFT tier boost returned by `GloveCatNFT`.
 
-## Governance
+### Does an NFT transfer keep the boost active?
 
-### Can anyone create proposals?
-
-Only users staking 10,000+ GCAT can create proposals.
-
-### Are voting results always implemented?
-
-No, Snapshot voting is advisory. The team reviews and decides.
+No. Transfer resets active benefit state and starts a new benefit holding period for the recipient.
 
 ## Security
 
-### Has the contract been audited?
+### Has an external audit been published?
 
-Yes, security audit was completed before mainnet deployment.
+No external audit report is recorded in the current contract repository. Internal checks and release
+gates should not be treated as a guarantee that no vulnerabilities exist.
 
-### Does the team control all tokens?
+### Who manages production admin actions?
 
-No, team tokens are locked and key settings are managed by multisig.
+Production admin actions are expected to use the configured Safe multisig.

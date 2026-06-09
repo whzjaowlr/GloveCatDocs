@@ -1,86 +1,38 @@
 # GloveCat Docs
 
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)]()
-[![Security](https://img.shields.io/badge/security-A%20grade-brightgreen)]()
+Official VitePress documentation for the current GloveCat redeploy surface.
 
-**GloveCat Official Documentation** - Base Chain Meme Token
+## Current Status
 
----
+GloveCat is in redeploy preparation. Historical Base addresses are reference-only until
+`deployments/base/latest.json` in the contract repository is regenerated from a fresh broadcast and
+marked `active`.
 
-## 📊 Project Status
+Active contract surface:
 
-- ✅ **Tests Passing** - Foundry test suite
-- ✅ **Contract Verified** - Basescan source verification
+- `GloveCatCore`
+- `Staking`
+- `GloveCatNFT`
+- `GloveCatBadge`
+- `GamificationCore`
+- `GloveCatViewer`
 
-**GloveCatCore Address**:
-See the centralized deployment registry in `.vitepress/data/contracts.ts`.
+This documentation only describes the current redeploy surface.
 
----
-
-## ✨ Core Features
-
-### Token (GloveCatCore)
-
-| Feature | Description |
-|---------|-------------|
-| **Token Fee** | Buy 0%, Sell 1% ecosystem fee 🔒 Immutable |
-| **Limits** | Initial max wallet launch limit |
-| **Liquidity** | Added and locked manually outside the token contract |
-| **Governance** | Snapshot off-chain community participation |
-
-### Staking APY
-
-| Period | APY |
-|--------|-----|
-| Flexible | 1% |
-| 90 days | 2% |
-| 180 days | 5% |
-| 365 days | 8% |
-
----
-
-## 📚 Documentation Sections
-
-| Section | Description |
-|---------|-------------|
-| [Guide](/guide/) | Project intro, tokenomics, feature guides |
-| [Admin](/admin/) | Contract management, security protocols |
-
----
-
-## 🔗 Links
-
-| Item | URL |
-|------|-----|
-| **dApp** | [glovecatcoin.com](https://glovecatcoin.com) |
-| **Contract** | See `.vitepress/data/contracts.ts` |
-| **Twitter** | [@GCATstudio](https://twitter.com/GCATstudio) |
-| **Telegram** | [glovecatcoin](https://t.me/glovecatcoin) |
-
----
-
-## 🛠 Local Development
+## Local Development
 
 ```bash
-# Install dependencies
 npm install
-
-# Dev server
 npm run docs:dev
-
-# Build
 npm run docs:build
 ```
 
----
+## Source Of Truth
 
-## 📦 Tech Stack
+Contract behavior should be checked against `C:\gcatProject\GloveCat`. This documentation mirrors
+that repository but does not replace the deployment manifest, on-chain reads, Safe transaction
+records, or contract verification evidence.
 
-- **VitePress** - Static docs site
-- **GitHub Pages** - Hosting
-- **Solidity** 0.8.34 - Smart contracts
-- **Base** (Chain ID: 8453)
+## Last Updated
 
----
-
-**Last Updated**: 2026-05-23
+2026-06-09

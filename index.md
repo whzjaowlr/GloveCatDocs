@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "GloveCat"
-  text: "Base Chain Meme Token"
-  tagline: 🐱🥊 Community-Driven Transparent DeFi Ecosystem
+  text: "GCAT on Base"
+  tagline: Current redeploy documentation for the GloveCat contract surface.
   image:
     src: /logo.webp
     alt: GloveCat
@@ -13,29 +13,55 @@ hero:
       text: Get Started
       link: /guide/
     - theme: alt
-      text: Launch dApp
-      link: https://glovecatcoin.com
+      text: Contract Status
+      link: /admin/contracts
 
 features:
-  - icon: 💰
-    title: Staking
-    details: Earn incentives with Flexible and Lock-up staking options
-  - icon: 🎨
-    title: NFT Tiers
-    details: Get staking boosts and badges with NFT holdings
-  - icon: 🗳️
-    title: Governance
-    details: Community participation through Snapshot
-  - icon: 🎁
-    title: Incentives System
-    details: Achievement and leaderboard incentives through GamificationCore
+  - title: Lock-Only Staking
+    details: Fixed 90, 180, and 365 day staking periods with reward-pool based incentives.
+  - title: Tier NFTs
+    details: ERC721 NFTs provide staking boost snapshots after the benefit holding period.
+  - title: Badges
+    details: Separate ERC1155 badges support soulbound and transferable achievement records.
+  - title: Gamification
+    details: Achievement rewards and staking-only leaderboard NFT claims use verifier and Merkle flows.
 ---
+
+## Current Release State
+
+GloveCat is in redeploy preparation. The previous Base deployment snapshot was archived because it
+referenced retired surfaces. Until a fresh Base manifest is generated and marked `active`, historical
+addresses must be treated as reference-only.
+
+| Item | Current Position |
+| ---- | ---------------- |
+| Base manifest | `no-current-redeploy` placeholder |
+| Contract addresses | Pending fresh redeploy manifest |
+| Trading launch | Not complete in the current manifest |
+| LP lock evidence | Required before public liquidity claims |
+| Active source of truth | `C:\gcatProject\GloveCat` |
+
+## Active Surface
+
+The current redeploy surface is intentionally smaller than older GloveCat documentation:
+
+- `GloveCatCore`: ERC20 token, fixed 0% buy fee and 1% sell ecosystem fee.
+- `Staking`: lock-only staking with fixed 90, 180, and 365 day periods.
+- `GloveCatNFT`: ERC721 tier NFT with staking boost and ERC2981 royalty support.
+- `GloveCatBadge`: ERC1155 badge contract.
+- `GamificationCore`: achievements and staking-only leaderboard NFT rewards.
+- `GloveCatViewer`: read-only frontend helper.
+
+This documentation only describes the current redeploy surface and current launch requirements.
 
 ## Quick Links
 
-| Item     | Link                                                                              |
-| -------- | --------------------------------------------------------------------------------- |
-| dApp     | [glovecatcoin.com](https://glovecatcoin.com)                                      |
-| Twitter  | [@GCATstudio](https://twitter.com/GCATstudio)                                 |
-| Telegram | [glovecatcoin](https://t.me/glovecatcoin)                                 |
-| BaseScan | <ContractLink name="GloveCatCore" label="Contract" token />                       |
+| Item | Link |
+| ---- | ---- |
+| Guide | [Project guide](/guide/) |
+| Staking | [Staking guide](/guide/staking) |
+| Tokenomics | [Tokenomics](/guide/tokenomics) |
+| Contract status | [Contract information](/admin/contracts) |
+| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
+| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
+| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |

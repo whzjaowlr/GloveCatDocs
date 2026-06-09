@@ -1,112 +1,93 @@
 # Admin Functions
 
-Admin-only functions for GloveCat smart contracts.
+Admin functions should be executed through the configured Safe multisig unless a documented
+deployment or recovery procedure explicitly says otherwise.
 
-::: warning Caution
-All admin functions should be executed through Safe{Wallet} multisig.
-:::
+## Current Admin Boundary
 
-## GloveCatCore Functions
+This page lists the current admin functions only. Do not infer additional admin powers from older
+materials or archived deployments.
 
-### Pause
+## GloveCatCore
 
-```solidity
-function pause() external onlyMultiSig
-function unpause() external onlyMultiSig
-```
+| Function | Authority | Purpose |
+| -------- | --------- | ------- |
+| `setStakingContract(address)` | Safe | Wire staking timestamp sync |
+| `setUniswapV2Pair(address)` | Safe | Set the primary official V2 pair |
+| `setOfficialPair(address,bool)` | Safe | Manage alternate official pair treatment |
+| `setMaxWalletLimit(uint32)` | Safe | Adjust launch max-wallet percentage within bounds |
+| `setLimitsEnabled(bool)` | Safe | Enable or disable launch max-wallet checks |
+| `setEcosystemWallet(address)` | Safe | Update fixed sell-fee receiver |
+| `openTrading()` | Safe | Open trading once |
 
-Pause/resume all transactions during emergencies.
+`openTrading()` is one-way. Run official pair setup and pre-launch LP seed planning before opening
+trading.
 
-### Fee Settings
+## Staking
 
-> ⚠️ **IMMUTABLE (변경 불가)**
->
-> Fee rates are now permanently hardcoded in the contract:
-> - Buy Fee: 0% (fixed)
-> - Sell Fee: 1% (fixed) = `SELL_ECOSYSTEM_FEE(1%)`
->
-> The `setFeeRate()` function has been **removed**. No admin can change these values.
+| Function | Authority | Purpose |
+| -------- | --------- | ------- |
+| `setCoreContract(address)` | Safe | Wire optional core timestamp sync |
+| `setNFTContract(address)` | Safe | Wire NFT boost source |
+| `depositIncentives(uint256)` | Any caller with approved tokens | Add tokens to the staking incentive pool |
 
-**Current Settings**: Buy 0%, Sell 1% 🔒 **영구 고정**
+Staking lock periods are fixed to 90, 180, and 365 days. Staking amount does not create a separate
+reward multiplier.
 
-### Transaction Limits
+## GloveCatNFT
 
-```solidity
-function setMaxWalletLimit(uint32 newMaxWalletPercent) external onlyMultiSig
-function setLimitsEnabled(bool enabled) external onlyMultiSig
-```
+| Function | Authority | Purpose |
+| -------- | --------- | ------- |
+| `addTier(string,uint256)` | Safe | Add an NFT tier within limits |
+| `updateTier(uint256,string,uint256)` | Safe | Update tier name and boost |
+| `setTierActive(uint256,bool)` | Safe | Enable or disable a tier |
+| `removeTier(uint256)` | Safe | Mark a tier inactive |
+| `setMinter(address,bool)` | Safe | Approve or remove NFT minters |
+| `setBaseURI(string)` | Safe | Update base metadata URI |
+| `setContractURI(string)` | Safe | Update collection metadata URI |
+| `setTokenURI(uint256,string)` | Safe | Set token-specific metadata |
+| `setDefaultRoyaltyReceiver(address)` | Safe | Update ERC2981 royalty receiver |
+| `deleteDefaultRoyalty()` | Safe | Remove default royalty |
 
-| Function | Description |
-|----------|-------------|
-| `setMaxWalletLimit` | Updates the launch max-wallet percentage |
-| `setLimitsEnabled` | Enables/disables the launch max-wallet limit |
+The default royalty percentage is fixed at 3%. NFT staking boost is capped at 2.2x per NFT tier.
 
-The active core exposes only the functions listed on this page. Removed legacy control
-surfaces are intentionally absent from the ABI.
+## GloveCatBadge
 
-### Wallet and Pair Configuration
+| Function | Authority | Purpose |
+| -------- | --------- | ------- |
+| `createBadgeType(string,string,bool,uint256)` | Safe | Create a badge type |
+| `updateBadgeType(uint256,bool,uint256,bool)` | Safe | Update transferability, cap, and active state |
+| `setMinter(address,bool)` | Safe | Approve or remove badge minters |
+| `setBaseURI(string)` | Safe | Update badge base URI |
+| `setBadgeURI(uint256,string)` | Safe | Set badge-specific metadata |
+| `grantBadge(address,uint256)` | Safe or minter | Grant one badge |
+| `grantBadges(address,uint256[])` | Safe or minter | Grant multiple badges |
+| `revokeBadge(address,uint256)` | Safe | Revoke a badge |
 
-```solidity
-function setEcosystemWallet(address _newWallet) external onlyMultiSig
-function setUniswapV2Pair(address pair) external onlyMultiSig
-function setOfficialPair(address pair, bool enabled) external onlyMultiSig
-function setStakingContract(address _stakingContract) external onlyMultiSig
-```
+Soulbound badge types cannot be transferred after mint.
 
-Liquidity creation and LP locking are performed manually outside `GloveCatCore`.
+## GamificationCore
 
-## Staking Functions
+| Function | Authority | Purpose |
+| -------- | --------- | ------- |
+| `createAchievement(string,string,uint256,uint256)` | Safe | Create an achievement |
+| `updateAchievement(uint256,uint256,uint256)` | Safe | Update threshold and reward |
+| `deleteAchievement(uint256)` | Safe | Deactivate an achievement |
+| `setAchievementActive(uint256,bool)` | Safe | Toggle active state |
+| `setVerifier(address,bool)` | Safe | Manage progress verifiers |
+| `depositRewards(uint256)` | Any caller with approved tokens | Add achievement reward tokens |
+| `finalizeSeason(bytes32)` | Safe | Finalize a leaderboard season |
+| `updateSeasonMerkleRoot(uint256,bytes32)` | Safe | Correct a root before any claim |
+| `setNFTContract(address)` | Safe | Wire NFT reward minting |
 
-### Reward Rate Settings
+Leaderboard claims are capped to 10 successful claims per season, with one claim per wallet and one
+claim per rank.
 
-```solidity
-function setFlexibleIncentiveRate(uint256 newRate) external onlyMultiSig
-```
+## Access Transfer
 
-Adjust flexible staking incentive rate (annual, basis points).
+`TieredAccess` multiSig transfer uses a two-step flow:
 
-### Lock-up Options
+1. Current Safe calls `transferMultiSig(newSafe)`.
+2. New Safe calls `acceptMultiSig()`.
 
-The active staking contract ships with 90, 180, and 365 day lock periods.
-
-### Tier Management
-
-```solidity
-function addTier(uint256 minAmount, uint256 maxAmount, uint256 multiplierBasisPoints) external onlyMultiSig
-function updateTier(uint256 tierId, uint256 minAmount, uint256 maxAmount, uint256 multiplierBasisPoints, bool active) external onlyMultiSig
-```
-
-| Function | Description |
-|----------|-------------|
-| `addTier` | Add new staking tier **(Max Multiplier: 5.0x)** |
-| `updateTier` | Update tier settings **(Max Multiplier: 5.0x)** |
-
-::: info Boost Calculation
-Staking boost and NFT boost are **summed** (not multiplied):
-- **Formula**: `1.0x + (tierBonus) + (nftBonus)`
-- **Example**: Diamond (1.5x) + Legendary NFT (1.8x) = 1.0x + 0.5x + 0.8x = **2.3x**
-:::
-
-## Contract Wiring (GloveCatCore)
-
-```solidity
-function setStakingContract(address _stakingContract) external onlyMultiSig
-function setUniswapV2Pair(address pair) external onlyMultiSig
-function setOfficialPair(address pair, bool enabled) external onlyMultiSig
-```
-
-## NFT and Gamification Wiring
-
-```solidity
-function setNFTContract(address _nftContract) external onlyMultiSig
-function setMinter(address minter, bool allowed) external onlyMultiSig
-function setExpGranter(address granter, bool status) external onlyMultiSig
-function setVerifier(address verifier, bool status) external onlyMultiSig
-```
-
-Use Safe transactions to connect `Staking`, `GloveCatNFT`, `NFTLevelSystem`, and
-`GamificationCore` after deployment.
-
-## Emergency Response
-
-For situation-specific responses, see [Emergency Response](/admin/emergency).
+The pending transfer can be cancelled by the current Safe before acceptance.

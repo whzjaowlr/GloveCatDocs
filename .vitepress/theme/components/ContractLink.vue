@@ -20,7 +20,8 @@ const href = computed(() =>
 </script>
 
 <template>
-  <a :href="href" target="_blank" rel="noreferrer">
+  <a v-if="href" :href="href" target="_blank" rel="noreferrer">
     {{ label || contract.name }}
   </a>
+  <span v-else>{{ label || contract.name }} pending redeploy</span>
 </template>

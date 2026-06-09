@@ -16,9 +16,15 @@ import { addressUrl, wallets } from "../../data/contracts";
         <td>{{ wallet.name }}</td>
         <td>{{ wallet.description }}</td>
         <td>
-          <a :href="addressUrl(wallet.address)" target="_blank" rel="noreferrer">
+          <a
+            v-if="wallet.address"
+            :href="addressUrl(wallet.address) || undefined"
+            target="_blank"
+            rel="noreferrer"
+          >
             <code>{{ wallet.address }}</code>
           </a>
+          <span v-else>Pending fresh redeploy manifest</span>
         </td>
       </tr>
     </tbody>

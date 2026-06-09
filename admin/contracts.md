@@ -1,8 +1,8 @@
 # Contract Information
 
-List of deployed smart contracts.
+This page shows the current deployment registry state.
 
-## Mainnet (Base)
+## Base Mainnet
 
 <ContractTable />
 
@@ -10,30 +10,45 @@ List of deployed smart contracts.
 
 <WalletTable />
 
-The Safe configuration transactions are prepared separately from deployment. Until they are
-executed, contract wiring should be checked directly on BaseScan before running admin actions.
+## Current Manifest Status
+
+The current contract repository manifest is `no-current-redeploy`. The previous Base snapshot was
+archived and must not be used as the active deployment registry.
+
+Do not use historical addresses as active addresses. A fresh manifest must include:
+
+- Contract addresses.
+- Transaction hashes and block numbers.
+- Constructor arguments.
+- Compiler version.
+- Git commit.
+- Safe address and Safe configuration evidence.
+- Contract verification evidence.
+- `status=active` only after final review.
 
 ## Network Information
 
-| Item     | Value                    |
-| -------- | ------------------------ |
-| Chain ID | 8453                     |
-| RPC      | https://mainnet.base.org |
-| Explorer | https://basescan.org     |
+| Item | Value |
+| ---- | ----- |
+| Network | Base Mainnet |
+| Chain ID | 8453 |
+| RPC | `https://mainnet.base.org` |
+| Explorer | `https://basescan.org` |
 
-## ABI
+## Active Contracts
 
-Contract ABIs can be found in the `/src/abi/` folder.
+The active redeploy surface is:
 
-- `GloveCatCore.json`
-- `Staking.json`
-- `GloveCatNFT.json`
-- `NFTLevelSystem.json`
-- `GamificationCore.json`
-- External: [Snapshot](https://snapshot.org/#/glovecat.eth)
+- `GloveCatCore`
+- `Staking`
+- `GloveCatNFT`
+- `GloveCatBadge`
+- `GamificationCore`
+- `GloveCatViewer`
 
-## Verification
+Only the contracts listed above should be treated as the current redeploy surface.
 
-All contracts are source-verified on BaseScan.
+## ABI And Verification
 
-<ContractLink name="GloveCatCore" label="View GCAT token on BaseScan" token />
+ABIs come from the contract repository build outputs after compile. Basescan verification should be
+checked against the active manifest, not older archived deployment snapshots.

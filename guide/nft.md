@@ -1,63 +1,47 @@
 # NFT Guide
 
-GloveCat NFTs provide staking boosts, badges, and gamification hooks to holders.
+`GloveCatNFT` is the ERC721 tier NFT used for staking boosts and marketplace support.
 
-## Tier System
+## NFT Tiers
 
-| Tier | Staking Boost |
-| ---- | ------------- |
-| 🐱 Common | 1.1x |
-| 🌟 Rare | 1.2x |
-| 💜 Epic | 1.5x |
-| 👑 Legendary | 1.8x |
+| Tier ID | Tier | Staking boost |
+| ------: | ---- | ------------: |
+| 0 | Common | 1.2x |
+| 1 | Rare | 1.4x |
+| 2 | Epic | 1.7x |
+| 3 | Legendary | 2.2x |
 
-## Benefits
+The maximum NFT staking boost is 2.2x. The final staking multiplier, after applying NFT bonus, is
+capped at 4.0x in `Staking`.
 
-### Staking Boost
+## Benefit Activation
 
-Bonus applied to staking rewards. Boosts are **summed** (not multiplied):
+NFT staking benefits are not automatically active forever after transfer.
 
-- **Formula**: `1.0x + (Staking Tier Bonus) + (NFT Tier Bonus)`
-- **Example**: Silver Tier (1.1x) + Rare NFT (1.2x) = 1.0x + 0.1x + 0.2x = **1.3x**
+- A token movement starts a benefit holding period.
+- The current holding period is 1 day.
+- The holder must activate the token benefit after the holding period.
+- On transfer, the prior holder's active benefit is reset.
 
-### Voting Weight
+## Multiple NFTs
 
-Additional voting power in governance.
+Multiple NFTs do not stack by summing every token. `getStakingBoost(address)` returns the highest
+active tier boost held by the wallet.
 
-### Exclusive Perks
+Example:
 
-- Early access to new features
-- Priority for airdrops
-- Community event participation
+- Rare active + Legendary active = Legendary boost only.
+- Common active + Epic inactive = Common boost only.
 
-## How to Get
+## Minting And Admin Controls
 
-1. **Minting**: Official minting events
-2. **Marketplace**: Purchase on OpenSea
-3. **Airdrop**: Community events
-4. **Leaderboard**: Monthly ranking rewards
+NFT minting is limited to the Safe or approved minters. `GamificationCore` must be approved as an
+NFT minter before leaderboard NFT reward claims can mint NFTs.
 
-## Leaderboard NFT Rewards
+Safe can update base URI, contract URI, token URI overrides, tier activation, and royalty receiver.
+The default royalty percentage is fixed at 3%.
 
-| Rank | Tier |
-| ---- | ---- |
-| 1st | Legendary |
-| 2nd-3rd | Epic |
-| 4th-7th | Rare |
-| 8th-10th | Common |
+## Badges Are Separate
 
-## Badge System (Soulbound)
-
-Earn badges through special achievements.
-
-| Badge | Condition |
-| ----- | --------- |
-| 100 Day Streak | 100 consecutive daily check-ins |
-| Top 10 Holder | Top 10 token holder |
-| Top 10 Referrer | Top 10 referrer |
-| Early Adopter | Early launch participant |
-| Diamond Tier | Achieved Diamond tier |
-
-::: info Soulbound
-Badges are non-transferable (Soulbound).
-:::
+Badges are not stored in `GloveCatNFT`. They are handled by `GloveCatBadge`, a separate ERC1155
+contract. Badges do not add staking rewards.

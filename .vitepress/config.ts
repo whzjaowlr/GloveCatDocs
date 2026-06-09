@@ -2,40 +2,56 @@ import { defineConfig } from "vitepress";
 
 export default defineConfig({
   title: "GloveCat",
-  description: "GloveCat (GCAT) Official Documentation",
+  description: "GloveCat (GCAT) redeploy documentation",
   lang: "en-US",
+  base: "/",
 
-  // Custom domain - docs.glovecatcoin.com
-  base: '/',
-
-  // Sitemap 자동 생성
   sitemap: {
-    hostname: 'https://docs.glovecatcoin.com',
+    hostname: "https://docs.glovecatcoin.com",
     lastmodDateOnly: false,
   },
 
   head: [
     ["link", { rel: "icon", href: "/logo.webp", type: "image/webp" }],
-    ["link", { rel: "preload", as: "image", href: "/logo.webp", type: "image/webp", fetchpriority: "high" }],
+    [
+      "link",
+      {
+        rel: "preload",
+        as: "image",
+        href: "/logo.webp",
+        type: "image/webp",
+        fetchpriority: "high",
+      },
+    ],
     ["meta", { name: "theme-color", content: "#f97316" }],
-    // Open Graph
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:url", content: "https://docs.glovecatcoin.com" }],
-    ["meta", { property: "og:title", content: "GloveCat Docs 🐱🥊" }],
-    ["meta", { property: "og:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
+    ["meta", { property: "og:title", content: "GloveCat Docs" }],
+    [
+      "meta",
+      {
+        property: "og:description",
+        content: "Current GloveCat (GCAT) redeploy documentation for Base.",
+      },
+    ],
     ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
-    // Twitter
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:url", content: "https://docs.glovecatcoin.com" }],
-    ["meta", { name: "twitter:title", content: "GloveCat Docs 🐱🥊" }],
-    ["meta", { name: "twitter:description", content: "GloveCat (GCAT) Official Documentation - Base Chain Meme Token" }],
+    ["meta", { name: "twitter:title", content: "GloveCat Docs" }],
+    [
+      "meta",
+      {
+        name: "twitter:description",
+        content: "Current GloveCat (GCAT) redeploy documentation for Base.",
+      },
+    ],
     ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
-    // Security Headers (CSP)
     [
       "meta",
       {
         "http-equiv": "Content-Security-Policy",
-        content: "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:;",
+        content:
+          "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:;",
       },
     ],
     ["meta", { "http-equiv": "X-Content-Type-Options", content: "nosniff" }],
@@ -77,7 +93,7 @@ export default defineConfig({
           items: [
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
-            { text: "Terms of Service", link: "/guide/terms" },
+            { text: "Terms and Risk Disclosure", link: "/guide/terms" },
           ],
         },
       ],
@@ -102,13 +118,15 @@ export default defineConfig({
     },
 
     socialLinks: [
-      { icon: "twitter", link: "https://twitter.com/glovecatcoin" },
+      { icon: "twitter", link: "https://twitter.com/GCATstudio" },
       { icon: "github", link: "https://github.com/glovecat" },
     ],
 
     footer: {
-      message: "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms of Service</a> | Community support through official channels",
-      copyright: "© 2026 GloveCat. All rights reserved. <br> This project is created for educational and entertainment purposes.",
+      message:
+        "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a>",
+      copyright:
+        "(c) 2026 GloveCat. This documentation is informational and does not replace on-chain verification.",
     },
 
     search: {

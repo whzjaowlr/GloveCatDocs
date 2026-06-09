@@ -1,44 +1,60 @@
 # Rewards System
 
-Earn GCAT incentives through achievements and leaderboard participation.
+The active on-chain rewards surface is `GamificationCore`.
 
-The active on-chain rewards surface is `GamificationCore`, backed by `GloveCatNFT` for badges and
-NFT incentives.
+It supports:
 
-## Leaderboard
+- Achievement definitions and claims.
+- Verifier-updated achievement progress.
+- Reward-pool backed achievement payouts.
+- Staking-only leaderboard NFT reward claims.
 
-### Categories
+## Achievement Rewards
 
-| Category | Calculation |
-| -------- | ----------- |
-| **STAKING** | Time-weighted average: `Σ(amount × days) / season_days` |
-| **VOLUME** | Total volume: `buyVolume + sellVolume` |
+Safe creates and manages achievement definitions. Approved verifiers update user progress.
 
-### Season Incentives
+Users can claim an achievement only when:
 
-Leaderboard reward claims use Merkle proofs published for each finalized season.
+- The achievement exists and is active.
+- The user's progress meets the threshold.
+- The user has not already claimed it.
+- The reward pool can cover any token reward.
 
-### Season Duration
+Achievement rewards are not minted automatically. They come from `rewardPool`.
 
-- Monthly seasons
-- On-chain data → Off-chain aggregation → Merkle Proof → Incentives
+## Leaderboard Rewards
 
-## Achievement System
+The active leaderboard is staking-only. Token buy/sell volume is not part of the active leaderboard
+contract.
 
-Complete special activities to earn achievement badges and incentives.
+Flow:
 
-| Achievement | Condition | Incentive |
-| ----------- | --------- | ------ |
-| First Stake | Complete first staking | Badge + GCAT |
-| Voter | First governance vote | Badge |
-| Collector | Own NFT | Badge |
+1. Operators compute staking scores off-chain.
+2. Safe finalizes a season with a Merkle root.
+3. Eligible users claim NFT rewards with Merkle proofs.
+4. `GamificationCore` mints the tier NFT through `GloveCatNFT`.
 
-## FAQ
+## Leaderboard Claim Limits
 
-### Q: Is check-in active on-chain?
+| Rule | Value |
+| ---- | ----- |
+| Max successful claims per season | 10 |
+| Claim per wallet per season | 1 |
+| Claim per rank per season | 1 |
+| Rank range | 1 through 10 |
 
-A: No. The active 5-contract deployment only exposes achievement and leaderboard reward flows.
+Rank-to-tier mapping:
 
-### Q: How long is a leaderboard season?
+| Rank | NFT tier |
+| ---- | -------- |
+| 1 | Legendary |
+| 2-3 | Epic |
+| 4-7 | Rare |
+| 8-10 | Common |
 
-A: Approximately 30 days (monthly).
+Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
+
+## Funding
+
+Achievement token rewards are paid from `rewardPool`. Leaderboard NFT rewards require the NFT
+contract to be wired and the gamification contract to be approved as a minter.

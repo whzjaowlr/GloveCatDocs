@@ -1,23 +1,52 @@
 # Safe Multisig Guide
 
-GloveCat is managed through Gnosis Safe multisig.
+GloveCat production admin authority is expected to be controlled by the configured Safe multisig.
 
-## Safe Address
-- **Mainnet**: <code>0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803</code>
-- **Signers**: 2-of-3 configuration
+## Deployment Pattern
 
-See [Contract Information](/admin/contracts) for the current Safe, launch-liquidity, treasury,
-team, and ecosystem fee wallet addresses.
+The normal redeploy pattern is:
 
-## Transaction Execution Process
+1. EOA deployer broadcasts the Foundry deployment scripts.
+2. Constructors receive the Safe address as `_multiSig`.
+3. Contracts start with Safe admin authority.
+4. Post-deploy wiring is executed through Safe transactions.
 
-1. Access Safe app
-2. Propose transaction
-3. Two or more signatures
-4. Execute
+Safe is the admin authority, not necessarily the transaction sender that deploys every contract.
 
-## Important Notes
+## Required Evidence
 
-::: warning
-All critical transactions should be reviewed by the team before execution.
-:::
+Before calling a deployment active, publish:
+
+- Safe address.
+- Safe owners and threshold.
+- Contract addresses.
+- Constructor arguments.
+- Deployment tx hashes and block numbers.
+- Basescan verification links.
+- Post-deploy wiring transaction hashes.
+- Manifest status and update time.
+
+## Post-Deploy Wiring
+
+Typical Safe actions include:
+
+- `GloveCatCore.setStakingContract(staking)`.
+- `Staking.setCoreContract(core)`.
+- `Staking.setNFTContract(nft)`.
+- `GamificationCore.setNFTContract(nft)`.
+- `GloveCatNFT.setMinter(gamification, true)`.
+- Official pair setup before trading opens.
+
+## Execution Process
+
+1. Prepare calldata or Safe Transaction Builder JSON.
+2. Review target, selector, arguments, and expected state change.
+3. Collect required Safe signatures.
+4. Execute.
+5. Verify on-chain state after execution.
+6. Archive evidence.
+
+## Mainnet Caution
+
+Do not use archived deployment addresses or pending manifests for production Safe actions. Confirm
+the active manifest and on-chain reads first.

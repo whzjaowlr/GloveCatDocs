@@ -1,39 +1,43 @@
 # Governance Guide
 
-Participate in community governance through Snapshot voting.
+GloveCat community governance is advisory unless a specific Safe-executed action is published and
+completed.
 
-## What is Snapshot?
+## Current Model
 
-Snapshot is an **off-chain, gasless voting platform**. Your voice matters, and the team actively reviews all proposals.
+The active smart-contract surface does not include an on-chain governance module. Production admin
+authority is held by the configured Safe multisig through `TieredAccess`.
 
-::: info Note
-Snapshot voting is advisory. Major decisions are reviewed by the team.
-:::
+Community input can still happen through off-chain channels such as Snapshot, Telegram, Discord, or
+published proposal documents.
 
-## How to Vote
+## Snapshot
 
-### Voting Power
+Snapshot voting is gasless and off-chain. It can help measure community preference, but Snapshot
+results do not automatically execute contract changes.
 
-Your voting power is based on your GCAT holdings at the snapshot block.
+Any contract-level change must still follow the Safe transaction process.
 
-### Process
+## Safe-Executed Changes
 
-1. Go to [snapshot.org/#/glovecat.eth](https://snapshot.org)
-2. Connect your wallet
-3. Find active proposals
-4. Vote For/Against (no gas fee!)
-5. Vote recorded
+Examples of actions that require Safe execution:
 
-## Proposal Status
+- Wire contract addresses after deployment.
+- Set official pair configuration.
+- Open trading once.
+- Replenish reward pools.
+- Update NFT or badge metadata settings.
+- Set verifiers or minters.
 
-| Status        | Description           |
-| ------------- | --------------------- |
-| 🟡 Pending    | Before voting starts  |
-| 🟢 Active     | Currently voting      |
-| 🔴 Closed     | Voting period ended   |
+## Proposal Hygiene
 
-## Tips
+Good proposals should include:
 
-- Check Snapshot regularly for new proposals
-- Discuss with the community before important votes
-- Your vote is based on your balance at the snapshot block
+- Objective and rationale.
+- Affected contracts or operations.
+- Risk assessment.
+- Proposed Safe transactions, if any.
+- Rollback or mitigation plan where possible.
+
+Do not assume a proposal is final until the corresponding Safe transaction, manifest update, and
+public evidence are complete.
