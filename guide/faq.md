@@ -42,6 +42,12 @@ Different NFT tiers stack additively. Multiple NFTs from the same tier do not ad
 
 No. Transfer resets active benefit state and starts a new benefit holding period for the recipient.
 
+### What happens if I stake with NFT boost and then sell the NFT?
+
+The existing staking lock keeps the NFT boost that was snapshotted when the lock was created. Selling
+or transferring the NFT removes the seller's active benefit for future locks, and the recipient must
+wait through the holding period before activating the NFT benefit.
+
 ## 🛡️ Security
 
 ### Has an external audit been published?

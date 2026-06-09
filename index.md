@@ -31,7 +31,7 @@ features:
     details: ERC1155 badge records support per-type soulbound or transferable behavior, supply caps, and Safe/minter grants.
   - icon: 🏆
     title: Gamification
-    details: Verifier-gated achievements and staking-only Merkle leaderboard claims pay from funded pools or mint NFT rewards.
+    details: Staking-only Merkle leaderboard claims mint tier NFT rewards, capped to 10 successful claims per season.
 ---
 
 ## 🚦 Current Release State
@@ -64,8 +64,8 @@ The current source surface is:
   4.0x aggregate staking boost cap.
 - `GloveCatBadge`: ERC1155 badge contract with soulbound or transferable badge types, optional
   max-supply caps, active flags, and Safe/minter grant controls.
-- `GamificationCore`: verifier-controlled achievement progress, reward-pool backed achievement
-  claims, and staking-only Merkle leaderboard NFT rewards capped to 10 successful claims per season.
+- `GamificationCore`: staking-only Merkle leaderboard NFT rewards capped to 10 successful claims
+  per season.
 - `GloveCatViewer`: read-only frontend helper.
 
 This documentation only describes the current redeploy surface and current launch requirements.

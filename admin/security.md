@@ -19,8 +19,7 @@ audit report and does not guarantee that no vulnerabilities exist.
 - Different active NFT tiers stack additively, while duplicate NFTs from the same tier do not add
   extra boost.
 - NFT benefits require 1-day activation and reset on transfer.
-- Achievement token rewards require sufficient `rewardPool`; failed funding does not create a
-  pending achievement balance.
+- `GamificationCore` is limited to staking-only leaderboard NFT reward claims.
 - Leaderboard claims are staking-only.
 - Each leaderboard season allows at most 10 successful claims.
 - Merkle leaves include chain ID, contract address, season, user, rank, and value.

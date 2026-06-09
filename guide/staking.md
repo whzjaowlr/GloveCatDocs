@@ -42,6 +42,11 @@ Inactive position slots can be reused after `lockUnstake(positionId)`.
 Each lock position snapshots the user's NFT boost when the position is created. Later NFT transfers
 or later benefit activation do not retroactively update an existing lock position.
 
+If a user activates an NFT benefit, creates a lock position, and then sells or transfers that NFT,
+the existing lock keeps the boost that was snapshotted at lock creation. The seller loses the active
+benefit for future lock positions, and the recipient must wait through the holding period before
+activating the benefit for new lock positions.
+
 Rules:
 
 - No NFT boost: 1.0x.

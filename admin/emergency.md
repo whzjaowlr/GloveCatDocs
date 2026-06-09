@@ -8,8 +8,8 @@ and external liquidity or reward operations.
 1. Stop planned launches, campaigns, or reward distributions.
 2. Preserve logs, transaction hashes, manifests, and Safe transaction records.
 3. Identify affected contracts and wallets.
-4. Check whether the issue is contract code, Safe wiring, liquidity operations, reward pool funding,
-   metadata, or documentation.
+4. Check whether the issue is contract code, Safe wiring, liquidity operations, staking reward pool
+   funding, metadata, or documentation.
 5. Publish a short status update without exploit details if users may be affected.
 
 ## 🔐 Possible Safe Actions
@@ -21,9 +21,9 @@ Depending on the issue, Safe may be able to:
 - Update ecosystem wallet.
 - Rewire staking, NFT, or gamification references.
 - Remove an NFT or badge minter.
-- Remove a gamification verifier.
+- Disable or replace leaderboard reward wiring.
 - Correct a leaderboard Merkle root before the first successful claim.
-- Replenish or stop funding reward pools.
+- Replenish or stop funding the staking reward pool.
 
 Safe cannot pause token transfers in the active redeploy surface.
 

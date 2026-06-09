@@ -51,7 +51,7 @@ hashes, LP token custody, lock duration, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking and gamification rewards are paid only from funded reward pools. If the staking incentive
-pool is insufficient, the staking contract can carry unpaid staking incentives forward as
-`pendingIncentives`; it does not mint new reward tokens. If the gamification reward pool is
-insufficient for an achievement token reward, the claim reverts.
+Staking rewards are paid only from the funded staking incentive pool. If the staking incentive pool
+is insufficient, the staking contract can carry unpaid staking incentives forward as
+`pendingIncentives`; it does not mint new reward tokens. Gamification leaderboard rewards are NFT
+mints, not ERC20 reward-pool payouts.

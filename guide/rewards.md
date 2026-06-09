@@ -2,32 +2,9 @@
 
 The active on-chain rewards surface is `GamificationCore`.
 
-It supports:
+It supports staking-only leaderboard NFT reward claims.
 
-- Achievement definitions and claims.
-- Verifier-updated achievement progress.
-- Reward-pool backed achievement payouts.
-- Staking-only leaderboard NFT reward claims.
-
-## 🎯 Achievement Rewards
-
-Safe creates and manages achievement definitions. Approved verifiers update user progress.
-
-Users can claim an achievement only when:
-
-- The achievement exists and is active.
-- The user's progress meets the threshold.
-- The user has not already claimed it.
-- The reward pool can cover any token reward.
-
-Achievement thresholds must be greater than zero and cannot exceed `MAX_PROGRESS`. Approved
-verifiers or the Safe update progress; users cannot self-report progress.
-
-Achievement rewards are not minted automatically. They come from `rewardPool`. If `rewardPool`
-cannot cover an achievement token reward, the achievement claim reverts instead of creating a
-pending balance.
-
-## 🏆 Leaderboard Rewards
+## 🏅 Leaderboard Rewards
 
 The active leaderboard is staking-only. Token buy/sell volume is not part of the active leaderboard
 contract.
@@ -40,7 +17,25 @@ Flow:
 4. `GamificationCore` mints the tier NFT through `GloveCatNFT`.
 5. The gamification contract must be approved as an NFT minter before claims can mint.
 
-## 📋 Leaderboard Claim Limits
+Leaderboard seasons use a fixed 3-calendar-month window in the leaderboard tooling and published
+season records.
+
+Leaderboard score policy:
+
+```text
+staking score = sum(lock amount * lock-period score multiplier)
+```
+
+| Lock period | `lockPeriodId` | Score multiplier |
+| ----------- | -------------- | ---------------- |
+| 30 days | `0` | 1x |
+| 90 days | `1` | 3x |
+| 180 days | `2` | 7x |
+
+This score multiplier is only for leaderboard ranking. It does not change staking reward APY or NFT
+boost.
+
+## 🧾 Leaderboard Claim Limits
 
 | Rule | Value |
 | ---- | ----- |
@@ -61,7 +56,7 @@ Rank-to-tier mapping:
 Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
 The Safe can correct a season Merkle root only before that season has any successful claim.
 
-## 🎁 Funding
+## 💰 Funding
 
-Achievement token rewards are paid from `rewardPool`. Leaderboard NFT rewards require the NFT
-contract to be wired and the gamification contract to be approved as a minter.
+Leaderboard NFT rewards do not use an ERC20 reward pool. Claims require the NFT contract to be wired
+and the gamification contract to be approved as a minter.

@@ -24,8 +24,8 @@ delivery dates.
 - Publish active contract addresses only after manifest validation.
 - Publish Safe owner/threshold evidence.
 - Publish liquidity pair and LP lock evidence.
-- Fund staking and gamification reward pools from approved sources.
-- Add public monitoring for contract wiring, reward pools, and liquidity status.
+- Fund the staking incentive pool from approved sources.
+- Add public monitoring for contract wiring, staking reward pool health, and liquidity status.
 
 ## 📊 P2: Post-Launch Visibility
 

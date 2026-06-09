@@ -75,12 +75,6 @@ Soulbound badge types cannot be transferred after mint. `maxSupply=0` means unca
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
-| `createAchievement(string,string,uint256,uint256)` | Safe | Create an achievement |
-| `updateAchievement(uint256,uint256,uint256)` | Safe | Update threshold and reward |
-| `deleteAchievement(uint256)` | Safe | Deactivate an achievement |
-| `setAchievementActive(uint256,bool)` | Safe | Toggle active state |
-| `setVerifier(address,bool)` | Safe | Manage progress verifiers |
-| `depositRewards(uint256)` | Any caller with approved tokens | Add achievement reward tokens |
 | `finalizeSeason(bytes32)` | Safe | Finalize a leaderboard season |
 | `updateSeasonMerkleRoot(uint256,bytes32)` | Safe | Correct a root before any claim |
 | `setNFTContract(address)` | Safe | Wire NFT reward minting |

@@ -22,6 +22,11 @@ NFT staking benefits are not automatically active forever after transfer.
 - The holder must activate the token benefit after the holding period.
 - On transfer, the prior holder's active benefit is reset.
 
+Staking uses a lock-creation snapshot. If a holder activates an NFT benefit, creates a staking lock,
+and then sells or transfers the NFT, that existing lock keeps its snapshotted boost. The transferred
+NFT no longer gives the seller boost for future locks, and the recipient must wait through the
+holding period before activating it.
+
 ## 🧮 Multiple NFTs
 
 Different NFT tiers stack additively. Multiple active NFTs from the same tier do not add extra

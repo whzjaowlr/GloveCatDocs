@@ -24,7 +24,7 @@ Fresh deployment is not complete until:
 | `Staking` | Fixed 30/90/180 day lock positions, 1,000 GCAT minimum, 50 active-position cap, annualized 2%/5%/8% rates, NFT boost snapshots, funded incentive pool |
 | `GloveCatNFT` | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty |
 | `GloveCatBadge` | ERC1155 badge records with per-type soulbound/transferable behavior, max-supply caps, active state, and minter grants |
-| `GamificationCore` | Verifier-gated achievements, reward-pool backed token claims, staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |
+| `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |
 | `GloveCatViewer` | Read-only frontend helper |
 
 ## 🔐 Admin Principles
@@ -32,7 +32,7 @@ Fresh deployment is not complete until:
 - Use Safe transactions for production admin actions.
 - Do not rely on EOA direct admin calls as a mainnet operating path.
 - Treat historical addresses as reference-only until the fresh manifest is active.
-- Publish evidence for launch, liquidity, LP lock, reward pool funding, and Safe wiring.
+- Publish evidence for launch, liquidity, LP lock, staking reward pool funding, and Safe wiring.
 - Do not describe removed features as available.
 
 ## 📚 Contents

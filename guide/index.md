@@ -25,7 +25,7 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | Staking | Lock positions with 1,000 GCAT minimum, 50 active-position cap, fixed 30/90/180 day periods, annualized 2%/5%/8% incentive rates, funded incentive pool, and unpaid incentive carry-forward |
 | NFT | ERC721 tier NFT with 1-day benefit activation, transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and 4.0x aggregate staking cap |
 | Badge | Separate ERC1155 badge contract with per-type soulbound or transferable behavior, optional max supply, active state, and Safe/minter grants |
-| Rewards | Verifier-gated achievement progress, reward-pool backed achievement claims, and staking-only Merkle leaderboard NFT claims capped to 10 successful claims per season |
+| Rewards | Staking-only Merkle leaderboard NFT claims capped to 10 successful claims per season |
 | Governance | Off-chain advisory community input; no on-chain governance module in active surface |
 
 ## 📌 Documentation Scope
