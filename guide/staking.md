@@ -1,28 +1,41 @@
 # Staking Guide
 
-GCAT staking is lock-only in the current redeploy surface.
+GCAT staking uses fixed lock positions in the current redeploy surface.
 
 ## 🔒 Core Rules
 
 The active staking contract supports fixed lock positions, funded reward-pool payouts, NFT boost
-snapshots, and Safe-controlled contract wiring.
+snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
+`GloveCatCore`.
+
+| Rule | Value |
+| ---- | ----- |
+| Minimum stake | 1,000 GCAT |
+| Max active lock positions per user | 50 |
+| Reward source | Funded `incentivePool` only |
+| Final multiplier cap | 4.0x |
 
 ## ⏳ Lock Periods
 
-| Lock period | Base incentive rate |
-| ----------- | ------------------- |
-| 90 days | 2% |
-| 180 days | 5% |
-| 365 days | 8% |
+The active staking contract exposes three fixed lock periods:
 
-Lock period selection changes the base incentive rate only. It is not an extra multiplier.
+| Lock period ID | Duration | Annualized incentive rate |
+| -------------- | -------: | ------------------------: |
+| 0 | 30 days | 2% / `200` bps |
+| 1 | 90 days | 5% / `500` bps |
+| 2 | 180 days | 8% / `800` bps |
+
+The selected period's duration and incentive rate are snapshotted into the lock position when
+`lockStake(amount, lockPeriodId)` is called. The incentive rate is applied pro rata by elapsed
+seconds; it is not a flat bonus paid just for selecting a period, and it is not an extra
+staking-amount multiplier.
 
 ## 📏 Staking Amounts
 
-There are no staking amount tiers. A larger stake can earn more total reward because more GCAT is
-locked, but it does not unlock a higher reward multiplier.
+Stake size affects rewards through the locked principal only. A larger stake can earn more total
+reward because more GCAT is locked, but it does not unlock a higher reward multiplier.
 
-The active staking ABI does not expose `tierCount()`, `tiers(uint256)`, or `getUserTier(address)`.
+Inactive position slots can be reused after `lockUnstake(positionId)`.
 
 ## 🎨 NFT Boost Snapshot
 
@@ -54,9 +67,9 @@ Do not treat displayed incentive rates as guaranteed returns.
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
 3. Approve the staking contract.
-4. Choose one fixed lock period.
+4. Choose lock period ID `0`, `1`, or `2`.
 5. Submit `lockStake(amount, lockPeriodId)`.
-6. Claim incentives with `claimIncentives()` or unstake after the lock matures.
+6. Claim accrued incentives with `claimIncentives()` while locked, or unstake after the lock matures.
 
 ## 🔓 Unstaking
 

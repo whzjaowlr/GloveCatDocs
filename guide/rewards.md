@@ -20,7 +20,12 @@ Users can claim an achievement only when:
 - The user has not already claimed it.
 - The reward pool can cover any token reward.
 
-Achievement rewards are not minted automatically. They come from `rewardPool`.
+Achievement thresholds must be greater than zero and cannot exceed `MAX_PROGRESS`. Approved
+verifiers or the Safe update progress; users cannot self-report progress.
+
+Achievement rewards are not minted automatically. They come from `rewardPool`. If `rewardPool`
+cannot cover an achievement token reward, the achievement claim reverts instead of creating a
+pending balance.
 
 ## 🏆 Leaderboard Rewards
 
@@ -33,6 +38,7 @@ Flow:
 2. Safe finalizes a season with a Merkle root.
 3. Eligible users claim NFT rewards with Merkle proofs.
 4. `GamificationCore` mints the tier NFT through `GloveCatNFT`.
+5. The gamification contract must be approved as an NFT minter before claims can mint.
 
 ## 📋 Leaderboard Claim Limits
 
@@ -53,6 +59,7 @@ Rank-to-tier mapping:
 | 8-10 | Common |
 
 Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
+The Safe can correct a season Merkle root only before that season has any successful claim.
 
 ## 🎁 Funding
 

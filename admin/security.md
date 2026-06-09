@@ -8,11 +8,19 @@ audit report and does not guarantee that no vulnerabilities exist.
 - Buy fee is fixed at 0%.
 - Sell fee is fixed at 1% ecosystem fee.
 - Fee setters and fee exclusions are absent.
+- Launch max-wallet checks expire 1 hour after `openTrading()`.
+- Fixed 30/90/180 day staking periods use annualized incentive rates of 2%, 5%, and 8%, pro-rated by
+  elapsed time.
 - Staking amount does not create an additional multiplier.
+- Staking incentives are paid only from the funded incentive pool; unpaid staking incentives can be
+  carried forward as `pendingIncentives`.
 - Final staking multiplier is capped at 4.0x.
 - A single NFT tier boost is capped at 2.5x.
 - Different active NFT tiers stack additively, while duplicate NFTs from the same tier do not add
   extra boost.
+- NFT benefits require 1-day activation and reset on transfer.
+- Achievement token rewards require sufficient `rewardPool`; failed funding does not create a
+  pending achievement balance.
 - Leaderboard claims are staking-only.
 - Each leaderboard season allows at most 10 successful claims.
 - Merkle leaves include chain ID, contract address, season, user, rank, and value.
@@ -43,7 +51,7 @@ npm run format:check
 npm run lint:check
 ```
 
-The current contract repo release gate recently passed with 206 Foundry tests and 0 medium/high
+The current contract repo release gate recently passed with 207 Foundry tests and 0 medium/high
 Slither release blockers. Low timestamp findings remain and should be tracked as operational risk.
 
 ## ⚠️ Operational Risks

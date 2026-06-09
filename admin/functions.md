@@ -21,7 +21,8 @@ materials or archived deployments.
 | `openTrading()` | Safe | Open trading once |
 
 `openTrading()` is one-way. Run official pair setup and pre-launch LP seed planning before opening
-trading.
+trading. The default launch max-wallet check starts at 2% of total supply and expires 1 hour after
+`openTrading()`.
 
 ## 🔒 Staking
 
@@ -31,8 +32,9 @@ trading.
 | `setNFTContract(address)` | Safe | Wire NFT boost source |
 | `depositIncentives(uint256)` | Any caller with approved tokens | Add tokens to the staking incentive pool |
 
-Staking lock periods are fixed to 90, 180, and 365 days. Staking amount does not create a separate
-reward multiplier.
+Staking lock periods are fixed to 30, 90, and 180 days with annualized 2%, 5%, and 8% incentive
+rates. The minimum stake is 1,000 GCAT, each user can have up to 50 active lock positions, and
+staking amount does not create a separate reward multiplier.
 
 ## 🎨 GloveCatNFT
 
@@ -50,7 +52,8 @@ reward multiplier.
 | `deleteDefaultRoyalty()` | Safe | Remove default royalty |
 
 The default royalty percentage is fixed at 3%. A single NFT tier boost is capped at 2.5x, and the
-aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x.
+aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x. Benefits require a 1-day
+holding period before activation and reset on transfer.
 
 ## 🏅 GloveCatBadge
 
@@ -65,7 +68,8 @@ aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x.
 | `grantBadges(address,uint256[])` | Safe or minter | Grant multiple badges |
 | `revokeBadge(address,uint256)` | Safe | Revoke a badge |
 
-Soulbound badge types cannot be transferred after mint.
+Soulbound badge types cannot be transferred after mint. `maxSupply=0` means uncapped; nonzero
+`maxSupply` is a lifetime mint cap and cannot be bypassed by revoking badges.
 
 ## 🏆 GamificationCore
 
@@ -82,7 +86,8 @@ Soulbound badge types cannot be transferred after mint.
 | `setNFTContract(address)` | Safe | Wire NFT reward minting |
 
 Leaderboard claims are capped to 10 successful claims per season, with one claim per wallet and one
-claim per rank.
+claim per rank. Season Merkle roots can be corrected only before that season has any successful
+claim.
 
 ## 🔁 Access Transfer
 

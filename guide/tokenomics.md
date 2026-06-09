@@ -29,8 +29,8 @@ allocation outside the rows above.
 | Buy fee | 0% | No token fee |
 | Sell fee | 1% | Ecosystem fee wallet |
 
-The token contract does not expose fee-rate setters or fee-exclusion admin functions. Sell fees are
-not automatically redistributed by the token contract.
+Fee rates are fixed in the token contract, and sell fees are sent to the ecosystem fee wallet. Sell
+fees are not automatically redistributed by the token contract.
 
 ## 🚦 Launch Limits
 
@@ -38,10 +38,10 @@ not automatically redistributed by the token contract.
 | ---- | ---- |
 | Max wallet | Starts at 2% of total supply |
 | Expiry | One hour after `openTrading()` |
-| Max transaction limit | Removed from active source |
 
-The launch max-wallet limit is not a complete market-protection system. Wallets, exchanges, and
-routers may also apply independent limits.
+The Safe can adjust or disable the launch max-wallet limit within contract bounds. The launch
+max-wallet limit is not a complete market-protection system. Wallets, exchanges, and routers may
+also apply independent limits.
 
 ## 💧 Liquidity
 
@@ -51,6 +51,7 @@ hashes, LP token custody, lock duration, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking and gamification rewards are paid only from funded reward pools. If a reward pool is
-insufficient, the staking contract can carry unpaid staking incentives forward as
-`pendingIncentives`; it does not mint new reward tokens.
+Staking and gamification rewards are paid only from funded reward pools. If the staking incentive
+pool is insufficient, the staking contract can carry unpaid staking incentives forward as
+`pendingIncentives`; it does not mint new reward tokens. If the gamification reward pool is
+insufficient for an achievement token reward, the claim reverts.
