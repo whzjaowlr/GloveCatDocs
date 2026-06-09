@@ -12,13 +12,13 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | ---- | ------ |
 | Network target | Base Mainnet |
 | Current manifest | `no-current-redeploy` placeholder |
-| Active addresses | Pending fresh redeploy manifest |
-| Contract verification | Pending fresh redeploy |
+| Active addresses | Pending manifest |
+| Contract verification | Pending redeploy |
 | Liquidity launch | Manual operation after pair setup |
 
 ## ✨ Active Features
 
-| Feature | Current Behavior |
+| Feature | Behavior |
 | ------- | ---------------- |
 | Token | ERC20 + ERC20Permit, fixed 0% buy fee and 1% sell ecosystem fee |
 | Launch controls | One-way trading open, one-time pre-launch LP seed path, launch max-wallet limit |

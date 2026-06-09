@@ -9,11 +9,11 @@ snapshots, and Safe-controlled contract wiring.
 
 ## ⏳ Lock Periods
 
-| ID | Duration | Base incentive rate |
-| -- | -------- | ------------------- |
-| 0 | 90 days | 2% |
-| 1 | 180 days | 5% |
-| 2 | 365 days | 8% |
+| Lock period | Base incentive rate |
+| ----------- | ------------------- |
+| 90 days | 2% |
+| 180 days | 5% |
+| 365 days | 8% |
 
 Lock period selection changes the base incentive rate only. It is not an extra multiplier.
 

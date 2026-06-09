@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "GloveCat"
   text: "GCAT on Base"
-  tagline: Current redeploy documentation for the GloveCat contract surface.
+  tagline: Current GCAT documentation for the Base redeploy.
   image:
     src: /logo.webp
     alt: GloveCat
@@ -13,7 +13,7 @@ hero:
       text: Get Started
       link: /guide/
     - theme: alt
-      text: Contract Status
+      text: Contracts
       link: /admin/contracts
 
 features:
@@ -37,17 +37,17 @@ GloveCat is in redeploy preparation. The previous Base deployment snapshot was a
 referenced retired surfaces. Until a fresh Base manifest is generated and marked `active`, historical
 addresses must be treated as reference-only.
 
-| Item | Current Position |
+| Item | Status |
 | ---- | ---------------- |
 | Base manifest | `no-current-redeploy` placeholder |
-| Contract addresses | Pending fresh redeploy manifest |
+| Contract addresses | Pending manifest |
 | Trading launch | Not complete in the current manifest |
 | LP lock evidence | Required before public liquidity claims |
 | Active source of truth | `C:\gcatProject\GloveCat` |
 
 ## 🧩 Active Surface
 
-The current redeploy surface is intentionally smaller than older GloveCat documentation:
+The current source surface is:
 
 - `GloveCatCore`: ERC20 token, fixed 0% buy fee and 1% sell ecosystem fee.
 - `Staking`: lock-only staking with fixed 90, 180, and 365 day periods.

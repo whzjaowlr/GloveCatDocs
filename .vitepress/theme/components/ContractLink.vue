@@ -23,5 +23,5 @@ const href = computed(() =>
   <a v-if="href" :href="href" target="_blank" rel="noreferrer">
     {{ label || contract.name }}
   </a>
-  <span v-else>{{ label || contract.name }} pending redeploy</span>
+  <span v-else>{{ label || contract.name }} pending</span>
 </template>

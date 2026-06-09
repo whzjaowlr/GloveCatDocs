@@ -4,12 +4,12 @@
 
 ## 🎨 NFT Tiers
 
-| Tier ID | Tier | Staking boost |
-| ------: | ---- | ------------: |
-| 0 | Common | 1.2x |
-| 1 | Rare | 1.4x |
-| 2 | Epic | 1.7x |
-| 3 | Legendary | 2.2x |
+| Tier | Staking boost |
+| ---- | ------------: |
+| 🐾 Common | 1.2x |
+| 💎 Rare | 1.4x |
+| 🌟 Epic | 1.7x |
+| 👑 Legendary | 2.2x |
 
 The maximum NFT staking boost is 2.2x. The final staking multiplier, after applying NFT bonus, is
 capped at 4.0x in `Staking`.

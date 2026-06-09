@@ -41,7 +41,7 @@ export const baseDeployment = {
   compiler: "solc 0.8.34",
   deployer: null as `0x${string}` | null,
   updatedAt: "2026-06-09",
-  note: "Historical Base addresses are archived. Publish fresh addresses only after a new manifest is generated and marked active.",
+  note: "Publish fresh addresses only after a new manifest is generated and marked active.",
 };
 
 export const contracts: ContractInfo[] = [
@@ -50,42 +50,42 @@ export const contracts: ContractInfo[] = [
     description: "GCAT ERC20 token with fixed sell fee and launch max-wallet limit",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
   {
     name: "Staking",
     description: "Lock-only staking with 90/180/365 day periods",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
   {
     name: "GloveCatNFT",
     description: "ERC721 tier NFT for staking boost and ERC2981 royalties",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
   {
     name: "GloveCatBadge",
     description: "ERC1155 badge contract with soulbound or transferable badge types",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
   {
     name: "GamificationCore",
     description: "Achievement rewards and staking-only leaderboard NFT claims",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
   {
     name: "GloveCatViewer",
     description: "Read-only frontend helper",
     address: null,
     verified: false,
-    status: "Pending fresh redeploy manifest",
+    status: "Pending redeploy",
   },
 ];
 

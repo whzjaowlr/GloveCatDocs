@@ -24,7 +24,7 @@ import { addressUrl, wallets } from "../../data/contracts";
           >
             <code>{{ wallet.address }}</code>
           </a>
-          <span v-else>Pending fresh redeploy manifest</span>
+          <span v-else>Pending redeploy</span>
         </td>
       </tr>
     </tbody>
