@@ -43,7 +43,6 @@ pending before the release can be treated as fully active.
 | Contract addresses     | Published and Basescan verified         |
 | Trading launch         | Not complete in the current manifest    |
 | LP lock evidence       | Required before public liquidity claims |
-| Active source of truth | `C:\gcatProject\GloveCat`               |
 
 ## 🧩 Active Surface
 
