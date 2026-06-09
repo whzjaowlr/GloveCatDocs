@@ -43,7 +43,6 @@ The active redeploy surface is:
 - `Staking`
 - `GloveCatNFT`
 - `GamificationCore`
-- `GloveCatViewer`
 
 Only the contracts listed above should be treated as the current redeploy surface.
 

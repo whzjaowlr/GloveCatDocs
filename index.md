@@ -61,7 +61,6 @@ The current source surface is:
   4.0x aggregate staking boost cap.
 - `GamificationCore`: staking-only Merkle leaderboard NFT rewards capped to 10 successful claims
   per season.
-- `GloveCatViewer`: read-only frontend helper.
 
 This documentation only describes the current redeploy surface and current launch requirements.
 

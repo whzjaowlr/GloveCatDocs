@@ -14,7 +14,6 @@ Active contract surface:
 - `Staking`
 - `GloveCatNFT`
 - `GamificationCore`
-- `GloveCatViewer`
 
 This documentation only describes the current redeploy surface.
 
