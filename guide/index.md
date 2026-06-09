@@ -23,7 +23,7 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | Token | ERC20 + ERC20Permit, fixed 0% buy fee and 1% sell ecosystem fee |
 | Launch controls | One-way trading open, one-time pre-launch LP seed path, launch max-wallet limit |
 | Staking | Lock-only 90/180/365 day staking |
-| NFT | ERC721 tier NFT, highest active tier boost only |
+| NFT | ERC721 tier NFT with different-tier boost stacking |
 | Badge | Separate ERC1155 badge contract, soulbound or transferable per badge type |
 | Rewards | Achievement rewards and staking-only leaderboard NFT claims |
 | Governance | Off-chain advisory community input; no on-chain governance module in active surface |

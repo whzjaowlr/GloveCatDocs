@@ -10,8 +10,9 @@ audit report and does not guarantee that no vulnerabilities exist.
 - Fee setters and fee exclusions are absent.
 - Staking amount does not create an additional multiplier.
 - Final staking multiplier is capped at 4.0x.
-- NFT staking boost is capped at 2.2x.
-- Multiple NFT tiers do not stack; the highest active tier applies.
+- A single NFT tier boost is capped at 2.5x.
+- Different active NFT tiers stack additively, while duplicate NFTs from the same tier do not add
+  extra boost.
 - Leaderboard claims are staking-only.
 - Each leaderboard season allows at most 10 successful claims.
 - Merkle leaves include chain ID, contract address, season, user, rank, and value.

@@ -36,7 +36,7 @@ No. Rewards depend on available reward pool funding.
 
 ### Do multiple NFT benefits stack?
 
-No. The staking contract uses the highest active NFT tier boost returned by `GloveCatNFT`.
+Different NFT tiers stack additively. Multiple NFTs from the same tier do not add extra boost.
 
 ### Does an NFT transfer keep the boost active?
 

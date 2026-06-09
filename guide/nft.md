@@ -7,12 +7,11 @@
 | Tier | Staking boost |
 | ---- | ------------: |
 | 🐾 Common | 1.2x |
-| 💎 Rare | 1.4x |
-| 🌟 Epic | 1.7x |
-| 👑 Legendary | 2.2x |
+| 💎 Rare | 1.5x |
+| 🌟 Epic | 1.8x |
+| 👑 Legendary | 2.5x |
 
-The maximum NFT staking boost is 2.2x. The final staking multiplier, after applying NFT bonus, is
-capped at 4.0x in `Staking`.
+One active NFT from each default tier reaches the 4.0x final staking multiplier cap in `Staking`.
 
 ## ⚡ Benefit Activation
 
@@ -25,13 +24,14 @@ NFT staking benefits are not automatically active forever after transfer.
 
 ## 🧮 Multiple NFTs
 
-Multiple NFTs do not stack by summing every token. `getStakingBoost(address)` returns the highest
-active tier boost held by the wallet.
+Different NFT tiers stack additively. Multiple active NFTs from the same tier do not add extra
+boost.
 
 Example:
 
-- Rare active + Legendary active = Legendary boost only.
-- Common active + Epic inactive = Common boost only.
+- Common + Rare + Epic + Legendary = 4.0x.
+- Two Common NFTs = 1.2x.
+- Rare active + Epic inactive = Rare boost only.
 
 ## 🛠️ Minting And Admin Controls
 

@@ -32,7 +32,8 @@ or later benefit activation do not retroactively update an existing lock positio
 Rules:
 
 - No NFT boost: 1.0x.
-- `GloveCatNFT` returns only the highest active tier boost for a wallet.
+- Different active NFT tiers stack additively.
+- Duplicate NFTs from the same tier do not add extra boost.
 - NFT benefits require the configured holding period before activation.
 - The final staking multiplier is capped at 4.0x.
 

@@ -49,7 +49,8 @@ reward multiplier.
 | `setDefaultRoyaltyReceiver(address)` | Safe | Update ERC2981 royalty receiver |
 | `deleteDefaultRoyalty()` | Safe | Remove default royalty |
 
-The default royalty percentage is fixed at 3%. NFT staking boost is capped at 2.2x per NFT tier.
+The default royalty percentage is fixed at 3%. A single NFT tier boost is capped at 2.5x, and the
+aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x.
 
 ## 🏅 GloveCatBadge
 
