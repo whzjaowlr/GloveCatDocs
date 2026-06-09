@@ -1,7 +1,7 @@
 # GloveCat (GCAT) Introduction
 
 GloveCat is a Base-chain token project built around a fixed-fee ERC20, lock-position staking, NFT
-boost snapshots, badges, and staking-based gamification.
+boost snapshots, and staking-based gamification.
 
 This documentation describes the current redeploy source surface. It does not claim that Base
 mainnet contracts are active until a fresh manifest is published and marked `active`.
@@ -24,7 +24,6 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | Launch controls | Official pair setup, one-time pre-launch LP seed from the launch liquidity wallet, one-way `openTrading()`, and default 2% launch max-wallet checks that expire 1 hour after trading opens |
 | Staking | Lock positions with 1,000 GCAT minimum, 50 active-position cap, fixed 30/90/180 day periods, annualized 2%/5%/8% incentive rates, funded incentive pool, and unpaid incentive carry-forward |
 | NFT | ERC721 tier NFT with 1-day benefit activation, transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and 4.0x aggregate staking cap |
-| Badge | Separate ERC1155 badge contract with per-type soulbound or transferable behavior, optional max supply, active state, and Safe/minter grants |
 | Rewards | Staking-only Merkle leaderboard NFT claims capped to 10 successful claims per season |
 | Governance | Off-chain advisory community input; no on-chain governance module in active surface |
 

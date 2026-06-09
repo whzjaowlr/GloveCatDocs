@@ -45,8 +45,3 @@ NFT minter before leaderboard NFT reward claims can mint NFTs.
 
 Safe can update base URI, contract URI, token URI overrides, tier activation, and royalty receiver.
 The default royalty percentage is fixed at 3%.
-
-## 🏅 Badges Are Separate
-
-Badges are not stored in `GloveCatNFT`. They are handled by `GloveCatBadge`, a separate ERC1155
-contract. Badges do not add staking rewards.

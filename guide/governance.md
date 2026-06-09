@@ -26,7 +26,7 @@ Examples of actions that require Safe execution:
 - Set official pair configuration.
 - Open trading once.
 - Replenish the staking reward pool.
-- Update NFT or badge metadata settings.
+- Update NFT metadata settings.
 - Set minters and leaderboard reward wiring.
 
 ## 📝 Proposal Hygiene

@@ -13,7 +13,6 @@ Active contract surface:
 - `GloveCatCore`
 - `Staking`
 - `GloveCatNFT`
-- `GloveCatBadge`
 - `GamificationCore`
 - `GloveCatViewer`
 
@@ -35,4 +34,4 @@ records, or contract verification evidence.
 
 ## 🗓️ Last Updated
 
-2026-06-09
+2026-06-10

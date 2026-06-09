@@ -26,9 +26,6 @@ features:
   - icon: 🎨
     title: NFT Boosts
     details: ERC721 tiers use 1-day benefit activation, different-tier boost stacking, and a 4.0x final staking cap.
-  - icon: 🏅
-    title: Badges
-    details: ERC1155 badge records support per-type soulbound or transferable behavior, supply caps, and Safe/minter grants.
   - icon: 🏆
     title: Gamification
     details: Staking-only Merkle leaderboard claims mint tier NFT rewards, capped to 10 successful claims per season.
@@ -62,8 +59,6 @@ The current source surface is:
 - `GloveCatNFT`: ERC721 tier NFT with ERC2981 royalty support, 1-day benefit activation,
   transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and a
   4.0x aggregate staking boost cap.
-- `GloveCatBadge`: ERC1155 badge contract with soulbound or transferable badge types, optional
-  max-supply caps, active flags, and Safe/minter grant controls.
 - `GamificationCore`: staking-only Merkle leaderboard NFT rewards capped to 10 successful claims
   per season.
 - `GloveCatViewer`: read-only frontend helper.

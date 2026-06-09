@@ -20,7 +20,7 @@ Depending on the issue, Safe may be able to:
 - Change official pair settings.
 - Update ecosystem wallet.
 - Rewire staking, NFT, or gamification references.
-- Remove an NFT or badge minter.
+- Remove an NFT minter.
 - Disable or replace leaderboard reward wiring.
 - Correct a leaderboard Merkle root before the first successful claim.
 - Replenish or stop funding the staking reward pool.

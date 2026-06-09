@@ -55,21 +55,6 @@ The default royalty percentage is fixed at 3%. A single NFT tier boost is capped
 aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x. Benefits require a 1-day
 holding period before activation and reset on transfer.
 
-## 🏅 GloveCatBadge
-
-| Function | Authority | Purpose |
-| -------- | --------- | ------- |
-| `createBadgeType(string,string,bool,uint256)` | Safe | Create a badge type |
-| `updateBadgeType(uint256,bool,uint256,bool)` | Safe | Update transferability, cap, and active state |
-| `setMinter(address,bool)` | Safe | Approve or remove badge minters |
-| `setBaseURI(string)` | Safe | Update badge base URI |
-| `setBadgeURI(uint256,string)` | Safe | Set badge-specific metadata |
-| `grantBadge(address,uint256)` | Safe or minter | Grant one badge |
-| `grantBadges(address,uint256[])` | Safe or minter | Grant multiple badges |
-| `revokeBadge(address,uint256)` | Safe | Revoke a badge |
-
-Soulbound badge types cannot be transferred after mint. `maxSupply=0` means uncapped; nonzero
-`maxSupply` is a lifetime mint cap and cannot be bypassed by revoking badges.
 
 ## 🏆 GamificationCore
 

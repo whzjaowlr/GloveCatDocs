@@ -42,7 +42,6 @@ The active redeploy surface is:
 - `GloveCatCore`
 - `Staking`
 - `GloveCatNFT`
-- `GloveCatBadge`
 - `GamificationCore`
 - `GloveCatViewer`
 

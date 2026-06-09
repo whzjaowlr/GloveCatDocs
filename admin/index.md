@@ -23,7 +23,6 @@ Fresh deployment is not complete until:
 | `GloveCatCore` | ERC20 + Permit token, fixed 0% buy and 1% sell ecosystem fee, official pair controls, one-time pre-launch LP seed path, launch max-wallet checks that expire 1 hour after trading opens |
 | `Staking` | Fixed 30/90/180 day lock positions, 1,000 GCAT minimum, 50 active-position cap, annualized 2%/5%/8% rates, NFT boost snapshots, funded incentive pool |
 | `GloveCatNFT` | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty |
-| `GloveCatBadge` | ERC1155 badge records with per-type soulbound/transferable behavior, max-supply caps, active state, and minter grants |
 | `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |
 | `GloveCatViewer` | Read-only frontend helper |
 
