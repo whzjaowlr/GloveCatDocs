@@ -33,17 +33,17 @@ features:
 
 ## 🚦 Current Release State
 
-GloveCat is in redeploy preparation. The previous Base deployment snapshot was archived because it
-referenced retired surfaces. Until a fresh Base manifest is generated and marked `active`, historical
-addresses must be treated as reference-only.
+GloveCat contracts are deployed and Basescan verified on Base mainnet. The current manifest is still
+`deployed-pending-safe-config`, so Safe wiring, liquidity setup, LP locking, and trading launch remain
+pending before the release can be treated as fully active.
 
-| Item | Status |
-| ---- | ---------------- |
-| Base manifest | `no-current-redeploy` placeholder |
-| Contract addresses | Pending manifest |
-| Trading launch | Not complete in the current manifest |
-| LP lock evidence | Required before public liquidity claims |
-| Active source of truth | `C:\gcatProject\GloveCat` |
+| Item                   | Status                                  |
+| ---------------------- | --------------------------------------- |
+| Base manifest          | `deployed-pending-safe-config`          |
+| Contract addresses     | Published and Basescan verified         |
+| Trading launch         | Not complete in the current manifest    |
+| LP lock evidence       | Required before public liquidity claims |
+| Active source of truth | `C:\gcatProject\GloveCat`               |
 
 ## 🧩 Active Surface
 
@@ -66,12 +66,12 @@ This documentation only describes the current redeploy surface and current launc
 
 ## 🔗 Quick Links
 
-| Item | Link |
-| ---- | ---- |
-| Guide | [Project guide](/guide/) |
-| Staking | [Staking guide](/guide/staking) |
-| Tokenomics | [Tokenomics](/guide/tokenomics) |
-| Contract status | [Contract information](/admin/contracts) |
-| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
-| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
-| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
+| Item            | Link                                          |
+| --------------- | --------------------------------------------- |
+| Guide           | [Project guide](/guide/)                      |
+| Staking         | [Staking guide](/guide/staking)               |
+| Tokenomics      | [Tokenomics](/guide/tokenomics)               |
+| Contract status | [Contract information](/admin/contracts)      |
+| dApp            | [glovecatcoin.com](https://glovecatcoin.com)  |
+| Twitter/X       | [@GCATstudio](https://twitter.com/GCATstudio) |
+| Telegram        | [glovecatcoin](https://t.me/glovecatcoin)     |

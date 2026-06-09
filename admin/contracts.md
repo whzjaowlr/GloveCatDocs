@@ -12,10 +12,12 @@ This page shows the current deployment registry state.
 
 ## 🚦 Current Manifest Status
 
-The current contract repository manifest is `no-current-redeploy`. The previous Base snapshot was
-archived and must not be used as the active deployment registry.
+The current Base manifest is `deployed-pending-safe-config`.
 
-Do not use historical addresses as active addresses. A fresh manifest must include:
+The contracts listed above are deployed and Basescan verified. The deployment is not a complete
+public launch until Safe wiring, liquidity setup, LP locking, and trading launch are completed.
+
+The active manifest includes:
 
 - Contract addresses.
 - Transaction hashes and block numbers.
@@ -24,16 +26,16 @@ Do not use historical addresses as active addresses. A fresh manifest must inclu
 - Git commit.
 - Safe address and Safe configuration evidence.
 - Contract verification evidence.
-- `status=active` only after final review.
+- `status=active` only after Safe configuration execution and final review.
 
 ## 🌐 Network Information
 
-| Item | Value |
-| ---- | ----- |
-| Network | Base Mainnet |
-| Chain ID | 8453 |
-| RPC | `https://mainnet.base.org` |
-| Explorer | `https://basescan.org` |
+| Item     | Value                      |
+| -------- | -------------------------- |
+| Network  | Base Mainnet               |
+| Chain ID | 8453                       |
+| RPC      | `https://mainnet.base.org` |
+| Explorer | `https://basescan.org`     |
 
 ## 🧩 Active Contracts
 

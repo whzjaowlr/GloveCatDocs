@@ -4,14 +4,14 @@
 
 ### Is there an active Base mainnet address?
 
-Not in the current documentation registry. The current Base manifest is a `no-current-redeploy`
-placeholder. Fresh addresses should be published only after a new broadcast-generated manifest is
-reviewed and marked `active`.
+Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
+are Basescan verified. The manifest status is still `deployed-pending-safe-config`, so Safe wiring,
+liquidity setup, LP locking, and trading launch remain pending before the release is fully active.
 
 ### Where can I buy GCAT?
 
 Use only official launch announcements and verified contract addresses. Historical addresses are
-reference-only until the fresh manifest is active.
+reference-only and should not be used as the current GCAT deployment.
 
 ### Which wallets are supported?
 
