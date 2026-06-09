@@ -2,7 +2,7 @@
 
 GCAT has a fixed total supply and a simplified redeploy allocation model.
 
-## Total Supply
+## 🪙 Total Supply
 
 | Item | Value |
 | ---- | ----- |
@@ -11,7 +11,7 @@ GCAT has a fixed total supply and a simplified redeploy allocation model.
 | Type | ERC20 with ERC20Permit |
 | Network target | Base Mainnet |
 
-## Initial Allocation
+## 📊 Initial Allocation
 
 | Allocation | Ratio | Amount | Notes |
 | ---------- | ----: | -----: | ----- |
@@ -22,7 +22,7 @@ GCAT has a fixed total supply and a simplified redeploy allocation model.
 There is no dedicated preminted marketing allocation, bug bounty allocation, or automatic liquidity
 allocation outside the rows above.
 
-## Fees
+## 💸 Fees
 
 | Type | Rate | Destination |
 | ---- | ---: | ----------- |
@@ -32,7 +32,7 @@ allocation outside the rows above.
 The token contract does not expose fee-rate setters or fee-exclusion admin functions. Sell fees are
 not automatically redistributed by the token contract.
 
-## Launch Limits
+## 🚦 Launch Limits
 
 | Item | Rule |
 | ---- | ---- |
@@ -43,13 +43,13 @@ not automatically redistributed by the token contract.
 The launch max-wallet limit is not a complete market-protection system. Wallets, exchanges, and
 routers may also apply independent limits.
 
-## Liquidity
+## 💧 Liquidity
 
 Liquidity creation, ETH/WETH funding, LP token custody, and LP token locking are manual operational
 steps outside the token contract. Public liquidity claims should include pair address, transaction
 hashes, LP token custody, lock duration, and lock evidence.
 
-## Reward Funding
+## 🎁 Reward Funding
 
 Staking and gamification rewards are paid only from funded reward pools. If a reward pool is
 insufficient, the staking contract can carry unpaid staking incentives forward as

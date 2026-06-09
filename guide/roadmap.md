@@ -5,7 +5,7 @@
 This roadmap tracks release readiness for the current redeploy surface. It is not a guarantee of
 delivery dates.
 
-## P0: Redeploy Readiness
+## 🚦 P0: Redeploy Readiness
 
 | Item | Status |
 | ---- | ------ |
@@ -19,7 +19,7 @@ delivery dates.
 | Trading open | Pending |
 | LP token lock evidence | Pending |
 
-## P1: Launch Operations
+## 🚀 P1: Launch Operations
 
 - Publish active contract addresses only after manifest validation.
 - Publish Safe owner/threshold evidence.
@@ -27,13 +27,13 @@ delivery dates.
 - Fund staking and gamification reward pools from approved sources.
 - Add public monitoring for contract wiring, reward pools, and liquidity status.
 
-## P2: Post-Launch Visibility
+## 📊 P2: Post-Launch Visibility
 
 - Public contract status dashboard.
 - Analytics dashboard for staking participation and reward pool health.
 - Improved user-facing staking and NFT benefit explanations.
 
-## Roadmap Rule
+## 📌 Roadmap Rule
 
 Roadmap items should be published only when they have a current owner, dependency list, and evidence
 plan.

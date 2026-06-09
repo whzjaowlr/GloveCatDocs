@@ -2,7 +2,7 @@
 
 This section is for operators maintaining the current GloveCat redeploy surface.
 
-## Operating Model
+## 🧭 Operating Model
 
 GloveCat contracts are deployed by an EOA, but production admin authority is assigned to the Safe
 multisig through `TieredAccess`.
@@ -16,7 +16,7 @@ Fresh deployment is not complete until:
 4. Basescan verification and on-chain reads match the manifest.
 5. Liquidity setup and LP lock evidence are published where relevant.
 
-## Active Contract Surface
+## 🧩 Active Contract Surface
 
 | Contract | Role |
 | -------- | ---- |
@@ -27,7 +27,7 @@ Fresh deployment is not complete until:
 | `GamificationCore` | Achievements and staking-only leaderboard NFT rewards |
 | `GloveCatViewer` | Read-only frontend helper |
 
-## Admin Principles
+## 🔐 Admin Principles
 
 - Use Safe transactions for production admin actions.
 - Do not rely on EOA direct admin calls as a mainnet operating path.
@@ -35,7 +35,7 @@ Fresh deployment is not complete until:
 - Publish evidence for launch, liquidity, LP lock, reward pool funding, and Safe wiring.
 - Do not describe removed features as available.
 
-## Contents
+## 📚 Contents
 
 - [Contract Info](/admin/contracts)
 - [Admin Functions](/admin/functions)

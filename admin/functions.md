@@ -3,12 +3,12 @@
 Admin functions should be executed through the configured Safe multisig unless a documented
 deployment or recovery procedure explicitly says otherwise.
 
-## Current Admin Boundary
+## 🔐 Current Admin Boundary
 
 This page lists the current admin functions only. Do not infer additional admin powers from older
 materials or archived deployments.
 
-## GloveCatCore
+## 🪙 GloveCatCore
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
@@ -23,7 +23,7 @@ materials or archived deployments.
 `openTrading()` is one-way. Run official pair setup and pre-launch LP seed planning before opening
 trading.
 
-## Staking
+## 🔒 Staking
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
@@ -34,7 +34,7 @@ trading.
 Staking lock periods are fixed to 90, 180, and 365 days. Staking amount does not create a separate
 reward multiplier.
 
-## GloveCatNFT
+## 🎨 GloveCatNFT
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
@@ -51,7 +51,7 @@ reward multiplier.
 
 The default royalty percentage is fixed at 3%. NFT staking boost is capped at 2.2x per NFT tier.
 
-## GloveCatBadge
+## 🏅 GloveCatBadge
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
@@ -66,7 +66,7 @@ The default royalty percentage is fixed at 3%. NFT staking boost is capped at 2.
 
 Soulbound badge types cannot be transferred after mint.
 
-## GamificationCore
+## 🏆 GamificationCore
 
 | Function | Authority | Purpose |
 | -------- | --------- | ------- |
@@ -83,7 +83,7 @@ Soulbound badge types cannot be transferred after mint.
 Leaderboard claims are capped to 10 successful claims per season, with one claim per wallet and one
 claim per rank.
 
-## Access Transfer
+## 🔁 Access Transfer
 
 `TieredAccess` multiSig transfer uses a two-step flow:
 

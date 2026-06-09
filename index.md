@@ -17,17 +17,21 @@ hero:
       link: /admin/contracts
 
 features:
-  - title: Lock-Only Staking
+  - icon: 🔒
+    title: Lock-Only Staking
     details: Fixed 90, 180, and 365 day staking periods with reward-pool based incentives.
-  - title: Tier NFTs
+  - icon: 🎨
+    title: Tier NFTs
     details: ERC721 NFTs provide staking boost snapshots after the benefit holding period.
-  - title: Badges
+  - icon: 🏅
+    title: Badges
     details: Separate ERC1155 badges support soulbound and transferable achievement records.
-  - title: Gamification
+  - icon: 🏆
+    title: Gamification
     details: Achievement rewards and staking-only leaderboard NFT claims use verifier and Merkle flows.
 ---
 
-## Current Release State
+## 🚦 Current Release State
 
 GloveCat is in redeploy preparation. The previous Base deployment snapshot was archived because it
 referenced retired surfaces. Until a fresh Base manifest is generated and marked `active`, historical
@@ -41,7 +45,7 @@ addresses must be treated as reference-only.
 | LP lock evidence | Required before public liquidity claims |
 | Active source of truth | `C:\gcatProject\GloveCat` |
 
-## Active Surface
+## 🧩 Active Surface
 
 The current redeploy surface is intentionally smaller than older GloveCat documentation:
 
@@ -54,7 +58,7 @@ The current redeploy surface is intentionally smaller than older GloveCat docume
 
 This documentation only describes the current redeploy surface and current launch requirements.
 
-## Quick Links
+## 🔗 Quick Links
 
 | Item | Link |
 | ---- | ---- |

@@ -6,7 +6,7 @@ snapshots, badges, and staking-based gamification.
 This documentation describes the current redeploy source surface. It does not claim that Base
 mainnet contracts are active until a fresh manifest is published and marked `active`.
 
-## Current Status
+## 🚦 Current Status
 
 | Item | Status |
 | ---- | ------ |
@@ -16,7 +16,7 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | Contract verification | Pending fresh redeploy |
 | Liquidity launch | Manual operation after pair setup |
 
-## Active Features
+## ✨ Active Features
 
 | Feature | Current Behavior |
 | ------- | ---------------- |
@@ -28,11 +28,11 @@ mainnet contracts are active until a fresh manifest is published and marked `act
 | Rewards | Achievement rewards and staking-only leaderboard NFT claims |
 | Governance | Off-chain advisory community input; no on-chain governance module in active surface |
 
-## Documentation Scope
+## 📌 Documentation Scope
 
 This guide describes the current redeploy source surface and current launch requirements only.
 
-## Getting Started
+## 🚀 Getting Started
 
 1. Read [Tokenomics](/guide/tokenomics).
 2. Review [Staking](/guide/staking) and [NFT](/guide/nft) behavior.

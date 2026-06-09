@@ -1,6 +1,6 @@
 # FAQ
 
-## General
+## 💬 General
 
 ### Is there an active Base mainnet address?
 
@@ -18,7 +18,7 @@ reference-only until the fresh manifest is active.
 Any wallet that supports Base can interact with Base contracts, subject to the dApp and wallet
 provider's own support.
 
-## Staking
+## 🔒 Staking
 
 ### Do staking amounts create separate multipliers?
 
@@ -32,7 +32,7 @@ No. A lock position can be unstaked only after the selected lock period ends.
 
 No. Rewards depend on available reward pool funding.
 
-## NFT
+## 🎨 NFT
 
 ### Do multiple NFT benefits stack?
 
@@ -42,7 +42,7 @@ No. The staking contract uses the highest active NFT tier boost returned by `Glo
 
 No. Transfer resets active benefit state and starts a new benefit holding period for the recipient.
 
-## Security
+## 🛡️ Security
 
 ### Has an external audit been published?
 

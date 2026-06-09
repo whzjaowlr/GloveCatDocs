@@ -3,7 +3,7 @@
 This page summarizes the current security posture for the redeploy surface. It is not an external
 audit report and does not guarantee that no vulnerabilities exist.
 
-## Confirmed Design Constraints
+## ✅ Confirmed Design Constraints
 
 - Buy fee is fixed at 0%.
 - Sell fee is fixed at 1% ecosystem fee.
@@ -16,11 +16,11 @@ audit report and does not guarantee that no vulnerabilities exist.
 - Each leaderboard season allows at most 10 successful claims.
 - Merkle leaves include chain ID, contract address, season, user, rank, and value.
 
-## Documentation Boundary
+## 📌 Documentation Boundary
 
 This page describes only the active redeploy surface and current release gates.
 
-## Access Control
+## 🔐 Access Control
 
 `TieredAccess` uses a Safe-style `multiSig` authority. MultiSig transfer is a two-step flow:
 
@@ -29,7 +29,7 @@ This page describes only the active redeploy surface and current release gates.
 
 No OpenZeppelin `AccessControl` manager roles are exposed in the active access layer.
 
-## Release Gates
+## 🚦 Release Gates
 
 Recommended checks before active publication:
 
@@ -45,7 +45,7 @@ npm run lint:check
 The current contract repo release gate recently passed with 206 Foundry tests and 0 medium/high
 Slither release blockers. Low timestamp findings remain and should be tracked as operational risk.
 
-## Operational Risks
+## ⚠️ Operational Risks
 
 - Reward pools can be exhausted.
 - Liquidity and LP lock execution are manual.
@@ -55,7 +55,7 @@ Slither release blockers. Low timestamp findings remain and should be tracked as
 - The pre-launch LP seed path works only before trading opens and only from the configured launch
   liquidity wallet to an official pair.
 
-## Reporting
+## 🛡️ Reporting
 
 Security issues should be reported privately to project maintainers. Do not publish exploit details
 in public channels.

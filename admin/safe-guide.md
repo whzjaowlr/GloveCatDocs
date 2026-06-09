@@ -2,7 +2,7 @@
 
 GloveCat production admin authority is expected to be controlled by the configured Safe multisig.
 
-## Deployment Pattern
+## 🚀 Deployment Pattern
 
 The normal redeploy pattern is:
 
@@ -13,7 +13,7 @@ The normal redeploy pattern is:
 
 Safe is the admin authority, not necessarily the transaction sender that deploys every contract.
 
-## Required Evidence
+## ✅ Required Evidence
 
 Before calling a deployment active, publish:
 
@@ -26,7 +26,7 @@ Before calling a deployment active, publish:
 - Post-deploy wiring transaction hashes.
 - Manifest status and update time.
 
-## Post-Deploy Wiring
+## 🔌 Post-Deploy Wiring
 
 Typical Safe actions include:
 
@@ -37,7 +37,7 @@ Typical Safe actions include:
 - `GloveCatNFT.setMinter(gamification, true)`.
 - Official pair setup before trading opens.
 
-## Execution Process
+## 📋 Execution Process
 
 1. Prepare calldata or Safe Transaction Builder JSON.
 2. Review target, selector, arguments, and expected state change.
@@ -46,7 +46,7 @@ Typical Safe actions include:
 5. Verify on-chain state after execution.
 6. Archive evidence.
 
-## Mainnet Caution
+## ⚠️ Mainnet Caution
 
 Do not use archived deployment addresses or pending manifests for production Safe actions. Confirm
 the active manifest and on-chain reads first.

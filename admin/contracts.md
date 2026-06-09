@@ -2,15 +2,15 @@
 
 This page shows the current deployment registry state.
 
-## Base Mainnet
+## 🌐 Base Mainnet
 
 <ContractTable />
 
-## Project Wallets
+## 👛 Project Wallets
 
 <WalletTable />
 
-## Current Manifest Status
+## 🚦 Current Manifest Status
 
 The current contract repository manifest is `no-current-redeploy`. The previous Base snapshot was
 archived and must not be used as the active deployment registry.
@@ -26,7 +26,7 @@ Do not use historical addresses as active addresses. A fresh manifest must inclu
 - Contract verification evidence.
 - `status=active` only after final review.
 
-## Network Information
+## 🌐 Network Information
 
 | Item | Value |
 | ---- | ----- |
@@ -35,7 +35,7 @@ Do not use historical addresses as active addresses. A fresh manifest must inclu
 | RPC | `https://mainnet.base.org` |
 | Explorer | `https://basescan.org` |
 
-## Active Contracts
+## 🧩 Active Contracts
 
 The active redeploy surface is:
 
@@ -48,7 +48,7 @@ The active redeploy surface is:
 
 Only the contracts listed above should be treated as the current redeploy surface.
 
-## ABI And Verification
+## ✅ ABI And Verification
 
 ABIs come from the contract repository build outputs after compile. Basescan verification should be
 checked against the active manifest, not older archived deployment snapshots.

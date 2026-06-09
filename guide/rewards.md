@@ -9,7 +9,7 @@ It supports:
 - Reward-pool backed achievement payouts.
 - Staking-only leaderboard NFT reward claims.
 
-## Achievement Rewards
+## 🎯 Achievement Rewards
 
 Safe creates and manages achievement definitions. Approved verifiers update user progress.
 
@@ -22,7 +22,7 @@ Users can claim an achievement only when:
 
 Achievement rewards are not minted automatically. They come from `rewardPool`.
 
-## Leaderboard Rewards
+## 🏆 Leaderboard Rewards
 
 The active leaderboard is staking-only. Token buy/sell volume is not part of the active leaderboard
 contract.
@@ -34,7 +34,7 @@ Flow:
 3. Eligible users claim NFT rewards with Merkle proofs.
 4. `GamificationCore` mints the tier NFT through `GloveCatNFT`.
 
-## Leaderboard Claim Limits
+## 📋 Leaderboard Claim Limits
 
 | Rule | Value |
 | ---- | ----- |
@@ -54,7 +54,7 @@ Rank-to-tier mapping:
 
 Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
 
-## Funding
+## 🎁 Funding
 
 Achievement token rewards are paid from `rewardPool`. Leaderboard NFT rewards require the NFT
 contract to be wired and the gamification contract to be approved as a minter.
