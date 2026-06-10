@@ -12,7 +12,7 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", href: "/logo.webp", type: "image/webp" }],
+    ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
     [
       "link",
       {
@@ -34,7 +34,10 @@ export default defineConfig({
         content: "Current GloveCat (GCAT) redeploy documentation for Base.",
       },
     ],
-    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
+    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
+    ["meta", { property: "og:image:type", content: "image/webp" }],
+    ["meta", { property: "og:image:width", content: "1600" }],
+    ["meta", { property: "og:image:height", content: "661" }],
     ["meta", { name: "twitter:card", content: "summary_large_image" }],
     ["meta", { name: "twitter:url", content: "https://docs.glovecatcoin.com" }],
     ["meta", { name: "twitter:title", content: "GloveCat Docs" }],
@@ -45,7 +48,7 @@ export default defineConfig({
         content: "Current GloveCat (GCAT) redeploy documentation for Base.",
       },
     ],
-    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/logo.webp" }],
+    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
     [
       "meta",
       {
