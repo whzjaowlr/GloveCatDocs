@@ -1,6 +1,6 @@
 # Terms And Risk Disclosure
 
-> Last updated: 2026-06-09
+> Last updated: 2026-06-12
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
@@ -9,8 +9,12 @@ counsel.
 ## 🚦 Product Status
 
 - GloveCat is a token and game-infrastructure experiment on Base.
-- Historical contract addresses are reference-only until a fresh manifest is marked `active`.
-- Contract behavior should be verified against the active manifest and on-chain reads.
+- Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
+  and are Basescan verified.
+- Historical contract addresses outside the current manifest are reference-only.
+- Contract behavior should be verified against the current manifest, Basescan source verification,
+  and on-chain reads. `deployed-pending-safe-config` is deployment evidence, not final public launch
+  evidence.
 
 ## 📉 Market Risks
 
@@ -44,8 +48,8 @@ jurisdictions.
 ## 📣 Communications
 
 Public statements should not describe staking, NFT boosts, leaderboard rewards, or token ownership
-as guaranteed profit. Always link to current docs, active manifest evidence, and security notes when
-discussing contract behavior.
+as guaranteed profit. Always link to current docs, current manifest evidence, and security notes
+when discussing contract behavior.
 
 ## 📌 No Warranty
 

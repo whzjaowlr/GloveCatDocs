@@ -1,6 +1,6 @@
 # Roadmap
 
-> Last updated: 2026-06-09
+> Last updated: 2026-06-12
 
 This roadmap tracks release readiness for the current redeploy surface. It is not a guarantee of
 delivery dates.
@@ -11,8 +11,8 @@ delivery dates.
 | ---- | ------ |
 | Active source cleanup | In progress |
 | Public docs refresh | In progress |
-| Fresh Base manifest | Pending |
-| BaseScan verification for fresh contracts | Pending |
+| Fresh Base manifest | Complete: `deployed-pending-safe-config` |
+| BaseScan verification for fresh contracts | Complete |
 | Safe configuration evidence | Pending |
 | Official pair setup | Pending |
 | Initial liquidity seed | Pending |
@@ -21,7 +21,9 @@ delivery dates.
 
 ## 🚀 P1: Launch Operations
 
-- Publish active contract addresses only after manifest validation.
+- Publish only the verified contract addresses from [Contract Information](/admin/contracts).
+- Do not describe the release as fully active until Safe wiring, liquidity setup, trading open, and
+  LP lock evidence are complete.
 - Publish Safe owner/threshold evidence.
 - Publish liquidity pair and LP lock evidence.
 - Fund the staking incentive pool from approved sources.

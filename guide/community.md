@@ -12,8 +12,11 @@ Use official channels for announcements, launch status, support, and security re
 
 ## 🔎 Before Sharing Contract Addresses
 
-Check [Contract Information](/admin/contracts). Historical addresses should not be shared as active
-deployment addresses unless the current manifest is marked `active` and the address is verified.
+Check [Contract Information](/admin/contracts). The listed Base mainnet addresses are the current
+verified deployment addresses while the manifest is `deployed-pending-safe-config`.
+
+Do not share historical addresses as active targets, and do not imply trading, liquidity, LP lock, or
+Safe wiring is complete until those transactions are visible on-chain.
 
 ## 🤝 How To Participate
 

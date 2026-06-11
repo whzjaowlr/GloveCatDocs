@@ -48,5 +48,7 @@ Typical Safe actions include:
 
 ## ⚠️ Mainnet Caution
 
-Do not use archived deployment addresses or pending manifests for production Safe actions. Confirm
-the active manifest and on-chain reads first.
+Do not use archived deployment addresses for production Safe actions. For the current
+`deployed-pending-safe-config` manifest, use only the prepared Safe configuration transactions that
+match the verified addresses in [Contract Information](/admin/contracts), then confirm on-chain
+state after execution.
