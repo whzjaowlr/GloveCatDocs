@@ -1,10 +1,23 @@
 import { defineConfig } from "vitepress";
 
+const addImageAttrs = (tag: string, attrs: string) => {
+  return tag.includes(" width=") ? tag : tag.replace(">", ` ${attrs}>`);
+};
+
 export default defineConfig({
   title: "GloveCat",
   description: "GloveCat (GCAT) redeploy documentation",
   lang: "en-US",
   base: "/",
+  transformHtml(code) {
+    return code
+      .replace(/<img class="VPImage logo" src="\/logo\.webp" alt[^>]*>/g, (tag) =>
+        addImageAttrs(tag, 'width="24" height="24" decoding="async"'),
+      )
+      .replace(/<img class="VPImage image-src" src="\/logo\.webp" alt="GloveCat"[^>]*>/g, (tag) =>
+        addImageAttrs(tag, 'width="320" height="320" decoding="async" fetchpriority="high"'),
+      );
+  },
 
   sitemap: {
     hostname: "https://docs.glovecatcoin.com",
@@ -12,7 +25,7 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", href: "/logo.png", type: "image/png" }],
+    ["link", { rel: "icon", href: "/logo.png", type: "image/png", sizes: "192x192" }],
     [
       "link",
       {
