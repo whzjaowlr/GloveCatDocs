@@ -4,7 +4,7 @@ layout: home
 hero:
   name: "GloveCat"
   text: "GCAT on Base"
-  tagline: Current GCAT documentation for the Base redeploy.
+  tagline: Current GCAT documentation for the Base mainnet redeploy.
   image:
     src: /logo.webp
     alt: GloveCat
@@ -22,27 +22,31 @@ features:
     details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and 1-hour launch max-wallet checks.
   - icon: 🔒
     title: Lock Staking
-    details: Fixed 30, 90, and 180 day lock periods with annualized 2%, 5%, and 8% incentive rates.
+    details: Fixed 30, 90, and 180 day lock periods with annualized 2%, 5%, and 8% incentive rates, funded by the public staking reward pool.
+  - icon: 🔐
+    title: Public Locks
+    details: LP lock, team vesting, treasury/staking reserve vesting, Safe address, and lock records are published as launch evidence.
   - icon: 🎨
     title: NFT Boosts
     details: ERC721 tiers use 1-day benefit activation, different-tier boost stacking, and a 4.0x final staking cap.
-  - icon: 🏆
-    title: Gamification
-    details: Staking-only Merkle leaderboard claims mint tier NFT rewards, capped to 10 successful claims per season.
 ---
 
 ## 🚦 Current Release State
 
-GloveCat contracts are deployed and Basescan verified on Base mainnet. The current manifest is still
-`deployed-pending-safe-config`, so Safe wiring, liquidity setup, LP locking, and trading launch remain
-pending before the release can be treated as fully active.
+GloveCat contracts are deployed and Basescan verified on Base mainnet. The public launch surface is
+documented around verified contract addresses, Safe admin control, PinkLock vesting records,
+liquidity evidence, LP lock evidence, staking reward funding, and the official Base trading route.
 
-| Item                   | Status                                  |
-| ---------------------- | --------------------------------------- |
-| Base manifest          | `deployed-pending-safe-config`          |
-| Contract addresses     | Published and Basescan verified         |
-| Trading launch         | Not complete in the current manifest    |
-| LP lock evidence       | Required before public liquidity claims |
+| Item | Status |
+| ---- | ------ |
+| Base deployment | `active` |
+| Contract addresses | Published and Basescan verified |
+| Phase 1 Safe wiring | Complete |
+| Team allocation lock | Complete through PinkLock |
+| Treasury/staking reserve lock | Complete through PinkLock |
+| Trading route | Uniswap on Base |
+| LP lock evidence | Published with launch evidence |
+| Staking reward pool | Initial bootstrap funded from Safe policy |
 
 ## 🧩 Active Surface
 
@@ -61,16 +65,17 @@ The current source surface is:
 - `GamificationCore`: staking-only Merkle leaderboard NFT rewards capped to 10 successful claims
   per season.
 
-This documentation only describes the current redeploy surface and current launch requirements.
+This documentation describes the current deployed Base surface and the public evidence users should
+check before relying on any address, lock, liquidity, staking, or reward claim.
 
 ## 🔗 Quick Links
 
-| Item            | Link                                          |
-| --------------- | --------------------------------------------- |
-| Guide           | [Project guide](/guide/)                      |
-| Staking         | [Staking guide](/guide/staking)               |
-| Tokenomics      | [Tokenomics](/guide/tokenomics)               |
-| Contract status | [Contract information](/admin/contracts)      |
-| dApp            | [glovecatcoin.com](https://glovecatcoin.com)  |
-| Twitter/X       | [@GCATstudio](https://twitter.com/GCATstudio) |
-| Telegram        | [glovecatcoin](https://t.me/glovecatcoin)     |
+| Item | Link |
+| ---- | ---- |
+| Guide | [Project guide](/guide/) |
+| Staking | [Staking guide](/guide/staking) |
+| Tokenomics | [Tokenomics](/guide/tokenomics) |
+| Contract status | [Contract information](/admin/contracts) |
+| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
+| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
+| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |

@@ -22,14 +22,16 @@ Any contract-level change must still follow the Safe transaction process.
 
 Examples of actions that require Safe execution:
 
-- Wire contract addresses after deployment.
 - Set official pair configuration.
 - Open trading once.
 - Replenish the staking reward pool.
 - Update NFT metadata settings.
 - Set minters and leaderboard reward wiring.
 
-## 📝 Proposal Hygiene
+Phase 1 wiring has already been executed. Any future wiring changes should still be reviewed,
+signed, executed, and archived through the Safe process.
+
+## 📋 Proposal Hygiene
 
 Good proposals should include:
 

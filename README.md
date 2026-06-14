@@ -1,12 +1,16 @@
 # GloveCat Docs
 
-Official VitePress documentation for the current GloveCat redeploy surface.
+Official VitePress documentation for the current GloveCat Base deployment surface.
 
-## Current Status
+## 🚦 Current Status
 
-GloveCat contracts are deployed and Basescan verified on Base mainnet. The current manifest is
-`deployed-pending-safe-config`, so Safe wiring, liquidity setup, LP locking, and trading launch
-remain pending before the release can be treated as fully active.
+GloveCat contracts are deployed and Basescan verified on Base mainnet. Phase 1 Safe wiring has been
+executed. Team allocation and the long-term treasury/staking reserve are locked through PinkLock
+vesting.
+
+The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,
+liquidity evidence, LP lock evidence, staking reward funding, and the official Base trading route
+must stay visible from the public documentation.
 
 Active contract surface:
 
@@ -15,9 +19,9 @@ Active contract surface:
 - `GloveCatNFT`
 - `GamificationCore`
 
-This documentation only describes the current redeploy surface.
+This documentation only describes the current deployed Base surface.
 
-## Local Development
+## 🛠️ Local Development
 
 ```bash
 npm install
@@ -25,12 +29,12 @@ npm run docs:dev
 npm run docs:build
 ```
 
-## Source Of Truth
+## 📌 Source Of Truth
 
 Contract behavior should be checked against the verified contract source, current deployment
-manifest, on-chain reads, Safe transaction records, and Basescan verification evidence. This
-documentation mirrors those sources but does not replace them.
+manifest, on-chain reads, Safe transaction records, PinkLock records, and Basescan verification
+evidence. This documentation mirrors those sources but does not replace them.
 
-## Last Updated
+## 🕒 Last Updated
 
-2026-06-10
+2026-06-15

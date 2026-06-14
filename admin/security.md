@@ -26,7 +26,7 @@ audit report and does not guarantee that no vulnerabilities exist.
 
 ## 📌 Documentation Boundary
 
-This page describes only the active redeploy surface and current release gates.
+This page describes only the active deployed Base surface and the evidence users should verify.
 
 ## 🔐 Access Control
 
@@ -39,7 +39,7 @@ No OpenZeppelin `AccessControl` manager roles are exposed in the active access l
 
 ## 🚦 Release Gates
 
-Recommended checks before active publication:
+Recommended checks for active publication:
 
 ```bash
 npm run compile

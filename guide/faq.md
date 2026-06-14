@@ -1,17 +1,18 @@
 # FAQ
 
-## 💬 General
+## ❓ General
 
 ### Is there an active Base mainnet address?
 
 Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
-are Basescan verified. The manifest status is still `deployed-pending-safe-config`, so Safe wiring,
-liquidity setup, LP locking, and trading launch remain pending before the release is fully active.
+are Basescan verified. Phase 1 Safe wiring and PinkLock vesting locks are complete. Trading,
+liquidity, LP locking, and reward-pool funding records are published as launch evidence.
 
 ### Where can I buy GCAT?
 
 Use only official launch announcements and verified contract addresses. Historical addresses are
-reference-only and should not be used as the current GCAT deployment.
+reference-only and should not be used as the current GCAT deployment. Use the official Base trading
+route and verify the pair address, token address, and LP lock evidence before swapping.
 
 ### Which wallets are supported?
 
@@ -19,6 +20,11 @@ Any wallet that supports Base can interact with Base contracts, subject to the d
 provider's own support.
 
 ## 🔒 Staking
+
+### Can I stake now?
+
+Use the official dApp only after confirming the active staking address, Safe policy, open token
+transfers, and the funded staking reward pool.
 
 ### Do staking amounts create separate multipliers?
 

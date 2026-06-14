@@ -20,8 +20,9 @@ materials or archived deployments.
 | `setEcosystemWallet(address)` | Safe | Update fixed sell-fee receiver |
 | `openTrading()` | Safe | Open trading once |
 
-`openTrading()` is one-way. Run official pair setup and pre-launch LP seed planning before opening
-trading. The default launch max-wallet check starts at 2% of total supply and expires 1 hour after
+`openTrading()` is one-way. Public docs should keep official pair setup, LP seed records, LP lock
+evidence, docs checks, frontend checks, and backend checks aligned with the active deployment. The
+default launch max-wallet check starts at 2% of total supply and expires 1 hour after
 `openTrading()`.
 
 ## 🔒 Staking
@@ -35,6 +36,8 @@ trading. The default launch max-wallet check starts at 2% of total supply and ex
 Staking lock periods are fixed to 30, 90, and 180 days with annualized 2%, 5%, and 8% incentive
 rates. The minimum stake is 1,000 GCAT, each user can have up to 50 active lock positions, and
 staking amount does not create a separate reward multiplier.
+
+Public staking should stay aligned with the official trading route and the funded reward pool.
 
 ## 🎨 GloveCatNFT
 
@@ -54,7 +57,6 @@ staking amount does not create a separate reward multiplier.
 The default royalty percentage is fixed at 3%. A single NFT tier boost is capped at 2.5x, and the
 aggregate staking boost returned by `GloveCatNFT` is capped at 4.0x. Benefits require a 1-day
 holding period before activation and reset on transfer.
-
 
 ## 🏆 GamificationCore
 

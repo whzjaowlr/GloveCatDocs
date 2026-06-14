@@ -1,6 +1,6 @@
 # Safe Multisig Guide
 
-GloveCat production admin authority is expected to be controlled by the configured Safe multisig.
+GloveCat production admin authority is controlled by the configured Safe multisig.
 
 ## 🚀 Deployment Pattern
 
@@ -13,9 +13,22 @@ The normal redeploy pattern is:
 
 Safe is the admin authority, not necessarily the transaction sender that deploys every contract.
 
-## ✅ Required Evidence
+## ✅ Current Safe State
 
-Before calling a deployment active, publish:
+| Item | Value |
+| ---- | ----- |
+| Safe | `0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803` |
+| Required policy | 2-of-3 or stronger |
+| Phase 1 wiring | Complete |
+| Team PinkLock transfer | Complete |
+| Treasury/staking reserve PinkLock transfer | Complete |
+| Trading route | Published as launch evidence |
+| LP lock evidence | Published as launch evidence |
+| Staking reward-pool funding | Initial bootstrap funded and tracked |
+
+## 📋 Required Evidence
+
+Public deployment evidence should include:
 
 - Safe address.
 - Safe owners and threshold.
@@ -24,18 +37,27 @@ Before calling a deployment active, publish:
 - Deployment tx hashes and block numbers.
 - Basescan verification links.
 - Post-deploy wiring transaction hashes.
+- PinkLock target and lock transaction hashes.
+- Pair address and liquidity tx hashes.
+- LP lock transaction and lock page.
 - Manifest status and update time.
 
-## 🔌 Post-Deploy Wiring
+## 🔌 Completed Post-Deploy Wiring
 
-Typical Safe actions include:
+The Phase 1 Safe batch included:
 
 - `GloveCatCore.setStakingContract(staking)`.
 - `Staking.setCoreContract(core)`.
 - `Staking.setNFTContract(nft)`.
 - `GamificationCore.setNFTContract(nft)`.
 - `GloveCatNFT.setMinter(gamification, true)`.
-- Official pair setup before trading opens.
+
+## 🚀 Launch Evidence Checklist
+
+- Keep official pair and liquidity records linked from public docs.
+- Keep the 5-year LP lock record linked from public docs.
+- Keep staking reward-pool funding records linked from public docs.
+- Keep trading-route, frontend, backend, and docs evidence aligned with the active contract addresses.
 
 ## 📋 Execution Process
 
@@ -48,7 +70,5 @@ Typical Safe actions include:
 
 ## ⚠️ Mainnet Caution
 
-Do not use archived deployment addresses for production Safe actions. For the current
-`deployed-pending-safe-config` manifest, use only the prepared Safe configuration transactions that
-match the verified addresses in [Contract Information](/admin/contracts), then confirm on-chain
-state after execution.
+Do not use archived deployment addresses for production Safe actions. Use only the verified addresses
+in [Contract Information](/admin/contracts), then confirm on-chain state after execution.

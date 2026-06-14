@@ -22,6 +22,25 @@ GCAT has a fixed total supply and a simplified redeploy allocation model.
 There is no dedicated preminted marketing allocation, bug bounty allocation, or automatic liquidity
 allocation outside the rows above.
 
+## 🔐 Public Locks
+
+| Item | Amount | Status |
+| ---- | -----: | ------ |
+| Team allocation | 25,000,000 GCAT | Locked through PinkLock vesting |
+| Long-term treasury/staking reserve | 95,000,000 GCAT | Locked through PinkLock vesting |
+| Initial staking bootstrap | 5,000,000 GCAT | Retained in Safe for initial pool funding |
+| LP tokens | Public LP position | 5-year LP lock evidence published with launch records |
+
+PinkLock vesting starts on `2026-06-28T02:00:00Z`. The configured schedule uses `0.57%` TGE and
+`1.63%` release every 30 days.
+
+| Evidence | Value |
+| -------- | ----- |
+| PinkLock target | `0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC` |
+| Lock target set tx | `0x6b7cd6aea6a36c595be64d6047fad032421785155166527be0473cda9445261d` |
+| Team lock tx | `0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c` |
+| Treasury lock tx | `0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48` |
+
 ## 💸 Fees
 
 | Type | Rate | Destination |
@@ -46,8 +65,8 @@ also apply independent limits.
 ## 💧 Liquidity
 
 Liquidity creation, ETH/WETH funding, LP token custody, and LP token locking are manual operational
-steps outside the token contract. Public liquidity claims should include pair address, transaction
-hashes, LP token custody, lock duration, and lock evidence.
+steps outside the token contract. Public liquidity records should include pair address, transaction
+hashes, LP token custody, 5-year lock duration, and lock evidence.
 
 ## 🎁 Reward Funding
 

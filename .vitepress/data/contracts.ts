@@ -26,6 +26,14 @@ export interface WalletInfo {
   address: `0x${string}` | null;
 }
 
+export interface TokenLockInfo {
+  name: string;
+  amountGcat: string;
+  target: `0x${string}`;
+  txHash: `0x${string}`;
+  schedule: string;
+}
+
 export const baseNetwork = {
   name: "Base Mainnet",
   chainId: 8453,
@@ -35,13 +43,13 @@ export const baseNetwork = {
 
 export const baseDeployment = {
   phase: "full-redeploy",
-  status: "deployed-pending-safe-config",
+  status: "active",
   compiler: "solc 0.8.34",
   deployer: "0xf04a5fe7e719c62142a927c560e4c8ded9c05629" as
     | `0x${string}`
     | null,
-  updatedAt: "2026-06-10",
-  note: "Contracts are deployed and Basescan verified. Safe wiring, liquidity setup, LP lock, and trading launch are still pending.",
+  updatedAt: "2026-06-15",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring and PinkLock vesting locks are complete. Public launch evidence covers Safe records, liquidity, LP locking, staking reward funding, and the official Base trading route.",
 };
 
 export const contracts: ContractInfo[] = [
@@ -49,31 +57,48 @@ export const contracts: ContractInfo[] = [
     name: "GloveCatCore",
     description:
       "GCAT ERC20 token with fixed sell fee and launch max-wallet limit",
-    address: "0xb92058fb3336a7191eb5817b9998caded46d208b",
+    address: "0x59df0577c7a5014954c0d6cc12616e92e34d9ff4",
     verified: true,
-    status: "Verified; pending Safe config",
+    status: "Verified; Safe wired",
   },
   {
     name: "Staking",
     description:
       "Lock-only staking with 30/90/180 day periods and 2%/5%/8% annualized rates",
-    address: "0x7f19cf580df2f2ad5a0f49482d993cbeb6f673a2",
+    address: "0x2ab642c747d4568f916fbe4f0556ca28802162ab",
     verified: true,
-    status: "Verified; pending Safe config",
+    status: "Verified; Safe wired",
   },
   {
     name: "GloveCatNFT",
     description: "ERC721 tier NFT for staking boost and ERC2981 royalties",
-    address: "0xfbd025366bc12339198c8267736b1414a5a8aca5",
+    address: "0x23d398f039cede09cd2a63f359c7052753919f82",
     verified: true,
-    status: "Verified; pending Safe config",
+    status: "Verified; minter wired",
   },
   {
     name: "GamificationCore",
     description: "Staking-only leaderboard NFT claims",
-    address: "0xa93f3ad1248bbcf74ad8eb392efb0990ad7a82cc",
+    address: "0x96935bde10b5c4b9e671482416754fd69401f3f7",
     verified: true,
-    status: "Verified; pending Safe config",
+    status: "Verified; NFT wired",
+  },
+];
+
+export const tokenLocks: TokenLockInfo[] = [
+  {
+    name: "Team allocation",
+    amountGcat: "25,000,000 GCAT",
+    target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
+    txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
+    schedule: "Starts 2026-06-28 02:00 UTC; 0.57% TGE; 1.63% every 30 days",
+  },
+  {
+    name: "Treasury/staking reserve",
+    amountGcat: "95,000,000 GCAT",
+    target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
+    txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
+    schedule: "Starts 2026-06-28 02:00 UTC; 0.57% TGE; 1.63% every 30 days",
   },
 ];
 
