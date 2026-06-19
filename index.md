@@ -54,7 +54,7 @@ The current source surface is:
 
 - `GloveCatCore`: ERC20 + Permit token with 500M fixed supply, 75/20/5 initial allocation,
   fixed 0% buy fee, fixed 1% sell ecosystem fee, official pair controls, a one-time pre-launch
-  liquidity seed path, a launch max-wallet limit that expires 1 hour after `openTrading()`, and
+  liquidity seed path, a launch max-wallet limit that expires 1 hour after trading opens, and
   user burn support.
 - `Staking`: lock-position staking with a 1,000 GCAT minimum, up to 50 active positions per user,
   fixed 30/90/180 day lock periods, annualized 2%/5%/8% incentive rates, NFT boost snapshots, and

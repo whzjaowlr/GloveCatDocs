@@ -29,7 +29,7 @@ the official trading route.
 | Feature | Behavior |
 | ------- | -------- |
 | Token | ERC20 + ERC20Permit, 500M fixed supply, 75/20/5 initial allocation, burn tracking, fixed 0% buy fee and fixed 1% sell ecosystem fee |
-| Launch controls | Official pair setup, one-time pre-launch LP seed from the launch liquidity wallet, one-way `openTrading()`, and default 2% launch max-wallet checks that expire 1 hour after trading opens |
+| Launch controls | Official pair setup, one-time pre-launch LP seed from the launch liquidity wallet, one-way trading launch, and default 2% launch max-wallet checks that expire 1 hour after trading opens |
 | Staking | Lock positions with 1,000 GCAT minimum, 50 active-position cap, fixed 30/90/180 day periods, annualized 2%/5%/8% incentive rates, funded incentive pool, and unpaid incentive carry-forward |
 | NFT | ERC721 tier NFT with 1-day benefit activation, transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and 4.0x aggregate staking cap |
 | Rewards | Staking-only Merkle leaderboard NFT claims capped to 10 successful claims per season |

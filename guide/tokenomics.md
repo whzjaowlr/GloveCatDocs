@@ -56,11 +56,10 @@ fees are not automatically redistributed by the token contract.
 | Item | Rule |
 | ---- | ---- |
 | Max wallet | Starts at 2% of total supply |
-| Expiry | One hour after `openTrading()` |
+| Expiry | One hour after trading opens |
 
-The Safe can adjust or disable the launch max-wallet limit within contract bounds. The launch
-max-wallet limit is not a complete market-protection system. Wallets, exchanges, and routers may
-also apply independent limits.
+The launch max-wallet limit is not a complete market-protection system. Wallets, exchanges, and
+routers may also apply independent limits.
 
 ## 💧 Liquidity
 
