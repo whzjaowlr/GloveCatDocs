@@ -67,7 +67,7 @@ export default defineConfig({
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "default-src 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:;",
+          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:; upgrade-insecure-requests",
       },
     ],
     ["meta", { "http-equiv": "X-Content-Type-Options", content: "nosniff" }],
@@ -81,7 +81,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/" },
-      { text: "Admin", link: "/admin/" },
+      { text: "Contracts", link: "/admin/contracts" },
       { text: "dApp", link: "https://glovecatcoin.com" },
     ],
 
@@ -115,19 +115,10 @@ export default defineConfig({
       ],
       "/admin/": [
         {
-          text: "Admin Guide",
+          text: "Deployment Status",
           items: [
             { text: "Overview", link: "/admin/" },
             { text: "Contract Info", link: "/admin/contracts" },
-            { text: "Admin Functions", link: "/admin/functions" },
-          ],
-        },
-        {
-          text: "Operations",
-          items: [
-            { text: "Safe Guide", link: "/admin/safe-guide" },
-            { text: "Emergency Response", link: "/admin/emergency" },
-            { text: "Security Protocol", link: "/admin/security" },
           ],
         },
       ],

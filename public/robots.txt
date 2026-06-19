@@ -1,5 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /admin/functions
+Disallow: /admin/safe-guide
+Disallow: /admin/emergency
+Disallow: /admin/security
 
 Sitemap: https://docs.glovecatcoin.com/sitemap.xml
 

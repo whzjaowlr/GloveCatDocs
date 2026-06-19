@@ -75,7 +75,8 @@ Do not treat displayed APRs as guaranteed returns.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm `openTrading()`, the official pair, liquidity, LP lock, and funded reward-pool evidence.
+3. Confirm the active staking address, `openTrading()`, official pair, liquidity, LP lock, and
+   funded reward-pool evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.

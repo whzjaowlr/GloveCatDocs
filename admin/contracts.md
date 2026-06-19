@@ -30,6 +30,10 @@ liquidity, LP locking, `openTrading()`, and reward-pool funding remain separate 
 | Staking reward pool | 1,000,000 GCAT funding transaction prepared; `incentivePool` is 0 until Safe execution |
 | Public staking | Closed until trading is open and the reward-pool minimum is funded |
 
+The current published Safe configuration is 2-of-3 multisig. This configuration may be strengthened
+later by adding signers, increasing the threshold, or both. Users should verify the current Safe
+owner and threshold records before relying on any privileged-control claim.
+
 ## 🔐 Public Lock Evidence
 
 | Item | Value |

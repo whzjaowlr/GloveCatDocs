@@ -29,7 +29,8 @@ guarantee of delivery dates.
 - Set the official pair, add liquidity, and publish pair evidence.
 - Lock project-owned LP tokens and publish locker evidence.
 - Open trading only after manual launch evidence is complete.
-- Fund the staking incentive pool from approved sources after token transfers are open.
+- Fund the staking incentive pool through Safe-approved treasury or reward-pool transactions after
+  token transfers are open.
 - Add public monitoring for contract wiring, staking reward pool health, and liquidity status.
 
 ## 📊 P2: Post-Launch Visibility

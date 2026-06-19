@@ -26,7 +26,9 @@ provider's own support.
 
 No. Public staking is closed until trading is open and the reward-pool minimum is funded on-chain.
 The prepared funding transaction targets 1,000,000 GCAT, but the current staking `incentivePool` is
-0 until the Safe executes it.
+0 until the Safe executes it. After launch, use the official dApp only after confirming the active
+staking address, current Safe signer/threshold evidence, open token transfers, and current staking
+reward-pool funding evidence.
 
 ### Do staking amounts create separate multipliers?
 
@@ -65,4 +67,6 @@ gates should not be treated as a guarantee that no vulnerabilities exist.
 
 ### Who manages production admin actions?
 
-Production admin actions are expected to use the configured Safe multisig.
+Production admin actions should be checked against the configured Safe multisig owner/threshold
+records and related on-chain transaction history. The current published Safe configuration is
+2-of-3, and it may be strengthened later by adding signers, increasing the threshold, or both.

@@ -1,13 +1,18 @@
-# Admin Guide
+# Deployment Status
 
-This section is for operators maintaining the current GloveCat redeploy surface.
+This public section is read-only deployment information for the current GloveCat Base mainnet
+surface.
 
-## 🧭 Operating Model
+It does not publish Safe execution guides, calldata preparation steps, emergency runbooks, or
+operator-only security procedures. Production admin execution is handled outside public docs through
+the existing Safe workflow and private maintainer channels.
 
-GloveCat contracts are deployed by an EOA, but production admin authority is assigned to the Safe
-multisig through `TieredAccess`.
+## Public Boundary
 
-The current deployment has completed:
+- Show current contract and wallet information.
+- Show public evidence users can verify on-chain.
+- Keep historical or archived addresses out of the active operating path.
+- Do not use this documentation as an admin transaction checklist.
 
 1. Fresh Base contract deployment.
 2. Basescan verification.
@@ -28,20 +33,14 @@ the matching evidence exists.
 | `GloveCatNFT` | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty |
 | `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |
 
-## 🔐 Admin Principles
+## 🔐 Public Evidence Rules
 
-- Use Safe transactions for production admin actions.
-- Do not rely on EOA direct admin calls as a mainnet operating path.
-- Use only the current Base manifest and Contract Information page for mainnet addresses.
+- Use only the current Contract Information page for mainnet addresses.
 - Treat historical addresses as reference-only.
-- Publish evidence for launch, liquidity, LP lock, staking reward pool funding, and Safe wiring only
-  after each item is actually executed or verified.
+- Publish launch, liquidity, LP lock, staking reward pool funding, and Safe wiring status only after
+  public evidence exists.
 - Do not describe removed features as available.
 
 ## 📚 Contents
 
 - [Contract Info](/admin/contracts)
-- [Admin Functions](/admin/functions)
-- [Safe Guide](/admin/safe-guide)
-- [Emergency Response](/admin/emergency)
-- [Security Protocol](/admin/security)
