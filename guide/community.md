@@ -16,8 +16,8 @@ Check [Contract Information](/admin/contracts). The listed Base mainnet addresse
 verified deployment addresses.
 
 Do not share historical addresses as active targets. When sharing launch information, link to the
-current contract page, lock evidence, liquidity evidence, staking reward-pool records, and official
-trading route.
+current contract page, lock evidence, and any executed liquidity, LP lock, trading, or staking
+reward-pool records. Do not describe pending launch gates as live.
 
 ## 🤝 How To Participate
 

@@ -16,18 +16,20 @@ guarantee of delivery dates.
 | Safe configuration evidence | Complete |
 | Team PinkLock vesting evidence | Complete |
 | Treasury/staking reserve PinkLock vesting evidence | Complete |
-| Official pair setup | Published as launch evidence |
-| Initial liquidity seed | Published as launch evidence |
-| Trading route | Published as launch evidence |
-| LP token lock evidence | Published as launch evidence |
-| Initial staking reward-pool funding | Published as launch evidence |
+| Official pair setup | Pending |
+| Initial liquidity seed | Pending |
+| Trading route | Pending until `openTrading()` executes |
+| LP token lock evidence | Pending until locker address and public lock page are verified |
+| Initial staking reward-pool funding | Prepared for 1,000,000 GCAT; not funded on-chain |
 
 ## 🚀 P1: Launch Operations
 
 - Publish only the verified contract addresses from [Contract Information](/admin/contracts).
 - Publish Safe owner/threshold evidence.
-- Publish liquidity pair and LP lock evidence.
-- Fund the staking incentive pool from approved sources.
+- Set the official pair, add liquidity, and publish pair evidence.
+- Lock project-owned LP tokens and publish locker evidence.
+- Open trading only after manual launch evidence is complete.
+- Fund the staking incentive pool from approved sources after token transfers are open.
 - Add public monitoring for contract wiring, staking reward pool health, and liquidity status.
 
 ## 📊 P2: Post-Launch Visibility

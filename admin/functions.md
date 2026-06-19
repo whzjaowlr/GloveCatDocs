@@ -33,11 +33,12 @@ default launch max-wallet check starts at 2% of total supply and expires 1 hour 
 | `setNFTContract(address)` | Safe | Wire NFT boost source |
 | `depositIncentives(uint256)` | Any caller with approved tokens | Add tokens to the staking incentive pool |
 
-Staking lock periods are fixed to 30, 90, and 180 days with annualized 2%, 5%, and 8% incentive
-rates. The minimum stake is 1,000 GCAT, each user can have up to 50 active lock positions, and
-staking amount does not create a separate reward multiplier.
+Staking lock periods are fixed to 30, 90, and 180 days with base APRs of 2%, 5%, and 8%,
+respectively. The minimum stake is 1,000 GCAT, each user can have up to 50 active lock positions,
+and staking amount does not create a separate reward multiplier.
 
-Public staking should stay aligned with the official trading route and the funded reward pool.
+Public staking must stay closed until `openTrading()` has executed and the staking reward-pool
+minimum is funded on-chain.
 
 ## 🎨 GloveCatNFT
 

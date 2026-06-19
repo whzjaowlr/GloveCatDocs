@@ -6,13 +6,14 @@
 
 Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
 are Basescan verified. Phase 1 Safe wiring and PinkLock vesting locks are complete. Trading,
-liquidity, LP locking, and reward-pool funding records are published as launch evidence.
+official pair setup, liquidity, LP locking, reward-pool funding, and public staking are separate
+launch gates and should not be treated as live until the matching public evidence is published.
 
 ### Where can I buy GCAT?
 
 Use only official launch announcements and verified contract addresses. Historical addresses are
-reference-only and should not be used as the current GCAT deployment. Use the official Base trading
-route and verify the pair address, token address, and LP lock evidence before swapping.
+reference-only and should not be used as the current GCAT deployment. Swap only after the official
+pair, liquidity, LP lock, and `openTrading()` evidence are published and verified.
 
 ### Which wallets are supported?
 
@@ -23,8 +24,9 @@ provider's own support.
 
 ### Can I stake now?
 
-Use the official dApp only after confirming the active staking address, Safe policy, open token
-transfers, and the funded staking reward pool.
+No. Public staking is closed until trading is open and the reward-pool minimum is funded on-chain.
+The prepared funding transaction targets 1,000,000 GCAT, but the current staking `incentivePool` is
+0 until the Safe executes it.
 
 ### Do staking amounts create separate multipliers?
 
@@ -36,7 +38,7 @@ No. A lock position can be unstaked only after the selected lock period ends.
 
 ### Are rewards guaranteed?
 
-No. Rewards depend on available reward pool funding.
+No. Rewards depend on available reward-pool funding and may be unpaid until the pool is replenished.
 
 ## 🎨 NFT
 

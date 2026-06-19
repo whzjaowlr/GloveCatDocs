@@ -4,12 +4,13 @@ GCAT staking uses fixed lock positions in the current redeploy surface.
 
 ## 🔒 Core Rules
 
-The active staking contract supports fixed lock positions, funded reward-pool payouts, NFT boost
+The active staking contract supports fixed lock positions, reward-pool-gated payouts, NFT boost
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking should use the active staking contract, official trading route, and funded staking
-reward pool shown in the public deployment evidence.
+Public staking is closed until trading is open and the reward-pool minimum is funded on-chain. The
+prepared reward-pool transaction targets 1,000,000 GCAT, but the staking `incentivePool` is 0 until
+Safe execution.
 
 | Rule | Value |
 | ---- | ----- |
@@ -22,16 +23,16 @@ reward pool shown in the public deployment evidence.
 
 The active staking contract exposes three fixed lock periods:
 
-| Lock period ID | Duration | Annualized incentive rate |
-| -------------- | -------: | ------------------------: |
+| Lock period ID | Duration | Base APR |
+| -------------- | -------: | -------: |
 | 0 | 30 days | 2% / `200` bps |
 | 1 | 90 days | 5% / `500` bps |
 | 2 | 180 days | 8% / `800` bps |
 
-The selected period's duration and incentive rate are snapshotted into the lock position when
-`lockStake(amount, lockPeriodId)` is called. The incentive rate is applied pro rata by elapsed
-seconds; it is not a flat bonus paid just for selecting a period, and it is not an extra
-staking-amount multiplier.
+The selected period's duration and base APR are snapshotted into the lock position when
+`lockStake(amount, lockPeriodId)` is called. The base APR is applied pro rata by elapsed seconds; it
+is not a flat bonus paid just for selecting a period, and it is not an extra staking-amount
+multiplier.
 
 ## 📏 Staking Amounts
 
@@ -68,13 +69,13 @@ If the pool is insufficient at claim or unstake time:
 - The unpaid amount is stored in `pendingIncentives`.
 - Users can claim later after the pool is replenished.
 
-Do not treat displayed incentive rates as guaranteed returns.
+Do not treat displayed APRs as guaranteed returns.
 
 ## 🚀 How To Stake
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the official trading route and funded reward-pool evidence.
+3. Confirm `openTrading()`, the official pair, liquidity, LP lock, and funded reward-pool evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.

@@ -9,11 +9,12 @@ audit report and does not guarantee that no vulnerabilities exist.
 - Sell fee is fixed at 1% ecosystem fee.
 - Fee setters and fee exclusions are absent.
 - Launch max-wallet checks expire 1 hour after `openTrading()`.
-- Fixed 30/90/180 day staking periods use annualized incentive rates of 2%, 5%, and 8%, pro-rated by
-  elapsed time.
+- Fixed 30-, 90-, and 180-day staking periods use base APRs of 2%, 5%, and 8%, respectively,
+  pro-rated by elapsed time.
 - Staking amount does not create an additional multiplier.
-- Staking incentives are paid only from the funded incentive pool; unpaid staking incentives can be
-  carried forward as `pendingIncentives`.
+- Staking incentives are paid only from the funded incentive pool; the pool must be funded on-chain
+  before public staking opens, and unpaid staking incentives can be carried forward as
+  `pendingIncentives`.
 - Final staking multiplier is capped at 4.0x.
 - A single NFT tier boost is capped at 2.5x.
 - Different active NFT tiers stack additively, while duplicate NFTs from the same tier do not add

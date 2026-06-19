@@ -12,8 +12,9 @@ counsel.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
   and are Basescan verified.
 - Phase 1 Safe wiring and PinkLock vesting locks are complete.
-- Trading, liquidity, LP locking, and staking reward-pool funding should be verified through the
-  corresponding public transactions and evidence.
+- Trading, official pair setup, liquidity, LP locking, staking reward-pool funding, and public
+  staking are separate launch gates and should be verified through the corresponding public
+  transactions and evidence before users rely on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
   Safe records, PinkLock records, and on-chain reads.
@@ -36,7 +37,8 @@ counsel.
 ## 🎁 Staking And Rewards
 
 - Staking incentives are not guaranteed returns.
-- Rewards are paid only from funded pools.
+- Rewards are paid only from funded pools; prepared funding transactions are not funding until they
+  are executed on-chain.
 - NFT boosts require benefit activation and are snapshotted when a lock position is created.
 - Leaderboard rewards depend on off-chain score computation and Merkle proof publication.
 - Campaign rules, eligibility checks, and abuse filtering may change.

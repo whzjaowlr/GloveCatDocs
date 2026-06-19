@@ -9,8 +9,9 @@ executed. Team allocation and the long-term treasury/staking reserve are locked 
 vesting.
 
 The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,
-liquidity evidence, LP lock evidence, staking reward funding, and the official Base trading route
-must stay visible from the public documentation.
+and pending launch gates must stay visible from the public documentation. Active deployment status
+does not mean official pair setup, liquidity, LP locking, `openTrading()`, or public staking is
+complete.
 
 Active contract surface:
 

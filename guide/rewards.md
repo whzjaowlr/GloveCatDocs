@@ -32,7 +32,7 @@ staking score = sum(lock amount * lock-period score multiplier)
 | 90 days | `1` | 3x |
 | 180 days | `2` | 7x |
 
-This score multiplier is only for leaderboard ranking. It does not change staking reward APY or NFT
+This score multiplier is only for leaderboard ranking. It does not change staking reward APR or NFT
 boost.
 
 ## 🧾 Leaderboard Claim Limits

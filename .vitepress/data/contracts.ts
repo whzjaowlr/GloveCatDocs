@@ -49,7 +49,7 @@ export const baseDeployment = {
     | `0x${string}`
     | null,
   updatedAt: "2026-06-15",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring and PinkLock vesting locks are complete. Public launch evidence covers Safe records, liquidity, LP locking, staking reward funding, and the official Base trading route.",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring and PinkLock token locks are complete. Official pair setup, liquidity, LP locking, trading, reward-pool funding, and public staking remain separate launch gates.",
 };
 
 export const contracts: ContractInfo[] = [
@@ -64,7 +64,7 @@ export const contracts: ContractInfo[] = [
   {
     name: "Staking",
     description:
-      "Lock-only staking with 30/90/180 day periods and 2%/5%/8% annualized rates",
+      "Lock-only staking with 30-, 90-, and 180-day periods and base APRs of 2%, 5%, and 8%, respectively",
     address: "0x2ab642c747d4568f916fbe4f0556ca28802162ab",
     verified: true,
     status: "Verified; Safe wired",
@@ -91,14 +91,16 @@ export const tokenLocks: TokenLockInfo[] = [
     amountGcat: "25,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
-    schedule: "Starts 2026-06-28 02:00 UTC; 0.57% TGE; 1.63% every 30 days",
+    schedule:
+      "Starts 2026-06-28 02:00 UTC; 0.56% TGE; 1.63% every 30 days; description: 60 Cycle Vesting; bps math reaches the 100% cap at 62 cycles",
   },
   {
-    name: "Treasury/staking reserve",
+    name: "Treasury/staking reserve vesting",
     amountGcat: "95,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
-    schedule: "Starts 2026-06-28 02:00 UTC; 0.57% TGE; 1.63% every 30 days",
+    schedule:
+      "Starts 2026-06-28 02:00 UTC; 0.56% TGE; 1.63% every 30 days; description: 61 Cycle Vesting; bps math reaches the 100% cap at 62 cycles",
   },
 ];
 

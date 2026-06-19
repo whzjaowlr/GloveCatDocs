@@ -22,9 +22,11 @@ Safe is the admin authority, not necessarily the transaction sender that deploys
 | Phase 1 wiring | Complete |
 | Team PinkLock transfer | Complete |
 | Treasury/staking reserve PinkLock transfer | Complete |
-| Trading route | Published as launch evidence |
-| LP lock evidence | Published as launch evidence |
-| Staking reward-pool funding | Initial bootstrap funded and tracked |
+| Official pair | Pending |
+| Liquidity seed | Pending |
+| Trading | Closed until `openTrading()` executes |
+| LP lock evidence | Pending until locker address and public lock page are verified |
+| Staking reward-pool funding | 1,000,000 GCAT transaction prepared; not funded on-chain |
 
 ## 📋 Required Evidence
 
@@ -38,25 +40,29 @@ Public deployment evidence should include:
 - Basescan verification links.
 - Post-deploy wiring transaction hashes.
 - PinkLock target and lock transaction hashes.
-- Pair address and liquidity tx hashes.
-- LP lock transaction and lock page.
+- Pair address and liquidity tx hashes after those launch gates execute.
+- LP lock transaction and lock page after project-owned LP tokens are locked.
+- Reward-pool funding transaction hash after `depositIncentives()` executes.
 - Manifest status and update time.
 
 ## 🔌 Completed Post-Deploy Wiring
 
-The Phase 1 Safe batch included:
+The Phase 1 Safe batch included 4 Safe calls:
 
 - `GloveCatCore.setStakingContract(staking)`.
-- `Staking.setCoreContract(core)`.
 - `Staking.setNFTContract(nft)`.
 - `GamificationCore.setNFTContract(nft)`.
 - `GloveCatNFT.setMinter(gamification, true)`.
 
+The optional staking core sync setter was not part of the current Safe batch. The staking
+constructor receives the GCAT token address, and the verifier confirms `Staking.coreContract()`
+matches `GloveCatCore`.
+
 ## 🚀 Launch Evidence Checklist
 
-- Keep official pair and liquidity records linked from public docs.
-- Keep the 5-year LP lock record linked from public docs.
-- Keep staking reward-pool funding records linked from public docs.
+- Keep official pair and liquidity records linked from public docs after they execute.
+- Keep the 5-year LP lock record linked from public docs after the locker is verified.
+- Keep staking reward-pool funding records linked from public docs after Safe execution.
 - Keep trading-route, frontend, backend, and docs evidence aligned with the active contract addresses.
 
 ## 📋 Execution Process

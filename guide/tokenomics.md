@@ -29,10 +29,14 @@ allocation outside the rows above.
 | Team allocation | 25,000,000 GCAT | Locked through PinkLock vesting |
 | Long-term treasury/staking reserve | 95,000,000 GCAT | Locked through PinkLock vesting |
 | Initial staking bootstrap | 5,000,000 GCAT | Retained in Safe for initial pool funding |
-| LP tokens | Public LP position | 5-year LP lock evidence published with launch records |
+| LP tokens | Public LP position | Pending until liquidity is added and project-owned LP tokens are locked |
 
-PinkLock vesting starts on `2026-06-28T02:00:00Z`. The configured schedule uses `0.57%` TGE and
-`1.63%` release every 30 days.
+The team and treasury/staking reserve PinkLock vesting records both start on
+`2026-06-28T02:00:00Z` and use `0.56%` TGE with `1.63%` release every 30 days. The visible
+description strings differ: team uses `GloveCat Team Allocation - 60 Cycle Vesting`, while the
+treasury/staking reserve uses `GloveCat Treasury Reserve - 61 Cycle Vesting`. By the bps math,
+60 cycles releases 98.36%, 61 cycles releases 99.99%, and the 62nd 30-day cycle reaches the 100%
+cap. External PinkLock pages are the final schedule evidence.
 
 | Evidence | Value |
 | -------- | ----- |
@@ -70,7 +74,8 @@ hashes, LP token custody, 5-year lock duration, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking rewards are paid only from the funded staking incentive pool. If the staking incentive pool
-is insufficient, the staking contract can carry unpaid staking incentives forward as
-`pendingIncentives`; it does not mint new reward tokens. Gamification leaderboard rewards are NFT
-mints, not ERC20 reward-pool payouts.
+Staking rewards are paid only from the funded staking incentive pool. A 1,000,000 GCAT funding
+transaction is prepared, but the pool is not funded on-chain until the Safe executes it after token
+transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
+unpaid staking incentives forward as `pendingIncentives`; it does not mint new reward tokens.
+Gamification leaderboard rewards are NFT mints, not ERC20 reward-pool payouts.
