@@ -22,7 +22,7 @@ the official trading route.
 | Liquidity launch | Published through launch evidence |
 | Trading route | Uniswap on Base |
 | LP lock evidence | Published with launch evidence |
-| Staking reward pool | Initial bootstrap funded from Safe policy |
+| Staking reward pool | Initial rewards funded via Safe multisig |
 
 ## 🧩 Active Features
 

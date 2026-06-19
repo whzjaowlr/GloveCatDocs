@@ -28,7 +28,8 @@ counsel.
 ## 🛠️ Contract And Operational Risks
 
 - Smart-contract bugs or integration mistakes may exist.
-- Admin actions are expected to go through Safe, but users should verify actual on-chain authority.
+- Admin-action claims should be verified against the configured Safe owner/threshold records and
+  actual on-chain authority.
 - Liquidity creation and LP locking are manual operational steps.
 - Reward pools can be insufficient.
 - NFT royalty payment depends on marketplace support for ERC2981.

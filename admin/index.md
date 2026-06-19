@@ -4,8 +4,8 @@ This public section is read-only deployment information for the current GloveCat
 surface.
 
 It does not publish Safe execution guides, calldata preparation steps, emergency runbooks, or
-operator-only security procedures. Production admin execution should remain in the existing Safe
-workflow and private maintainer channels.
+operator-only security procedures. Production admin execution is handled outside public docs through
+the existing Safe workflow and private maintainer channels.
 
 ## Public Boundary
 

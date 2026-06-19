@@ -23,8 +23,8 @@ provider's own support.
 
 ### Can I stake now?
 
-Use the official dApp only after confirming the active staking address, Safe policy, open token
-transfers, and the funded staking reward pool.
+Use the official dApp only after confirming the active staking address, current Safe
+signer/threshold evidence, open token transfers, and current staking reward-pool funding evidence.
 
 ### Do staking amounts create separate multipliers?
 
@@ -63,4 +63,6 @@ gates should not be treated as a guarantee that no vulnerabilities exist.
 
 ### Who manages production admin actions?
 
-Production admin actions are expected to use the configured Safe multisig.
+Production admin actions should be checked against the configured Safe multisig owner/threshold
+records and related on-chain transaction history. The current published Safe configuration is
+2-of-3, and it may be strengthened later by adding signers, increasing the threshold, or both.

@@ -22,7 +22,7 @@ features:
     details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and 1-hour launch max-wallet checks.
   - icon: 🔒
     title: Lock Staking
-    details: Fixed 30, 90, and 180 day lock periods with annualized 2%, 5%, and 8% incentive rates, funded by the public staking reward pool.
+    details: Fixed 30, 90, and 180 day lock periods with annualized 2%, 5%, and 8% incentive rates paid from the public staking reward pool.
   - icon: 🔐
     title: Public Locks
     details: LP lock, team vesting, treasury/staking reserve vesting, Safe address, and lock records are published as launch evidence.
@@ -34,8 +34,9 @@ features:
 ## 🚦 Current Release State
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The public launch surface is
-documented around verified contract addresses, Safe admin control, PinkLock vesting records,
-liquidity evidence, LP lock evidence, staking reward funding, and the official Base trading route.
+documented around verified contract addresses, Safe multisig admin authority, PinkLock vesting
+records, liquidity evidence, LP lock evidence, staking reward funding, and the official Base
+trading route.
 
 | Item | Status |
 | ---- | ------ |
@@ -46,7 +47,7 @@ liquidity evidence, LP lock evidence, staking reward funding, and the official B
 | Treasury/staking reserve lock | Complete through PinkLock |
 | Trading route | Uniswap on Base |
 | LP lock evidence | Published with launch evidence |
-| Staking reward pool | Initial bootstrap funded from Safe policy |
+| Staking reward pool | Initial rewards funded via Safe multisig |
 
 ## 🧩 Active Surface
 

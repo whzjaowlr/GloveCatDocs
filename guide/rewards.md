@@ -12,7 +12,7 @@ contract.
 Flow:
 
 1. Operators compute staking scores off-chain.
-2. Safe finalizes a season with a Merkle root.
+2. A Safe multisig transaction finalizes a season with a Merkle root.
 3. Eligible users claim NFT rewards with Merkle proofs.
 4. `GamificationCore` mints the tier NFT through `GloveCatNFT`.
 5. The gamification contract must be approved as an NFT minter before claims can mint.
@@ -54,7 +54,8 @@ Rank-to-tier mapping:
 | 8-10 | Common |
 
 Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
-The Safe can correct a season Merkle root only before that season has any successful claim.
+A season Merkle root can be corrected only by Safe multisig transaction and only before that season
+has any successful claim.
 
 ## 💰 Funding
 

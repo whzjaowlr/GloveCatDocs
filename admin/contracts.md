@@ -20,6 +20,10 @@ Team allocation and the long-term treasury/staking reserve are locked through Pi
 Public deployment evidence should include Safe ownership, contract verification, PinkLock records,
 liquidity transactions, LP lock records, staking reward-pool funding, and the official trading route.
 
+The current published Safe configuration is 2-of-3 multisig. This configuration may be strengthened
+later by adding signers, increasing the threshold, or both. Users should verify the current Safe
+owner and threshold records before relying on any admin-action claim.
+
 ## 🔐 Public Lock Evidence
 
 | Item | Value |
@@ -36,7 +40,7 @@ liquidity transactions, LP lock records, staking reward-pool funding, and the of
 | Team lock tx | `0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c` |
 | Treasury lock tx | `0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48` |
 
-LP lock wording must stay tied to the public lock transaction and lock page evidence.
+LP lock claims should be verified against the public lock transaction and lock page evidence.
 
 ## 🌐 Network Information
 

@@ -27,7 +27,7 @@ guarantee of delivery dates.
 - Publish only the verified contract addresses from [Contract Information](/admin/contracts).
 - Publish Safe owner/threshold evidence.
 - Publish liquidity pair and LP lock evidence.
-- Fund the staking incentive pool from approved sources.
+- Fund the staking incentive pool through Safe-approved treasury or reward-pool transactions.
 - Add public monitoring for contract wiring, staking reward pool health, and liquidity status.
 
 ## 📊 P2: Post-Launch Visibility

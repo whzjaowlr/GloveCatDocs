@@ -4,12 +4,12 @@ GCAT staking uses fixed lock positions in the current redeploy surface.
 
 ## 🔒 Core Rules
 
-The active staking contract supports fixed lock positions, funded reward-pool payouts, NFT boost
+The active staking contract supports fixed lock positions, reward-pool-based payouts, NFT boost
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking should use the active staking contract, official trading route, and funded staking
-reward pool shown in the public deployment evidence.
+Public staking should use the active staking contract and official trading route. Users should
+verify current staking reward-pool funding evidence before staking.
 
 | Rule | Value |
 | ---- | ----- |
@@ -74,7 +74,7 @@ Do not treat displayed incentive rates as guaranteed returns.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the official trading route and funded reward-pool evidence.
+3. Confirm the official trading route and current reward-pool funding evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.
