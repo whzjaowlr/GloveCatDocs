@@ -9,10 +9,11 @@ The active smart-contract surface does not include an on-chain governance module
 authority is held by the configured Safe multisig through `TieredAccess`.
 
 The current published Safe configuration is 2-of-3. Future operational hardening may add signers,
-increase the approval threshold, or both. Treat the current Safe owner/threshold records as the
-source of truth.
+increase the approval threshold, or both. Treat the current
+[Safe owner/threshold records](/admin/contracts#project-wallets) as the source of truth.
 
-Community input can still happen through off-chain channels such as Snapshot, Telegram, Discord, or
+Community input can still happen through off-chain channels such as
+[Snapshot](https://snapshot.org/#/glovecatcoin.eth), [Telegram](https://t.me/glovecatcoin), or
 published proposal documents.
 
 ## 🗳️ Snapshot

@@ -40,10 +40,11 @@ Example:
 
 ## 🛠️ Minting And Admin Controls
 
-By contract rule, NFT minting is limited to the configured Safe or approved minters.
+By contract rule, NFT minting is limited to the configured
+[Safe](/admin/contracts#project-wallets) or approved minters.
 `GamificationCore` must be approved as an NFT minter before leaderboard NFT reward claims can mint
 NFTs.
 
 Metadata, tier activation, and royalty receiver settings are admin-controlled through the configured
-Safe. Verify current values on-chain before relying on them. The default royalty percentage is fixed
-at 3%.
+[Safe](/admin/contracts#project-wallets). Verify current values on-chain before relying on them. The
+default royalty percentage is fixed at 3%.

@@ -36,14 +36,10 @@ The team and treasury/staking reserve PinkLock vesting records both start on
 description strings differ: team uses `GloveCat Team Allocation - 60 Cycle Vesting`, while the
 treasury/staking reserve uses `GloveCat Treasury Reserve - 61 Cycle Vesting`. By the bps math,
 60 cycles releases 98.36%, 61 cycles releases 99.99%, and the 62nd 30-day cycle reaches the 100%
-cap. External PinkLock pages are the final schedule evidence.
+cap. External PinkLock records are the final schedule evidence; the compact table below links to the
+target contract and execution transactions.
 
-| Evidence | Value |
-| -------- | ----- |
-| PinkLock target | `0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC` |
-| Lock target set tx | `0x6b7cd6aea6a36c595be64d6047fad032421785155166527be0473cda9445261d` |
-| Team lock tx | `0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c` |
-| Treasury lock tx | `0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48` |
+<TokenLockTable />
 
 ## 💸 Fees
 

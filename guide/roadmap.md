@@ -12,10 +12,10 @@ guarantee of delivery dates.
 | Active source cleanup | Complete |
 | Public docs refresh | Complete |
 | Fresh Base manifest | Complete: `active` |
-| BaseScan verification for fresh contracts | Complete |
-| Safe configuration evidence | Complete |
-| Team PinkLock vesting evidence | Complete |
-| Treasury/staking reserve PinkLock vesting evidence | Complete |
+| BaseScan verification for fresh contracts | [Complete](/admin/contracts#public-evidence-links) |
+| Safe configuration evidence | [Complete](/admin/contracts#project-wallets) |
+| Team PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
+| Treasury/staking reserve PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
 | Official pair setup | Pending |
 | Initial liquidity seed | Pending |
 | Trading route | Pending until `openTrading()` executes |
@@ -25,7 +25,7 @@ guarantee of delivery dates.
 ## 🚀 P1: Launch Operations
 
 - Publish only the verified contract addresses from [Contract Information](/admin/contracts).
-- Publish Safe owner/threshold evidence.
+- Publish [Safe owner/threshold evidence](/admin/contracts#project-wallets).
 - Set the official pair, add liquidity, and publish pair evidence.
 - Lock project-owned LP tokens and publish locker evidence.
 - Open trading only after manual launch evidence is complete.

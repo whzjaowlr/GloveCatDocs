@@ -5,7 +5,8 @@
 ### Is there an active Base mainnet address?
 
 Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
-are Basescan verified. Phase 1 Safe wiring and PinkLock vesting locks are complete. Trading,
+[Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified. Phase 1
+Safe wiring and PinkLock vesting locks are complete. Trading,
 official pair setup, liquidity, LP locking, reward-pool funding, and public staking are separate
 launch gates and should not be treated as live until the matching public evidence is published.
 
@@ -27,8 +28,8 @@ provider's own support.
 No. Public staking is closed until trading is open and the reward-pool minimum is funded on-chain.
 The prepared funding transaction targets 1,000,000 GCAT, but the current staking `incentivePool` is
 0 until the Safe executes it. After launch, use the official dApp only after confirming the active
-staking address, current Safe signer/threshold evidence, open token transfers, and current staking
-reward-pool funding evidence.
+staking address, current [Safe signer/threshold evidence](/admin/contracts#project-wallets), open
+token transfers, and current staking reward-pool funding evidence.
 
 ### Do staking amounts create separate multipliers?
 
@@ -67,6 +68,7 @@ gates should not be treated as a guarantee that no vulnerabilities exist.
 
 ### Who manages production admin actions?
 
-Production admin actions should be checked against the configured Safe multisig owner/threshold
-records and related on-chain transaction history. The current published Safe configuration is
-2-of-3, and it may be strengthened later by adding signers, increasing the threshold, or both.
+Production admin actions should be checked against the configured
+[Safe multisig owner/threshold records](/admin/contracts#project-wallets) and related on-chain
+transaction history. The current published Safe configuration is 2-of-3, and it may be strengthened
+later by adding signers, increasing the threshold, or both.

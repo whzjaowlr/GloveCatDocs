@@ -10,14 +10,15 @@ counsel.
 
 - GloveCat is a token and game-infrastructure experiment on Base.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
-  and are Basescan verified.
+  and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
 - Phase 1 Safe wiring and PinkLock vesting locks are complete.
 - Trading, official pair setup, liquidity, LP locking, staking reward-pool funding, and public
   staking are separate launch gates and should be verified through the corresponding public
   transactions and evidence before users rely on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
-  Safe records, PinkLock records, and on-chain reads.
+  [Safe records](/admin/contracts#project-wallets), [PinkLock records](/admin/contracts#public-lock-evidence),
+  and on-chain reads.
 
 ## 📉 Market Risks
 
@@ -29,8 +30,8 @@ counsel.
 ## 🛠️ Contract And Operational Risks
 
 - Smart-contract bugs or integration mistakes may exist.
-- Admin-action claims should be verified against the configured Safe owner/threshold records and
-  actual on-chain authority.
+- Admin-action claims should be verified against the configured
+  [Safe owner/threshold records](/admin/contracts#project-wallets) and actual on-chain authority.
 - Liquidity creation and LP locking are manual operational steps.
 - Reward pools can be insufficient.
 - NFT royalty payment depends on marketplace support for ERC2981.

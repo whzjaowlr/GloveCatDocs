@@ -15,7 +15,7 @@ are separate launch gates.
 | Network target | Base Mainnet |
 | Deployment status | `active` |
 | Active addresses | Published in [Contract Information](/admin/contracts) |
-| Contract verification | Basescan verified |
+| Contract verification | [Basescan verified](/admin/contracts#public-evidence-links) |
 | Phase 1 Safe wiring | Complete |
 | Team vesting lock | Complete |
 | Treasury/staking reserve vesting lock | Complete |
@@ -46,5 +46,6 @@ Do not treat active deployment status as a live trading or staking signal.
 
 1. Read [Tokenomics](/guide/tokenomics).
 2. Review [Staking](/guide/staking) and [NFT](/guide/nft) behavior.
-3. Check [Contract Information](/admin/contracts) before relying on any address.
+3. Check [Contract Information](/admin/contracts) and
+   [Public Evidence Links](/admin/contracts#public-evidence-links) before relying on any address.
 4. Use official community channels for launch announcements.

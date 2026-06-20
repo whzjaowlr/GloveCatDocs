@@ -19,3 +19,245 @@
   height: auto;
   aspect-ratio: 1 / 1;
 }
+
+.vp-doc table {
+  display: table;
+  width: auto;
+  max-width: 100%;
+  margin: 14px 0 18px;
+  border: 1px solid var(--vp-c-divider);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.vp-doc table th {
+  background: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+}
+
+.vp-doc table th,
+.vp-doc table td {
+  border: 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  padding: 10px 12px;
+  vertical-align: top;
+}
+
+.vp-doc table tr:last-child td {
+  border-bottom: 0;
+}
+
+.vp-doc table a {
+  overflow-wrap: anywhere;
+}
+
+.vp-doc table code {
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.lock-evidence {
+  margin: 14px 0 22px;
+}
+
+.registry-list,
+.evidence-list,
+.lock-summary-list {
+  display: grid;
+  gap: 12px;
+  margin: 14px 0 22px;
+}
+
+.evidence-list,
+.lock-summary-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+
+.registry-item,
+.evidence-item,
+.lock-summary-item,
+.lock-detail {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 8px;
+  background: var(--vp-c-bg-soft);
+  padding: 14px 16px;
+}
+
+.registry-item-main,
+.evidence-item-main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.registry-copy {
+  min-width: 0;
+}
+
+.registry-copy h3,
+.lock-detail h3 {
+  margin: 0;
+  color: var(--vp-c-text-1);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.registry-copy p {
+  margin: 5px 0 0;
+  color: var(--vp-c-text-2);
+  line-height: 1.55;
+}
+
+.registry-badges {
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  max-width: 260px;
+}
+
+.registry-badge,
+.evidence-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 2px 8px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.registry-badge.is-complete,
+.evidence-status {
+  border-color: color-mix(in srgb, #15803d 34%, var(--vp-c-divider));
+  background: color-mix(in srgb, #22c55e 10%, var(--vp-c-bg));
+  color: #166534;
+}
+
+.registry-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.registry-label {
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.registry-meta code,
+.evidence-links code {
+  font-size: 12px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.registry-actions,
+.evidence-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.vp-doc .registry-actions a,
+.vp-doc .evidence-links a,
+.vp-doc .registry-primary-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 30px;
+  padding: 4px 9px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  background: var(--vp-c-bg);
+  color: var(--vp-c-brand-1);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.vp-doc .registry-actions a:hover,
+.vp-doc .evidence-links a:hover,
+.vp-doc .registry-primary-action:hover {
+  border-color: var(--vp-c-brand-2);
+  background: color-mix(in srgb, var(--vp-c-brand-3) 7%, var(--vp-c-bg));
+  text-decoration: none;
+}
+
+.lock-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.lock-detail dl {
+  display: grid;
+  gap: 10px;
+  margin: 10px 0 0;
+}
+
+.lock-detail dt {
+  color: var(--vp-c-text-1);
+  font-weight: 700;
+}
+
+.lock-detail dd {
+  margin: 3px 0 0;
+  color: var(--vp-c-text-2);
+}
+
+.lock-detail dd code {
+  display: block;
+  margin-top: 4px;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+@media (max-width: 760px) {
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
+  }
+
+  .vp-doc table th,
+  .vp-doc table td {
+    min-width: 128px;
+  }
+
+  .registry-item-main,
+  .evidence-item-main {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .registry-badges {
+    justify-content: flex-start;
+    max-width: none;
+  }
+
+  .vp-doc .registry-actions a,
+  .vp-doc .evidence-links a,
+  .vp-doc .registry-primary-action {
+    white-space: normal;
+  }
+}

@@ -9,16 +9,16 @@ the existing Safe workflow and private maintainer channels.
 
 ## Public Boundary
 
-- Show current contract and wallet information.
-- Show public evidence users can verify on-chain.
+- Show current [contract and wallet information](/admin/contracts).
+- Show [public evidence users can verify on-chain](/admin/contracts#public-evidence-links).
 - Keep historical or archived addresses out of the active operating path.
 - Do not use this documentation as an admin transaction checklist.
 
 1. Fresh Base contract deployment.
-2. Basescan verification.
-3. Phase 1 Safe wiring.
-4. Team PinkLock vesting transfer.
-5. Treasury/staking reserve PinkLock vesting transfer.
+2. [Basescan verification](/admin/contracts#public-evidence-links).
+3. [Phase 1 Safe wiring](/admin/contracts#project-wallets).
+4. [Team PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
+5. [Treasury/staking reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 
 Official pair setup, liquidity seed, LP locking, staking reward-pool funding, and trading are
 separate launch gates. Keep those records visible beside the active contract addresses only after
@@ -35,7 +35,7 @@ the matching evidence exists.
 
 ## 🔐 Public Evidence Rules
 
-- Use only the current Contract Information page for mainnet addresses.
+- Use only the current [Contract Information](/admin/contracts) page for mainnet addresses.
 - Treat historical addresses as reference-only.
 - Publish launch, liquidity, LP lock, staking reward pool funding, and Safe wiring status only after
   public evidence exists.
@@ -44,3 +44,4 @@ the matching evidence exists.
 ## 📚 Contents
 
 - [Contract Info](/admin/contracts)
+- [Public Evidence Links](/admin/contracts#public-evidence-links)

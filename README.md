@@ -34,7 +34,8 @@ npm run docs:build
 
 Contract behavior should be checked against the verified contract source, current deployment
 manifest, on-chain reads, Safe transaction records, PinkLock records, and Basescan verification
-evidence. This documentation mirrors those sources but does not replace them.
+evidence. Start from [Contract Information](./admin/contracts.md) for the public evidence links.
+This documentation mirrors those sources but does not replace them.
 
 ## 🕒 Last Updated
 

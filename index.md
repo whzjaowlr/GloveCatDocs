@@ -81,6 +81,8 @@ claim.
 | Staking | [Staking guide](/guide/staking) |
 | Tokenomics | [Tokenomics](/guide/tokenomics) |
 | Contract status | [Contract information](/admin/contracts) |
+| Public evidence | [Contract, Safe, and lock evidence](/admin/contracts#public-evidence-links) |
+| GCAT token | [Basescan token page](https://basescan.org/token/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4) |
 | dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 | Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | Telegram | [glovecatcoin](https://t.me/glovecatcoin) |

@@ -12,12 +12,14 @@ Use official channels for announcements, launch status, support, and security re
 
 ## 🔎 Before Sharing Contract Addresses
 
-Check [Contract Information](/admin/contracts). The listed Base mainnet addresses are the current
-verified deployment addresses.
+Check [Contract Information](/admin/contracts) and
+[Public Evidence Links](/admin/contracts#public-evidence-links). The listed Base mainnet addresses
+are the current verified deployment addresses.
 
 Do not share historical addresses as active targets. When sharing launch information, link to the
-current contract page, lock evidence, and any executed liquidity, LP lock, trading, or staking
-reward-pool records. Do not describe pending launch gates as live.
+current contract page, [lock evidence](/admin/contracts#public-lock-evidence), and any executed
+liquidity, LP lock, trading, or staking reward-pool records. Do not describe pending launch gates as
+live.
 
 ## 🤝 How To Participate
 
