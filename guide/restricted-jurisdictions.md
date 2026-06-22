@@ -6,10 +6,19 @@ This page explains where GloveCat services are not currently offered. It is an o
 disclosure notice, not legal, tax, financial, or investment advice. GloveCat may update this page as
 products, launch status, rules, or legal review change.
 
-## Current Restricted Jurisdiction
+## Current Restricted Jurisdictions
 
 GloveCat services are not currently offered to users located in, ordinarily resident in, or accessing
-the service from the Republic of Korea.
+the service from the following jurisdictions:
+
+| Code | Jurisdiction | Restriction basis |
+| ---- | ------------ | ----------------- |
+| `KR` | Republic of Korea / South Korea | Local game, token, reward, NFT, and consumer-protection review is not complete. |
+| `KP` | North Korea / DPRK | Sanctions, AML/CFT, and proliferation-financing risk. |
+| `IR` | Iran | Sanctions, AML/CFT, and proliferation-financing risk. |
+| `MM` | Myanmar | FATF high-risk jurisdiction and elevated illicit-finance risk. |
+| `CU` | Cuba | Sanctions and restricted-market compliance risk. |
+| `SY` | Syria | Sanctions and restricted-market compliance risk. |
 
 This restriction is based on jurisdiction, residency, and access location. It is not based on
 ethnicity, language, or personal identity.
@@ -18,10 +27,10 @@ ethnicity, language, or personal identity.
 
 Restricted users include:
 
-- Users physically located in the Republic of Korea.
-- Users ordinarily resident in the Republic of Korea.
-- Users accessing the service through a Korean network location or account context.
-- Users acting on behalf of a person or entity in the Republic of Korea.
+- Users physically located in a restricted jurisdiction.
+- Users ordinarily resident in a restricted jurisdiction.
+- Users accessing the service through a restricted-jurisdiction network location or account context.
+- Users acting on behalf of a person or entity in a restricted jurisdiction.
 
 Users must not use VPNs, proxies, remote access tools, alternate accounts, or third-party accounts to
 bypass jurisdiction restrictions.
