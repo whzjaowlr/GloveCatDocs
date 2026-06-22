@@ -110,6 +110,7 @@ export default defineConfig({
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
             { text: "Terms and Risk Disclosure", link: "/guide/terms" },
+            { text: "Restricted Jurisdictions", link: "/guide/restricted-jurisdictions" },
           ],
         },
       ],
@@ -131,7 +132,7 @@ export default defineConfig({
 
     footer: {
       message:
-        "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a>",
+        "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a> | <a href='/guide/restricted-jurisdictions'>Restricted Jurisdictions</a>",
       copyright:
         "(c) 2026 GloveCat. This documentation is informational and does not replace on-chain verification.",
     },

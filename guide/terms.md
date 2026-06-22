@@ -1,6 +1,6 @@
 # Terms And Risk Disclosure
 
-> Last updated: 2026-06-15
+> Last updated: 2026-06-22
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
@@ -50,6 +50,10 @@ counsel.
 Users are responsible for complying with local law, tax obligations, sanctions rules, and wallet or
 exchange restrictions. Campaigns may exclude sanctioned persons, sanctioned addresses, and prohibited
 jurisdictions.
+
+See [Restricted Jurisdictions And Service Availability](/guide/restricted-jurisdictions) for the
+current jurisdiction-based service availability notice, including restricted users, rationale, and
+exceptions.
 
 ## 📣 Communications
 
