@@ -11,14 +11,13 @@ products, launch status, rules, or legal review change.
 GloveCat services are not currently offered to users located in, ordinarily resident in, or accessing
 the service from the following jurisdictions:
 
-| Code | Jurisdiction | Restriction basis |
-| ---- | ------------ | ----------------- |
-| `KR` | Republic of Korea / South Korea | Local game, token, reward, NFT, and consumer-protection review is not complete. |
-| `KP` | North Korea / DPRK | Sanctions, AML/CFT, and proliferation-financing risk. |
-| `IR` | Iran | Sanctions, AML/CFT, and proliferation-financing risk. |
-| `MM` | Myanmar | FATF high-risk jurisdiction and elevated illicit-finance risk. |
-| `CU` | Cuba | Sanctions and restricted-market compliance risk. |
-| `SY` | Syria | Sanctions and restricted-market compliance risk. |
+| Code | Jurisdiction       | Restriction basis                                              |
+| ---- | ------------------ | -------------------------------------------------------------- |
+| `KP` | North Korea / DPRK | Sanctions, AML/CFT, and proliferation-financing risk.          |
+| `IR` | Iran               | Sanctions, AML/CFT, and proliferation-financing risk.          |
+| `MM` | Myanmar            | FATF high-risk jurisdiction and elevated illicit-finance risk. |
+| `CU` | Cuba               | Sanctions and restricted-market compliance risk.               |
+| `SY` | Syria              | Sanctions and restricted-market compliance risk.               |
 
 This restriction is based on jurisdiction, residency, and access location. It is not based on
 ethnicity, language, or personal identity.
@@ -34,6 +33,23 @@ Restricted users include:
 
 Users must not use VPNs, proxies, remote access tools, alternate accounts, or third-party accounts to
 bypass jurisdiction restrictions.
+
+## Jurisdictions Requiring Legal Review Before Participation
+
+GloveCat may restrict staking, reward claims, token sales, airdrops, promotional campaigns, NFT boost
+benefits, leaderboard rewards, or other participation features for users located in, ordinarily
+resident in, or accessing from the following jurisdictions until jurisdiction-specific legal review is
+complete:
+
+| Jurisdiction                            | Review basis                                                                                                                  |
+| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Republic of Korea / South Korea         | Local game, token, reward, NFT, virtual-asset, advertising, and consumer-protection review is not complete.                   |
+| United States                           | Token sale, staking, reward, promotional, securities, commodities, consumer-protection, and state-law review is not complete. |
+| United Kingdom                          | Cryptoasset financial promotion, token, reward, staking, advertising, and consumer-protection review is not complete.         |
+| European Union / European Economic Area | MiCA, token, reward, staking, advertising, consumer-protection, and member-state review is not complete.                      |
+
+These jurisdictions are not full-site IP blocked unless GloveCat publishes an updated availability
+notice or implements product-level controls for a specific feature.
 
 ## Rationale
 
