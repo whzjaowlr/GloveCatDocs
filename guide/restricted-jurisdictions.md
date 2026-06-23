@@ -54,15 +54,12 @@ bypass jurisdiction restrictions.
 GloveCat may restrict participation features for users located in, ordinarily resident in, or
 accessing from the following jurisdictions until jurisdiction-specific legal review is complete:
 
-| Jurisdiction                            | Review basis                                                                                                                  |
-| --------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| Republic of Korea / South Korea         | Local game, token, reward, NFT, virtual-asset, advertising, and consumer-protection review is not complete.                   |
-| United States                           | Token sale, staking, reward, promotional, securities, commodities, consumer-protection, and state-law review is not complete. |
-| United Kingdom                          | Cryptoasset financial promotion, token, reward, staking, advertising, and consumer-protection review is not complete.         |
-| European Union / European Economic Area | MiCA, token, reward, staking, advertising, consumer-protection, and member-state review is not complete.                      |
-
-These jurisdictions are not full-site IP blocked unless GloveCat publishes an updated availability
-notice or implements product-level controls for a specific feature.
+| Jurisdiction                            |
+| --------------------------------------- |
+| Republic of Korea / South Korea         |
+| United States                           |
+| United Kingdom                          |
+| European Union / European Economic Area |
 
 ## Additional AML/CFT Review Jurisdictions
 
@@ -72,35 +69,31 @@ jurisdiction-specific review and approval are complete.
 
 As of the FATF public statement dated 2026-06-19, this includes:
 
-| Jurisdiction                         | Review basis                                      |
-| ------------------------------------ | ------------------------------------------------- |
-| Algeria                              | FATF increased-monitoring jurisdiction.           |
-| Angola                               | FATF increased-monitoring jurisdiction.           |
-| Bolivia                              | FATF increased-monitoring jurisdiction.           |
-| Bosnia and Herzegovina               | FATF increased-monitoring jurisdiction.           |
-| Bulgaria                             | FATF increased-monitoring jurisdiction.           |
-| Cameroon                             | FATF increased-monitoring jurisdiction.           |
-| Cote d'Ivoire                        | FATF increased-monitoring jurisdiction.           |
-| Democratic Republic of the Congo     | FATF increased-monitoring jurisdiction.           |
-| Haiti                                | FATF increased-monitoring jurisdiction.           |
-| Kenya                                | FATF increased-monitoring jurisdiction.           |
-| Kuwait                               | FATF increased-monitoring jurisdiction.           |
-| Lao PDR / Laos                       | FATF increased-monitoring jurisdiction.           |
-| Lebanon                              | FATF increased-monitoring jurisdiction.           |
-| Monaco                               | FATF increased-monitoring jurisdiction.           |
-| Namibia                              | FATF increased-monitoring jurisdiction.           |
-| Nepal                                | FATF increased-monitoring jurisdiction.           |
-| Papua New Guinea                     | FATF increased-monitoring jurisdiction.           |
-| South Sudan                          | FATF increased-monitoring jurisdiction.           |
-| Syria                                | FATF increased monitoring and full-site restricted. |
-| Venezuela                            | FATF increased-monitoring jurisdiction.           |
-| Viet Nam / Vietnam                   | FATF increased-monitoring jurisdiction.           |
-| Virgin Islands (UK)                  | FATF increased-monitoring jurisdiction.           |
-| Yemen                                | FATF increased-monitoring jurisdiction.           |
-
-These jurisdictions are not automatically full-site IP blocked unless listed in Current Restricted
-Jurisdictions or unless GloveCat publishes an updated availability notice. If a jurisdiction appears
-in more than one section, the stricter restriction applies.
+| Jurisdiction                     |
+| -------------------------------- |
+| Algeria                          |
+| Angola                           |
+| Bolivia                          |
+| Bosnia and Herzegovina           |
+| Bulgaria                         |
+| Cameroon                         |
+| Cote d'Ivoire                    |
+| Democratic Republic of the Congo |
+| Haiti                            |
+| Kenya                            |
+| Kuwait                           |
+| Lao PDR / Laos                   |
+| Lebanon                          |
+| Monaco                           |
+| Namibia                          |
+| Nepal                            |
+| Papua New Guinea                 |
+| South Sudan                      |
+| Syria                            |
+| Venezuela                        |
+| Viet Nam / Vietnam               |
+| Virgin Islands (UK)              |
+| Yemen                            |
 
 ## Rationale
 
