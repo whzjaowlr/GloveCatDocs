@@ -51,16 +51,15 @@ Users are responsible for complying with local law, tax obligations, sanctions r
 exchange restrictions. Campaigns may exclude sanctioned persons, sanctioned addresses, and prohibited
 jurisdictions.
 
-Users must not access or use GloveCat services if they are subject to sanctions administered or
-enforced by OFAC, the United Nations, the European Union, the United Kingdom, the Republic of Korea,
-or another applicable sanctions authority, or if they act for, are owned by, are controlled by, or use
-wallets, accounts, or addresses associated with a sanctioned person, sanctioned entity, blocked
-address, or restricted party.
+Users may not access or use GloveCat services if applicable sanctions laws, restricted-party rules,
+or jurisdiction restrictions prohibit that access or use. This includes sanctioned or restricted
+persons, entities owned or controlled by sanctioned or restricted persons, and wallets, accounts, or
+addresses that are sanctioned, blocked, or otherwise restricted.
 
-GloveCat does not represent that every user, wallet, transaction, or blockchain address is screened
-in every product surface. GloveCat may refuse, limit, suspend, or terminate access, participation,
-campaign eligibility, rewards, claims, or other features if sanctions, abuse, or compliance risk is
-identified.
+GloveCat may refuse, limit, suspend, or terminate access to services or participation features if
+sanctions, abuse, circumvention, or other compliance risk is identified. GloveCat may rely on
+available technical, account, wallet, blockchain, support, and operational signals, but does not
+guarantee screening of every user, wallet, transaction, or blockchain address.
 
 GloveCat may also restrict participation features for users located in, ordinarily resident in, or
 accessing from FATF increased-monitoring jurisdictions unless jurisdiction-specific review and

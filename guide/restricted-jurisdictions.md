@@ -24,18 +24,17 @@ ethnicity, language, or personal identity.
 
 ## Sanctions And Restricted Parties
 
-Users must not access or use GloveCat services if they are subject to sanctions administered or
-enforced by OFAC, the United Nations, the European Union, the United Kingdom, the Republic of Korea,
-or another applicable sanctions authority.
+Users may not access or use GloveCat services if applicable sanctions laws, restricted-party rules,
+or jurisdiction restrictions prohibit that access or use.
 
-This restriction also applies to users acting for, owned by, controlled by, or using wallets,
-accounts, or addresses associated with a sanctioned person, sanctioned entity, blocked address, or
-restricted party.
+This includes sanctioned or restricted persons, entities owned or controlled by sanctioned or
+restricted persons, and wallets, accounts, or addresses that are sanctioned, blocked, or otherwise
+restricted.
 
-GloveCat does not represent that every user, wallet, transaction, or blockchain address is screened
-in every product surface. GloveCat may refuse, limit, suspend, or terminate access, participation,
-campaign eligibility, rewards, claims, or other features if sanctions, abuse, or compliance risk is
-identified.
+GloveCat may refuse, limit, suspend, or terminate access to services or participation features if
+sanctions, abuse, circumvention, or other compliance risk is identified. GloveCat may rely on
+available technical, account, wallet, blockchain, support, and operational signals, but does not
+guarantee screening of every user, wallet, transaction, or blockchain address.
 
 ## Restricted Users
 
