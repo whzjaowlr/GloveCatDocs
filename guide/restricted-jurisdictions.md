@@ -48,14 +48,14 @@ Restricted users include:
 Users must not use VPNs, proxies, remote access tools, alternate accounts, or third-party accounts to
 bypass jurisdiction restrictions.
 
-## Jurisdictions Requiring Legal Review Before Participation
+## Jurisdictions Under Review
 
-GloveCat may restrict participation features for users located in, ordinarily resident in, or
-accessing from the following jurisdictions until jurisdiction-specific legal review is complete:
+GloveCat may limit participation features in the following jurisdictions until legal and compliance
+review is complete:
 
 | Jurisdiction                            |
 | --------------------------------------- |
-| Republic of Korea / South Korea         |
+| South Korea                             |
 | United States                           |
 | United Kingdom                          |
 | European Union / European Economic Area |
