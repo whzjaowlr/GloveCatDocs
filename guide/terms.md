@@ -1,6 +1,6 @@
 # Terms And Risk Disclosure
 
-> Last updated: 2026-06-22
+> Last updated: 2026-06-23
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
@@ -50,6 +50,21 @@ counsel.
 Users are responsible for complying with local law, tax obligations, sanctions rules, and wallet or
 exchange restrictions. Campaigns may exclude sanctioned persons, sanctioned addresses, and prohibited
 jurisdictions.
+
+Users must not access or use GloveCat services if they are subject to sanctions administered or
+enforced by OFAC, the United Nations, the European Union, the United Kingdom, the Republic of Korea,
+or another applicable sanctions authority, or if they act for, are owned by, are controlled by, or use
+wallets, accounts, or addresses associated with a sanctioned person, sanctioned entity, blocked
+address, or restricted party.
+
+GloveCat does not represent that every user, wallet, transaction, or blockchain address is screened
+in every product surface. GloveCat may refuse, limit, suspend, or terminate access, participation,
+campaign eligibility, rewards, claims, or other features if sanctions, abuse, or compliance risk is
+identified.
+
+GloveCat may also restrict participation features for users located in, ordinarily resident in, or
+accessing from FATF increased-monitoring jurisdictions unless jurisdiction-specific review and
+approval are complete.
 
 See [Restricted Jurisdictions And Service Availability](/guide/restricted-jurisdictions) for the
 current jurisdiction-based service availability notice, including restricted users, rationale, and
