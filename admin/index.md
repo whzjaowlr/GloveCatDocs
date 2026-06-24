@@ -20,9 +20,9 @@ the existing Safe workflow and private maintainer channels.
 4. [Team PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 5. [Treasury/staking reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 
-Official pair setup, liquidity seed, LP locking, staking reward-pool funding, and trading are
-separate launch gates. Keep those records visible beside the active contract addresses only after
-the matching evidence exists.
+Official pair setup, liquidity seed, and project-owned LP locking are complete and visible in the
+public evidence records. Trading is not open, and staking reward-pool funding still requires Safe
+execution.
 
 ## 🧩 Active Contract Surface
 
@@ -38,7 +38,7 @@ the matching evidence exists.
 - Use only the current [Contract Information](/admin/contracts) page for mainnet addresses.
 - Treat historical addresses as reference-only.
 - Publish launch, liquidity, LP lock, staking reward pool funding, and Safe wiring status only after
-  public evidence exists.
+  public evidence exists; current liquidity and LP lock records are linked from the public evidence pages.
 - Do not describe removed features as available.
 
 ## 📚 Contents

@@ -1,6 +1,6 @@
 # Roadmap
 
-> Last updated: 2026-06-15
+> Last updated: 2026-06-24
 
 This roadmap tracks the public deployment surface and post-launch visibility work. It is not a
 guarantee of delivery dates.
@@ -16,19 +16,18 @@ guarantee of delivery dates.
 | Safe configuration evidence | [Complete](/admin/contracts#project-wallets) |
 | Team PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
 | Treasury/staking reserve PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
-| Official pair setup | Pending |
-| Initial liquidity seed | Pending |
-| Trading route | Pending until `openTrading()` executes |
-| LP token lock evidence | Pending until locker address and public lock page are verified |
-| Initial staking reward-pool funding | Prepared for 1,000,000 GCAT; not funded on-chain |
+| Official pair setup | [Complete](/guide/official-pool-policy) |
+| Initial liquidity seed | [Complete](/guide/liquidity-lock-evidence) |
+| Trading route | Official Aerodrome WETH/GCAT route is documented; not live until `openTrading()` executes |
+| LP token lock evidence | [Complete](/guide/liquidity-lock-evidence) |
+| Initial staking reward-pool funding | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
 
 ## 🚀 P1: Launch Operations
 
 - Publish only the verified contract addresses from [Contract Information](/admin/contracts).
 - Publish [Safe owner/threshold evidence](/admin/contracts#project-wallets).
-- Set the official pair, add liquidity, and publish pair evidence.
-- Lock project-owned LP tokens and publish locker evidence.
-- Open trading only after manual launch evidence is complete.
+- Keep the official Aerodrome WETH/GCAT route and LP lock evidence visible in public docs.
+- Open trading only after final launch evidence review is complete.
 - Fund the staking incentive pool through Safe-approved treasury or reward-pool transactions after
   token transfers are open.
 - Add public monitoring for contract wiring, staking reward pool health, and liquidity status.

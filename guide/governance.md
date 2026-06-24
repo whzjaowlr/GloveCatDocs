@@ -21,7 +21,7 @@ published proposal documents.
 Snapshot voting is gasless and off-chain. It can help measure community preference, but Snapshot
 results do not automatically change contract state.
 
-Any contract-level change should be treated as pending until public on-chain evidence is available.
+Any contract-level change should be treated as unverified until public on-chain evidence is available.
 
 ## 🔐 Privileged Changes
 
@@ -33,7 +33,7 @@ Examples of privileged changes that require public evidence before users should 
 - Update NFT metadata settings.
 - Set minters and leaderboard reward wiring.
 
-Phase 1 wiring has already been executed. Any future wiring changes should be treated as pending
+Phase 1 wiring has already been executed. Any future wiring changes should be treated as unverified
 until the matching public evidence is available.
 
 ## 📋 Proposal Hygiene

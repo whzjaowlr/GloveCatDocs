@@ -11,10 +11,11 @@ counsel.
 - GloveCat is a token and game-infrastructure experiment on Base.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
-- Phase 1 Safe wiring and PinkLock vesting locks are complete.
-- Trading, official pair setup, liquidity, LP locking, staking reward-pool funding, and public
-  staking are separate launch gates and should be verified through the corresponding public
-  transactions and evidence before users rely on them.
+- Phase 1 Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and
+  project-owned LP locking are complete.
+- Trading is not open, staking reward-pool funding still requires Safe execution, and public staking
+  is not live; users should verify the corresponding public transactions and evidence before relying
+  on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
   [Safe records](/admin/contracts#project-wallets), [PinkLock records](/admin/contracts#public-lock-evidence),
@@ -32,14 +33,15 @@ counsel.
 - Smart-contract bugs or integration mistakes may exist.
 - Admin-action claims should be verified against the configured
   [Safe owner/threshold records](/admin/contracts#project-wallets) and actual on-chain authority.
-- Liquidity creation and LP locking are manual operational steps.
+- Liquidity creation and LP locking are manual operational steps; current public records are linked
+  from [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence).
 - Reward pools can be insufficient.
 - NFT royalty payment depends on marketplace support for ERC2981.
 
 ## 🎁 Staking And Rewards
 
 - Staking incentives are not guaranteed returns.
-- Rewards are paid only from funded pools; prepared funding transactions are not funding until they
+- Rewards are paid only from funded pools; funding transactions do not increase the pool until they
   are executed on-chain.
 - NFT boosts require benefit activation and are snapshotted when a lock position is created.
 - Leaderboard rewards depend on off-chain score computation and Merkle proof publication.

@@ -1,4 +1,4 @@
-# FAQ
+﻿# FAQ
 
 ## ❓ General
 
@@ -6,15 +6,15 @@
 
 Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
 [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified. Phase 1
-Safe wiring and PinkLock vesting locks are complete. Trading,
-official pair setup, liquidity, LP locking, reward-pool funding, and public staking are separate
-launch gates and should not be treated as live until the matching public evidence is published.
+Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and project-owned LP
+locking are complete. Trading is not open, reward-pool funding still requires Safe execution, and
+public staking is not live until the matching public evidence is published.
 
 ### Where can I buy GCAT?
 
 Use only official launch announcements and verified contract addresses. Historical addresses are
-reference-only and should not be used as the current GCAT deployment. Swap only after the official
-pair, liquidity, LP lock, and `openTrading()` evidence are published and verified.
+reference-only and should not be used as the current GCAT deployment. Swap only through the official
+Aerodrome WETH/GCAT route after `openTrading()` evidence is published and verified.
 
 ### Which wallets are supported?
 
@@ -25,9 +25,9 @@ provider's own support.
 
 ### Can I stake now?
 
-No. Public staking is closed until trading is open and the reward-pool minimum is funded on-chain.
-The prepared funding transaction targets 1,000,000 GCAT, but the current staking `incentivePool` is
-0 until the Safe executes it. After launch, use the official dApp only after confirming the active
+No. Public staking is not live; it requires trading to be open and the reward-pool minimum to be funded on-chain.
+The documented funding target is 1,000,000 GCAT, but the current staking `incentivePool` is 0 until
+the Safe executes it. After launch, use the official dApp only after confirming the active
 staking address, current [Safe signer/threshold evidence](/admin/contracts#project-wallets), open
 token transfers, and current staking reward-pool funding evidence.
 

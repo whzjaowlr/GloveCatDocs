@@ -1,4 +1,4 @@
-# Staking Guide
+﻿# Staking Guide
 
 GCAT staking uses fixed lock positions in the current redeploy surface.
 
@@ -8,8 +8,8 @@ The active staking contract supports fixed lock positions, reward-pool-gated pay
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking is closed until trading is open and the reward-pool minimum is funded on-chain. The
-prepared reward-pool transaction targets 1,000,000 GCAT, but the staking `incentivePool` is 0 until
+Public staking is not live; it requires trading to be open and the reward-pool minimum to be funded on-chain. The
+documented reward-pool funding target is 1,000,000 GCAT, but the staking `incentivePool` is 0 until
 Safe execution.
 
 | Rule | Value |
@@ -33,6 +33,10 @@ The selected period's duration and base APR are snapshotted into the lock positi
 `lockStake(amount, lockPeriodId)` is called. The base APR is applied pro rata by elapsed seconds; it
 is not a flat bonus paid just for selecting a period, and it is not an extra staking-amount
 multiplier.
+
+After a lock reaches maturity, it becomes withdrawable but does not automatically stop earning
+rewards. A matured position continues to accrue incentives while it remains active, until the user
+claims incentives or unstakes the position.
 
 ## 📏 Staking Amounts
 
@@ -62,6 +66,8 @@ Rules:
 ## 🎁 Reward Pool
 
 Staking rewards are paid from the staking incentive pool. The contract does not mint reward tokens.
+Rewards can continue accumulating after the selected lock period has matured if the position remains
+active.
 
 If the pool is insufficient at claim or unstake time:
 
@@ -75,8 +81,8 @@ Do not treat displayed APRs as guaranteed returns.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the [active staking address](/admin/contracts), `openTrading()`, official pair,
-   liquidity, LP lock, and funded reward-pool evidence.
+3. Confirm the [active staking address](/admin/contracts), `openTrading()`,
+   [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.
@@ -85,4 +91,6 @@ Do not treat displayed APRs as guaranteed returns.
 ## 🔓 Unstaking
 
 Locked positions cannot be withdrawn before their lock period ends. After maturity, users can call
-`lockUnstake(positionId)` to withdraw principal and any payable incentive.
+`lockUnstake(positionId)` to withdraw principal and any payable incentive. Users may also leave a
+matured position active; in that case, rewards continue to accrue until the next claim or unstake
+transaction, subject to reward-pool availability.

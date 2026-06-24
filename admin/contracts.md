@@ -1,4 +1,4 @@
-# Contract Information
+﻿# Contract Information
 
 This page shows the current deployment registry state.
 
@@ -31,16 +31,18 @@ executed. The PinkLock target is set, and the team and long-term treasury/stakin
 are complete on-chain.
 
 Active deployment status is not a trading-live or staking-live claim. Official pair setup,
-liquidity, LP locking, `openTrading()`, and reward-pool funding remain separate launch evidence.
+liquidity seeding, and project-owned LP locking are complete. Trading is not open, the staking
+incentive pool is 0, and public staking is not live until the final Safe-controlled gates
+execute.
 
 | Launch gate | Current status |
 | ----------- | -------------- |
-| Official pair | Pending; `uniswapV2Pair` is still the zero address |
-| Liquidity seed | Pending; `launchLiquiditySeeded` is false |
-| Trading | Closed until `openTrading()` executes |
-| LP lock evidence | Pending until locker address and public lock page are verified |
-| Staking reward pool | 1,000,000 GCAT funding transaction prepared; `incentivePool` is 0 until Safe execution |
-| Public staking | Closed until trading is open and the reward-pool minimum is funded |
+| Official pair | Complete; Aerodrome Classic Volatile WETH/GCAT pool is registered in `GloveCatCore` |
+| Liquidity seed | Complete; 5.51 WETH and 375,000,000 GCAT were seeded into the official pool |
+| Trading | Not open; requires `openTrading()` execution |
+| LP lock evidence | Complete; project-owned Aerodrome LP tokens are locked through PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking reward pool | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
+| Public staking | Not live; requires open trading and funded reward-pool minimum |
 
 The current published Safe configuration is 2-of-3 multisig. This configuration may be strengthened
 later by adding signers, increasing the threshold, or both. Users should verify the current
@@ -53,8 +55,9 @@ before relying on any privileged-control claim.
 
 ## 🔐 Public Lock Evidence
 
-The team allocation lock and treasury/staking reserve lock are complete through PinkLock. This is
-token-lock evidence only; it is not a public-staking-live claim.
+The team allocation lock, treasury/staking reserve lock, and project-owned LP lock are complete
+through PinkLock. These records are lock evidence only; they are not a trading-live or
+public-staking-live claim.
 
 <TokenLockTable />
 
@@ -65,6 +68,9 @@ contract and execution transactions. Both visible PinkLock records use
 treasury/staking reserve 61 Cycle Vesting. By the bps math, 60 cycles releases 98.36%, 61 cycles
 releases 99.99%, and the 62nd 30-day cycle reaches the 100% cap. LP lock wording must stay tied to
 the public lock transaction and lock page evidence.
+
+The Aerodrome LP position is locked through PinkLock V2 as a normal ERC20 token lock because
+PinkLock's LP-token mode expects a Uniswap V2-style factory path. See [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence).
 
 <a id="network-information"></a>
 

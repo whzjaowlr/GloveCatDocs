@@ -29,7 +29,7 @@ allocation outside the rows above.
 | Team allocation | 25,000,000 GCAT | Locked through PinkLock vesting |
 | Long-term treasury/staking reserve | 95,000,000 GCAT | Locked through PinkLock vesting |
 | Initial staking bootstrap | 5,000,000 GCAT | Retained in Safe for initial pool funding |
-| LP tokens | Public LP position | Pending until liquidity is added and project-owned LP tokens are locked |
+| LP tokens | 45,456.02270326782560651 vAMM-WETH/GCAT | Locked through PinkLock V2 until 2031-06-24 00:00 UTC |
 
 The team and treasury/staking reserve PinkLock vesting records both start on
 `2026-06-28T02:00:00Z` and use `0.56%` TGE with `1.63%` release every 30 days. The visible
@@ -63,14 +63,15 @@ routers may also apply independent limits.
 
 ## 💧 Liquidity
 
-Liquidity creation, ETH/WETH funding, LP token custody, and LP token locking are manual operational
-steps outside the token contract. Public liquidity records should include pair address, transaction
-hashes, LP token custody, 5-year lock duration, and lock evidence.
+The official Aerodrome Classic Volatile WETH/GCAT pool is funded with 5.51 WETH and 375,000,000
+GCAT. The project-owned LP tokens are locked through PinkLock V2 until 2031-06-24 00:00 UTC. See
+[Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence) for the pool address, transaction
+hashes, LP token custody, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking rewards are paid only from the funded staking incentive pool. A 1,000,000 GCAT funding
-transaction is prepared, but the pool is not funded on-chain until the Safe executes it after token
-transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
+Staking rewards are paid only from the funded staking incentive pool. The documented funding target
+is 1,000,000 GCAT, but the pool does not increase on-chain until the Safe executes funding after
+token transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
 unpaid staking incentives forward as `pendingIncentives`; it does not mint new reward tokens.
 Gamification leaderboard rewards are NFT mints, not ERC20 reward-pool payouts.

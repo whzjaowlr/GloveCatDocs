@@ -109,6 +109,8 @@ export default defineConfig({
           items: [
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
+            { text: "Official Pool Policy", link: "/guide/official-pool-policy" },
+            { text: "Liquidity and LP Lock Evidence", link: "/guide/liquidity-lock-evidence" },
             { text: "Terms and Risk Disclosure", link: "/guide/terms" },
             { text: "Restricted Jurisdictions", link: "/guide/restricted-jurisdictions" },
           ],

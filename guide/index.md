@@ -1,12 +1,13 @@
-# GloveCat (GCAT) Introduction
+﻿# GloveCat (GCAT) Introduction
 
 GloveCat is a Base-chain token project built around a fixed-fee ERC20, lock-position staking, NFT
 boost snapshots, and staking-based gamification.
 
 This documentation describes the current deployed Base surface. Base mainnet contracts are deployed
 and verified, Phase 1 Safe wiring is complete, and PinkLock token-lock records are published.
-Official pair setup, liquidity, LP locking, `openTrading()`, reward-pool funding, and public staking
-are separate launch gates.
+Official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not
+open, the staking incentive pool is 0, and public staking is not live until the final
+Safe-controlled gates execute.
 
 ## 🚦 Current Status
 
@@ -19,12 +20,12 @@ are separate launch gates.
 | Phase 1 Safe wiring | Complete |
 | Team vesting lock | Complete |
 | Treasury/staking reserve vesting lock | Complete |
-| Official pair | Pending |
-| Liquidity seed | Pending |
-| Trading | Closed until `openTrading()` executes |
-| LP lock evidence | Pending until locker address and public lock page are verified |
-| Staking reward pool | 1,000,000 GCAT funding transaction prepared; `incentivePool` is 0 until Safe execution |
-| Public staking | Closed until the go-live check passes |
+| Official pair | Complete; Aerodrome Classic Volatile WETH/GCAT pool registered |
+| Liquidity seed | Complete; 5.51 WETH and 375,000,000 GCAT seeded |
+| Trading | Not open; requires `openTrading()` execution |
+| LP lock evidence | Complete; project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking reward pool | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
+| Public staking | Not live; requires the go-live check to pass |
 
 ## 🧩 Active Features
 
@@ -48,4 +49,5 @@ Do not treat active deployment status as a live trading or staking signal.
 2. Review [Staking](/guide/staking) and [NFT](/guide/nft) behavior.
 3. Check [Contract Information](/admin/contracts) and
    [Public Evidence Links](/admin/contracts#public-evidence-links) before relying on any address.
-4. Use official community channels for launch announcements.
+4. Review [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence).
+5. Use official community channels for launch announcements.
