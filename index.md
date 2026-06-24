@@ -22,7 +22,7 @@ features:
     details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and 1-hour launch max-wallet checks.
   - icon: 🔒
     title: Locked Staking
-    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking requires trading to be open and the reward pool to be funded.
+    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`.
   - icon: 🔐
     title: Public Locks
     details: Team vesting, treasury/staking reserve vesting, official liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
@@ -35,23 +35,20 @@ features:
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The active deployment status
 covers verified contract addresses, Safe admin control, Phase 1 wiring, and PinkLock token-lock
-records. Official liquidity and project-owned LP locking are complete. Public trading is not open,
-the staking incentive pool is 0, and public staking is not live until the final Safe-controlled
-gates execute.
+records. Official liquidity and project-owned LP locking are complete. Public trading is not open. Public staking is not live.
 
 | Item | Status |
 | ---- | ------ |
 | Base deployment | `active` |
 | Contract addresses | Published and Basescan verified |
-| Phase 1 Safe wiring | Complete |
-| Team allocation lock | Complete through PinkLock |
-| Treasury/staking reserve lock | Complete through PinkLock |
-| Official pair | Complete; Aerodrome Classic Volatile WETH/GCAT pool registered |
-| Liquidity seed | Complete; 5.51 WETH and 375,000,000 GCAT seeded |
-| Trading | Not open; requires `openTrading()` execution |
-| LP lock evidence | Complete; project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking reward pool | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
-| Public staking | Not live; requires open trading and funded reward-pool minimum |
+| Phase 1 Safe wiring | Safe wiring executed |
+| Team allocation lock | PinkLock vesting |
+| Treasury/staking reserve lock | PinkLock vesting |
+| Official pair | Aerodrome Classic Volatile WETH/GCAT pool registered |
+| Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
+| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
 
 ## 🧩 Active Surface
 

@@ -9,11 +9,11 @@ claim.
 | Item | Status |
 | --- | --- |
 | Official pool | Aerodrome Classic Volatile WETH/GCAT |
-| Official pair registration | Complete in `GloveCatCore` |
-| Liquidity seed | Complete |
+| Official pair registration | Registered in `GloveCatCore` |
+| Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | LP token custody | Project-owned LP tokens held by PinkLock V2 |
 | LP lock mode | PinkLock V2 normal ERC20 token lock |
-| Trading | Not open; requires `openTrading()` execution |
+| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
 
 ## Addresses
 
@@ -72,6 +72,6 @@ Users and reviewers should verify the following before relying on any launch-liq
 The liquidity and LP lock records above do not complete every launch gate. The final separate gates
 are:
 
-- `openTrading()` execution;
+- trading-launch execution scheduled for June 29, 2026 at 2:00 PM UTC;
 - staking reward-pool funding;
-- final public staking go-live checks and announcement.
+- final public staking evidence and announcement.

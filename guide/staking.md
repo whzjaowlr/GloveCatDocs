@@ -8,9 +8,7 @@ The active staking contract supports fixed lock positions, reward-pool-gated pay
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking is not live; it requires trading to be open and the reward-pool minimum to be funded on-chain. The
-documented reward-pool funding target is 1,000,000 GCAT, but the staking `incentivePool` is 0 until
-Safe execution.
+Public staking is not live. It requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT` on-chain. If `incentivePool` is below 1,000,000 GCAT, rewards must be added through Safe execution before public staking is treated as ready.
 
 | Rule | Value |
 | ---- | ----- |
@@ -81,8 +79,7 @@ Do not treat displayed APRs as guaranteed returns.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the [active staking address](/admin/contracts), `openTrading()`,
-   [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
+3. Confirm the [active staking address](/admin/contracts), June 29, 2026 at 2:00 PM UTC trading-launch evidence, [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.

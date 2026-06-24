@@ -1,4 +1,4 @@
-# Deployment Status
+﻿# Deployment Status
 
 This public section is read-only deployment information for the current GloveCat Base mainnet
 surface.
@@ -21,8 +21,7 @@ the existing Safe workflow and private maintainer channels.
 5. [Treasury/staking reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 
 Official pair setup, liquidity seed, and project-owned LP locking are complete and visible in the
-public evidence records. Trading is not open, and staking reward-pool funding still requires Safe
-execution.
+public evidence records. Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`.
 
 ## 🧩 Active Contract Surface
 

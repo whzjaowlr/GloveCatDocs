@@ -1,4 +1,4 @@
-# Roadmap
+﻿# Roadmap
 
 > Last updated: 2026-06-24
 
@@ -9,18 +9,18 @@ guarantee of delivery dates.
 
 | Item | Status |
 | ---- | ------ |
-| Active source cleanup | Complete |
-| Public docs refresh | Complete |
-| Fresh Base manifest | Complete: `active` |
-| BaseScan verification for fresh contracts | [Complete](/admin/contracts#public-evidence-links) |
-| Safe configuration evidence | [Complete](/admin/contracts#project-wallets) |
-| Team PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
-| Treasury/staking reserve PinkLock vesting evidence | [Complete](/admin/contracts#public-lock-evidence) |
-| Official pair setup | [Complete](/guide/official-pool-policy) |
-| Initial liquidity seed | [Complete](/guide/liquidity-lock-evidence) |
-| Trading route | Official Aerodrome WETH/GCAT route is documented; not live until `openTrading()` executes |
-| LP token lock evidence | [Complete](/guide/liquidity-lock-evidence) |
-| Initial staking reward-pool funding | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
+| Active source cleanup | Cleaned source surface |
+| Public docs refresh | Current Base redeploy docs updated |
+| Fresh Base manifest | `active` manifest published |
+| BaseScan verification for fresh contracts | [Basescan evidence](/admin/contracts#public-evidence-links) |
+| Safe configuration evidence | [Safe evidence](/admin/contracts#project-wallets) |
+| Team PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
+| Treasury/staking reserve PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
+| Official pair setup | [Official pool policy](/guide/official-pool-policy) |
+| Initial liquidity seed | [Liquidity evidence](/guide/liquidity-lock-evidence) |
+| Trading route | Official Aerodrome WETH/GCAT route documented. Trading launch scheduled for June 29, 2026 at 2:00 PM UTC |
+| LP token lock evidence | [LP lock evidence](/guide/liquidity-lock-evidence) |
+| Initial staking reward-pool funding | Requires `incentivePool >= 1,000,000 GCAT`. Add rewards through Safe execution if below target |
 
 ## 🚀 P1: Launch Operations
 

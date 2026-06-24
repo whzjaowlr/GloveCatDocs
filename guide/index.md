@@ -5,9 +5,7 @@ boost snapshots, and staking-based gamification.
 
 This documentation describes the current deployed Base surface. Base mainnet contracts are deployed
 and verified, Phase 1 Safe wiring is complete, and PinkLock token-lock records are published.
-Official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not
-open, the staking incentive pool is 0, and public staking is not live until the final
-Safe-controlled gates execute.
+Official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
 
 ## 🚦 Current Status
 
@@ -17,15 +15,14 @@ Safe-controlled gates execute.
 | Deployment status | `active` |
 | Active addresses | Published in [Contract Information](/admin/contracts) |
 | Contract verification | [Basescan verified](/admin/contracts#public-evidence-links) |
-| Phase 1 Safe wiring | Complete |
-| Team vesting lock | Complete |
-| Treasury/staking reserve vesting lock | Complete |
-| Official pair | Complete; Aerodrome Classic Volatile WETH/GCAT pool registered |
-| Liquidity seed | Complete; 5.51 WETH and 375,000,000 GCAT seeded |
-| Trading | Not open; requires `openTrading()` execution |
-| LP lock evidence | Complete; project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking reward pool | Funding target is 1,000,000 GCAT; `incentivePool` is 0 until Safe execution |
-| Public staking | Not live; requires the go-live check to pass |
+| Phase 1 Safe wiring | Safe wiring executed |
+| Team vesting lock | PinkLock vesting |
+| Treasury/staking reserve vesting lock | PinkLock vesting |
+| Official pair | Aerodrome Classic Volatile WETH/GCAT pool registered |
+| Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
+| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
 
 ## 🧩 Active Features
 

@@ -6,15 +6,13 @@
 
 Yes. The current contract addresses are published in [Contract Information](/admin/contracts) and
 [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified. Phase 1
-Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and project-owned LP
-locking are complete. Trading is not open, reward-pool funding still requires Safe execution, and
-public staking is not live until the matching public evidence is published.
+Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
 
 ### Where can I buy GCAT?
 
 Use only official launch announcements and verified contract addresses. Historical addresses are
 reference-only and should not be used as the current GCAT deployment. Swap only through the official
-Aerodrome WETH/GCAT route after `openTrading()` evidence is published and verified.
+Aerodrome WETH/GCAT route after trading-launch evidence for June 29, 2026 at 2:00 PM UTC is published and verified.
 
 ### Which wallets are supported?
 
@@ -25,9 +23,7 @@ provider's own support.
 
 ### Can I stake now?
 
-No. Public staking is not live; it requires trading to be open and the reward-pool minimum to be funded on-chain.
-The documented funding target is 1,000,000 GCAT, but the current staking `incentivePool` is 0 until
-the Safe executes it. After launch, use the official dApp only after confirming the active
+No. Public staking is not live. It requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT` on-chain. If `incentivePool` is below 1,000,000 GCAT, rewards must be added through Safe execution before public staking is treated as ready. After launch, use the official dApp only after confirming the active
 staking address, current [Safe signer/threshold evidence](/admin/contracts#project-wallets), open
 token transfers, and current staking reward-pool funding evidence.
 

@@ -1,4 +1,4 @@
-# Terms And Risk Disclosure
+﻿# Terms And Risk Disclosure
 
 > Last updated: 2026-06-23
 
@@ -13,9 +13,8 @@ counsel.
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
 - Phase 1 Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and
   project-owned LP locking are complete.
-- Trading is not open, staking reward-pool funding still requires Safe execution, and public staking
-  is not live; users should verify the corresponding public transactions and evidence before relying
-  on them.
+- Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`. Users should verify the corresponding public transactions and
+  evidence before relying on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
   [Safe records](/admin/contracts#project-wallets), [PinkLock records](/admin/contracts#public-lock-evidence),

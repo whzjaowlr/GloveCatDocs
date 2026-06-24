@@ -1,4 +1,4 @@
-export type ContractKey =
+﻿export type ContractKey =
   | "GloveCatCore"
   | "Staking"
   | "GloveCatNFT"
@@ -58,7 +58,7 @@ export const baseDeployment = {
     | `0x${string}`
     | null,
   updatedAt: "2026-06-24",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open, the staking incentive pool is 0, and public staking is not live until the remaining Safe-controlled gates execute.",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.",
 };
 
 export const lockTargetSetTxHash =
@@ -91,7 +91,7 @@ export const contracts: ContractInfo[] = [
       "GCAT ERC20 token with fixed sell fee and launch max-wallet limit",
     address: "0x59df0577c7a5014954c0d6cc12616e92e34d9ff4",
     verified: true,
-    status: "Verified; Safe wired",
+    status: "Basescan verified and Safe wired",
   },
   {
     name: "Staking",
@@ -99,28 +99,28 @@ export const contracts: ContractInfo[] = [
       "Lock-only staking with 30-, 90-, and 180-day periods and base APRs of 2%, 5%, and 8%, respectively",
     address: "0x2ab642c747d4568f916fbe4f0556ca28802162ab",
     verified: true,
-    status: "Verified; Safe wired",
+    status: "Basescan verified and Safe wired",
   },
   {
     name: "GloveCatNFT",
     description: "ERC721 tier NFT for staking boost and ERC2981 royalties",
     address: "0x23d398f039cede09cd2a63f359c7052753919f82",
     verified: true,
-    status: "Verified; minter wired",
+    status: "Basescan verified and minter wired",
   },
   {
     name: "GamificationCore",
     description: "Staking-only leaderboard NFT claims",
     address: "0x96935bde10b5c4b9e671482416754fd69401f3f7",
     verified: true,
-    status: "Verified; NFT wired",
+    status: "Basescan verified and NFT wired",
   },
 ];
 
 export const tokenLocks: TokenLockInfo[] = [
   {
     name: "Team allocation lock",
-    status: "Locked through PinkLock",
+    status: "PinkLock vesting",
     amountGcat: "25,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
@@ -130,7 +130,7 @@ export const tokenLocks: TokenLockInfo[] = [
   },
   {
     name: "Treasury/staking reserve lock",
-    status: "Locked through PinkLock",
+    status: "PinkLock vesting",
     amountGcat: "95,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",

@@ -1,4 +1,4 @@
-# Tokenomics
+﻿# Tokenomics
 
 GCAT has a fixed total supply and a simplified redeploy allocation model.
 
@@ -26,10 +26,10 @@ allocation outside the rows above.
 
 | Item | Amount | Status |
 | ---- | -----: | ------ |
-| Team allocation | 25,000,000 GCAT | Locked through PinkLock vesting |
-| Long-term treasury/staking reserve | 95,000,000 GCAT | Locked through PinkLock vesting |
+| Team allocation | 25,000,000 GCAT | PinkLock vesting |
+| Long-term treasury/staking reserve | 95,000,000 GCAT | PinkLock vesting |
 | Initial staking bootstrap | 5,000,000 GCAT | Retained in Safe for initial pool funding |
-| LP tokens | 45,456.02270326782560651 vAMM-WETH/GCAT | Locked through PinkLock V2 until 2031-06-24 00:00 UTC |
+| LP tokens | 45,456.02270326782560651 vAMM-WETH/GCAT | PinkLock V2 until 2031-06-24 00:00 UTC |
 
 The team and treasury/staking reserve PinkLock vesting records both start on
 `2026-06-28T02:00:00Z` and use `0.56%` TGE with `1.63%` release every 30 days. The visible
@@ -70,8 +70,6 @@ hashes, LP token custody, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking rewards are paid only from the funded staking incentive pool. The documented funding target
-is 1,000,000 GCAT, but the pool does not increase on-chain until the Safe executes funding after
-token transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
+Staking rewards are paid only from the funded staking incentive pool. The readiness target is `incentivePool >= 1,000,000 GCAT`. If the on-chain pool is below target, rewards must be added through Safe execution after token transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
 unpaid staking incentives forward as `pendingIncentives`; it does not mint new reward tokens.
 Gamification leaderboard rewards are NFT mints, not ERC20 reward-pool payouts.
