@@ -16,8 +16,8 @@ Official pair setup, liquidity seeding, and project-owned LP locking are complet
 | Active addresses | Published in [Contract Information](/admin/contracts) |
 | Contract verification | [Basescan verified](/admin/contracts#public-evidence-links) |
 | Phase 1 Safe wiring | Safe wiring executed |
-| Team vesting lock | PinkLock vesting |
-| Treasury/staking reserve vesting lock | PinkLock vesting |
+| Team vesting lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
+| Long-term treasury reserve vesting lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Official pair | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |

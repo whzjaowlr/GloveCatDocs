@@ -35,7 +35,8 @@ claim.
 | Timestamp | 2026-06-23 17:22:55 UTC |
 | WETH seeded | 5.51 WETH |
 | GCAT seeded | 375,000,000 GCAT |
-| LP tokens minted | 45,456.02270326782560651 vAMM-WETH/GCAT |
+| Project LP tokens received | 45,456.02270326782560651 vAMM-WETH/GCAT |
+| Minimum-liquidity LP | 0.000000000000001 vAMM-WETH/GCAT minted to `0x0000000000000000000000000000000000000001`; not project-owned |
 | Initial LP recipient | Launch Liquidity Safe |
 
 ## LP Lock Evidence
@@ -43,6 +44,7 @@ claim.
 | Item | Value |
 | --- | --- |
 | Lock tx | [`0xd0afe05c7e64a7113c3b8b48e17cf06211ae65d9da8389267009c6e603e2554b`](https://basescan.org/tx/0xd0afe05c7e64a7113c3b8b48e17cf06211ae65d9da8389267009c6e603e2554b) |
+| Lock timestamp | 2026-06-23 17:36:05 UTC |
 | Lock ID | `1046390` |
 | Lock owner | Launch Liquidity Safe |
 | Locked token | vAMM-WETH/GCAT LP token |

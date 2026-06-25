@@ -5,7 +5,7 @@ Official VitePress documentation for the current GloveCat Base deployment surfac
 ## 🚦 Current Status
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. Phase 1 Safe wiring has been
-executed. Team allocation, the long-term treasury/staking reserve, official pair setup, liquidity
+executed. Team allocation, the long-term treasury reserve, official pair setup, liquidity
 seeding, and project-owned LP locking are published through public evidence records.
 
 The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,

@@ -18,7 +18,7 @@ the existing Safe workflow and private maintainer channels.
 2. [Basescan verification](/admin/contracts#public-evidence-links).
 3. [Phase 1 Safe wiring](/admin/contracts#project-wallets).
 4. [Team PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
-5. [Treasury/staking reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
+5. [Long-term treasury reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 
 Official pair setup, liquidity seed, and project-owned LP locking are complete and visible in the
 public evidence records. Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`.

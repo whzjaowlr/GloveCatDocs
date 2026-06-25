@@ -15,7 +15,7 @@ guarantee of delivery dates.
 | BaseScan verification for fresh contracts | [Basescan evidence](/admin/contracts#public-evidence-links) |
 | Safe configuration evidence | [Safe evidence](/admin/contracts#project-wallets) |
 | Team PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
-| Treasury/staking reserve PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
+| Long-term treasury reserve PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
 | Official pair setup | [Official pool policy](/guide/official-pool-policy) |
 | Initial liquidity seed | [Liquidity evidence](/guide/liquidity-lock-evidence) |
 | Trading route | Official Aerodrome WETH/GCAT route documented. Trading launch scheduled for June 29, 2026 at 2:00 PM UTC |

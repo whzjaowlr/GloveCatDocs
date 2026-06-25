@@ -9,7 +9,12 @@ import { addressUrl, shortPublicValue, tokenLocks, txUrl } from "../../data/cont
         <div class="registry-item-main">
           <div class="registry-copy">
             <h3>{{ lock.name }}</h3>
-            <p>{{ lock.description }}</p>
+            <p>{{ lock.schedule }}</p>
+            <p class="lock-ui-label-note">
+              PinkLock UI label:
+              <code>{{ lock.uiLabel }}</code>
+              Manual label; differs from the actual 62-cycle schedule.
+            </p>
           </div>
           <span class="evidence-status">{{ lock.status }}</span>
         </div>
@@ -51,12 +56,15 @@ import { addressUrl, shortPublicValue, tokenLocks, txUrl } from "../../data/cont
         <h3>{{ lock.name }}</h3>
         <dl>
           <div>
-            <dt>PinkLock description</dt>
-            <dd>{{ lock.description }}</dd>
-          </div>
-          <div>
             <dt>Schedule</dt>
             <dd>{{ lock.schedule }}</dd>
+          </div>
+          <div>
+            <dt>PinkLock UI label</dt>
+            <dd class="lock-ui-label-note">
+              <code>{{ lock.uiLabel }}</code>
+              Manual label; differs from the actual 62-cycle schedule.
+            </dd>
           </div>
           <div>
             <dt>Target</dt>

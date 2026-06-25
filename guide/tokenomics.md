@@ -26,18 +26,21 @@ allocation outside the rows above.
 
 | Item | Amount | Status |
 | ---- | -----: | ------ |
-| Team allocation | 25,000,000 GCAT | PinkLock vesting |
-| Long-term treasury/staking reserve | 95,000,000 GCAT | PinkLock vesting |
+| Team allocation | 25,000,000 GCAT | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
+| Long-term treasury reserve | 95,000,000 GCAT | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Initial staking bootstrap | 5,000,000 GCAT | Retained in Safe for initial pool funding |
-| LP tokens | 45,456.02270326782560651 vAMM-WETH/GCAT | PinkLock V2 until 2031-06-24 00:00 UTC |
+| Project-owned LP tokens | 45,456.02270326782560651 vAMM-WETH/GCAT | PinkLock V2 until 2031-06-24 00:00 UTC |
 
-The team and treasury/staking reserve PinkLock vesting records both start on
-`2026-06-28T02:00:00Z` and use `0.56%` TGE with `1.63%` release every 30 days. The visible
-description strings differ: team uses `GloveCat Team Allocation - 60 Cycle Vesting`, while the
-treasury/staking reserve uses `GloveCat Treasury Reserve - 61 Cycle Vesting`. By the bps math,
-60 cycles releases 98.36%, 61 cycles releases 99.99%, and the 62nd 30-day cycle reaches the 100%
-cap. External PinkLock records are the final schedule evidence; the compact table below links to the
-target contract and execution transactions.
+The team and long-term treasury reserve PinkLock vesting records both start on
+`2026-06-28T02:00:00Z` and use `0.56%` TGE with `1.63%` release every 30 days. The actual schedule
+reaches the 100% cap after 62 elapsed 30-day cycles. External PinkLock records are the final
+schedule evidence; the compact table below links to the target contract and execution transactions.
+
+<p class="lock-ui-label-note">
+PinkLock UI labels: <code>GloveCat Team Allocation - 60 Cycle Vesting</code> and
+<code>GloveCat Treasury Reserve - 61 Cycle Vesting</code>. These are manual labels and differ from
+the actual 62-cycle schedule.
+</p>
 
 <TokenLockTable />
 
@@ -70,6 +73,6 @@ hashes, LP token custody, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking rewards are paid only from the funded staking incentive pool. The readiness target is `incentivePool >= 1,000,000 GCAT`. If the on-chain pool is below target, rewards must be added through Safe execution after token transfers are open. If the staking incentive pool is insufficient, the staking contract can carry
+Staking rewards are paid only from the funded staking incentive pool. The readiness target is `incentivePool >= 1,000,000 GCAT`. If the on-chain pool is below target, rewards must be added through Safe execution before public staking is treated as ready. If the staking incentive pool is insufficient, the staking contract can carry
 unpaid staking incentives forward as `pendingIncentives`; it does not mint new reward tokens.
 Gamification leaderboard rewards are NFT mints, not ERC20 reward-pool payouts.

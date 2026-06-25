@@ -25,7 +25,7 @@ features:
     details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`.
   - icon: 🔐
     title: Public Locks
-    details: Team vesting, treasury/staking reserve vesting, official liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
+    details: Team vesting, long-term treasury reserve vesting, official liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
   - icon: 🎨
     title: NFT Boosts
     details: ERC721 tiers use 1-day benefit activation, different-tier boost stacking, and a 4.0x final staking cap.
@@ -42,8 +42,8 @@ records. Official liquidity and project-owned LP locking are complete. Public tr
 | Base deployment | `active` |
 | Contract addresses | Published and Basescan verified |
 | Phase 1 Safe wiring | Safe wiring executed |
-| Team allocation lock | PinkLock vesting |
-| Treasury/staking reserve lock | PinkLock vesting |
+| Team allocation lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
+| Long-term treasury reserve lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Official pair | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |

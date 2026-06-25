@@ -32,7 +32,7 @@ export interface TokenLockInfo {
   amountGcat: string;
   target: `0x${string}`;
   txHash: `0x${string}`;
-  description: string;
+  uiLabel: string;
   schedule: string;
 }
 
@@ -124,19 +124,19 @@ export const tokenLocks: TokenLockInfo[] = [
     amountGcat: "25,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
-    description: "GloveCat Team Allocation - 60 Cycle Vesting",
+    uiLabel: "GloveCat Team Allocation - 60 Cycle Vesting",
     schedule:
-      "Starts 2026-06-28 02:00 UTC. Uses 0.56% TGE and 1.63% release every 30 days. The visible PinkLock description says 60 Cycle Vesting; by bps math the 100% cap is reached at 62 cycles.",
+      "Actual schedule: 62 elapsed 30-day cycles to the 100% cap. Starts 2026-06-28 02:00 UTC with 0.56% TGE and 1.63% release per cycle.",
   },
   {
-    name: "Treasury/staking reserve lock",
+    name: "Long-term treasury reserve lock",
     status: "PinkLock vesting",
     amountGcat: "95,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
-    description: "GloveCat Treasury Reserve - 61 Cycle Vesting",
+    uiLabel: "GloveCat Treasury Reserve - 61 Cycle Vesting",
     schedule:
-      "Starts 2026-06-28 02:00 UTC. Uses 0.56% TGE and 1.63% release every 30 days. The visible PinkLock description says 61 Cycle Vesting; by bps math the 100% cap is reached at 62 cycles.",
+      "Actual schedule: 62 elapsed 30-day cycles to the 100% cap. Starts 2026-06-28 02:00 UTC with 0.56% TGE and 1.63% release per cycle.",
   },
 ];
 

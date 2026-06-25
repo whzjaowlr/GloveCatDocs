@@ -114,6 +114,22 @@
   line-height: 1.55;
 }
 
+.registry-copy .lock-ui-label-note,
+.lock-detail .lock-ui-label-note {
+  margin-top: 6px;
+  color: var(--vp-c-text-3);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.lock-ui-label-note code {
+  margin: 0 4px;
+  font-size: 11px;
+  color: var(--vp-c-text-2);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
 .registry-badges {
   display: flex;
   flex: 0 0 auto;
