@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "type": "module",
   "description": "GloveCat Documentation",
-  "overrides": {
-    "esbuild": "0.28.1",
-    "postcss": "8.5.15",
-    "preact": "10.29.2",
-    "rollup": "4.60.4",
-    "vite": "7.3.5"
+  "packageManager": "pnpm@10.26.2",
+  "pnpm": {
+    "overrides": {
+      "esbuild": "0.28.1",
+      "postcss": "8.5.15",
+      "preact": "10.29.2",
+      "rollup": "4.60.4",
+      "vite": "7.3.5"
+    }
   },
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "security:check": "node scripts/check-docs-security.mjs"
   },
   "devDependencies": {
     "vitepress": "^1.5.0"

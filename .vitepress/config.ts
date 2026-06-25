@@ -67,7 +67,7 @@ export default defineConfig({
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https:; upgrade-insecure-requests",
+          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; frame-src 'none'; upgrade-insecure-requests",
       },
     ],
     ["meta", { "http-equiv": "X-Content-Type-Options", content: "nosniff" }],
