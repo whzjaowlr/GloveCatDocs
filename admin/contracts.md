@@ -63,12 +63,6 @@ contract and execution transactions. Both visible PinkLock records use
 30 days. The actual schedule reaches the 100% cap after 62 elapsed 30-day cycles. LP lock wording
 must stay tied to the public lock transaction and lock page evidence.
 
-<p class="lock-ui-label-note">
-PinkLock UI labels: <code>GloveCat Team Allocation - 60 Cycle Vesting</code> and
-<code>GloveCat Treasury Reserve - 61 Cycle Vesting</code>. These are manual labels and differ from
-the actual 62-cycle schedule.
-</p>
-
 The Aerodrome LP position is locked through PinkLock V2 as a normal ERC20 token lock because
 PinkLock's LP-token mode expects a Uniswap V2-style factory path. See [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence).
 

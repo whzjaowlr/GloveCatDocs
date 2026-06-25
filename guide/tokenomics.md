@@ -36,12 +36,6 @@ The team and long-term treasury reserve PinkLock vesting records both start on
 reaches the 100% cap after 62 elapsed 30-day cycles. External PinkLock records are the final
 schedule evidence; the compact table below links to the target contract and execution transactions.
 
-<p class="lock-ui-label-note">
-PinkLock UI labels: <code>GloveCat Team Allocation - 60 Cycle Vesting</code> and
-<code>GloveCat Treasury Reserve - 61 Cycle Vesting</code>. These are manual labels and differ from
-the actual 62-cycle schedule.
-</p>
-
 <TokenLockTable />
 
 ## 💸 Fees
