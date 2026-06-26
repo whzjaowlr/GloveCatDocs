@@ -27,7 +27,7 @@ Any contract-level change should be treated as unverified until public on-chain 
 
 Examples of privileged changes that require public evidence before users should rely on them:
 
-- Set official pair configuration.
+- Set registered-pool configuration.
 - Open trading once.
 - Replenish the staking reward pool.
 - Update NFT metadata settings.

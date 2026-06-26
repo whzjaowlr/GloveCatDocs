@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "GloveCat"
-  text: "GCAT on Base"
-  tagline: Current GCAT documentation for the Base mainnet redeploy.
+  text: "Independent GCAT contract docs"
+  tagline: GloveCat project documentation for contracts deployed on Base mainnet.
   image:
     src: /logo.webp
     alt: GloveCat
@@ -25,7 +25,7 @@ features:
     details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`.
   - icon: 🔐
     title: Public Locks
-    details: Team vesting, long-term treasury reserve vesting, official liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
+    details: Team vesting, long-term treasury reserve vesting, registered liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
   - icon: 🎨
     title: NFT Boosts
     details: ERC721 tiers use 1-day benefit activation, different-tier boost stacking, and a 4.0x final staking cap.
@@ -33,18 +33,22 @@ features:
 
 ## 🚦 Current Release State
 
+GloveCat is an independent project. It is not affiliated with, endorsed by, or sponsored by Base or Coinbase.
+Base is referenced only as the public network where the current GCAT contracts are deployed.
+
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The active deployment status
 covers verified contract addresses, Safe admin control, Phase 1 wiring, and PinkLock token-lock
-records. Official liquidity and project-owned LP locking are complete. Public trading is not open. Public staking is not live.
+records. Registered liquidity and project-owned LP locking are complete. Public trading is not open. Public staking is not live.
 
 | Item | Status |
 | ---- | ------ |
-| Base deployment | `active` |
+| Deployment network | Base Mainnet |
+| Deployment status | `active` |
 | Contract addresses | Published and Basescan verified |
 | Phase 1 Safe wiring | Safe wiring executed |
 | Team allocation lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Long-term treasury reserve lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
-| Official pair | Aerodrome Classic Volatile WETH/GCAT pool registered |
+| Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
 | LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
@@ -55,7 +59,7 @@ records. Official liquidity and project-owned LP locking are complete. Public tr
 The current source surface is:
 
 - `GloveCatCore`: ERC20 + Permit token with 500M fixed supply, 75/20/5 initial allocation,
-  fixed 0% buy fee, fixed 1% sell ecosystem fee, official pair controls, a one-time pre-launch
+  fixed 0% buy fee, fixed 1% sell ecosystem fee, registered-pool controls, a one-time pre-launch
   liquidity seed path, a launch max-wallet limit that expires 1 hour after trading opens, and
   user burn support.
 - `Staking`: lock-position staking with a 1,000 GCAT minimum, up to 50 active positions per user,
@@ -67,7 +71,7 @@ The current source surface is:
 - `GamificationCore`: staking-only Merkle leaderboard NFT rewards capped to 10 successful claims
   per season.
 
-This documentation describes the current deployed Base surface and the public evidence users should
+This documentation describes the current GloveCat deployment on Base mainnet and the public evidence users should
 check before relying on any address, lock, liquidity, trading route, staking action, or reward
 claim.
 

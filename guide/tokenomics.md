@@ -1,6 +1,6 @@
 ﻿# Tokenomics
 
-GCAT has a fixed total supply and a simplified redeploy allocation model.
+GCAT has a fixed total supply and a simplified deployment allocation model.
 
 ## 🪙 Total Supply
 
@@ -60,7 +60,7 @@ routers may also apply independent limits.
 
 ## 💧 Liquidity
 
-The official Aerodrome Classic Volatile WETH/GCAT pool is funded with 5.51 WETH and 375,000,000
+The registered Aerodrome Classic Volatile WETH/GCAT pool is funded with 5.51 WETH and 375,000,000
 GCAT. The project-owned LP tokens are locked through PinkLock V2 until 2031-06-24 00:00 UTC. See
 [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence) for the pool address, transaction
 hashes, LP token custody, and lock evidence.

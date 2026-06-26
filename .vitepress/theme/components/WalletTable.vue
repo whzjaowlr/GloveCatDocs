@@ -30,7 +30,7 @@ import {
         >
           <code>{{ shortPublicValue(wallet.address) }}</code>
         </a>
-        <span v-else>Pending redeploy</span>
+        <span v-else>Pending deployment</span>
       </div>
 
       <div class="registry-actions" v-if="wallet.address">

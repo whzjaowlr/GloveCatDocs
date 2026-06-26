@@ -105,7 +105,7 @@ service in restricted jurisdictions.
 ## Exceptions
 
 There are no public exceptions unless GloveCat publishes a written exception or updated availability
-notice through official channels.
+notice through GloveCat-published channels.
 
 Internal testing, contractor access, legal review, security review, or administrative access may be
 allowed only when separately authorized by GloveCat and only for the approved purpose.

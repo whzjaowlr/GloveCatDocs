@@ -1,6 +1,6 @@
 ﻿# Staking Guide
 
-GCAT staking uses fixed lock positions in the current redeploy surface.
+GCAT staking uses fixed lock positions in the current contract deployment.
 
 ## 🔒 Core Rules
 

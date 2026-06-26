@@ -1,7 +1,7 @@
 ﻿# Deployment Status
 
-This public section is read-only deployment information for the current GloveCat Base mainnet
-surface.
+This public section is read-only deployment information for the current GloveCat contracts on Base
+mainnet.
 
 It does not publish Safe execution guides, calldata preparation steps, emergency runbooks, or
 operator-only security procedures. Production admin execution is handled outside public docs through
@@ -14,20 +14,20 @@ the existing Safe workflow and private maintainer channels.
 - Keep historical or archived addresses out of the active operating path.
 - Do not use this documentation as an admin transaction checklist.
 
-1. Fresh Base contract deployment.
+1. Fresh GloveCat contract deployment on Base mainnet.
 2. [Basescan verification](/admin/contracts#public-evidence-links).
 3. [Phase 1 Safe wiring](/admin/contracts#project-wallets).
 4. [Team PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 5. [Long-term treasury reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
 
-Official pair setup, liquidity seed, and project-owned LP locking are complete and visible in the
+Registered-pool setup, liquidity seed, and project-owned LP locking are complete and visible in the
 public evidence records. Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`.
 
 ## 🧩 Active Contract Surface
 
 | Contract | Role |
 | -------- | ---- |
-| `GloveCatCore` | ERC20 + Permit token, fixed 0% buy and 1% sell ecosystem fee, official pair controls, one-time pre-launch LP seed path, launch max-wallet checks that expire 1 hour after trading opens |
+| `GloveCatCore` | ERC20 + Permit token, fixed 0% buy and 1% sell ecosystem fee, registered-pool controls, one-time pre-launch LP seed path, launch max-wallet checks that expire 1 hour after trading opens |
 | `Staking` | Fixed 30-, 90-, and 180-day lock positions, 1,000 GCAT minimum, 50 active-position cap, base APRs of 2%, 5%, and 8%, respectively, NFT boost snapshots, pool-gated incentives |
 | `GloveCatNFT` | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty |
 | `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |

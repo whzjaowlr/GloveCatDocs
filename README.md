@@ -1,11 +1,11 @@
 # GloveCat Docs
 
-Official VitePress documentation for the current GloveCat Base deployment surface.
+VitePress documentation for the current GloveCat contract deployment.
 
 ## Current Status
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. Phase 1 Safe wiring has been
-executed. Team allocation, the long-term treasury reserve, official pair setup, liquidity seeding,
+executed. Team allocation, the long-term treasury reserve, registered-pool setup, liquidity seeding,
 and project-owned LP locking are published through public evidence records.
 
 The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,
@@ -20,7 +20,8 @@ Active contract surface:
 - `GloveCatNFT`
 - `GamificationCore`
 
-This documentation only describes the current deployed Base surface.
+This documentation only describes the current GloveCat deployment on Base mainnet. GloveCat is an
+independent project and is not affiliated with, endorsed by, or sponsored by Base or Coinbase.
 
 ## Local Development
 

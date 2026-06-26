@@ -24,18 +24,18 @@ This page shows the current deployment registry state.
 
 ## 🚦 Current Deployment Status
 
-The current Base deployment status is `active`.
+The current GloveCat deployment status on Base mainnet is `active`.
 
 The contracts listed above are deployed and Basescan verified. Phase 1 Safe wiring has been
 executed. The PinkLock target is set, and the team and long-term treasury reserve lock flags
 are complete on-chain.
 
-Active deployment status is not a trading-live or staking-live claim. Official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
+Active deployment status is not a trading-live or staking-live claim. Registered-pool setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
 
 | Launch gate | Current status |
 | ----------- | -------------- |
-| Official pair | Aerodrome Classic Volatile WETH/GCAT pool is registered in `GloveCatCore` |
-| Liquidity seed | 5.51 WETH and 375,000,000 GCAT were seeded into the official pool |
+| Registered pool | Aerodrome Classic Volatile WETH/GCAT pool is registered in `GloveCatCore` |
+| Liquidity seed | 5.51 WETH and 375,000,000 GCAT were seeded into the registered pool |
 | Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
 | LP lock evidence | Project-owned Aerodrome LP tokens are locked through PinkLock V2 until 2031-06-24 00:00 UTC |
 | Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
@@ -81,14 +81,14 @@ PinkLock's LP-token mode expects a Uniswap V2-style factory path. See [Liquidity
 
 ## 🧩 Active Contracts
 
-The active redeploy surface is:
+The active contract surface is:
 
 - `GloveCatCore`
 - `Staking`
 - `GloveCatNFT`
 - `GamificationCore`
 
-Only the contracts listed above should be treated as the current redeploy surface.
+Only the contracts listed above should be treated as the current GloveCat deployment surface.
 
 <a id="abi-and-verification"></a>
 

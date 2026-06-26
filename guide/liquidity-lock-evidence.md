@@ -1,6 +1,6 @@
 ﻿# Liquidity and LP Lock Evidence
 
-This page records the official GloveCat launch liquidity and project-owned LP token lock on Base.
+This page records GloveCat launch liquidity and project-owned LP token lock evidence on Base mainnet.
 It is informational evidence only. It is not a trading-live, staking-live, or reward-pool-funded
 claim.
 
@@ -8,8 +8,8 @@ claim.
 
 | Item | Status |
 | --- | --- |
-| Official pool | Aerodrome Classic Volatile WETH/GCAT |
-| Official pair registration | Registered in `GloveCatCore` |
+| Registered pool | Aerodrome Classic Volatile WETH/GCAT |
+| Pool registration | Registered in `GloveCatCore` |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | LP token custody | Project-owned LP tokens held by PinkLock V2 |
 | LP lock mode | PinkLock V2 normal ERC20 token lock |

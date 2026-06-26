@@ -10,15 +10,15 @@ guarantee of delivery dates.
 | Item | Status |
 | ---- | ------ |
 | Active source cleanup | Cleaned source surface |
-| Public docs refresh | Current Base redeploy docs updated |
-| Fresh Base manifest | `active` manifest published |
+| Public docs refresh | Current GloveCat deployment docs updated |
+| Fresh deployment manifest | `active` manifest published |
 | BaseScan verification for fresh contracts | [Basescan evidence](/admin/contracts#public-evidence-links) |
 | Safe configuration evidence | [Safe evidence](/admin/contracts#project-wallets) |
 | Team PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
 | Long-term treasury reserve PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
-| Official pair setup | [Official pool policy](/guide/official-pool-policy) |
+| Registered-pool setup | [Registered pool policy](/guide/registered-pool-policy) |
 | Initial liquidity seed | [Liquidity evidence](/guide/liquidity-lock-evidence) |
-| Trading route | Official Aerodrome WETH/GCAT route documented. Trading launch scheduled for June 29, 2026 at 2:00 PM UTC |
+| Trading route | Registered Aerodrome WETH/GCAT route documented. Trading launch scheduled for June 29, 2026 at 2:00 PM UTC |
 | LP token lock evidence | [LP lock evidence](/guide/liquidity-lock-evidence) |
 | Initial staking reward-pool funding | Requires `incentivePool >= 1,000,000 GCAT`. Add rewards through Safe execution if below target |
 
@@ -26,7 +26,7 @@ guarantee of delivery dates.
 
 - Publish only the verified contract addresses from [Contract Information](/admin/contracts).
 - Publish [Safe owner/threshold evidence](/admin/contracts#project-wallets).
-- Keep the official Aerodrome WETH/GCAT route and LP lock evidence visible in public docs.
+- Keep the registered Aerodrome WETH/GCAT route and LP lock evidence visible in public docs.
 - Open trading only after final launch evidence review is complete.
 - Fund the staking incentive pool through Safe-approved treasury or reward-pool transactions after
   token transfers are open.

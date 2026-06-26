@@ -232,6 +232,24 @@
   white-space: normal;
 }
 
+.affiliation-notice {
+  border-top: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-2);
+}
+
+.affiliation-notice p {
+  max-width: 1152px;
+  margin: 0 auto;
+  padding: 16px 24px 22px;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.affiliation-notice strong {
+  color: var(--vp-c-text-1);
+}
+
 @media (max-width: 760px) {
   .vp-doc table {
     display: block;
@@ -259,5 +277,9 @@
   .vp-doc .evidence-links a,
   .vp-doc .registry-primary-action {
     white-space: normal;
+  }
+
+  .affiliation-notice p {
+    padding: 14px 18px 20px;
   }
 }

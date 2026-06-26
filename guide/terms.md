@@ -8,10 +8,11 @@ counsel.
 
 ## 🚦 Product Status
 
-- GloveCat is a token and game-infrastructure experiment on Base.
+- GloveCat is an independent token and game-infrastructure experiment deployed on Base mainnet.
+- GloveCat is not affiliated with, endorsed by, or sponsored by Base or Coinbase.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
-- Phase 1 Safe wiring, PinkLock vesting locks, official pair setup, liquidity seeding, and
+- Phase 1 Safe wiring, PinkLock vesting locks, registered-pool setup, liquidity seeding, and
   project-owned LP locking are complete.
 - Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`. Users should verify the corresponding public transactions and
   evidence before relying on them.

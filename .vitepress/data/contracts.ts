@@ -50,14 +50,14 @@ export const baseNetwork = {
 };
 
 export const baseDeployment = {
-  phase: "full-redeploy",
+  phase: "current-deployment",
   status: "active",
   compiler: "solc 0.8.34",
   deployer: "0xf04a5fe7e719c62142a927c560e4c8ded9c05629" as
     | `0x${string}`
     | null,
   updatedAt: "2026-06-24",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, official pair setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, registered-pool setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.",
 };
 
 export const lockTargetSetTxHash =
@@ -267,7 +267,7 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
   },
   {
     name: "Safe app",
-    description: "Base Safe UI",
+    description: "Safe app view for the configured network",
     href: requiredUrl(safeAppUrl(walletsByName.Safe.address), "Safe app"),
     value: walletsByName.Safe.address ?? undefined,
   },
@@ -290,9 +290,9 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
     value: lockTargetSetTxHash,
   },
   {
-    name: "Official Aerodrome pool",
+    name: "Registered Aerodrome pool",
     description: "Registered Classic Volatile WETH/GCAT pool and LP token",
-    href: requiredUrl(addressUrl(liquidityEvidence.poolAddress), "Official Aerodrome pool"),
+    href: requiredUrl(addressUrl(liquidityEvidence.poolAddress), "Registered Aerodrome pool"),
     value: liquidityEvidence.poolAddress,
   },
   {

@@ -6,7 +6,7 @@ const addImageAttrs = (tag: string, attrs: string) => {
 
 export default defineConfig({
   title: "GloveCat",
-  description: "GloveCat (GCAT) redeploy documentation",
+  description: "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
   lang: "en-US",
   base: "/",
   transformHtml(code) {
@@ -44,7 +44,8 @@ export default defineConfig({
       "meta",
       {
         property: "og:description",
-        content: "Current GloveCat (GCAT) redeploy documentation for Base.",
+        content:
+          "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
       },
     ],
     ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
@@ -58,7 +59,8 @@ export default defineConfig({
       "meta",
       {
         name: "twitter:description",
-        content: "Current GloveCat (GCAT) redeploy documentation for Base.",
+        content:
+          "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
       },
     ],
     ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
@@ -109,7 +111,7 @@ export default defineConfig({
           items: [
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
-            { text: "Official Pool Policy", link: "/guide/official-pool-policy" },
+            { text: "Registered Pool Policy", link: "/guide/registered-pool-policy" },
             { text: "Liquidity and LP Lock Evidence", link: "/guide/liquidity-lock-evidence" },
             { text: "Terms and Risk Disclosure", link: "/guide/terms" },
             { text: "Restricted Jurisdictions", link: "/guide/restricted-jurisdictions" },
@@ -134,9 +136,9 @@ export default defineConfig({
 
     footer: {
       message:
-        "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a> | <a href='/guide/restricted-jurisdictions'>Restricted Jurisdictions</a>",
+        "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a> | <a href='/guide/restricted-jurisdictions'>Restricted Jurisdictions</a> | Independent project; not affiliated with Base or Coinbase.",
       copyright:
-        "(c) 2026 GloveCat. This documentation is informational and does not replace on-chain verification.",
+        "(c) 2026 GloveCat. Base/Coinbase와 비제휴 독립 프로젝트. This documentation is informational and does not replace on-chain verification.",
     },
 
     search: {

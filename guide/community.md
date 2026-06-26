@@ -1,8 +1,8 @@
 # Community
 
-Use official channels for announcements, launch status, support, and security reporting.
+Use GloveCat-published channels for announcements, launch status, support, and security reporting.
 
-## 📣 Official Channels
+## 📣 GloveCat Channels
 
 | Channel | Link |
 | ------- | ---- |
@@ -23,14 +23,14 @@ staking reward-pool records. Do not describe unfinished launch gates as live.
 
 ## 🤝 How To Participate
 
-- Follow official launch updates.
+- Follow GloveCat-published launch updates.
 - Review public proposals and Snapshot posts where available.
 - Create educational content that links to current docs.
 - Report documentation mismatches so stale claims can be removed.
 
 ## 🛡️ Bug And Security Reports
 
-General bugs can be reported through official community support channels.
+General bugs can be reported through GloveCat community support channels.
 
 Security issues should be reported privately to project maintainers. Do not post exploit details,
 private keys, operational secrets, or suspected vulnerabilities in public channels.
