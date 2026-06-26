@@ -1,0 +1,4 @@
+Contact: mailto:glovecatcoin@gmail.com
+Expires: 2027-06-25T00:00:00Z
+Canonical: https://docs.glovecatcoin.com/.well-known/security.txt
+Preferred-Languages: ko, en
