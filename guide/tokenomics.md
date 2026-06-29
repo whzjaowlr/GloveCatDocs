@@ -53,7 +53,7 @@ fees are not automatically redistributed by the token contract.
 | Item | Rule |
 | ---- | ---- |
 | Max wallet | Starts at 2% of total supply |
-| Expiry | One hour after trading opens |
+| Expiry | Expired on 2026-06-29 14:30:07 UTC, one hour after `openTrading()` executed |
 
 The launch max-wallet limit is not a complete market-protection system. Wallets, exchanges, and
 routers may also apply independent limits.
@@ -67,6 +67,9 @@ hashes, LP token custody, and lock evidence.
 
 ## 🎁 Reward Funding
 
-Staking rewards are paid only from the funded staking incentive pool. The readiness target is `incentivePool >= 1,000,000 GCAT`. If the on-chain pool is below target, rewards must be added through Safe execution before public staking is treated as ready. If the staking incentive pool is insufficient, the staking contract can carry
-unpaid staking incentives forward as `pendingIncentives`; it does not mint new reward tokens.
+Staking rewards are paid only from the funded staking incentive pool. The readiness target is
+`incentivePool >= 1,000,000 GCAT`. The latest live readiness check shows `incentivePool = 0`, so
+rewards must be added through Safe execution before public staking is treated as ready. If the
+staking incentive pool is insufficient, the staking contract can carry unpaid staking incentives
+forward as `pendingIncentives`; it does not mint new reward tokens.
 Gamification leaderboard rewards are NFT mints, not ERC20 reward-pool payouts.

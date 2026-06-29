@@ -30,15 +30,18 @@ The contracts listed above are deployed and Basescan verified. Phase 1 Safe wiri
 executed. The PinkLock target is set, and the team and long-term treasury reserve lock flags
 are complete on-chain.
 
-Active deployment status is not a trading-live or staking-live claim. Registered-pool setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
+Active deployment status is not a public-staking-live claim. Registered-pool setup, liquidity
+seeding, project-owned LP locking, and Safe `openTrading()` execution are complete. Public trading is
+open on-chain. Public staking is not live because the staking incentive pool is still below the
+published readiness target.
 
 | Launch gate | Current status |
 | ----------- | -------------- |
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT pool is registered in `GloveCatCore` |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT were seeded into the registered pool |
-| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC in tx [`0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e`](https://basescan.org/tx/0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e) |
 | LP lock evidence | Project-owned Aerodrome LP tokens are locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
+| Staking / rewards | Pending reward pool; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
 
 The current published Safe configuration is 2-of-3 multisig. This configuration may be strengthened
 later by adding signers, increasing the threshold, or both. Users should verify the current

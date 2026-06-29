@@ -8,7 +8,9 @@ only as the public network where the current GCAT contracts are deployed.
 
 This documentation describes the current GloveCat deployment on Base mainnet. Contracts are deployed
 and verified, Phase 1 Safe wiring is complete, and PinkLock token-lock records are published.
-Registered-pool setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.
+Registered-pool setup, liquidity seeding, project-owned LP locking, and Safe `openTrading()`
+execution are complete. Public trading is open on-chain. Public staking is not live because the
+staking incentive pool is still below the published readiness target.
 
 ## 🚦 Current Status
 
@@ -23,16 +25,16 @@ Registered-pool setup, liquidity seeding, and project-owned LP locking are compl
 | Long-term treasury reserve vesting lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
-| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
 | LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
+| Staking / rewards | Pending reward pool; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
 
 ## 🧩 Active Features
 
 | Feature | Behavior |
 | ------- | -------- |
 | Token | ERC20 + ERC20Permit, 500M fixed supply, 75/20/5 initial allocation, burn tracking, fixed 0% buy fee and fixed 1% sell ecosystem fee |
-| Launch controls | Registered-pool setup, one-time pre-launch LP seed from the launch liquidity wallet, one-way `openTrading()`, and default 2% launch max-wallet checks that expire 1 hour after trading opens |
+| Launch controls | Registered-pool setup, one-time pre-launch LP seed from the launch liquidity wallet, Safe-executed one-way `openTrading()`, and default 2% launch max-wallet checks that expired 1 hour after trading opened |
 | Staking | Lock positions with 1,000 GCAT minimum, 50 active-position cap, fixed 30-, 90-, and 180-day periods with base APRs of 2%, 5%, and 8%, respectively, pool-gated incentives, and unpaid incentive carry-forward |
 | NFT | ERC721 tier NFT with 1-day benefit activation, transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and 4.0x aggregate staking cap |
 | Rewards | Staking-only Merkle leaderboard NFT claims capped to 10 successful claims per season |
@@ -41,7 +43,7 @@ Registered-pool setup, liquidity seeding, and project-owned LP locking are compl
 ## 📌 Documentation Scope
 
 This guide describes the current GloveCat deployment on Base mainnet and the public evidence users should verify.
-Do not treat active deployment status as a live trading or staking signal.
+Do not treat active deployment status alone as a public-staking-live signal; staking still depends on the reward-pool gate.
 
 ## 🚀 Getting Started
 

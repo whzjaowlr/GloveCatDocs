@@ -1,8 +1,7 @@
 ﻿# Liquidity and LP Lock Evidence
 
 This page records GloveCat launch liquidity and project-owned LP token lock evidence on Base mainnet.
-It is informational evidence only. It is not a trading-live, staking-live, or reward-pool-funded
-claim.
+It is informational evidence only. It is not a public-staking-live or reward-pool-funded claim.
 
 ## Status Summary
 
@@ -13,7 +12,7 @@ claim.
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | LP token custody | Project-owned LP tokens held by PinkLock V2 |
 | LP lock mode | PinkLock V2 normal ERC20 token lock |
-| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
 
 ## Addresses
 
@@ -69,11 +68,19 @@ Users and reviewers should verify the following before relying on any launch-liq
 | LP Safe LP balance after lock | 0 |
 | PinkLock V2 LP token balance | 45,456.02270326782560651 vAMM-WETH/GCAT |
 
-## Final Launch Gates
+## Trading-Open Evidence
 
-The liquidity and LP lock records above do not complete every launch gate. The final separate gates
-are:
+| Item | Value |
+| --- | --- |
+| Safe tx hash | `0xdc7a2d3a8e0a053e21776fbeaf4aef5953c7fc76927851c489c920247654e196` |
+| Execution tx | [`0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e`](https://basescan.org/tx/0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e) |
+| Executed at | 2026-06-29 13:30:07 UTC |
+| Safe nonce | 8 |
 
-- trading-launch execution scheduled for June 29, 2026 at 2:00 PM UTC;
-- staking reward-pool funding;
+## Remaining Staking Gates
+
+The liquidity, LP lock, and trading-open records above do not make public staking live. The remaining
+separate gates are:
+
+- staking reward-pool funding to at least `1,000,000 GCAT`;
 - final public staking evidence and announcement.

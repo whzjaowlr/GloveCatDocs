@@ -138,7 +138,7 @@ export default defineConfig({
       message:
         "<a href='https://glovecatcoin.com/privacy'>Privacy Policy</a> | <a href='/guide/terms'>Terms and Risk Disclosure</a> | <a href='/guide/restricted-jurisdictions'>Restricted Jurisdictions</a> | Independent project; not affiliated with Base or Coinbase.",
       copyright:
-        "(c) 2026 GloveCat. Base/Coinbase와 비제휴 독립 프로젝트. This documentation is informational and does not replace on-chain verification.",
+        "(c) 2026 GloveCat. Independent project; not affiliated with Base or Coinbase. This documentation is informational and does not replace on-chain verification.",
     },
 
     search: {

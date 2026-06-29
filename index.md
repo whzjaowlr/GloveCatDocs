@@ -19,10 +19,10 @@ hero:
 features:
   - icon: 🪙
     title: Fixed-Fee ERC20
-    details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and 1-hour launch max-wallet checks.
+    details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and the now-expired 1-hour launch max-wallet window.
   - icon: 🔒
     title: Locked Staking
-    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`.
+    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking remains blocked until `incentivePool >= 1,000,000 GCAT`.
   - icon: 🔐
     title: Public Locks
     details: Team vesting, long-term treasury reserve vesting, registered liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
@@ -37,8 +37,10 @@ GloveCat is an independent project. It is not affiliated with, endorsed by, or s
 Base is referenced only as the public network where the current GCAT contracts are deployed.
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The active deployment status
-covers verified contract addresses, Safe admin control, Phase 1 wiring, and PinkLock token-lock
-records. Registered liquidity and project-owned LP locking are complete. Public trading is not open. Public staking is not live.
+covers verified contract addresses, Safe admin control, Phase 1 wiring, PinkLock token-lock records,
+registered liquidity, project-owned LP locking, and Safe `openTrading()` execution. Public trading is
+open on-chain. Public staking is not live because the staking incentive pool is still below the
+published readiness target.
 
 | Item | Status |
 | ---- | ------ |
@@ -50,9 +52,9 @@ records. Registered liquidity and project-owned LP locking are complete. Public 
 | Long-term treasury reserve lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
-| Trading | Scheduled for June 29, 2026 at 2:00 PM UTC |
+| Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
 | LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT`. If below target, rewards must be added through Safe execution |
+| Staking / rewards | Pending reward pool; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
 
 ## 🧩 Active Surface
 
@@ -60,7 +62,7 @@ The current source surface is:
 
 - `GloveCatCore`: ERC20 + Permit token with 500M fixed supply, 75/20/5 initial allocation,
   fixed 0% buy fee, fixed 1% sell ecosystem fee, registered-pool controls, a one-time pre-launch
-  liquidity seed path, a launch max-wallet limit that expires 1 hour after trading opens, and
+  liquidity seed path, a launch max-wallet limit that expired 1 hour after trading opened, and
   user burn support.
 - `Staking`: lock-position staking with a 1,000 GCAT minimum, up to 50 active positions per user,
   fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively, NFT

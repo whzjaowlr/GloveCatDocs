@@ -19,7 +19,7 @@ are the current verified deployment addresses.
 Do not share historical addresses as active targets. When sharing launch information, link to the
 current contract page, [lock evidence](/admin/contracts#public-lock-evidence),
 [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and any executed trading or
-staking reward-pool records. Do not describe unfinished launch gates as live.
+staking reward-pool records. Do not describe unfinished staking gates as live.
 
 ## 🤝 How To Participate
 

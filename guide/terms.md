@@ -1,34 +1,36 @@
 ﻿# Terms And Risk Disclosure
 
-> Last updated: 2026-06-23
+> Last updated: 2026-06-30
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
 counsel.
 
-## 🚦 Product Status
+## Product Status
 
 - GloveCat is an independent token and game-infrastructure experiment deployed on Base mainnet.
 - GloveCat is not affiliated with, endorsed by, or sponsored by Base or Coinbase.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
-- Phase 1 Safe wiring, PinkLock vesting locks, registered-pool setup, liquidity seeding, and
-  project-owned LP locking are complete.
-- Trading launch is scheduled for June 29, 2026 at 2:00 PM UTC. Public staking is not live; it requires that launch and `incentivePool >= 1,000,000 GCAT`. Users should verify the corresponding public transactions and
-  evidence before relying on them.
+- Phase 1 Safe wiring, PinkLock vesting locks, registered-pool setup, liquidity seeding,
+  project-owned LP locking, and Safe `openTrading()` execution are complete.
+- Public trading is open on-chain. Safe `openTrading()` execution completed on 2026-06-29 13:30:07 UTC.
+- Public staking is not live; it requires `incentivePool >= 1,000,000 GCAT`, and the latest live
+  readiness check shows `incentivePool = 0`. Users should verify the corresponding public
+  transactions and evidence before relying on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
   [Safe records](/admin/contracts#project-wallets), [PinkLock records](/admin/contracts#public-lock-evidence),
   and on-chain reads.
 
-## 📉 Market Risks
+## Market Risks
 
 - GCAT can lose value or become illiquid.
 - Token price may be volatile.
 - Liquidity may be shallow before or after launch.
 - Large trades may experience price impact or MEV-related execution risk.
 
-## 🛠️ Contract And Operational Risks
+## Contract And Operational Risks
 
 - Smart-contract bugs or integration mistakes may exist.
 - Admin-action claims should be verified against the configured
@@ -38,7 +40,7 @@ counsel.
 - Reward pools can be insufficient.
 - NFT royalty payment depends on marketplace support for ERC2981.
 
-## 🎁 Staking And Rewards
+## Staking And Rewards
 
 - Staking incentives are not guaranteed returns.
 - Rewards are paid only from funded pools; funding transactions do not increase the pool until they
@@ -47,7 +49,7 @@ counsel.
 - Leaderboard rewards depend on off-chain score computation and Merkle proof publication.
 - Campaign rules, eligibility checks, and abuse filtering may change.
 
-## ⚖️ Compliance
+## Compliance
 
 Users are responsible for complying with local law, tax obligations, sanctions rules, and wallet or
 exchange restrictions. Campaigns may exclude sanctioned persons, sanctioned addresses, and prohibited
@@ -71,13 +73,13 @@ See [Restricted Jurisdictions And Service Availability](/guide/restricted-jurisd
 current jurisdiction-based service availability notice, including restricted users, rationale, and
 exceptions.
 
-## 📣 Communications
+## Communications
 
 Public statements should not describe staking, NFT boosts, leaderboard rewards, or token ownership
 as guaranteed profit. Always link to current docs, current manifest evidence, and security notes
 when discussing contract behavior.
 
-## 📌 No Warranty
+## No Warranty
 
 The documentation and services are provided as-is. Users are responsible for their own wallet
 security, private keys, transaction review, and risk decisions.

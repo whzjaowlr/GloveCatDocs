@@ -2,13 +2,15 @@
 
 GCAT staking uses fixed lock positions in the current contract deployment.
 
-## 🔒 Core Rules
+## Core Rules
 
 The active staking contract supports fixed lock positions, reward-pool-gated payouts, NFT boost
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking is not live. It requires the June 29, 2026 at 2:00 PM UTC trading launch and `incentivePool >= 1,000,000 GCAT` on-chain. If `incentivePool` is below 1,000,000 GCAT, rewards must be added through Safe execution before public staking is treated as ready.
+Public staking is not live. Trading is open on-chain, but the latest live readiness check shows
+`incentivePool = 0`; public staking requires `incentivePool >= 1,000,000 GCAT`. Rewards must be
+added through Safe execution before public staking is treated as ready.
 
 | Rule | Value |
 | ---- | ----- |
@@ -17,7 +19,7 @@ Public staking is not live. It requires the June 29, 2026 at 2:00 PM UTC trading
 | Reward source | Funded `incentivePool` only |
 | Final multiplier cap | 4.0x |
 
-## ⏳ Lock Periods
+## Lock Periods
 
 The active staking contract exposes three fixed lock periods:
 
@@ -36,14 +38,14 @@ After a lock reaches maturity, it becomes withdrawable but does not automaticall
 rewards. A matured position continues to accrue incentives while it remains active, until the user
 claims incentives or unstakes the position.
 
-## 📏 Staking Amounts
+## Staking Amounts
 
 Stake size affects rewards through the locked principal only. A larger stake can earn more total
 reward because more GCAT is locked, but it does not unlock a higher reward multiplier.
 
 Inactive position slots can be reused after `lockUnstake(positionId)`.
 
-## 🎨 NFT Boost Snapshot
+## NFT Boost Snapshot
 
 Each lock position snapshots the user's NFT boost when the position is created. Later NFT transfers
 or later benefit activation do not retroactively update an existing lock position.
@@ -61,7 +63,7 @@ Rules:
 - NFT benefits require the configured holding period before activation.
 - The final staking multiplier is capped at 4.0x.
 
-## 🎁 Reward Pool
+## Reward Pool
 
 Staking rewards are paid from the staking incentive pool. The contract does not mint reward tokens.
 Rewards can continue accumulating after the selected lock period has matured if the position remains
@@ -75,17 +77,20 @@ If the pool is insufficient at claim or unstake time:
 
 Do not treat displayed APRs as guaranteed returns.
 
-## 🚀 How To Stake
+## How To Stake
+
+The steps below are the public go-live flow. Do not execute them until the staking reward-pool
+requirement is funded and published as ready.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the [active staking address](/admin/contracts), June 29, 2026 at 2:00 PM UTC trading-launch evidence, [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
+3. Confirm the [active staking address](/admin/contracts), trading-open evidence, [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.
 7. Claim accrued incentives with `claimIncentives()` while locked, or unstake after the lock matures.
 
-## 🔓 Unstaking
+## Unstaking
 
 Locked positions cannot be withdrawn before their lock period ends. After maturity, users can call
 `lockUnstake(positionId)` to withdraw principal and any payable incentive. Users may also leave a

@@ -6,12 +6,13 @@ VitePress documentation for the current GloveCat contract deployment.
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. Phase 1 Safe wiring has been
 executed. Team allocation, the long-term treasury reserve, registered-pool setup, liquidity seeding,
-and project-owned LP locking are published through public evidence records.
+project-owned LP locking, and Safe `openTrading()` execution are published through public evidence
+records.
 
 The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,
-liquidity evidence, LP lock evidence, and unfinished launch gates must stay visible from the public
-documentation. Active deployment status does not mean `openTrading()`, public staking, or reward-pool
-funding is complete.
+liquidity evidence, LP lock evidence, trading-open evidence, and unfinished staking gates must stay
+visible from the public documentation. Active deployment status does not mean public staking or
+reward-pool funding is complete.
 
 Active contract surface:
 
@@ -53,4 +54,4 @@ This documentation mirrors those sources but does not replace them.
 
 ## Last Updated
 
-2026-06-26
+2026-06-30

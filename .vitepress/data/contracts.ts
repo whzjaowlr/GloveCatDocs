@@ -56,12 +56,19 @@ export const baseDeployment = {
   deployer: "0xf04a5fe7e719c62142a927c560e4c8ded9c05629" as
     | `0x${string}`
     | null,
-  updatedAt: "2026-06-24",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, registered-pool setup, liquidity seeding, and project-owned LP locking are complete. Trading is not open. Public staking is not live.",
+  updatedAt: "2026-06-30",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, registered-pool setup, liquidity seeding, project-owned LP locking, and Safe openTrading execution are complete. Public staking is not live because the staking incentive pool is still below the published readiness target.",
 };
 
 export const lockTargetSetTxHash =
   "0x6b7cd6aea6a36c595be64d6047fad032421785155166527be0473cda9445261d" as const;
+
+export const openTradingEvidence = {
+  executedAt: "2026-06-29 13:30:07 UTC",
+  safeTxHash: "0xdc7a2d3a8e0a053e21776fbeaf4aef5953c7fc76927851c489c920247654e196",
+  txHash: "0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e",
+  safeNonce: "8",
+} as const;
 
 export const liquidityEvidence = {
   poolName: "Aerodrome Classic Volatile WETH/GCAT",
@@ -87,7 +94,7 @@ export const contracts: ContractInfo[] = [
   {
     name: "GloveCatCore",
     description:
-      "GCAT ERC20 token with fixed sell fee and launch max-wallet limit",
+      "GCAT ERC20 token with fixed sell fee and expired launch max-wallet window",
     address: "0x59df0577c7a5014954c0d6cc12616e92e34d9ff4",
     verified: true,
     status: "Basescan verified and Safe wired",
@@ -312,6 +319,12 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
     description: "PinkLock V2 transaction that locked the project-owned Aerodrome LP tokens",
     href: requiredUrl(txUrl(liquidityEvidence.lpLockTxHash), "Project LP lock tx"),
     value: liquidityEvidence.lpLockTxHash,
+  },
+  {
+    name: "Trading open tx",
+    description: "Safe-executed openTrading transaction on GloveCatCore",
+    href: requiredUrl(txUrl(openTradingEvidence.txHash), "Trading open tx"),
+    value: openTradingEvidence.txHash,
   },
   ...tokenLocks.map((lock) => ({
     name: `${lock.name} tx`,
