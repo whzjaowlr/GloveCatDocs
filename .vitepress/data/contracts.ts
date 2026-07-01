@@ -57,7 +57,7 @@ export const baseDeployment = {
     | `0x${string}`
     | null,
   updatedAt: "2026-06-30",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkLock token locks, registered-pool setup, liquidity seeding, project-owned LP locking, and Safe openTrading execution are complete. Public staking is not live because the staking incentive pool is still below the published readiness target.",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkSale / PinkLock V2 token locks, registered-pool setup, liquidity seeding, project-owned LP locking, Safe openTrading execution, and the initial 1,000,000 GCAT staking reward-pool funding are complete. Public staking readiness now passes on-chain.",
 };
 
 export const lockTargetSetTxHash =
@@ -70,10 +70,17 @@ export const openTradingEvidence = {
   safeNonce: "8",
 } as const;
 
+export const officialGcatPair = {
+  name: "Aerodrome Classic Volatile WETH/GCAT",
+  address: "0x6330Bb184d90D78F336270485C3d17AB8AE8dD54",
+} as const;
+
 export const liquidityEvidence = {
-  poolName: "Aerodrome Classic Volatile WETH/GCAT",
-  poolAddress: "0x6330Bb184d90D78F336270485C3d17AB8AE8dD54",
-  lpTokenAddress: "0x6330Bb184d90D78F336270485C3d17AB8AE8dD54",
+  officialPairName: officialGcatPair.name,
+  officialPairAddress: officialGcatPair.address,
+  poolName: officialGcatPair.name,
+  poolAddress: officialGcatPair.address,
+  lpTokenAddress: officialGcatPair.address,
   aerodromeRouter: "0xcF77a3Ba9A5CA399B7c97c74d54e5b1Beb874E43",
   aerodromePoolFactory: "0x420DD381b31aEf6683db6B902084cB0FFECe40Da",
   lpSafe: "0xa92C88dE90F3114A6bD0fFf8DE56139Dc3F27fda",
@@ -126,7 +133,7 @@ export const contracts: ContractInfo[] = [
 export const tokenLocks: TokenLockInfo[] = [
   {
     name: "Team allocation lock",
-    status: "PinkLock vesting",
+    status: "PinkSale / PinkLock V2 vesting",
     amountGcat: "25,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
@@ -135,7 +142,7 @@ export const tokenLocks: TokenLockInfo[] = [
   },
   {
     name: "Long-term treasury reserve lock",
-    status: "PinkLock vesting",
+    status: "PinkSale / PinkLock V2 vesting",
     amountGcat: "95,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
     txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
@@ -285,22 +292,25 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
     value: walletsByName.Safe.address ?? undefined,
   },
   {
-    name: "PinkLock target",
-    description: "PinkLock target contract on Basescan",
-    href: requiredUrl(addressUrl(tokenLocks[0]?.target ?? null), "PinkLock target"),
+    name: "PinkSale / PinkLock V2 target",
+    description: "PinkSale / PinkLock V2 target contract on Basescan",
+    href: requiredUrl(addressUrl(tokenLocks[0]?.target ?? null), "PinkSale / PinkLock V2 target"),
     value: tokenLocks[0]?.target,
   },
   {
-    name: "PinkLock target set tx",
-    description: "Basescan transaction that set the PinkLock target",
-    href: requiredUrl(txUrl(lockTargetSetTxHash), "PinkLock target set tx"),
+    name: "PinkSale / PinkLock V2 target set tx",
+    description: "Basescan transaction that set the PinkSale / PinkLock V2 target",
+    href: requiredUrl(txUrl(lockTargetSetTxHash), "PinkSale / PinkLock V2 target set tx"),
     value: lockTargetSetTxHash,
   },
   {
-    name: "Registered Aerodrome pool",
-    description: "Registered Classic Volatile WETH/GCAT pool and LP token",
-    href: requiredUrl(addressUrl(liquidityEvidence.poolAddress), "Registered Aerodrome pool"),
-    value: liquidityEvidence.poolAddress,
+    name: "Official GCAT trading pair",
+    description: "Official registered Aerodrome Classic Volatile WETH/GCAT pair and LP token",
+    href: requiredUrl(
+      addressUrl(liquidityEvidence.officialPairAddress),
+      "Official GCAT trading pair",
+    ),
+    value: liquidityEvidence.officialPairAddress,
   },
   {
     name: "Liquidity seed tx",
@@ -310,13 +320,13 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
   },
   {
     name: "Project LP lock contract",
-    description: "PinkLock V2 contract holding the project-owned Aerodrome LP tokens",
+    description: "PinkSale / PinkLock V2 contract holding the project-owned Aerodrome LP tokens",
     href: requiredUrl(addressUrl(liquidityEvidence.lpLockContract), "Project LP lock contract"),
     value: liquidityEvidence.lpLockContract,
   },
   {
     name: "Project LP lock tx",
-    description: "PinkLock V2 transaction that locked the project-owned Aerodrome LP tokens",
+    description: "PinkSale / PinkLock V2 transaction that locked the project-owned Aerodrome LP tokens",
     href: requiredUrl(txUrl(liquidityEvidence.lpLockTxHash), "Project LP lock tx"),
     value: liquidityEvidence.lpLockTxHash,
   },

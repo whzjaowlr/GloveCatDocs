@@ -1,4 +1,4 @@
-﻿---
+---
 layout: home
 
 hero:
@@ -22,7 +22,7 @@ features:
     details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and the now-expired 1-hour launch max-wallet window.
   - icon: 🔒
     title: Locked Staking
-    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; public staking remains blocked until `incentivePool >= 1,000,000 GCAT`.
+    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; the initial reward pool is funded with 1,000,000 GCAT.
   - icon: 🔐
     title: Public Locks
     details: Team vesting, long-term treasury reserve vesting, registered liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
@@ -37,10 +37,10 @@ GloveCat is an independent project. It is not affiliated with, endorsed by, or s
 Base is referenced only as the public network where the current GCAT contracts are deployed.
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The active deployment status
-covers verified contract addresses, Safe admin control, Phase 1 wiring, PinkLock token-lock records,
-registered liquidity, project-owned LP locking, and Safe `openTrading()` execution. Public trading is
-open on-chain. Public staking is not live because the staking incentive pool is still below the
-published readiness target.
+covers verified contract addresses, Safe admin control, Phase 1 wiring, PinkSale / PinkLock V2 token-lock records,
+registered liquidity, project-owned LP locking, Safe `openTrading()` execution, and the initial
+1,000,000 GCAT staking reward-pool funding. Public trading is open on-chain, and public staking
+readiness passes on-chain.
 
 | Item | Status |
 | ---- | ------ |
@@ -48,13 +48,13 @@ published readiness target.
 | Deployment status | `active` |
 | Contract addresses | Published and Basescan verified |
 | Phase 1 Safe wiring | Safe wiring executed |
-| Team allocation lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
-| Long-term treasury reserve lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
+| Team allocation lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
+| Long-term treasury reserve lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
-| LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Pending reward pool; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
+| LP lock evidence | Project-owned LP tokens locked through PinkSale / PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking / rewards | Ready; latest live readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published target |
 
 ## 🧩 Active Surface
 
@@ -88,6 +88,8 @@ claim.
 | Liquidity and LP lock | [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence) |
 | Public evidence | [Contract, Safe, and lock evidence](/admin/contracts#public-evidence-links) |
 | GCAT token | [Basescan token page](https://basescan.org/token/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4) |
+| Official GCAT pair | [Aerodrome WETH/GCAT pair](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54) |
+| DEX chart | [DEXScreener official pair chart](https://dexscreener.com/base/0x6330bb184d90d78f336270485c3d17ab8ae8dd54) |
 | dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 | Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | Telegram | [glovecatcoin](https://t.me/glovecatcoin) |

@@ -10,8 +10,8 @@ It is informational evidence only. It is not a public-staking-live or reward-poo
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT |
 | Pool registration | Registered in `GloveCatCore` |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
-| LP token custody | Project-owned LP tokens held by PinkLock V2 |
-| LP lock mode | PinkLock V2 normal ERC20 token lock |
+| LP token custody | Project-owned LP tokens held by PinkSale / PinkLock V2 |
+| LP lock mode | PinkSale / PinkLock V2 normal ERC20 token lock |
 | Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
 
 ## Addresses
@@ -20,11 +20,12 @@ It is informational evidence only. It is not a public-staking-live or reward-poo
 | --- | --- |
 | GCAT | [`0x59df0577C7A5014954C0d6Cc12616e92E34d9fF4`](https://basescan.org/token/0x59df0577C7A5014954C0d6Cc12616e92E34d9fF4) |
 | WETH | [`0x4200000000000000000000000000000000000006`](https://basescan.org/token/0x4200000000000000000000000000000000000006) |
+| Official GCAT trading pair | [`0x6330Bb184d90D78F336270485C3d17AB8AE8dD54`](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54) |
 | Pool and LP token | [`0x6330Bb184d90D78F336270485C3d17AB8AE8dD54`](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54) |
 | Aerodrome Router | [`0xcF77a3Ba9A5CA399B7c97c74d54e5b1Beb874E43`](https://basescan.org/address/0xcF77a3Ba9A5CA399B7c97c74d54e5b1Beb874E43) |
 | Aerodrome PoolFactory | [`0x420DD381b31aEf6683db6B902084cB0FFECe40Da`](https://basescan.org/address/0x420DD381b31aEf6683db6B902084cB0FFECe40Da) |
 | Launch Liquidity Safe | [`0xa92C88dE90F3114A6bD0fFf8DE56139Dc3F27fda`](https://basescan.org/address/0xa92C88dE90F3114A6bD0fFf8DE56139Dc3F27fda) |
-| PinkLock V2 | [`0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC`](https://basescan.org/address/0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC) |
+| PinkSale / PinkLock V2 contract | [`0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC`](https://basescan.org/address/0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC) |
 
 ## Liquidity Evidence
 
@@ -51,9 +52,11 @@ It is informational evidence only. It is not a public-staking-live or reward-poo
 | Unlock date | 2031-06-24 00:00:00 UTC |
 | Unlocked amount at record time | 0 |
 
-The LP tokens are locked through PinkLock V2 as a normal ERC20 token lock with `isLpToken=false`.
-This is intentional for this record because Aerodrome pool tokens are ERC20 LP tokens and PinkLock's
-LP-token mode expects a Uniswap V2-style factory path.
+The LP tokens are locked through PinkSale / PinkLock V2 as a normal ERC20 token lock with `isLpToken=false`.
+This is intentional for this record because Aerodrome pool tokens are ERC20 LP tokens and the
+PinkSale / PinkLock V2 LP-token mode expects a Uniswap V2-style factory path.
+PinkSale / PinkLock V2 is the PinkSale locking product used for this record; the Basescan lock
+transaction and target contract are the canonical public evidence.
 
 ## Verification Checklist
 
@@ -61,12 +64,13 @@ Users and reviewers should verify the following before relying on any launch-liq
 
 | Check | Expected result |
 | --- | --- |
+| Official GCAT trading pair | `0x6330Bb184d90D78F336270485C3d17AB8AE8dD54` |
 | `GloveCatCore.uniswapV2Pair()` | `0x6330Bb184d90D78F336270485C3d17AB8AE8dD54` |
 | `GloveCatCore.isOfficialPair(pool)` | `true` |
 | `GloveCatCore.launchLiquiditySeeded()` | `true` |
 | Pool reserves | 5.51 WETH and 375,000,000 GCAT at the seed transaction state |
 | LP Safe LP balance after lock | 0 |
-| PinkLock V2 LP token balance | 45,456.02270326782560651 vAMM-WETH/GCAT |
+| PinkSale / PinkLock V2 LP token balance | 45,456.02270326782560651 vAMM-WETH/GCAT |
 
 ## Trading-Open Evidence
 

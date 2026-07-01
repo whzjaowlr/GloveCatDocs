@@ -7,10 +7,10 @@ GloveCat is not affiliated with, endorsed by, or sponsored by Base or Coinbase. 
 only as the public network where the current GCAT contracts are deployed.
 
 This documentation describes the current GloveCat deployment on Base mainnet. Contracts are deployed
-and verified, Phase 1 Safe wiring is complete, and PinkLock token-lock records are published.
-Registered-pool setup, liquidity seeding, project-owned LP locking, and Safe `openTrading()`
-execution are complete. Public trading is open on-chain. Public staking is not live because the
-staking incentive pool is still below the published readiness target.
+and verified, Phase 1 Safe wiring is complete, and PinkSale / PinkLock V2 token-lock records are published.
+Registered-pool setup, liquidity seeding, project-owned LP locking, Safe `openTrading()` execution,
+and the initial 1,000,000 GCAT staking reward-pool funding are complete. Public trading is open
+on-chain, and public staking readiness passes on-chain.
 
 ## 🚦 Current Status
 
@@ -21,13 +21,13 @@ staking incentive pool is still below the published readiness target.
 | Active addresses | Published in [Contract Information](/admin/contracts) |
 | Contract verification | [Basescan verified](/admin/contracts#public-evidence-links) |
 | Phase 1 Safe wiring | Safe wiring executed |
-| Team vesting lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
-| Long-term treasury reserve vesting lock | PinkLock vesting; 62 elapsed 30-day cycles to 100% cap |
+| Team vesting lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
+| Long-term treasury reserve vesting lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
 | Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
 | Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
 | Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
-| LP lock evidence | Project-owned LP tokens locked through PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Pending reward pool; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
+| LP lock evidence | Project-owned LP tokens locked through PinkSale / PinkLock V2 until 2031-06-24 00:00 UTC |
+| Staking / rewards | Ready; latest live readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published target |
 
 ## 🧩 Active Features
 
@@ -43,7 +43,8 @@ staking incentive pool is still below the published readiness target.
 ## 📌 Documentation Scope
 
 This guide describes the current GloveCat deployment on Base mainnet and the public evidence users should verify.
-Do not treat active deployment status alone as a public-staking-live signal; staking still depends on the reward-pool gate.
+Do not treat active deployment status alone as a public-staking-live signal; staking readiness also
+depends on the live reward-pool gate, which currently passes with `incentivePool = 1,000,000 GCAT`.
 
 ## 🚀 Getting Started
 

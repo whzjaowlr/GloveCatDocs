@@ -9,7 +9,7 @@ executed. Team allocation, the long-term treasury reserve, registered-pool setup
 project-owned LP locking, and Safe `openTrading()` execution are published through public evidence
 records.
 
-The docs are written for public deployment use: verified addresses, Safe records, PinkLock vesting,
+The docs are written for public deployment use: verified addresses, Safe records, PinkSale / PinkLock V2 vesting,
 liquidity evidence, LP lock evidence, trading-open evidence, and unfinished staking gates must stay
 visible from the public documentation. Active deployment status does not mean public staking or
 reward-pool funding is complete.
@@ -48,7 +48,7 @@ not emit iframe markup.
 ## Source Of Truth
 
 Contract behavior should be checked against the verified contract source, current deployment
-manifest, on-chain reads, Safe transaction records, PinkLock records, and Basescan verification
+manifest, on-chain reads, Safe transaction records, PinkSale / PinkLock V2 records, and Basescan verification
 evidence. Start from [Contract Information](./admin/contracts.md) for the public evidence links.
 This documentation mirrors those sources but does not replace them.
 

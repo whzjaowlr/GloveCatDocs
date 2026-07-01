@@ -8,9 +8,9 @@ The active staking contract supports fixed lock positions, reward-pool-gated pay
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking is not live. Trading is open on-chain, but the latest live readiness check shows
-`incentivePool = 0`; public staking requires `incentivePool >= 1,000,000 GCAT`. Rewards must be
-added through Safe execution before public staking is treated as ready.
+Public staking readiness now passes on-chain. Trading is open on-chain, and the latest live
+readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published
+`incentivePool >= 1,000,000 GCAT` target.
 
 | Rule | Value |
 | ---- | ----- |
@@ -79,8 +79,8 @@ Do not treat displayed APRs as guaranteed returns.
 
 ## How To Stake
 
-The steps below are the public go-live flow. Do not execute them until the staking reward-pool
-requirement is funded and published as ready.
+The steps below are the public staking flow. Users should verify the staking reward-pool requirement
+and active contract addresses before approving GCAT.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.

@@ -26,7 +26,7 @@ import { addressUrl, shortPublicValue, tokenLocks, txUrl } from "../../data/cont
             rel="noreferrer"
             :title="lock.target"
           >
-            PinkLock target
+            PinkSale / PinkLock V2 target
             <code>{{ shortPublicValue(lock.target) }}</code>
           </a>
           <a

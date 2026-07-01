@@ -1,6 +1,6 @@
 ﻿# Terms And Risk Disclosure
 
-> Last updated: 2026-06-30
+> Last updated: 2026-07-01
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
@@ -12,15 +12,15 @@ counsel.
 - GloveCat is not affiliated with, endorsed by, or sponsored by Base or Coinbase.
 - Current Base mainnet contract addresses are published in [Contract Information](/admin/contracts)
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
-- Phase 1 Safe wiring, PinkLock vesting locks, registered-pool setup, liquidity seeding,
+- Phase 1 Safe wiring, PinkSale / PinkLock V2 vesting locks, registered-pool setup, liquidity seeding,
   project-owned LP locking, and Safe `openTrading()` execution are complete.
 - Public trading is open on-chain. Safe `openTrading()` execution completed on 2026-06-29 13:30:07 UTC.
-- Public staking is not live; it requires `incentivePool >= 1,000,000 GCAT`, and the latest live
-  readiness check shows `incentivePool = 0`. Users should verify the corresponding public
-  transactions and evidence before relying on them.
+- Public staking readiness now passes on-chain; it requires `incentivePool >= 1,000,000 GCAT`, and
+  the latest live readiness check shows `incentivePool = 1,000,000 GCAT`. Users should verify the
+  corresponding public transactions and evidence before relying on them.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
-  [Safe records](/admin/contracts#project-wallets), [PinkLock records](/admin/contracts#public-lock-evidence),
+  [Safe records](/admin/contracts#project-wallets), [PinkSale / PinkLock V2 records](/admin/contracts#public-lock-evidence),
   and on-chain reads.
 
 ## Market Risks

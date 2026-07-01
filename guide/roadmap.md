@@ -14,13 +14,13 @@ visibility work. It is not a guarantee of delivery dates.
 | Fresh deployment manifest | `active` manifest published |
 | BaseScan verification for fresh contracts | [Basescan evidence](/admin/contracts#public-evidence-links) |
 | Safe configuration evidence | [Safe evidence](/admin/contracts#project-wallets) |
-| Team PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
-| Long-term treasury reserve PinkLock vesting evidence | [PinkLock evidence](/admin/contracts#public-lock-evidence) |
+| Team PinkSale / PinkLock V2 vesting evidence | [PinkSale / PinkLock V2 evidence](/admin/contracts#public-lock-evidence) |
+| Long-term treasury reserve PinkSale / PinkLock V2 vesting evidence | [PinkSale / PinkLock V2 evidence](/admin/contracts#public-lock-evidence) |
 | Registered-pool setup | [Registered pool policy](/guide/registered-pool-policy) |
 | Initial liquidity seed | [Liquidity evidence](/guide/liquidity-lock-evidence) |
 | Trading route | Complete; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
 | LP token lock evidence | [LP lock evidence](/guide/liquidity-lock-evidence) |
-| Initial staking reward-pool funding | In progress; latest live readiness check shows `incentivePool = 0`, below the `1,000,000 GCAT` target |
+| Initial staking reward-pool funding | Complete; latest live readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the target |
 
 ## 🚀 P1: Launch Operations
 

@@ -17,13 +17,13 @@ the existing Safe workflow and private maintainer channels.
 1. Fresh GloveCat contract deployment on Base mainnet.
 2. [Basescan verification](/admin/contracts#public-evidence-links).
 3. [Phase 1 Safe wiring](/admin/contracts#project-wallets).
-4. [Team PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
-5. [Long-term treasury reserve PinkLock vesting transfer](/admin/contracts#public-lock-evidence).
+4. [Team PinkSale / PinkLock V2 vesting transfer](/admin/contracts#public-lock-evidence).
+5. [Long-term treasury reserve PinkSale / PinkLock V2 vesting transfer](/admin/contracts#public-lock-evidence).
 
-Registered-pool setup, liquidity seed, project-owned LP locking, and Safe `openTrading()` execution
-are complete and visible in the public evidence records. Public trading is open on-chain. Public
-staking is not live because the latest live readiness check shows `incentivePool = 0`, below the
-`1,000,000 GCAT` target.
+Registered-pool setup, liquidity seed, project-owned LP locking, Safe `openTrading()` execution, and
+the initial 1,000,000 GCAT staking reward-pool funding are complete and visible in the public
+evidence records. Public trading is open on-chain, and the live staking readiness check passes on
+Base mainnet.
 
 ## 🧩 Active Contract Surface
 
