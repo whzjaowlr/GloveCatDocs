@@ -4,7 +4,7 @@ The active on-chain rewards surface is `GamificationCore`.
 
 It supports staking-only leaderboard NFT reward claims.
 
-## 🏅 Leaderboard Rewards
+## Leaderboard Rewards
 
 The active leaderboard is staking-only. Token buy/sell volume is not part of the active leaderboard
 contract.
@@ -18,7 +18,7 @@ Flow:
 5. The gamification contract must be approved as an NFT minter before claims can mint.
 
 Leaderboard seasons use a fixed 3-calendar-month window in the leaderboard tooling and published
-season records.
+season records. Season 1 runs from `2026-07-02T00:00:00Z` to `2026-10-02T00:00:00Z`.
 
 Leaderboard score policy:
 
@@ -35,7 +35,10 @@ staking score = sum(lock amount * lock-period score multiplier)
 This score multiplier is only for leaderboard ranking. It does not change staking reward APR or NFT
 boost.
 
-## 🧾 Leaderboard Claim Limits
+The score is based on lock commitments created during the season. It is not token buy/sell volume
+and not an end-of-season wallet balance.
+
+## Leaderboard Claim Limits
 
 | Rule | Value |
 | ---- | ----- |
@@ -53,11 +56,21 @@ Rank-to-tier mapping:
 | 4-7 | Rare |
 | 8-10 | Common |
 
-Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value.
-A season Merkle root can be corrected only by [Safe multisig](/admin/contracts#project-wallets)
+Merkle leaves are domain-separated by chain ID, contract address, season, user, rank, and value. A
+season Merkle root can be corrected only by [Safe multisig](/admin/contracts#project-wallets)
 transaction and only before that season has any successful claim.
 
-## 💰 Funding
+## Incentive Pacing
+
+The public leaderboard may show a display-only season target of `5,000,000 GCAT`, split by month and
+UTC day. This is a pacing target for public communication only. It does not unlock tokens and does
+not change the staking contract.
+
+Actual ERC20 staking payouts are limited by the live `Staking.incentivePool()` balance and the
+staking claim logic. Users should verify the funded pool on-chain before relying on any reward-pool
+claim.
+
+## Funding
 
 Leaderboard NFT rewards do not use an ERC20 reward pool. Claims require the NFT contract to be wired
 and the gamification contract to be approved as a minter.
