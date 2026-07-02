@@ -45,6 +45,8 @@ counsel.
 - Staking incentives are not guaranteed returns.
 - Rewards are paid only from funded pools; funding transactions do not increase the pool until they
   are executed on-chain.
+- Staking incentives may accrue and be claimed while the staked principal remains locked; principal
+  withdrawal is still subject to the selected lock period.
 - NFT boosts require benefit activation and are snapshotted when a lock position is created.
 - Leaderboard rewards depend on off-chain score computation and Merkle proof publication.
 - Campaign rules, eligibility checks, and abuse filtering may change.

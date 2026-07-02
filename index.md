@@ -22,7 +22,7 @@ features:
     details: 500M fixed supply, 75/20/5 launch split, 0% buy fee, fixed 1% sell ecosystem fee, one-way trading launch, and the now-expired 1-hour launch max-wallet window.
   - icon: 🔒
     title: Locked Staking
-    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively; the initial reward pool is funded with 1,000,000 GCAT.
+    details: Fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%; incentives accrue over time and can be claimed while principal remains locked.
   - icon: 🔐
     title: Public Locks
     details: Team vesting, long-term treasury reserve vesting, registered liquidity, project-owned LP locking, and Safe records are tracked as public evidence.
@@ -66,7 +66,8 @@ The current source surface is:
   user burn support.
 - `Staking`: lock-position staking with a 1,000 GCAT minimum, up to 50 active positions per user,
   fixed 30-, 90-, and 180-day lock periods with base APRs of 2%, 5%, and 8%, respectively, NFT
-  boost snapshots, and pool-gated payout accounting with unpaid incentive carry-forward.
+  boost snapshots, incentive claims while principal remains locked, and pool-gated payout
+  accounting with unpaid incentive carry-forward.
 - `GloveCatNFT`: ERC721 tier NFT with ERC2981 royalty support, 1-day benefit activation,
   transfer-time boost reset, different-tier boost stacking, same-tier duplicate suppression, and a
   4.0x aggregate staking boost cap.

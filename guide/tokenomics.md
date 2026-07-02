@@ -73,6 +73,9 @@ Staking rewards are paid only from the funded staking incentive pool. The readin
 insufficient later, the staking contract can carry unpaid staking incentives forward as
 `pendingIncentives`; it does not mint new reward tokens.
 
+Staking incentives accrue over time and can be claimed while a staking position is still locked.
+Locked principal can be withdrawn only after the selected lock period has matured.
+
 The full initial staking bootstrap allocation is `5,000,000 GCAT`. Any public monthly or daily
 leaderboard pacing display is a planned target only; it does not release tokens by itself. Actual
 staking payouts depend on the live `Staking.incentivePool()` balance.

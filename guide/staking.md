@@ -17,6 +17,7 @@ readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published
 | Minimum stake | 1,000 GCAT |
 | Max active lock positions per user | 50 |
 | Reward source | Funded `incentivePool` only |
+| Incentive claiming | Accrues over time and can be claimed while principal remains locked |
 | Final multiplier cap | 4.0x |
 
 ## Lock Periods
@@ -66,8 +67,9 @@ Rules:
 ## Reward Pool
 
 Staking rewards are paid from the staking incentive pool. The contract does not mint reward tokens.
-Rewards can continue accumulating after the selected lock period has matured if the position remains
-active.
+Incentives accrue over time and can be claimed with `claimIncentives()` while the locked principal
+remains locked. After the selected lock period has matured, rewards can continue accumulating if the
+position remains active.
 
 If the pool is insufficient at claim or unstake time:
 

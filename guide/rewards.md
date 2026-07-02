@@ -70,6 +70,9 @@ Actual ERC20 staking payouts are limited by the live `Staking.incentivePool()` b
 staking claim logic. Users should verify the funded pool on-chain before relying on any reward-pool
 claim.
 
+ERC20 staking incentives accrue over time and can be claimed while the principal remains locked.
+This is separate from leaderboard NFT reward eligibility and claims.
+
 ## Funding
 
 Leaderboard NFT rewards do not use an ERC20 reward pool. Claims require the NFT contract to be wired
