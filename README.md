@@ -10,9 +10,9 @@ project-owned LP locking, and Safe `openTrading()` execution are published throu
 records.
 
 The docs are written for public deployment use: verified addresses, Safe records, PinkSale / PinkLock V2 vesting,
-liquidity evidence, LP lock evidence, trading-open evidence, and unfinished staking gates must stay
-visible from the public documentation. Active deployment status does not mean public staking or
-reward-pool funding is complete.
+liquidity evidence, LP lock evidence, trading-open evidence, staking readiness evidence, and
+reward-pool status must stay visible from the public documentation. Active deployment status alone
+does not replace live on-chain verification of the staking reward pool.
 
 Active contract surface:
 
@@ -54,4 +54,4 @@ This documentation mirrors those sources but does not replace them.
 
 ## Last Updated
 
-2026-06-30
+2026-07-03

@@ -1,6 +1,6 @@
 ﻿# Roadmap
 
-> Last updated: 2026-06-30
+> Last updated: 2026-07-03
 
 This roadmap tracks the public deployment surface, current launch blockers, and post-launch
 visibility work. It is not a guarantee of delivery dates.
@@ -28,8 +28,8 @@ visibility work. It is not a guarantee of delivery dates.
 - Keep [Safe owner/threshold evidence](/admin/contracts#project-wallets) visible.
 - Keep the registered Aerodrome WETH/GCAT route, liquidity seed, LP lock, and trading-open evidence
   visible in public docs.
-- Fund the staking incentive pool through Safe-approved treasury or reward-pool transactions before
-  public staking is treated as ready.
+- Keep future staking incentive-pool top-ups tied to Safe-approved treasury or reward-pool
+  transactions and publish public evidence before users rely on updated reward-pool claims.
 - Keep the dApp staking approval path gated by live on-chain reads for contract wiring, Safe policy,
   `tradingOpened()`, and `incentivePool >= 1,000,000 GCAT`.
 - Add public monitoring for contract wiring, staking reward pool health, and liquidity status.

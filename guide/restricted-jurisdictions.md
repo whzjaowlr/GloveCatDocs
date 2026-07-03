@@ -126,4 +126,4 @@ restricted jurisdiction, they must stop using the service.
 
 ## Contact
 
-Questions about service availability can be sent to <glovecatcoin@gmail.com>.
+Questions about service availability can be sent to <gcatstudio@glovecatcoin.com>.

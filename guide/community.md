@@ -8,6 +8,7 @@ Use GloveCat-published channels for announcements, launch status, support, and s
 | ------- | ---- |
 | Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
+| Discord | [GloveCat Discord](https://discord.gg/R6kcUDcZra) |
 | dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 
 ## 🔎 Before Sharing Contract Addresses
@@ -19,7 +20,8 @@ are the current verified deployment addresses.
 Do not share historical addresses as active targets. When sharing launch information, link to the
 current contract page, [lock evidence](/admin/contracts#public-lock-evidence),
 [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and any executed trading or
-staking reward-pool records. Do not describe unfinished staking gates as live.
+staking reward-pool records. Do not describe any staking, reward-pool, or contract-readiness claim
+as live unless the current on-chain evidence still supports it.
 
 ## 🤝 How To Participate
 

@@ -94,3 +94,5 @@ claim.
 | dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 | Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
+| Discord | [GloveCat Discord](https://discord.gg/R6kcUDcZra) |
+| Contact | [gcatstudio@glovecatcoin.com](mailto:gcatstudio@glovecatcoin.com) |

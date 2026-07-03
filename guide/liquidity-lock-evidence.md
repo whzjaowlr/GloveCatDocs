@@ -81,10 +81,13 @@ Users and reviewers should verify the following before relying on any launch-liq
 | Executed at | 2026-06-29 13:30:07 UTC |
 | Safe nonce | 8 |
 
-## Remaining Staking Gates
+## Staking Readiness Reference
 
-The liquidity, LP lock, and trading-open records above do not make public staking live. The remaining
-separate gates are:
+The liquidity, LP lock, and trading-open records above are launch-liquidity evidence, not staking
+reward-pool evidence. Public staking readiness is tracked on the dedicated staking and tokenomics
+pages.
 
-- staking reward-pool funding to at least `1,000,000 GCAT`;
-- final public staking evidence and announcement.
+Current public docs state that staking readiness passes on-chain because the latest live readiness
+check shows `incentivePool = 1,000,000 GCAT`, meeting the published
+`incentivePool >= 1,000,000 GCAT` target. Users should still verify the live staking contract and
+reward-pool balance before approving or staking GCAT.
