@@ -47,7 +47,7 @@ setOfficialPair(poolAddress, true)
 ```
 
 The registered address must be the actual pool contract address. It is not the Aerodrome router
-address, a DEXScreener link, or a token address.
+address, a DEX chart link, or a token address.
 
 ## Sell Fee Behavior
 
@@ -58,7 +58,7 @@ Examples:
 | Route | Fee behavior |
 | --- | --- |
 | Sell through the registered Aerodrome GCAT/WETH pool | 1% sell fee applies |
-| Sell through DEXScreener, if the final route uses the registered pool | 1% sell fee applies |
+| Sell through a DEX chart or router surface, if the final route uses the registered pool | 1% sell fee applies |
 | Sell through a wallet swap, if the final route uses the registered pool | 1% sell fee applies |
 | Sell into an unregistered third-party pool | Fee may not apply |
 
@@ -90,7 +90,7 @@ routes.
 
 ## Monitoring And Response
 
-The project should monitor DEXScreener, Aerodrome, Base explorers, and other public routing surfaces
+The project should monitor CoinMarketCap DEX, Aerodrome, Base explorers, and other public routing surfaces
 for material third-party GCAT pools.
 
 If an unregistered pool becomes meaningful, the Safe should decide whether to:

@@ -90,7 +90,7 @@ claim.
 | Public evidence | [Contract, Safe, and lock evidence](/admin/contracts#public-evidence-links) |
 | GCAT token | [Basescan token page](https://basescan.org/token/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4) |
 | Official GCAT pair | [Aerodrome WETH/GCAT pair](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54) |
-| DEX chart | [DEXScreener official pair chart](https://dexscreener.com/base/0x6330bb184d90d78f336270485c3d17ab8ae8dd54) |
+| DEX chart | [CoinMarketCap DEX GCAT chart](https://dex.coinmarketcap.com/token/base/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4/) |
 | dApp | [glovecatcoin.com](https://glovecatcoin.com) |
 | Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
 | Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
