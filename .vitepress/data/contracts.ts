@@ -42,6 +42,22 @@ export interface PublicEvidenceLink {
   value?: string;
 }
 
+export type StakingReadiness =
+  | "ready"
+  | "pending-reward-pool"
+  | "pending-trading-open"
+  | "pending-safe-config"
+  | "unsafe-safe-policy"
+  | "not-ready";
+
+export interface StakingFundingEvidence {
+  amountGcat: string;
+  executedAt: string;
+  safeNonce: string;
+  safeTxHash: `0x${string}`;
+  txHash: `0x${string}`;
+}
+
 export const baseNetwork = {
   name: "Base Mainnet",
   chainId: 8453,
@@ -56,19 +72,84 @@ export const baseDeployment = {
   deployer: "0xf04a5fe7e719c62142a927c560e4c8ded9c05629" as
     | `0x${string}`
     | null,
-  updatedAt: "2026-06-30",
-  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkSale / PinkLock V2 token locks, registered-pool setup, liquidity seeding, project-owned LP locking, Safe openTrading execution, and the initial 1,000,000 GCAT staking reward-pool funding are complete. Public staking readiness now passes on-chain.",
+  updatedAt: "2026-07-10",
+  note: "Contracts are deployed and Basescan verified. Phase 1 Safe wiring, PinkSale / PinkLock V2 token locks, registered-pool setup, liquidity seeding, project-owned LP locking, Safe openTrading execution, and staking reward-pool funding have public evidence. Mutable readiness and reward-pool values come from the production status API, not this static registry.",
 };
+
+export const productionProtocolStatus = {
+  schemaVersion: "1.0.0",
+  apiUrl: "https://api.glovecatcoin.com/api/v1/public-status",
+  expectedChainId: 8453,
+  expectedReleaseId: "base-mainnet-2026-07-10",
+  expectedRegistryUpdatedAt: "2026-07-10T14:00:00.000Z",
+  expectedDeploymentStatus: "active",
+  maxObservationAgeSeconds: 60,
+  expectedAddresses: {
+    gloveCatCore: "0x59df0577c7a5014954c0d6cc12616e92e34d9ff4",
+    staking: "0x2ab642c747d4568f916fbe4f0556ca28802162ab",
+    gloveCatNFT: "0x23d398f039cede09cd2a63f359c7052753919f82",
+    gamificationCore: "0x96935bde10b5c4b9e671482416754fd69401f3f7",
+    safe: "0xFa5eE6e605642Dc3d4198D58Cb716E2d8eeF0803",
+  },
+  authority:
+    "Authoritative mutable source for public staking readiness, trading-open reads, and the live incentive-pool balance.",
+} as const;
+
+export const datedProtocolStatusSnapshot = {
+  observedAt: "2026-07-10T13:53:49.000Z",
+  blockNumber: "48451141",
+  blockHash:
+    "0xbc6cb32902c61cb39da42f24cb656ff2053133c9c21998cb590120e0c234fa89",
+  chainId: 8453,
+  source: "Direct Base reads at a fixed block",
+  tradingOpened: true,
+  incentivePoolWei: "5000000000000000000000000",
+  incentivePoolGcat: "5,000,000",
+  minimumRewardPoolWei: "1000000000000000000000000",
+  minimumRewardPoolGcat: "1,000,000",
+  legacyApiObservation: {
+    observedAt: "2026-07-10T13:47:29.000Z",
+    readiness: "ready" as StakingReadiness,
+    canStakeNow: true,
+    blockNumber: null,
+    limitation:
+      "Historical production API response before observedAt and blockNumber were included in its schema.",
+  },
+  scope:
+    "Dated Base block snapshot for tradingOpened and incentivePool only. It is historical evidence after observation and must not be presented as the live value.",
+} as const;
 
 export const lockTargetSetTxHash =
   "0x6b7cd6aea6a36c595be64d6047fad032421785155166527be0473cda9445261d" as const;
 
 export const openTradingEvidence = {
   executedAt: "2026-06-29 13:30:07 UTC",
-  safeTxHash: "0xdc7a2d3a8e0a053e21776fbeaf4aef5953c7fc76927851c489c920247654e196",
+  safeTxHash:
+    "0xdc7a2d3a8e0a053e21776fbeaf4aef5953c7fc76927851c489c920247654e196",
   txHash: "0x18fb7f5fef1c3270dbffa50d9bd56d46c816912c00a599b82fe6fb8b8993485e",
   safeNonce: "8",
 } as const;
+
+export const stakingFundingEvidence: StakingFundingEvidence[] = [
+  {
+    amountGcat: "1,000,000",
+    executedAt: "2026-07-01 20:35:53 UTC",
+    safeNonce: "9",
+    safeTxHash:
+      "0x07803043e891de5e081f009d02a0ab55a2f9713c6a580249e99dd88b31980b97",
+    txHash:
+      "0x5996a597d0f82a612ada863d7e5132f779fbe539f47d07a27547442039920076",
+  },
+  {
+    amountGcat: "4,000,000",
+    executedAt: "2026-07-01 21:09:43 UTC",
+    safeNonce: "10",
+    safeTxHash:
+      "0xe53da292c6155b58c25dc23ac64fed22dd6a3e65ecb8dc82f7c50bffe74251df",
+    txHash:
+      "0x3d54e7a95f62b4c945924b0f7325c0af3dbfe0cb2f89a31ea77df36f181840d3",
+  },
+];
 
 export const officialGcatPair = {
   name: "Aerodrome Classic Volatile WETH/GCAT",
@@ -87,11 +168,13 @@ export const liquidityEvidence = {
   wethAddress: "0x4200000000000000000000000000000000000006",
   gcatAmount: "375,000,000 GCAT",
   wethAmount: "5.51 WETH",
-  liquidityAddTxHash: "0xa4268463f1cfaa6d8e3eb3c315c2d54da5cd6dfae015ffd276cd18c42e0fb7a0",
+  liquidityAddTxHash:
+    "0xa4268463f1cfaa6d8e3eb3c315c2d54da5cd6dfae015ffd276cd18c42e0fb7a0",
   liquidityAddedAt: "2026-06-23 17:22:55 UTC",
   lpTokenAmount: "45,456.02270326782560651 vAMM-WETH/GCAT",
   lpLockContract: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
-  lpLockTxHash: "0xd0afe05c7e64a7113c3b8b48e17cf06211ae65d9da8389267009c6e603e2554b",
+  lpLockTxHash:
+    "0xd0afe05c7e64a7113c3b8b48e17cf06211ae65d9da8389267009c6e603e2554b",
   lpLockId: "1046390",
   lpLockOwner: "0xa92C88dE90F3114A6bD0fFf8DE56139Dc3F27fda",
   lpUnlockDate: "2031-06-24 00:00:00 UTC",
@@ -136,7 +219,8 @@ export const tokenLocks: TokenLockInfo[] = [
     status: "PinkSale / PinkLock V2 vesting",
     amountGcat: "25,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
-    txHash: "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
+    txHash:
+      "0x9c0feb497e0d96da551aa3f7d556ee5501ede05718a47bb4c6e38484703b634c",
     schedule:
       "Actual schedule: 62 elapsed 30-day cycles to the 100% cap. Starts 2026-06-28 02:00 UTC with 0.56% TGE and 1.63% release per cycle.",
   },
@@ -145,7 +229,8 @@ export const tokenLocks: TokenLockInfo[] = [
     status: "PinkSale / PinkLock V2 vesting",
     amountGcat: "95,000,000 GCAT",
     target: "0xdD6E31A046b828CbBAfb939C2a394629aff8BBdC",
-    txHash: "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
+    txHash:
+      "0xe2a17dc1cb1300a9c26c6ec77cf036c1f38c3ff6ccb3163a5e77ffed43942d48",
     schedule:
       "Actual schedule: 62 elapsed 30-day cycles to the 100% cap. Starts 2026-06-28 02:00 UTC with 0.56% TGE and 1.63% release per cycle.",
   },
@@ -240,7 +325,10 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
   {
     name: "GCAT token",
     description: "Basescan ERC20 token page",
-    href: requiredUrl(tokenUrl(contractsByName.GloveCatCore.address), "GCAT token"),
+    href: requiredUrl(
+      tokenUrl(contractsByName.GloveCatCore.address),
+      "GCAT token",
+    ),
     value: contractsByName.GloveCatCore.address ?? undefined,
   },
   {
@@ -288,24 +376,35 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
   {
     name: "Safe owner/threshold record",
     description: "Safe public API record for owners and threshold",
-    href: requiredUrl(safeApiUrl(walletsByName.Safe.address), "Safe API record"),
+    href: requiredUrl(
+      safeApiUrl(walletsByName.Safe.address),
+      "Safe API record",
+    ),
     value: walletsByName.Safe.address ?? undefined,
   },
   {
     name: "PinkSale / PinkLock V2 target",
     description: "PinkSale / PinkLock V2 target contract on Basescan",
-    href: requiredUrl(addressUrl(tokenLocks[0]?.target ?? null), "PinkSale / PinkLock V2 target"),
+    href: requiredUrl(
+      addressUrl(tokenLocks[0]?.target ?? null),
+      "PinkSale / PinkLock V2 target",
+    ),
     value: tokenLocks[0]?.target,
   },
   {
     name: "PinkSale / PinkLock V2 target set tx",
-    description: "Basescan transaction that set the PinkSale / PinkLock V2 target",
-    href: requiredUrl(txUrl(lockTargetSetTxHash), "PinkSale / PinkLock V2 target set tx"),
+    description:
+      "Basescan transaction that set the PinkSale / PinkLock V2 target",
+    href: requiredUrl(
+      txUrl(lockTargetSetTxHash),
+      "PinkSale / PinkLock V2 target set tx",
+    ),
     value: lockTargetSetTxHash,
   },
   {
     name: "Official GCAT trading pair",
-    description: "Official registered Aerodrome Classic Volatile WETH/GCAT pair and LP token",
+    description:
+      "Official registered Aerodrome Classic Volatile WETH/GCAT pair and LP token",
     href: requiredUrl(
       addressUrl(liquidityEvidence.officialPairAddress),
       "Official GCAT trading pair",
@@ -315,19 +414,30 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
   {
     name: "Liquidity seed tx",
     description: "Aerodrome addLiquidity execution transaction",
-    href: requiredUrl(txUrl(liquidityEvidence.liquidityAddTxHash), "Liquidity seed tx"),
+    href: requiredUrl(
+      txUrl(liquidityEvidence.liquidityAddTxHash),
+      "Liquidity seed tx",
+    ),
     value: liquidityEvidence.liquidityAddTxHash,
   },
   {
     name: "Project LP lock contract",
-    description: "PinkSale / PinkLock V2 contract holding the project-owned Aerodrome LP tokens",
-    href: requiredUrl(addressUrl(liquidityEvidence.lpLockContract), "Project LP lock contract"),
+    description:
+      "PinkSale / PinkLock V2 contract holding the project-owned Aerodrome LP tokens",
+    href: requiredUrl(
+      addressUrl(liquidityEvidence.lpLockContract),
+      "Project LP lock contract",
+    ),
     value: liquidityEvidence.lpLockContract,
   },
   {
     name: "Project LP lock tx",
-    description: "PinkSale / PinkLock V2 transaction that locked the project-owned Aerodrome LP tokens",
-    href: requiredUrl(txUrl(liquidityEvidence.lpLockTxHash), "Project LP lock tx"),
+    description:
+      "PinkSale / PinkLock V2 transaction that locked the project-owned Aerodrome LP tokens",
+    href: requiredUrl(
+      txUrl(liquidityEvidence.lpLockTxHash),
+      "Project LP lock tx",
+    ),
     value: liquidityEvidence.lpLockTxHash,
   },
   {
@@ -336,6 +446,22 @@ export const publicEvidenceLinks: PublicEvidenceLink[] = [
     href: requiredUrl(txUrl(openTradingEvidence.txHash), "Trading open tx"),
     value: openTradingEvidence.txHash,
   },
+  {
+    name: "Production protocol status",
+    description:
+      "Mutable staking readiness, trading-open, and reward-pool status from live Base reads",
+    href: productionProtocolStatus.apiUrl,
+    value: `schema ${productionProtocolStatus.schemaVersion}`,
+  },
+  ...stakingFundingEvidence.map((funding) => ({
+    name: `Staking funding tx (${funding.amountGcat} GCAT)`,
+    description: `Safe nonce ${funding.safeNonce}, executed ${funding.executedAt}`,
+    href: requiredUrl(
+      txUrl(funding.txHash),
+      `Staking funding tx ${funding.safeNonce}`,
+    ),
+    value: funding.txHash,
+  })),
   ...tokenLocks.map((lock) => ({
     name: `${lock.name} tx`,
     description: "Basescan lock execution transaction",

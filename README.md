@@ -29,6 +29,7 @@ independent project and is not affiliated with, endorsed by, or sponsored by Bas
 ```bash
 pnpm install --frozen-lockfile
 pnpm run docs:dev
+pnpm run consistency:check
 pnpm run docs:build
 pnpm run security:check
 ```
@@ -42,16 +43,18 @@ Docs are deployed as a public GitHub Pages site. GitHub Pages does not apply Clo
 `_headers` files, so the baseline browser controls must be present in the built HTML itself.
 
 `pnpm run security:check` verifies the generated pages include the expected meta CSP and referrer
-policy, do not allow broad `connect-src https:`, do not allow Cloudflare analytics endpoints, and do
-not emit iframe markup.
+policy, allow connections only to the site itself and the production status API, do not allow broad
+`connect-src https:`, do not allow Cloudflare analytics endpoints, and do not emit iframe markup.
 
 ## Source Of Truth
 
 Contract behavior should be checked against the verified contract source, current deployment
 manifest, on-chain reads, Safe transaction records, PinkSale / PinkLock V2 records, and Basescan verification
 evidence. Start from [Contract Information](./admin/contracts.md) for the public evidence links.
-This documentation mirrors those sources but does not replace them.
+Mutable operating state must come from the production status API described in
+[Operational Status](./guide/operational-status.md). This documentation mirrors those sources but
+does not replace them.
 
 ## Last Updated
 
-2026-07-03
+2026-07-10

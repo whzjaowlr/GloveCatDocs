@@ -21,18 +21,18 @@ the existing Safe workflow and private maintainer channels.
 5. [Long-term treasury reserve PinkSale / PinkLock V2 vesting transfer](/admin/contracts#public-lock-evidence).
 
 Registered-pool setup, liquidity seed, project-owned LP locking, Safe `openTrading()` execution, and
-the initial 1,000,000 GCAT staking reward-pool funding are complete and visible in the public
-evidence records. Public trading is open on-chain, and the live staking readiness check passes on
-Base mainnet.
+the 1,000,000 GCAT and 4,000,000 GCAT staking funding executions are visible in the public evidence
+records. Current readiness and pool values are intentionally not frozen here; use
+[Operational Status](/guide/operational-status).
 
 ## 🧩 Active Contract Surface
 
-| Contract | Role |
-| -------- | ---- |
-| `GloveCatCore` | ERC20 + Permit token, fixed 0% buy and 1% sell ecosystem fee, registered-pool controls, one-time pre-launch LP seed path, Safe-executed one-way `openTrading()`, and launch max-wallet checks that expired 1 hour after trading opened |
-| `Staking` | Fixed 30-, 90-, and 180-day lock positions, 1,000 GCAT minimum, 50 active-position cap, base APRs of 2%, 5%, and 8%, respectively, NFT boost snapshots, pool-gated incentives |
-| `GloveCatNFT` | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty |
-| `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season |
+| Contract           | Role                                                                                                                                                                                                                                   |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GloveCatCore`     | ERC20 + Permit token, fixed 0% buy and 1% sell ecosystem fee, registered-pool controls, one-time pre-launch LP seed path, Safe-executed one-way `openTrading()`, and launch max-wallet checks that expired 1 hour after trading opened |
+| `Staking`          | Fixed 30-, 90-, and 180-day lock positions, 1,000 GCAT minimum, 50 active-position cap, base APRs of 2%, 5%, and 8%, respectively, NFT boost snapshots, pool-gated incentives                                                          |
+| `GloveCatNFT`      | ERC721 tier NFT, 1-day benefit activation, different-tier boost stacking, same-tier duplicate suppression, 4.0x aggregate staking cap, ERC2981 royalty                                                                                 |
+| `GamificationCore` | Staking-only Merkle leaderboard NFT rewards capped to 10 claims per season                                                                                                                                                             |
 
 ## 🔐 Public Evidence Rules
 
@@ -46,3 +46,4 @@ Base mainnet.
 
 - [Contract Info](/admin/contracts)
 - [Public Evidence Links](/admin/contracts#public-evidence-links)
+- [Operational Status](/guide/operational-status)

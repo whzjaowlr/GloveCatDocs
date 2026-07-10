@@ -8,7 +8,8 @@ Yes. The current contract addresses are published in [Contract Information](/adm
 [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified. Phase 1
 Safe wiring, PinkSale / PinkLock V2 vesting locks, registered-pool setup, liquidity seeding,
 project-owned LP locking, Safe `openTrading()` execution, and initial staking reward-pool funding
-are complete. Public trading is open on-chain, and public staking readiness passes on-chain.
+have public execution evidence. Mutable operating state is shown on
+[Operational Status](/guide/operational-status).
 
 ### Where can I buy GCAT?
 
@@ -26,10 +27,11 @@ provider's own support.
 
 ### Can I stake now?
 
-Yes, the on-chain public staking readiness gate now passes. Trading is open on-chain, and the latest
-live readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published reward-pool
-target. Users should still verify the dApp readiness panel and contract addresses before approving
-GCAT.
+Check [Operational Status](/guide/operational-status). Stake only when its fresh production response
+says **Official readiness: ready** and the dApp confirms the same gate. The dated 2026-07-10 snapshot
+recorded `tradingOpened=true` and a 5,000,000 GCAT pool at Base block `48451141`, but it did not
+freeze later readiness or balances. If live status is unavailable or stale, the answer is “current
+status unavailable,” and users should not approve GCAT based on static documentation.
 
 ### Do staking amounts create separate multipliers?
 

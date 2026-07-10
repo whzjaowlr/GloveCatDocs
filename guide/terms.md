@@ -1,6 +1,6 @@
 ﻿# Terms And Risk Disclosure
 
-> Last updated: 2026-07-01
+> Last updated: 2026-07-11
 
 This page is a project risk disclosure summary. It is not legal, tax, financial, or investment
 advice. Public launch, liquidity, marketing, and reward language should be reviewed by qualified
@@ -14,10 +14,11 @@ counsel.
   and [Public Evidence Links](/admin/contracts#public-evidence-links), and are Basescan verified.
 - Phase 1 Safe wiring, PinkSale / PinkLock V2 vesting locks, registered-pool setup, liquidity seeding,
   project-owned LP locking, and Safe `openTrading()` execution are complete.
-- Public trading is open on-chain. Safe `openTrading()` execution completed on 2026-06-29 13:30:07 UTC.
-- Public staking readiness now passes on-chain; it requires `incentivePool >= 1,000,000 GCAT`, and
-  the latest live readiness check shows `incentivePool = 1,000,000 GCAT`. Users should verify the
-  corresponding public transactions and evidence before relying on them.
+- Safe `openTrading()` execution completed on 2026-06-29 13:30:07 UTC. A current trading-open claim
+  must still come from a fresh [Operational Status](/guide/operational-status) observation.
+- The public staking gate requires `incentivePool >= 1,000,000 GCAT` plus the other published
+  readiness checks. A dated 2026-07-10 on-chain snapshot recorded 5,000,000 GCAT at Base block
+  `48451141`; it is not a guarantee of current readiness or availability.
 - Historical contract addresses outside the current deployment are reference-only.
 - Contract behavior should be verified against the current manifest, Basescan source verification,
   [Safe records](/admin/contracts#project-wallets), [PinkSale / PinkLock V2 records](/admin/contracts#public-lock-evidence),

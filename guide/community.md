@@ -4,12 +4,12 @@ Use GloveCat-published channels for announcements, launch status, support, and s
 
 ## 📣 GloveCat Channels
 
-| Channel | Link |
-| ------- | ---- |
-| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
-| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
-| Discord | [GloveCat Discord](https://discord.gg/R6kcUDcZra) |
-| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
+| Channel   | Link                                              |
+| --------- | ------------------------------------------------- |
+| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio)     |
+| Telegram  | [glovecatcoin](https://t.me/glovecatcoin)         |
+| Discord   | [GloveCat Discord](https://discord.gg/R6kcUDcZra) |
+| dApp      | [glovecatcoin.com](https://glovecatcoin.com)      |
 
 ## 🔎 Before Sharing Contract Addresses
 
@@ -21,7 +21,7 @@ Do not share historical addresses as active targets. When sharing launch informa
 current contract page, [lock evidence](/admin/contracts#public-lock-evidence),
 [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and any executed trading or
 staking reward-pool records. Do not describe any staking, reward-pool, or contract-readiness claim
-as live unless the current on-chain evidence still supports it.
+as current unless a fresh [Operational Status](/guide/operational-status) observation supports it.
 
 ## 🤝 How To Participate
 

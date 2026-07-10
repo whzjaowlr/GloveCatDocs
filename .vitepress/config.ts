@@ -6,16 +6,23 @@ const addImageAttrs = (tag: string, attrs: string) => {
 
 export default defineConfig({
   title: "GloveCat",
-  description: "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
+  description:
+    "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
   lang: "en-US",
   base: "/",
   transformHtml(code) {
     return code
-      .replace(/<img class="VPImage logo" src="\/logo\.webp" alt[^>]*>/g, (tag) =>
-        addImageAttrs(tag, 'width="24" height="24" decoding="async"'),
+      .replace(
+        /<img class="VPImage logo" src="\/logo\.webp" alt[^>]*>/g,
+        (tag) => addImageAttrs(tag, 'width="24" height="24" decoding="async"'),
       )
-      .replace(/<img class="VPImage image-src" src="\/logo\.webp" alt="GloveCat"[^>]*>/g, (tag) =>
-        addImageAttrs(tag, 'width="320" height="320" decoding="async" fetchpriority="high"'),
+      .replace(
+        /<img class="VPImage image-src" src="\/logo\.webp" alt="GloveCat"[^>]*>/g,
+        (tag) =>
+          addImageAttrs(
+            tag,
+            'width="320" height="320" decoding="async" fetchpriority="high"',
+          ),
       );
   },
 
@@ -25,7 +32,10 @@ export default defineConfig({
   },
 
   head: [
-    ["link", { rel: "icon", href: "/logo.png", type: "image/png", sizes: "192x192" }],
+    [
+      "link",
+      { rel: "icon", href: "/logo.png", type: "image/png", sizes: "192x192" },
+    ],
     [
       "link",
       {
@@ -48,7 +58,13 @@ export default defineConfig({
           "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
       },
     ],
-    ["meta", { property: "og:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
+    [
+      "meta",
+      {
+        property: "og:image",
+        content: "https://docs.glovecatcoin.com/og-image.webp",
+      },
+    ],
     ["meta", { property: "og:image:type", content: "image/webp" }],
     ["meta", { property: "og:image:width", content: "1600" }],
     ["meta", { property: "og:image:height", content: "661" }],
@@ -63,13 +79,19 @@ export default defineConfig({
           "Independent GloveCat (GCAT) contract documentation. Not affiliated with Base or Coinbase.",
       },
     ],
-    ["meta", { name: "twitter:image", content: "https://docs.glovecatcoin.com/og-image.webp" }],
+    [
+      "meta",
+      {
+        name: "twitter:image",
+        content: "https://docs.glovecatcoin.com/og-image.webp",
+      },
+    ],
     [
       "meta",
       {
         "http-equiv": "Content-Security-Policy",
         content:
-          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self'; worker-src 'self' blob:; frame-src 'none'; upgrade-insecure-requests",
+          "default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; connect-src 'self' https://api.glovecatcoin.com; worker-src 'self' blob:; frame-src 'none'; upgrade-insecure-requests",
       },
     ],
     ["meta", { "http-equiv": "X-Content-Type-Options", content: "nosniff" }],
@@ -83,6 +105,7 @@ export default defineConfig({
     nav: [
       { text: "Home", link: "/" },
       { text: "Guide", link: "/guide/" },
+      { text: "Live Status", link: "/guide/operational-status" },
       { text: "Contracts", link: "/admin/contracts" },
       { text: "dApp", link: "https://glovecatcoin.com" },
     ],
@@ -93,6 +116,7 @@ export default defineConfig({
           text: "Introduction",
           items: [
             { text: "GloveCat Intro", link: "/guide/" },
+            { text: "Operational Status", link: "/guide/operational-status" },
             { text: "Tokenomics", link: "/guide/tokenomics" },
             { text: "Roadmap", link: "/guide/roadmap" },
           ],
@@ -111,10 +135,19 @@ export default defineConfig({
           items: [
             { text: "FAQ", link: "/guide/faq" },
             { text: "Community", link: "/guide/community" },
-            { text: "Registered Pool Policy", link: "/guide/registered-pool-policy" },
-            { text: "Liquidity and LP Lock Evidence", link: "/guide/liquidity-lock-evidence" },
+            {
+              text: "Registered Pool Policy",
+              link: "/guide/registered-pool-policy",
+            },
+            {
+              text: "Liquidity and LP Lock Evidence",
+              link: "/guide/liquidity-lock-evidence",
+            },
             { text: "Terms and Risk Disclosure", link: "/guide/terms" },
-            { text: "Restricted Jurisdictions", link: "/guide/restricted-jurisdictions" },
+            {
+              text: "Restricted Jurisdictions",
+              link: "/guide/restricted-jurisdictions",
+            },
           ],
         },
       ],

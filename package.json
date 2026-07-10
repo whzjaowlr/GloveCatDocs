@@ -15,8 +15,9 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
+    "docs:build": "pnpm run consistency:check && vitepress build",
     "docs:preview": "vitepress preview",
+    "consistency:check": "node scripts/check-docs-consistency.mjs",
     "security:check": "node scripts/check-docs-security.mjs"
   },
   "devDependencies": {

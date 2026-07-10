@@ -5,6 +5,7 @@ import AffiliationNotice from "./components/AffiliationNotice.vue";
 import ContractAddress from "./components/ContractAddress.vue";
 import ContractLink from "./components/ContractLink.vue";
 import ContractTable from "./components/ContractTable.vue";
+import LiveProtocolStatus from "./components/LiveProtocolStatus.vue";
 import PublicEvidenceTable from "./components/PublicEvidenceTable.vue";
 import TokenLockTable from "./components/TokenLockTable.vue";
 import WalletTable from "./components/WalletTable.vue";
@@ -22,6 +23,7 @@ export default {
     app.component("ContractAddress", ContractAddress);
     app.component("ContractLink", ContractLink);
     app.component("ContractTable", ContractTable);
+    app.component("LiveProtocolStatus", LiveProtocolStatus);
     app.component("PublicEvidenceTable", PublicEvidenceTable);
     app.component("TokenLockTable", TokenLockTable);
     app.component("WalletTable", WalletTable);

@@ -38,23 +38,26 @@ Base is referenced only as the public network where the current GCAT contracts a
 
 GloveCat contracts are deployed and Basescan verified on Base mainnet. The active deployment status
 covers verified contract addresses, Safe admin control, Phase 1 wiring, PinkSale / PinkLock V2 token-lock records,
-registered liquidity, project-owned LP locking, Safe `openTrading()` execution, and the initial
-1,000,000 GCAT staking reward-pool funding. Public trading is open on-chain, and public staking
-readiness passes on-chain.
+registered liquidity, project-owned LP locking, Safe `openTrading()` execution, and two executed
+staking reward-pool funding transactions. Mutable trading reads, staking readiness, and pool balances
+come from the [Operational Status](/guide/operational-status) source, not this static page.
 
-| Item | Status |
-| ---- | ------ |
-| Deployment network | Base Mainnet |
-| Deployment status | `active` |
-| Contract addresses | Published and Basescan verified |
-| Phase 1 Safe wiring | Safe wiring executed |
-| Team allocation lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
-| Long-term treasury reserve lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap |
-| Registered pool | Aerodrome Classic Volatile WETH/GCAT pool registered |
-| Liquidity seed | 5.51 WETH and 375,000,000 GCAT seeded |
-| Trading | Open; Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC |
-| LP lock evidence | Project-owned LP tokens locked through PinkSale / PinkLock V2 until 2031-06-24 00:00 UTC |
-| Staking / rewards | Ready; latest live readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published target |
+<LiveProtocolStatus />
+
+| Item                            | Status                                                                                                                                                          |
+| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deployment network              | Base Mainnet                                                                                                                                                    |
+| Deployment status               | `active`                                                                                                                                                        |
+| Contract addresses              | Published and Basescan verified                                                                                                                                 |
+| Phase 1 Safe wiring             | Safe wiring executed                                                                                                                                            |
+| Team allocation lock            | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap                                                                                            |
+| Long-term treasury reserve lock | PinkSale / PinkLock V2 vesting; 62 elapsed 30-day cycles to 100% cap                                                                                            |
+| Registered pool                 | Aerodrome Classic Volatile WETH/GCAT pool registered                                                                                                            |
+| Liquidity seed                  | 5.51 WETH and 375,000,000 GCAT seeded                                                                                                                           |
+| Trading execution evidence      | Safe `openTrading()` executed on 2026-06-29 13:30:07 UTC                                                                                                        |
+| LP lock evidence                | Project-owned LP tokens locked through PinkSale / PinkLock V2 until 2031-06-24 00:00 UTC                                                                        |
+| Staking funding evidence        | 1,000,000 GCAT and 4,000,000 GCAT deposits executed on 2026-07-01                                                                                               |
+| Dated on-chain snapshot         | At Base block `48451141` on 2026-07-10 13:53:49 UTC, `tradingOpened=true` and the pool read 5,000,000 GCAT; use live status for the current readiness and value |
 
 ## 🧩 Active Surface
 
@@ -80,19 +83,20 @@ claim.
 
 ## 🔗 Quick Links
 
-| Item | Link |
-| ---- | ---- |
-| Guide | [Project guide](/guide/) |
-| Staking | [Staking guide](/guide/staking) |
-| Tokenomics | [Tokenomics](/guide/tokenomics) |
-| Contract status | [Contract information](/admin/contracts) |
-| Liquidity and LP lock | [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence) |
-| Public evidence | [Contract, Safe, and lock evidence](/admin/contracts#public-evidence-links) |
-| GCAT token | [Basescan token page](https://basescan.org/token/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4) |
-| Official GCAT pair | [Aerodrome WETH/GCAT pair](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54) |
-| DEX chart | [CoinMarketCap DEX GCAT chart](https://dex.coinmarketcap.com/token/base/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4/) |
-| dApp | [glovecatcoin.com](https://glovecatcoin.com) |
-| Twitter/X | [@GCATstudio](https://twitter.com/GCATstudio) |
-| Telegram | [glovecatcoin](https://t.me/glovecatcoin) |
-| Discord | [GloveCat Discord](https://discord.gg/R6kcUDcZra) |
-| Contact | [gcatstudio@glovecatcoin.com](mailto:gcatstudio@glovecatcoin.com) |
+| Item                  | Link                                                                                                                 |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Guide                 | [Project guide](/guide/)                                                                                             |
+| Live operating state  | [Operational Status](/guide/operational-status)                                                                      |
+| Staking               | [Staking guide](/guide/staking)                                                                                      |
+| Tokenomics            | [Tokenomics](/guide/tokenomics)                                                                                      |
+| Contract status       | [Contract information](/admin/contracts)                                                                             |
+| Liquidity and LP lock | [Liquidity and LP Lock Evidence](/guide/liquidity-lock-evidence)                                                     |
+| Public evidence       | [Contract, Safe, and lock evidence](/admin/contracts#public-evidence-links)                                          |
+| GCAT token            | [Basescan token page](https://basescan.org/token/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4)                         |
+| Registered GCAT pair  | [Aerodrome WETH/GCAT pair](https://basescan.org/address/0x6330Bb184d90D78F336270485C3d17AB8AE8dD54)                  |
+| DEX chart             | [CoinMarketCap DEX GCAT chart](https://dex.coinmarketcap.com/token/base/0x59df0577c7a5014954c0d6cc12616e92e34d9ff4/) |
+| dApp                  | [glovecatcoin.com](https://glovecatcoin.com)                                                                         |
+| Twitter/X             | [@GCATstudio](https://twitter.com/GCATstudio)                                                                        |
+| Telegram              | [glovecatcoin](https://t.me/glovecatcoin)                                                                            |
+| Discord               | [GloveCat Discord](https://discord.gg/R6kcUDcZra)                                                                    |
+| Contact               | [gcatstudio@glovecatcoin.com](mailto:gcatstudio@glovecatcoin.com)                                                    |

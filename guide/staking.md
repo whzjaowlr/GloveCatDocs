@@ -8,27 +8,30 @@ The active staking contract supports fixed lock positions, reward-pool-gated pay
 snapshots, Safe-controlled contract wiring, and optional staking timestamp sync back to
 `GloveCatCore`.
 
-Public staking readiness now passes on-chain. Trading is open on-chain, and the latest live
-readiness check shows `incentivePool = 1,000,000 GCAT`, meeting the published
-`incentivePool >= 1,000,000 GCAT` target.
+Current public readiness is determined by the production status API, not by deployment or funding
+evidence alone. It requires open token transfers, complete contract wiring, the production Safe
+policy, `incentivePool >= 1,000,000 GCAT`, and
+`GloveCatCore.balanceOf(Staking) >= totalLockStaked + incentivePool`. The last condition prevents
+an under-collateralized principal/reward balance from being presented as ready. See
+[Operational Status](/guide/operational-status) before any approval or staking action.
 
-| Rule | Value |
-| ---- | ----- |
-| Minimum stake | 1,000 GCAT |
-| Max active lock positions per user | 50 |
-| Reward source | Funded `incentivePool` only |
-| Incentive claiming | Accrues over time and can be claimed while principal remains locked |
-| Final multiplier cap | 4.0x |
+| Rule                               | Value                                                               |
+| ---------------------------------- | ------------------------------------------------------------------- |
+| Minimum stake                      | 1,000 GCAT                                                          |
+| Max active lock positions per user | 50                                                                  |
+| Reward source                      | Funded `incentivePool` only                                         |
+| Incentive claiming                 | Accrues over time and can be claimed while principal remains locked |
+| Final multiplier cap               | 4.0x                                                                |
 
 ## Lock Periods
 
 The active staking contract exposes three fixed lock periods:
 
-| Lock period ID | Duration | Base APR |
-| -------------- | -------: | -------: |
-| 0 | 30 days | 2% / `200` bps |
-| 1 | 90 days | 5% / `500` bps |
-| 2 | 180 days | 8% / `800` bps |
+| Lock period ID | Duration |       Base APR |
+| -------------- | -------: | -------------: |
+| 0              |  30 days | 2% / `200` bps |
+| 1              |  90 days | 5% / `500` bps |
+| 2              | 180 days | 8% / `800` bps |
 
 The selected period's duration and base APR are snapshotted into the lock position when
 `lockStake(amount, lockPeriodId)` is called. The base APR is applied pro rata by elapsed seconds; it
@@ -81,12 +84,12 @@ Do not treat displayed APRs as guaranteed returns.
 
 ## How To Stake
 
-The steps below are the public staking flow. Users should verify the staking reward-pool requirement
-and active contract addresses before approving GCAT.
+The steps below describe the transaction flow, not a permanent availability promise. Users should
+first require a fresh **Official readiness: ready** result and verify active contract addresses.
 
 1. Connect a Base-compatible wallet.
 2. Hold GCAT on Base.
-3. Confirm the [active staking address](/admin/contracts), trading-open evidence, [liquidity and LP lock evidence](/guide/liquidity-lock-evidence), and funded reward-pool evidence.
+3. Confirm [Operational Status](/guide/operational-status), the [active staking address](/admin/contracts), and funding evidence.
 4. Approve the staking contract.
 5. Choose lock period ID `0`, `1`, or `2`.
 6. Submit `lockStake(amount, lockPeriodId)`.
