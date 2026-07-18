@@ -118,6 +118,10 @@ export default defineConfig({
             { text: "GloveCat Intro", link: "/guide/" },
             { text: "Operational Status", link: "/guide/operational-status" },
             { text: "Tokenomics", link: "/guide/tokenomics" },
+            {
+              text: "Ecosystem Fee Usage",
+              link: "/guide/ecosystem-fee-usage",
+            },
             { text: "Roadmap", link: "/guide/roadmap" },
           ],
         },

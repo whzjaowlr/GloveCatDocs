@@ -155,6 +155,35 @@ await requireContent("guide/official-pool-policy.md", [
   },
 ]);
 
+await requireContent("guide/ecosystem-fee-usage.md", [
+  {
+    value: "<EcosystemFeeUsageLedger />",
+    label: "data-driven ecosystem fee ledger component",
+  },
+  {
+    value: ".vitepress/data/ecosystem-fee-usage.json",
+    label: "ledger maintenance data path",
+  },
+  {
+    value: "Do not add proposed or pending Safe transactions",
+    label: "executed-only ledger policy",
+  },
+]);
+
+await requireContent(".vitepress/data/ecosystem-fee-usage.json", [
+  { value: '"schemaVersion": "1.0.0"', label: "ledger schema version" },
+  {
+    value: "0x228EDD1BFb7ec5E7A2b7284C1f3d6130c55B054a",
+    label: "ecosystem fee Safe address",
+  },
+  {
+    value: "0xa7f9412a0fe7e29739173e9ef1cd5a9cb7acaab20d6f05cdb0c4f96ff450b38f",
+    label: "executed ranking-reward transaction",
+  },
+  { value: '"amountGcat": "560600"', label: "first-place amount" },
+  { value: '"blockNumber": 48791558', label: "execution block" },
+]);
+
 const workflow = await requireContent(".github/workflows/deploy.yml", [
   { value: "actions/checkout@v7", label: "checkout action major" },
   { value: "pnpm/action-setup@v6", label: "pnpm setup action" },
@@ -189,12 +218,28 @@ await requireContent(".vitepress/config.ts", [
     value: 'link: "/guide/operational-status"',
     label: "operational-status navigation",
   },
+  {
+    value: 'link: "/guide/ecosystem-fee-usage"',
+    label: "ecosystem-fee usage navigation",
+  },
+]);
+
+await requireContent("guide/tokenomics.md", [
+  {
+    value: "/guide/ecosystem-fee-usage",
+    label: "ecosystem-fee usage ledger link",
+  },
 ]);
 
 await requireContent(".vitepress/theme/index.ts", [
   {
     value: 'app.component("LiveProtocolStatus", LiveProtocolStatus)',
     label: "live component registration",
+  },
+  {
+    value:
+      'app.component("EcosystemFeeUsageLedger", EcosystemFeeUsageLedger)',
+    label: "ecosystem fee ledger component registration",
   },
 ]);
 
@@ -204,8 +249,13 @@ await requireContent("package.json", [
     label: "consistency package script",
   },
   {
-    value: '"docs:build": "pnpm run consistency:check && vitepress build"',
+    value:
+      '"docs:build": "pnpm run ledger:check && pnpm run consistency:check && vitepress build"',
     label: "pre-build consistency gate",
+  },
+  {
+    value: '"ledger:check": "node scripts/check-ecosystem-fee-ledger.mjs"',
+    label: "ecosystem fee ledger validation script",
   },
 ]);
 

@@ -46,7 +46,8 @@ schedule evidence; the compact table below links to the target contract and exec
 | Sell fee |   1% | Ecosystem fee wallet |
 
 Fee rates are fixed in the token contract, and sell fees are sent to the ecosystem fee wallet. Sell
-fees are not automatically redistributed by the token contract.
+fees are not automatically redistributed by the token contract. Executed outflows are recorded in
+the [Ecosystem Fee Usage](/guide/ecosystem-fee-usage) public ledger.
 
 ## 🚦 Launch Limits
 

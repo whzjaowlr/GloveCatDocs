@@ -15,9 +15,10 @@
   },
   "scripts": {
     "docs:dev": "vitepress dev",
-    "docs:build": "pnpm run consistency:check && vitepress build",
+    "docs:build": "pnpm run ledger:check && pnpm run consistency:check && vitepress build",
     "docs:preview": "vitepress preview",
     "consistency:check": "node scripts/check-docs-consistency.mjs",
+    "ledger:check": "node scripts/check-ecosystem-fee-ledger.mjs",
     "security:check": "node scripts/check-docs-security.mjs"
   },
   "devDependencies": {

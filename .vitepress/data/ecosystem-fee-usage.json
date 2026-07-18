@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "1.0.0",
+  "reviewedAt": "2026-07-18",
+  "chain": {
+    "name": "Base Mainnet",
+    "chainId": 8453,
+    "explorerUrl": "https://basescan.org"
+  },
+  "safe": {
+    "address": "0x228EDD1BFb7ec5E7A2b7284C1f3d6130c55B054a",
+    "appUrl": "https://app.safe.global/home?safe=base:0x228EDD1BFb7ec5E7A2b7284C1f3d6130c55B054a"
+  },
+  "token": {
+    "symbol": "GCAT",
+    "address": "0x59df0577C7A5014954C0d6Cc12616e92E34d9fF4",
+    "decimals": 18
+  },
+  "collectionPolicy": {
+    "sellFeeBps": 100,
+    "trigger": "Transfer into a registered official pair",
+    "directWalletTransferFeeBps": 0
+  },
+  "entries": [
+    {
+      "id": "2026-07-18-community-ranking-rewards",
+      "title": "Community Ranking Rewards",
+      "category": "Community rewards",
+      "description": "Three GCAT ranking rewards executed together as one Safe batch.",
+      "status": "executed",
+      "executedAt": "2026-07-18T11:01:03Z",
+      "safeNonce": 1,
+      "ownersAtExecution": 3,
+      "confirmationsRequired": 2,
+      "blockNumber": 48791558,
+      "transactionHash": "0xa7f9412a0fe7e29739173e9ef1cd5a9cb7acaab20d6f05cdb0c4f96ff450b38f",
+      "safeTransactionHash": "0xdcfeead3ebaefa74c7cd416d2c196057630263c9a11782e9b8b94fa31f602f33",
+      "priceReference": {
+        "currency": "USD",
+        "pricePerGcat": "0.00005354",
+        "observedAt": "2026-07-18T10:34:14Z",
+        "source": "DexScreener Aerodrome WETH/GCAT pair",
+        "sourceUrl": "https://dexscreener.com/base/0x6330bb184d90d78f336270485c3d17ab8ae8dd54",
+        "note": "Amounts were rounded upward so each reference value was at least $0.01 above its nominal target. USD values document sizing only and are not stable valuations."
+      },
+      "recipients": [
+        {
+          "id": "rank-1",
+          "label": "1st place",
+          "address": "0x35f09097f39F44044c8A2522A82268A3702fbf3F",
+          "amountGcat": "560600",
+          "referenceUsd": "30.014524"
+        },
+        {
+          "id": "rank-2",
+          "label": "2nd place",
+          "address": "0xCda783C459920cfc40bb8D96a544AcB6509cA570",
+          "amountGcat": "280400",
+          "referenceUsd": "15.012616"
+        },
+        {
+          "id": "rank-3",
+          "label": "3rd place",
+          "address": "0x07D88106bDf7d0e2f35b8ca057b7A5Ae146a4F52",
+          "amountGcat": "93600",
+          "referenceUsd": "5.011344"
+        }
+      ],
+      "balanceProof": {
+        "beforeBlock": 48791557,
+        "beforeGcat": "7824793.034129655842717886",
+        "afterBlock": 48791558,
+        "afterGcat": "6890193.034129655842717886"
+      }
+    }
+  ],
+  "balanceSnapshots": [
+    {
+      "blockNumber": 48791725,
+      "observedAt": "2026-07-18T11:06:37Z",
+      "balanceGcat": "6892973.200129655842717886",
+      "note": "Later fixed-block snapshot after an additional ecosystem fee receipt."
+    }
+  ]
+}
