@@ -16,7 +16,7 @@ The sell-fee trigger is defined by the receiving address, not by a website or ro
 
 ## Independent Verification
 
-- Inspect the [successful Base transaction](https://basescan.org/tx/0xa7f9412a0fe7e29739173e9ef1cd5a9cb7acaab20d6f05cdb0c4f96ff450b38f).
+- Open each ledger entry's **Transaction** link to inspect its successful Base execution.
 - Inspect the [ecosystem fee Safe](https://app.safe.global/home?safe=base:0x228EDD1BFb7ec5E7A2b7284C1f3d6130c55B054a).
 - Inspect the [GCAT transfer history for the Safe](https://basescan.org/token/0x59df0577C7A5014954C0d6Cc12616e92E34d9fF4?a=0x228EDD1BFb7ec5E7A2b7284C1f3d6130c55B054a).
 

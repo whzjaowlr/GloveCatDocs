@@ -71,6 +71,43 @@
         "afterBlock": 48791558,
         "afterGcat": "6890193.034129655842717886"
       }
+    },
+    {
+      "id": "2026-07-18-community-manager-payment",
+      "title": "Community Manager Payment",
+      "category": "Community operations",
+      "description": "GCAT payment to the community manager, executed from the ecosystem fee Safe.",
+      "status": "executed",
+      "executedAt": "2026-07-18T12:26:49Z",
+      "safeNonce": 2,
+      "ownersAtExecution": 3,
+      "confirmationsRequired": 2,
+      "blockNumber": 48794131,
+      "transactionHash": "0xa480a76fae9054e567ec7ba24fc1d2de8b2c9826bb79072507fa2f51ba6e28e6",
+      "safeTransactionHash": "0x153bbdc8fe71544d340746321ad8a458e4bd4f8bfc7acf230f983cc1d8db65a6",
+      "priceReference": {
+        "currency": "USD",
+        "pricePerGcat": "0.00005323",
+        "observedAt": "2026-07-18T12:20:46Z",
+        "source": "DexScreener Aerodrome WETH/GCAT pair",
+        "sourceUrl": "https://dexscreener.com/base/0x6330bb184d90d78f336270485c3d17ab8ae8dd54",
+        "note": "The payment was sized at a nominal $7.01 using the observed market price. USD values document sizing only and are not stable valuations."
+      },
+      "recipients": [
+        {
+          "id": "community-manager",
+          "label": "Community manager",
+          "address": "0x976E1F03c6C729266905B054648A7b31F1b024ee",
+          "amountGcat": "131700",
+          "referenceUsd": "7.010391"
+        }
+      ],
+      "balanceProof": {
+        "beforeBlock": 48794130,
+        "beforeGcat": "6898579.200129655842717886",
+        "afterBlock": 48794131,
+        "afterGcat": "6766879.200129655842717886"
+      }
     }
   ],
   "balanceSnapshots": [
@@ -79,6 +116,12 @@
       "observedAt": "2026-07-18T11:06:37Z",
       "balanceGcat": "6892973.200129655842717886",
       "note": "Later fixed-block snapshot after an additional ecosystem fee receipt."
+    },
+    {
+      "blockNumber": 48794173,
+      "observedAt": "2026-07-18T12:28:13Z",
+      "balanceGcat": "6766879.200129655842717886",
+      "note": "Latest fixed-block snapshot after the community manager payment executed."
     }
   ]
 }
