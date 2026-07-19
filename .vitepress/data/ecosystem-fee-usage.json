@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "reviewedAt": "2026-07-18",
+  "reviewedAt": "2026-07-19",
   "chain": {
     "name": "Base Mainnet",
     "chainId": 8453,
@@ -108,6 +108,43 @@
         "afterBlock": 48794131,
         "afterGcat": "6766879.200129655842717886"
       }
+    },
+    {
+      "id": "2026-07-19-community-operations-support",
+      "title": "Community Operations Support",
+      "category": "Community operations",
+      "description": "One-time GCAT support for community management activities, executed from the ecosystem fee Safe.",
+      "status": "executed",
+      "executedAt": "2026-07-19T14:37:45Z",
+      "safeNonce": 3,
+      "ownersAtExecution": 3,
+      "confirmationsRequired": 2,
+      "blockNumber": 48841259,
+      "transactionHash": "0xc8d2527054644a7bb834468ce109535cb8148fc9c493d41563cca7e7b217da34",
+      "safeTransactionHash": "0x3f6da2723661a7d06eb4ff6decbd8e4dfb750fa0a9b7f5c29688055b4a028fb5",
+      "priceReference": {
+        "currency": "USD",
+        "pricePerGcat": "0.00005365",
+        "observedAt": "2026-07-19T14:31:09Z",
+        "source": "DexScreener Aerodrome WETH/GCAT pair",
+        "sourceUrl": "https://dexscreener.com/base/0x6330bb184d90d78f336270485c3d17ab8ae8dd54",
+        "note": "The support amount was sized at a nominal $5.00 using the observed market price. USD values document sizing only and are not stable valuations."
+      },
+      "recipients": [
+        {
+          "id": "community-operations-recipient",
+          "label": "Community manager",
+          "address": "0x976E1F03c6C729266905B054648A7b31F1b024ee",
+          "amountGcat": "93200",
+          "referenceUsd": "5.00018"
+        }
+      ],
+      "balanceProof": {
+        "beforeBlock": 48841258,
+        "beforeGcat": "6769132.200129655842717886",
+        "afterBlock": 48841259,
+        "afterGcat": "6675932.200129655842717886"
+      }
     }
   ],
   "balanceSnapshots": [
@@ -122,6 +159,12 @@
       "observedAt": "2026-07-18T12:28:13Z",
       "balanceGcat": "6766879.200129655842717886",
       "note": "Latest fixed-block snapshot after the community manager payment executed."
+    },
+    {
+      "blockNumber": 48841283,
+      "observedAt": "2026-07-19T14:38:33Z",
+      "balanceGcat": "6675932.200129655842717886",
+      "note": "Latest fixed-block snapshot after the community operations support executed."
     }
   ]
 }
